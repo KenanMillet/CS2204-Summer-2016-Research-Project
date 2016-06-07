@@ -1,3 +1,4 @@
-# CS2204-Summer-2016-Research-Project
-
-Workstation is where all the Xilinx Projects will go.
+Directories|
+------------
+  - ppm revamp:		Warmup 1-3 week project
+  - Workstation:	Xilinx projects go here
