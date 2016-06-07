@@ -1,0 +1,14 @@
+The Comms Program will be a standalone program that will be handling communication between the FPGA and the PC.
+The GUI will be separate, but will need to communicate with the COMMS program. This could happen through Pipes or Filestreams.
+
+Pipes
+	Pros:
+		Faster than Filestreams, making for more seamless communication
+	Cons:
+		Requires a larger amount of setup than filestreams (establishing pipe connections is less intuitive and more code than filestreams)
+
+Filestreams
+	Pros:
+		Requires very little setup on the GUI end (just read and write to files)
+	Cons:
+		Slower than Pipes--communication might seem a bit less instantaneous
