@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 124: Syntax error near &quot;<arg fmt="%s" index="1">)</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 129: Syntax error near &quot;<arg fmt="%s" index="1">attribute</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 143: Syntax error near &quot;<arg fmt="%s" index="1">component</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 155: Syntax error near &quot;<arg fmt="%s" index="1">component</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 178: &lt;<arg fmt="%s" index="1">gnd</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 180: Syntax error near &quot;<arg fmt="%s" index="1">component</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 191: &lt;<arg fmt="%s" index="1">hu_set</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 192: &lt;<arg fmt="%s" index="1">hu_set</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 194: &lt;<arg fmt="%s" index="1">fd4ce_hxilinx_simple</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 207: &lt;<arg fmt="%s" index="1">add4_hxilinx_simple</arg>&gt; is not declared.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="439" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 225: Formal port <arg fmt="%s" index="1">g</arg> of mode <arg fmt="%s" index="2">out</arg> cannot be associated with actual port <arg fmt="%s" index="3">xlxn_47</arg> of mode <arg fmt="%s" index="4">in</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="100" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 225: <arg fmt="%s" index="1">xlxn_47</arg> with mode &apos;in&apos; cannot be updated
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1001" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 224: <arg fmt="%s" index="1">component instantiations</arg> not allowed in entity statement part
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="439" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 228: Formal port <arg fmt="%s" index="1">g</arg> of mode <arg fmt="%s" index="2">out</arg> cannot be associated with actual port <arg fmt="%s" index="3">xlxn_48</arg> of mode <arg fmt="%s" index="4">in</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="100" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 228: <arg fmt="%s" index="1">xlxn_48</arg> with mode &apos;in&apos; cannot be updated
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1001" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 227: <arg fmt="%s" index="1">component instantiations</arg> not allowed in entity statement part
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 230: &lt;<arg fmt="%s" index="1">placeholder</arg>&gt; is not declared.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="439" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 241: Formal port <arg fmt="%s" index="1">g</arg> of mode <arg fmt="%s" index="2">out</arg> cannot be associated with actual port <arg fmt="%s" index="3">xlxn_49</arg> of mode <arg fmt="%s" index="4">in</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="100" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 241: <arg fmt="%s" index="1">xlxn_49</arg> with mode &apos;in&apos; cannot be updated
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1001" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 240: <arg fmt="%s" index="1">component instantiations</arg> not allowed in entity statement part
+</msg>
+
+<msg type="error" file="HDLCompiler" num="580" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 243: Mismatch on label ; expected <arg fmt="%s" index="1">simple</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="new" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\simple.vhf" Line 123: Unit &lt;<arg fmt="%s" index="1">simple</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+
