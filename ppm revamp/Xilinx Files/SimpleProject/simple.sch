@@ -6,8 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_20" />
-        <signal name="XLXN_22" />
         <signal name="uCont_gpi1(0)" />
         <signal name="uCont_gpi1(1)" />
         <signal name="uCont_gpi1(2)" />
@@ -144,7 +142,7 @@
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <text style="fontsize:64;fontname:Arial" x="2192" y="176">Communication (MicroBlaze)</text>
-        <text style="fontsize:64;fontname:Arial" x="484" y="160">Addr &amp; Register</text>
+        <text style="fontsize:64;fontname:Arial" x="484" y="160">Addition &amp; Register</text>
         <line x2="1760" y1="76" y2="2636" x1="1760" />
         <branch name="uCont_gpi1(0)">
             <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="880" y="672" type="branch" />
@@ -231,24 +229,24 @@
         </branch>
         <instance x="416" y="1120" name="XLXI_1" orien="R0" />
         <branch name="uCont_gpo1(2)">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="930" y="1120" type="branch" />
-            <wire x2="930" y1="1120" y2="1120" x1="896" />
-            <wire x2="960" y1="1120" y2="1120" x1="930" />
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="930" y="1120" type="branch" />
+            <wire x2="928" y1="1120" y2="1120" x1="896" />
+            <wire x2="960" y1="1120" y2="1120" x1="928" />
         </branch>
         <branch name="uCont_gpo1(3)">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="933" y="1184" type="branch" />
-            <wire x2="933" y1="1184" y2="1184" x1="896" />
-            <wire x2="960" y1="1184" y2="1184" x1="933" />
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="933" y="1184" type="branch" />
+            <wire x2="928" y1="1184" y2="1184" x1="896" />
+            <wire x2="960" y1="1184" y2="1184" x1="928" />
         </branch>
         <branch name="uCont_gpo1(1)">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="921" y="1056" type="branch" />
-            <wire x2="921" y1="1056" y2="1056" x1="896" />
-            <wire x2="960" y1="1056" y2="1056" x1="921" />
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="921" y="1056" type="branch" />
+            <wire x2="928" y1="1056" y2="1056" x1="896" />
+            <wire x2="960" y1="1056" y2="1056" x1="928" />
         </branch>
         <branch name="uCont_gpo1(0)">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="915" y="992" type="branch" />
-            <wire x2="915" y1="992" y2="992" x1="896" />
-            <wire x2="960" y1="992" y2="992" x1="915" />
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="915" y="992" type="branch" />
+            <wire x2="912" y1="992" y2="992" x1="896" />
+            <wire x2="960" y1="992" y2="992" x1="912" />
         </branch>
         <branch name="uCont_gpo1(31:0)">
             <attrtext style="alignment:SOFT-VRIGHT" attrname="Name" x="800" y="1280" type="branch" />
@@ -277,8 +275,8 @@
         <bustap x2="1056" y1="1552" y2="1456" x1="1056" />
         <branch name="uCont_gpi1(0)">
             <attrtext style="alignment:SOFT-TVCENTER" attrname="Name" x="912" y="1440" type="branch" />
-            <wire x2="912" y1="1360" y2="1400" x1="912" />
-            <wire x2="912" y1="1400" y2="1440" x1="912" />
+            <wire x2="912" y1="1360" y2="1408" x1="912" />
+            <wire x2="912" y1="1408" y2="1440" x1="912" />
             <wire x2="912" y1="1440" y2="1456" x1="912" />
         </branch>
         <branch name="uCont_gpi1(1)">
