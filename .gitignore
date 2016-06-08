@@ -222,3 +222,6 @@ pip-log.txt
 
 #logs
 *.xreport
+ppm revamp/Xilinx Files/SimpleProject/simple_summary.html
+*.projectmgr
+ppm revamp/Xilinx Files/SimpleProject/simple_summary.html
