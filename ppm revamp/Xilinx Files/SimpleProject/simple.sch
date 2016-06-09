@@ -26,9 +26,10 @@
         <signal name="usb_in" />
         <signal name="usb_out" />
         <signal name="CLOCK" />
-        <signal name="uCont_gpo1(4)" />
         <signal name="XLXN_56" />
         <signal name="OBClk" />
+        <signal name="uCont_gpo1(4)" />
+        <signal name="XLXN_61" />
         <blockdef name="fd4ce">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="320" y1="-448" y2="-448" x1="384" />
@@ -116,9 +117,19 @@
             <line x2="128" y1="-32" y2="-32" x1="224" />
             <line x2="64" y1="-32" y2="-32" x1="0" />
         </blockdef>
+        <blockdef name="RisingEdge">
+            <timestamp>2016-6-9T16:0:30</timestamp>
+            <rect width="128" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="256" y1="-96" y2="-96" x1="192" />
+            <line x2="72" y1="-24" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-40" x1="72" />
+            <line x2="64" y1="-40" y2="-24" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+        </blockdef>
         <block symbolname="fd4ce" name="XLXI_1">
             <blockpin signalname="CLOCK" name="C" />
-            <blockpin signalname="uCont_gpo1(4)" name="CE" />
+            <blockpin signalname="XLXN_61" name="CE" />
             <blockpin signalname="XLXN_48" name="CLR" />
             <blockpin signalname="XLXN_14" name="D0" />
             <blockpin signalname="XLXN_15" name="D1" />
@@ -172,6 +183,11 @@
         <block symbolname="bufg" name="XLXI_18">
             <blockpin signalname="XLXN_56" name="I" />
             <blockpin signalname="CLOCK" name="O" />
+        </block>
+        <block symbolname="RisingEdge" name="XLXI_22">
+            <blockpin signalname="uCont_gpo1(4)" name="D" />
+            <blockpin signalname="CLOCK" name="C" />
+            <blockpin signalname="XLXN_61" name="Q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -313,21 +329,18 @@
             <wire x2="1056" y1="1440" y2="1456" x1="1056" />
         </branch>
         <branch name="XLXN_49">
-            <wire x2="2160" y1="384" y2="384" x1="2144" />
-            <wire x2="2176" y1="384" y2="384" x1="2160" />
+            <wire x2="2176" y1="384" y2="384" x1="2144" />
         </branch>
         <instance x="2016" y="320" name="XLXI_15" orien="R90" />
         <branch name="usb_in">
             <attrtext style="alignment:SOFT-RIGHT" attrname="Name" x="2048" y="480" type="branch" />
-            <wire x2="2064" y1="480" y2="480" x1="2048" />
-            <wire x2="2160" y1="480" y2="480" x1="2064" />
+            <wire x2="2160" y1="480" y2="480" x1="2048" />
             <wire x2="2176" y1="416" y2="416" x1="2160" />
             <wire x2="2160" y1="416" y2="480" x1="2160" />
         </branch>
         <branch name="usb_out">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="3079" y="352" type="branch" />
-            <wire x2="3079" y1="352" y2="352" x1="2944" />
-            <wire x2="3088" y1="352" y2="352" x1="3079" />
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="3079" y="352" type="branch" />
+            <wire x2="3088" y1="352" y2="352" x1="2944" />
         </branch>
         <branch name="CLOCK">
             <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="2064" y="272" type="branch" />
@@ -336,18 +349,7 @@
             <wire x2="2160" y1="272" y2="352" x1="2160" />
             <wire x2="2176" y1="352" y2="352" x1="2160" />
         </branch>
-        <branch name="CLOCK">
-            <attrtext style="alignment:SOFT-RIGHT" attrname="Name" x="192" y="992" type="branch" />
-            <wire x2="416" y1="992" y2="992" x1="192" />
-        </branch>
         <bustap x2="704" y1="1248" y2="1248" x1="800" />
-        <branch name="uCont_gpo1(4)">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="688" y="1248" type="branch" />
-            <wire x2="416" y1="928" y2="928" x1="80" />
-            <wire x2="80" y1="928" y2="1248" x1="80" />
-            <wire x2="688" y1="1248" y2="1248" x1="80" />
-            <wire x2="704" y1="1248" y2="1248" x1="688" />
-        </branch>
         <text style="fontsize:64;fontname:Arial" x="484" y="160">Main Functionality</text>
         <line x2="1712" y1="1824" y2="1824" x1="36" />
         <instance x="688" y="2336" name="XLXI_17" orien="R0" />
@@ -361,9 +363,30 @@
         </branch>
         <branch name="OBClk">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="400" y="2304" type="branch" />
-            <wire x2="428" y1="2304" y2="2304" x1="400" />
-            <wire x2="688" y1="2304" y2="2304" x1="428" />
+            <wire x2="688" y1="2304" y2="2304" x1="400" />
         </branch>
         <text style="fontsize:64;fontname:Arial" x="776" y="1904">Buffers</text>
+        <branch name="CLOCK">
+            <attrtext style="alignment:SOFT-RIGHT" attrname="Name" x="384" y="992" type="branch" />
+            <wire x2="416" y1="992" y2="992" x1="384" />
+        </branch>
+        <branch name="uCont_gpo1(4)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="560" y="1248" type="branch" />
+            <wire x2="560" y1="1248" y2="1248" x1="432" />
+            <wire x2="704" y1="1248" y2="1248" x1="560" />
+        </branch>
+        <branch name="CLOCK">
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="528" y="1312" type="branch" />
+            <wire x2="512" y1="1312" y2="1312" x1="432" />
+            <wire x2="528" y1="1312" y2="1312" x1="512" />
+        </branch>
+        <branch name="XLXN_61">
+            <wire x2="400" y1="928" y2="928" x1="80" />
+            <wire x2="416" y1="928" y2="928" x1="400" />
+            <wire x2="80" y1="928" y2="1248" x1="80" />
+            <wire x2="176" y1="1248" y2="1248" x1="80" />
+        </branch>
+        <instance x="432" y="1344" name="XLXI_22" orien="M0">
+        </instance>
     </sheet>
 </drawing>

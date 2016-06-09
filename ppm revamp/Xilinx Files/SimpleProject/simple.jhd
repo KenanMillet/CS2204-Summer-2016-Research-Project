@@ -1,3 +1,5 @@
 MODULE simple
 	SUBMODULE placeholder
 		INSTANCE XLXI_13
+	SUBMODULE RisingEdge
+		INSTANCE XLXI_22
