@@ -1,5 +1,5 @@
 The following files were generated for 'microblaze_mcs' in directory
-C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm revamp\Xilinx Files\SimpleProject\ipcore_dir\
+C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\ipcore_dir\
 
 Generate XCO file:
    CORE Generator input file containing the parameters used to generate a core.
