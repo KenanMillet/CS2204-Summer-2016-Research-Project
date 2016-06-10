@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Thu Jun 09 20:09:44 2016
+# Date: Fri Jun 10 19:17:40 2016
 #
 ##############################################################
 #
@@ -96,8 +96,8 @@ CSET uart_data_bits=8
 CSET uart_error_interrupt=false
 CSET uart_odd_parity=Even
 CSET uart_prog_baudrate=false
-CSET uart_rx_interrupt=false
-CSET uart_tx_interrupt=false
+CSET uart_rx_interrupt=true
+CSET uart_tx_interrupt=true
 CSET uart_use_parity=false
 CSET use_fit1=false
 CSET use_fit2=false
@@ -123,4 +123,4 @@ CSET use_uart_tx=true
 MISC pkg_timestamp=2012-11-21T08:11:43Z
 # END Extra information
 GENERATE
-# CRC: 57ec0e68
+# CRC: 2184e9cf
