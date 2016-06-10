@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Fri Jun 10 20:12:59 2016
+# Date: Fri Jun 10 20:34:17 2016
 #
 ##############################################################
 #
@@ -39,7 +39,7 @@ SET vhdlsim = true
 SELECT MicroBlaze_MCS xilinx.com:ip:microblaze_mcs:1.4
 # END Select
 # BEGIN Parameters
-CSET component_name=placeholder
+CSET component_name=communication
 CSET debug_enabled=false
 CSET fit1_interrupt=false
 CSET fit1_no_clocks=6216
@@ -71,9 +71,9 @@ CSET intc_level_edge=0x0000
 CSET intc_positive=0xFFFF
 CSET intc_use_ext_intr=false
 CSET jtag_chain=USER2
-CSET memsize=64KB
+CSET memsize=8KB
 CSET microblaze_instance=microblaze_mcs_v1_4
-CSET path=microblaze_mcs
+CSET path=mcs_0
 CSET pit1_interrupt=false
 CSET pit1_prescaler=None
 CSET pit1_readable=true
@@ -93,7 +93,7 @@ CSET pit4_size=32
 CSET trace=false
 CSET uart_baudrate=9600
 CSET uart_data_bits=8
-CSET uart_error_interrupt=false
+CSET uart_error_interrupt=true
 CSET uart_odd_parity=Even
 CSET uart_prog_baudrate=false
 CSET uart_rx_interrupt=true
@@ -123,4 +123,4 @@ CSET use_uart_tx=true
 MISC pkg_timestamp=2012-11-21T08:11:43Z
 # END Extra information
 GENERATE
-# CRC: d75c33ef
+# CRC: f346756d

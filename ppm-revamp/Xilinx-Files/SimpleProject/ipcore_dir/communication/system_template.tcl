@@ -1,13 +1,13 @@
+set data {
 
+<EDKSYSTEM EDKVERSION="14.5" EDWVERSION="1.2" TIMESTAMP="%timestamp%">
 
-<EDKSYSTEM EDKVERSION="14.5" EDWVERSION="1.2" TIMESTAMP="Fri Jun 10 16:15:35 2016">
-
-  <SYSTEMINFO ARCH="artix7" DEVICE="xc7a100t" PACKAGE="csg324" PART="xc7a100tcsg324-3" SOURCE="" SPEEDGRADE="-3"/>
+  <SYSTEMINFO ARCH="%family%" DEVICE="%xdevice%" PACKAGE="%xpackage%" PART="%xpart%" SOURCE="" SPEEDGRADE="%xspeedgrade%"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="100000000" DIR="I" MHS_INDEX="0" NAME="Clk" SIGIS="CLK" SIGNAME="Clk">
+    <PORT CLKFREQUENCY="%freq%" DIR="I" MHS_INDEX="0" NAME="Clk" SIGIS="CLK" SIGNAME="Clk">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[DLMB:ILMB:M_AXI_DP:M_AXI_IP]" INSTANCE="placeholder" PORT="CLK"/>
+        <CONNECTION BUSINTERFACE="[DLMB:ILMB:M_AXI_DP:M_AXI_IP]" INSTANCE="%microblaze_instance%" PORT="CLK"/>
         <CONNECTION INSTANCE="ilmb" PORT="LMB_CLK"/>
         <CONNECTION INSTANCE="dlmb" PORT="LMB_CLK"/>
         <CONNECTION BUSINTERFACE="[SLMB]" INSTANCE="dlmb_cntlr" PORT="LMB_Clk"/>
@@ -17,7 +17,7 @@
     </PORT>
     <PORT DIR="I" MHS_INDEX="1" NAME="Reset" RSTPOLARITY="1" SIGIS="RST" SIGNAME="Reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="placeholder" PORT="MB_RESET"/>
+        <CONNECTION INSTANCE="%microblaze_instance%" PORT="MB_RESET"/>
         <CONNECTION INSTANCE="ilmb" PORT="SYS_RST"/>
         <CONNECTION INSTANCE="dlmb" PORT="SYS_RST"/>
         <CONNECTION INSTANCE="iomodule_0" PORT="Rst"/>
@@ -178,27 +178,27 @@
         <CONNECTION INSTANCE="iomodule_0" PORT="PIT4_Toggle"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="33" MSB="31" NAME="GPO1" RIGHT="0" SIGNAME="GPO1">
+    <PORT DIR="O" ENDIAN="LITTLE" LEFT="%gpo1_size-1%" LSB="0" MHS_INDEX="33" MSB="%gpo1_size-1%" NAME="GPO1" RIGHT="0" SIGNAME="GPO1">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPO1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="34" MSB="31" NAME="GPO2" RIGHT="0" SIGNAME="GPO2">
+    <PORT DIR="O" ENDIAN="LITTLE" LEFT="%gpo2_size-1%" LSB="0" MHS_INDEX="34" MSB="%gpo2_size-1%" NAME="GPO2" RIGHT="0" SIGNAME="GPO2">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPO2"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="35" MSB="31" NAME="GPO3" RIGHT="0" SIGNAME="GPO3">
+    <PORT DIR="O" ENDIAN="LITTLE" LEFT="%gpo3_size-1%" LSB="0" MHS_INDEX="35" MSB="%gpo3_size-1%" NAME="GPO3" RIGHT="0" SIGNAME="GPO3">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPO3"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="36" MSB="31" NAME="GPO4" RIGHT="0" SIGNAME="GPO4">
+    <PORT DIR="O" ENDIAN="LITTLE" LEFT="%gpo4_size-1%" LSB="0" MHS_INDEX="36" MSB="%gpo4_size-1%" NAME="GPO4" RIGHT="0" SIGNAME="GPO4">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPO4"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="37" MSB="31" NAME="GPI1" RIGHT="0" SIGNAME="GPI1">
+    <PORT DIR="I" ENDIAN="LITTLE" LEFT="%gpi1_size-1%" LSB="0" MHS_INDEX="37" MSB="%gpi1_size-1%" NAME="GPI1" RIGHT="0" SIGNAME="GPI1">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPI1"/>
       </CONNECTIONS>
@@ -208,7 +208,7 @@
         <CONNECTION INSTANCE="iomodule_0" PORT="GPI1_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="39" MSB="31" NAME="GPI2" RIGHT="0" SIGNAME="GPI2">
+    <PORT DIR="I" ENDIAN="LITTLE" LEFT="%gpi2_size-1%" LSB="0" MHS_INDEX="39" MSB="%gpi2_size-1%" NAME="GPI2" RIGHT="0" SIGNAME="GPI2">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPI2"/>
       </CONNECTIONS>
@@ -218,7 +218,7 @@
         <CONNECTION INSTANCE="iomodule_0" PORT="GPI2_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="41" MSB="31" NAME="GPI3" RIGHT="0" SIGNAME="GPI3">
+    <PORT DIR="I" ENDIAN="LITTLE" LEFT="%gpi3_size-1%" LSB="0" MHS_INDEX="41" MSB="%gpi3_size-1%" NAME="GPI3" RIGHT="0" SIGNAME="GPI3">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPI3"/>
       </CONNECTIONS>
@@ -228,7 +228,7 @@
         <CONNECTION INSTANCE="iomodule_0" PORT="GPI3_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MHS_INDEX="43" MSB="31" NAME="GPI4" RIGHT="0" SIGNAME="GPI4">
+    <PORT DIR="I" ENDIAN="LITTLE" LEFT="%gpi4_size-1%" LSB="0" MHS_INDEX="43" MSB="%gpi4_size-1%" NAME="GPI4" RIGHT="0" SIGNAME="GPI4">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[gpio_0]" INSTANCE="iomodule_0" PORT="GPI4"/>
       </CONNECTIONS>
@@ -238,213 +238,213 @@
         <CONNECTION INSTANCE="iomodule_0" PORT="GPI4_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    <!--
+    %intc_0_comment_start%
     <PORT DIR="I" MHS_INDEX="45" NAME="INTC_Interrupt_0" SIGNAME="INTC_Interrupt_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_0_comment_end%
+    %intc_1_comment_start%
     <PORT DIR="I" MHS_INDEX="46" NAME="INTC_Interrupt_1" SIGNAME="INTC_Interrupt_1">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_1_comment_end%
+    %intc_2_comment_start%
     <PORT DIR="I" MHS_INDEX="47" NAME="INTC_Interrupt_2" SIGNAME="INTC_Interrupt_2">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_2_comment_end%
+    %intc_3_comment_start%
     <PORT DIR="I" MHS_INDEX="48" NAME="INTC_Interrupt_3" SIGNAME="INTC_Interrupt_3">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_3_comment_end%
+    %intc_4_comment_start%
     <PORT DIR="I" MHS_INDEX="49" NAME="INTC_Interrupt_4" SIGNAME="INTC_Interrupt_4">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_4_comment_end%
+    %intc_5_comment_start%
     <PORT DIR="I" MHS_INDEX="50" NAME="INTC_Interrupt_5" SIGNAME="INTC_Interrupt_5">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_5_comment_end%
+    %intc_6_comment_start%
     <PORT DIR="I" MHS_INDEX="51" NAME="INTC_Interrupt_6" SIGNAME="INTC_Interrupt_6">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_6_comment_end%
+    %intc_7_comment_start%
     <PORT DIR="I" MHS_INDEX="52" NAME="INTC_Interrupt_7" SIGNAME="INTC_Interrupt_7">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_7_comment_end%
+    %intc_8_comment_start%
     <PORT DIR="I" MHS_INDEX="53" NAME="INTC_Interrupt_8" SIGNAME="INTC_Interrupt_8">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_8_comment_end%
+    %intc_9_comment_start%
     <PORT DIR="I" MHS_INDEX="54" NAME="INTC_Interrupt_9" SIGNAME="INTC_Interrupt_9">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_9_comment_end%
+    %intc_10_comment_start%
     <PORT DIR="I" MHS_INDEX="55" NAME="INTC_Interrupt_10" SIGNAME="INTC_Interrupt_10">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_10_comment_end%
+    %intc_11_comment_start%
     <PORT DIR="I" MHS_INDEX="56" NAME="INTC_Interrupt_11" SIGNAME="INTC_Interrupt_11">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_11_comment_end%
+    %intc_12_comment_start%
     <PORT DIR="I" MHS_INDEX="57" NAME="INTC_Interrupt_12" SIGNAME="INTC_Interrupt_12">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_12_comment_end%
+    %intc_13_comment_start%
     <PORT DIR="I" MHS_INDEX="58" NAME="INTC_Interrupt_13" SIGNAME="INTC_Interrupt_13">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_13_comment_end%
+    %intc_14_comment_start%
     <PORT DIR="I" MHS_INDEX="59" NAME="INTC_Interrupt_14" SIGNAME="INTC_Interrupt_14">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
-    <!--
+    %intc_14_comment_end%
+    %intc_15_comment_start%
     <PORT DIR="I" MHS_INDEX="60" NAME="INTC_Interrupt_15" SIGNAME="INTC_Interrupt_15">
       <CONNECTIONS>
         <CONNECTION INSTANCE="iomodule_0" PORT="INTC_Interrupt"/>
       </CONNECTIONS>
     </PORT>
-    -->
+    %intc_15_comment_end%
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MHS_INDEX="61" MSB="0" NAME="Trace_Instruction" RIGHT="31" SIGNAME="Trace_Instruction">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Instruction"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Instruction"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="62" NAME="Trace_Valid_Instr" SIGNAME="Trace_Valid_Instr">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Valid_Instr"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Valid_Instr"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MHS_INDEX="63" MSB="0" NAME="Trace_PC" RIGHT="31" SIGNAME="Trace_PC">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_PC"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_PC"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="64" NAME="Trace_Reg_Write" SIGNAME="Trace_Reg_Write">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Reg_Write"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Reg_Write"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="4" MHS_INDEX="65" MSB="0" NAME="Trace_Reg_Addr" RIGHT="4" SIGNAME="Trace_Reg_Addr">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Reg_Addr"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Reg_Addr"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="14" MHS_INDEX="66" MSB="0" NAME="Trace_MSR_Reg" RIGHT="14" SIGNAME="Trace_MSR_Reg">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_MSR_Reg"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_MSR_Reg"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MHS_INDEX="67" MSB="0" NAME="Trace_New_Reg_Value" RIGHT="31" SIGNAME="Trace_New_Reg_Value">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_New_Reg_Value"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_New_Reg_Value"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="68" NAME="Trace_Jump_Taken" SIGNAME="Trace_Jump_Taken">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Jump_Taken"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Jump_Taken"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="69" NAME="Trace_Delay_Slot" SIGNAME="Trace_Delay_Slot">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Delay_Slot"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Delay_Slot"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MHS_INDEX="70" MSB="0" NAME="Trace_Data_Address" RIGHT="31" SIGNAME="Trace_Data_Address">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Data_Address"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Data_Address"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="71" NAME="Trace_Data_Access" SIGNAME="Trace_Data_Access">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Data_Access"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Data_Access"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="72" NAME="Trace_Data_Read" SIGNAME="Trace_Data_Read">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Data_Read"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Data_Read"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="73" NAME="Trace_Data_Write" SIGNAME="Trace_Data_Write">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Data_Write"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Data_Write"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MHS_INDEX="74" MSB="0" NAME="Trace_Data_Write_Value" RIGHT="31" SIGNAME="Trace_Data_Write_Value">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Data_Write_Value"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Data_Write_Value"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="3" MHS_INDEX="75" MSB="0" NAME="Trace_Data_Byte_Enable" RIGHT="3" SIGNAME="Trace_Data_Byte_Enable">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_Data_Byte_Enable"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_Data_Byte_Enable"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" MHS_INDEX="76" NAME="Trace_MB_Halted" SIGNAME="Trace_MB_Halted">
       <CONNECTIONS>
-        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="placeholder" PORT="Trace_MB_Halted"/>
+        <CONNECTION BUSINTERFACE="[TRACE]" INSTANCE="%microblaze_instance%" PORT="Trace_MB_Halted"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
 
   <MODULES>
-    <MODULE HWVERSION="8.40.a" INSTANCE="placeholder" IPTYPE="PROCESSOR" MHS_INDEX="0" MODCLASS="PROCESSOR" MODTYPE="microblaze" PROCTYPE="MICROBLAZE">
+    <MODULE HWVERSION="8.40.a" INSTANCE="%microblaze_instance%" IPTYPE="PROCESSOR" MHS_INDEX="0" MODCLASS="PROCESSOR" MODTYPE="microblaze" PROCTYPE="MICROBLAZE">
       <DOCUMENTATION>
         <DOCUMENT SOURCE="" TYPE="IP"/>
       </DOCUMENTATION>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="0" NAME="C_SCO" TYPE="integer" VALUE="0"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_FREQ" TYPE="integer" VALUE="100000000"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_FREQ" TYPE="integer" VALUE="%freq%"/>
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="2" NAME="C_DATA_SIZE" TYPE="integer" VALUE="32"/>
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="3" NAME="C_DYNAMIC_BUS_SIZING" TYPE="integer" VALUE="1"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="4" NAME="C_FAMILY" TYPE="string" VALUE="artix7"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="5" NAME="C_INSTANCE" TYPE="string" VALUE="placeholder"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="4" NAME="C_FAMILY" TYPE="string" VALUE="%family%"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="5" NAME="C_INSTANCE" TYPE="string" VALUE="%microblaze_instance%"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="6" NAME="C_AVOID_PRIMITIVES" TYPE="integer" VALUE="0"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="7" NAME="C_FAULT_TOLERANT" TYPE="integer" VALUE="0">
           <DESCRIPTION>Enable Fault Tolerance Support</DESCRIPTION>
@@ -556,7 +556,7 @@
         <PARAMETER ASSIGNMENT="OPTIONAL" ENDIAN="BIG" LSB="31" MPD_INDEX="68" MSB="0" NAME="C_PVR_USER2" TYPE="std_logic_vector" VALUE="0x00000000">
           <DESCRIPTION>Specify USER2 Bits in Processor Version Registers</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="69" NAME="C_DEBUG_ENABLED" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="69" NAME="C_DEBUG_ENABLED" TYPE="integer" VALUE="%debug_enabled%">
           <DESCRIPTION>Enable MicroBlaze Debug Module Interface</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="70" NAME="C_NUMBER_OF_PC_BRK" TYPE="integer" VALUE="1">
@@ -664,7 +664,7 @@
           <DESCRIPTION>Enable Writes</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="148" NAME="C_ADDR_TAG_BITS" TYPE="integer" VALUE="0"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="149" NAME="C_CACHE_BYTE_SIZE" TYPE="integer" VALUE="65536">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="149" NAME="C_CACHE_BYTE_SIZE" TYPE="integer" VALUE="%memorysize%">
           <DESCRIPTION>Size in Bytes</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="150" NAME="C_ICACHE_USE_FSL" TYPE="integer" VALUE="0"/>
@@ -716,7 +716,7 @@
           <DESCRIPTION>Enable Writes</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="178" NAME="C_DCACHE_ADDR_TAG" TYPE="integer" VALUE="0"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="179" NAME="C_DCACHE_BYTE_SIZE" TYPE="integer" VALUE="65536">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="179" NAME="C_DCACHE_BYTE_SIZE" TYPE="integer" VALUE="%memorysize%">
           <DESCRIPTION>Size in Bytes</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="180" NAME="C_DCACHE_USE_FSL" TYPE="integer" VALUE="0"/>
@@ -776,8 +776,8 @@
           <DESCRIPTION>Privileged Instructions</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="10" MPD_INDEX="212" NAME="C_USE_INTERRUPT" TYPE="integer" VALUE="2"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="213" NAME="C_USE_EXT_BRK" TYPE="integer" VALUE="0"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="214" NAME="C_USE_EXT_NM_BRK" TYPE="integer" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="213" NAME="C_USE_EXT_BRK" TYPE="integer" VALUE="%debug_enabled%"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="214" NAME="C_USE_EXT_NM_BRK" TYPE="integer" VALUE="%debug_enabled%"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="215" NAME="C_USE_BRANCH_TARGET_CACHE" TYPE="integer" VALUE="0">
           <DESCRIPTION>Enable Branch Target Cache</DESCRIPTION>
         </PARAMETER>
@@ -808,24 +808,24 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LEFT="0" LSB="1" MHS_INDEX="4" MPD_INDEX="11" MSB="0" NAME="WAKEUP" RIGHT="1" SIGNAME="INTC_IRQ &amp; Dbg_Wakeup" VECFORMULA="[0:1]">
-          <!--
+          %intc_0_comment_start%
           <SIGNALS>
-          -->
+          %intc_0_comment_end%
             <SIGNAL NAME="INTC_IRQ"/>
             <SIGNAL NAME="Dbg_Wakeup"/>
-          <!--
+          %intc_0_comment_start%
           </SIGNALS>
-          -->
+          %intc_0_comment_end%
           <CONNECTIONS>
             <CONNECTION INSTANCE="intc_irq &amp; dbg_wakeup"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="13" NAME="DBG_WAKEUP" SIGNAME="Dbg_Wakeup">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="placeholder" PORT="WAKEUP"/>
+            <CONNECTION INSTANCE="%microblaze_instance%" PORT="WAKEUP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT BUS="DPLB:IPLB:DLMB:ILMB:M_AXI_DP:M_AXI_IP:M_AXI_DC:M_AXI_IC:M0_AXIS:S0_AXIS:M1_AXIS:S1_AXIS:M2_AXIS:S2_AXIS:M3_AXIS:S3_AXIS:M4_AXIS:S4_AXIS:M5_AXIS:S5_AXIS:M6_AXIS:S6_AXIS:M7_AXIS:S7_AXIS:M8_AXIS:S8_AXIS:M9_AXIS:S9_AXIS:M10_AXIS:S10_AXIS:M11_AXIS:S11_AXIS:M12_AXIS:S12_AXIS:M13_AXIS:S13_AXIS:M14_AXIS:S14_AXIS:M15_AXIS:S15_AXIS" CLKFREQUENCY="100000000" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="0" NAME="CLK" SIGIS="CLK" SIGNAME="Clk">
+        <PORT BUS="DPLB:IPLB:DLMB:ILMB:M_AXI_DP:M_AXI_IP:M_AXI_DC:M_AXI_IC:M0_AXIS:S0_AXIS:M1_AXIS:S1_AXIS:M2_AXIS:S2_AXIS:M3_AXIS:S3_AXIS:M4_AXIS:S4_AXIS:M5_AXIS:S5_AXIS:M6_AXIS:S6_AXIS:M7_AXIS:S7_AXIS:M8_AXIS:S8_AXIS:M9_AXIS:S9_AXIS:M10_AXIS:S10_AXIS:M11_AXIS:S11_AXIS:M12_AXIS:S12_AXIS:M13_AXIS:S13_AXIS:M14_AXIS:S14_AXIS:M15_AXIS:S15_AXIS" CLKFREQUENCY="%freq%" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="0" NAME="CLK" SIGIS="CLK" SIGNAME="Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="Clk"/>
           </CONNECTIONS>
@@ -2835,7 +2835,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="65535" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0000FFFF" INSTANCE="dlmb_cntlr" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" IS_VALID="TRUE" MEMTYPE="MEMORY" SIZE="65536" SIZEABRV="64K">
+        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="%highdecimal%" HIGHNAME="C_HIGHADDR" HIGHVALUE="%highvalue%" INSTANCE="dlmb_cntlr" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" IS_VALID="TRUE" MEMTYPE="MEMORY" SIZE="%memorysize%" SIZEABRV="%sizeabrv%">
           <ACCESSROUTE>
             <ROUTEPNT INDEX="0" INSTANCE="dlmb"/>
           </ACCESSROUTE>
@@ -2845,7 +2845,7 @@
             <ROUTEPNT INDEX="0" INSTANCE="dlmb"/>
           </ACCESSROUTE>
         </MEMRANGE>
-        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="65535" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0000FFFF" INSTANCE="ilmb_cntlr" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" IS_VALID="TRUE" MEMTYPE="MEMORY" SIZE="65536" SIZEABRV="64K">
+        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="%highdecimal%" HIGHNAME="C_HIGHADDR" HIGHVALUE="%highvalue%" INSTANCE="ilmb_cntlr" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" IS_VALID="TRUE" MEMTYPE="MEMORY" SIZE="%memorysize%" SIZEABRV="%sizeabrv%">
           <ACCESSROUTE>
             <ROUTEPNT INDEX="0" INSTANCE="ilmb"/>
           </ACCESSROUTE>
@@ -2876,7 +2876,7 @@
         </PARAMETER>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="LMB_CLK" SIGIS="CLK" SIGNAME="Clk">
+        <PORT CLKFREQUENCY="%freq%" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="LMB_CLK" SIGIS="CLK" SIGNAME="Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="Clk"/>
           </CONNECTIONS>
@@ -2893,12 +2893,12 @@
         </PORT>
         <PORT DEF_SIGNAME="ilmb_M_ABus" DIR="I" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="3" MSB="0" NAME="M_ABus" RIGHT="31" SIGNAME="ilmb_M_ABus" VECFORMULA="[0:C_LMB_AWIDTH-1]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="INSTR_ADDR"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="INSTR_ADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_M_ReadStrobe" DIR="I" MPD_INDEX="4" NAME="M_ReadStrobe" SIGNAME="ilmb_M_ReadStrobe">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="IFETCH"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="IFETCH"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_M_WriteStrobe" DIR="I" MPD_INDEX="5" NAME="M_WriteStrobe" SIGNAME="ilmb_M_WriteStrobe">
@@ -2906,7 +2906,7 @@
         </PORT>
         <PORT DEF_SIGNAME="ilmb_M_AddrStrobe" DIR="I" MPD_INDEX="6" NAME="M_AddrStrobe" SIGNAME="ilmb_M_AddrStrobe">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="I_AS"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="I_AS"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_M_DBus" DIR="I" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="7" MSB="0" NAME="M_DBus" RIGHT="31" SIGNAME="ilmb_M_DBus" VECFORMULA="[0:C_LMB_DWIDTH-1]">
@@ -2962,7 +2962,7 @@
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_ReadDBus" DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="18" MSB="0" NAME="LMB_ReadDBus" RIGHT="31" SIGNAME="ilmb_LMB_ReadDBus" VECFORMULA="[0:C_LMB_DWIDTH-1]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="INSTR"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="INSTR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_WriteDBus" DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="19" MSB="0" NAME="LMB_WriteDBus" RIGHT="31" SIGNAME="ilmb_LMB_WriteDBus" VECFORMULA="[0:C_LMB_DWIDTH-1]">
@@ -2972,22 +2972,22 @@
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_Ready" DIR="O" MPD_INDEX="20" NAME="LMB_Ready" SIGNAME="ilmb_LMB_Ready">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="IREADY"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="IREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_Wait" DIR="O" MPD_INDEX="21" NAME="LMB_Wait" SIGNAME="ilmb_LMB_Wait">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="IWAIT"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="IWAIT"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_UE" DIR="O" MPD_INDEX="22" NAME="LMB_UE" SIGNAME="ilmb_LMB_UE">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="IUE"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="IUE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_CE" DIR="O" MPD_INDEX="23" NAME="LMB_CE" SIGNAME="ilmb_LMB_CE">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="placeholder" PORT="ICE"/>
+            <CONNECTION BUSINTERFACE="[ILMB]" INSTANCE="%microblaze_instance%" PORT="ICE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="ilmb_LMB_BE" DIR="O" ENDIAN="BIG" LEFT="0" LSB="3" MPD_INDEX="24" MSB="0" NAME="LMB_BE" RIGHT="3" SIGNAME="ilmb_LMB_BE" VECFORMULA="[0:(C_LMB_DWIDTH+7)/8-1]">
@@ -3020,7 +3020,7 @@
         </PARAMETER>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="LMB_CLK" SIGIS="CLK" SIGNAME="Clk">
+        <PORT CLKFREQUENCY="%freq%" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="LMB_CLK" SIGIS="CLK" SIGNAME="Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="Clk"/>
           </CONNECTIONS>
@@ -3032,38 +3032,38 @@
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_Rst" DIR="O" MPD_INDEX="2" NAME="LMB_Rst" SIGIS="RST" SIGNAME="dlmb_LMB_Rst">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB:ILMB]" INSTANCE="placeholder" PORT="RESET"/>
+            <CONNECTION BUSINTERFACE="[DLMB:ILMB]" INSTANCE="%microblaze_instance%" PORT="RESET"/>
             <CONNECTION BUSINTERFACE="[SLMB]" INSTANCE="dlmb_cntlr" PORT="LMB_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_M_ABus" DIR="I" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="3" MSB="0" NAME="M_ABus" RIGHT="31" SIGNAME="dlmb_M_ABus" VECFORMULA="[0:C_LMB_AWIDTH-1]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DATA_ADDR"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DATA_ADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_M_ReadStrobe" DIR="I" MPD_INDEX="4" NAME="M_ReadStrobe" SIGNAME="dlmb_M_ReadStrobe">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="READ_STROBE"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="READ_STROBE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_M_WriteStrobe" DIR="I" MPD_INDEX="5" NAME="M_WriteStrobe" SIGNAME="dlmb_M_WriteStrobe">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="WRITE_STROBE"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="WRITE_STROBE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_M_AddrStrobe" DIR="I" MPD_INDEX="6" NAME="M_AddrStrobe" SIGNAME="dlmb_M_AddrStrobe">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="D_AS"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="D_AS"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_M_DBus" DIR="I" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="7" MSB="0" NAME="M_DBus" RIGHT="31" SIGNAME="dlmb_M_DBus" VECFORMULA="[0:C_LMB_DWIDTH-1]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DATA_WRITE"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DATA_WRITE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_M_BE" DIR="I" ENDIAN="BIG" LEFT="0" LSB="3" MPD_INDEX="8" MSB="0" NAME="M_BE" RIGHT="3" SIGNAME="dlmb_M_BE" VECFORMULA="[0:(C_LMB_DWIDTH+7)/8-1]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="BYTE_ENABLE"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="BYTE_ENABLE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_Sl_DBus" DIR="I" ENDIAN="BIG" LEFT="0" LSB="63" MPD_INDEX="9" MSB="0" NAME="Sl_DBus" RIGHT="63" SIGNAME="dlmb_Sl_DBus" VECFORMULA="[0:(C_LMB_DWIDTH*C_LMB_NUM_SLAVES)-1]">
@@ -3122,7 +3122,7 @@
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_ReadDBus" DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="18" MSB="0" NAME="LMB_ReadDBus" RIGHT="31" SIGNAME="dlmb_LMB_ReadDBus" VECFORMULA="[0:C_LMB_DWIDTH-1]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DATA_READ"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DATA_READ"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_WriteDBus" DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="19" MSB="0" NAME="LMB_WriteDBus" RIGHT="31" SIGNAME="dlmb_LMB_WriteDBus" VECFORMULA="[0:C_LMB_DWIDTH-1]">
@@ -3133,22 +3133,22 @@
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_Ready" DIR="O" MPD_INDEX="20" NAME="LMB_Ready" SIGNAME="dlmb_LMB_Ready">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DREADY"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_Wait" DIR="O" MPD_INDEX="21" NAME="LMB_Wait" SIGNAME="dlmb_LMB_Wait">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DWAIT"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DWAIT"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_UE" DIR="O" MPD_INDEX="22" NAME="LMB_UE" SIGNAME="dlmb_LMB_UE">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DUE"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DUE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_CE" DIR="O" MPD_INDEX="23" NAME="LMB_CE" SIGNAME="dlmb_LMB_CE">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="placeholder" PORT="DCE"/>
+            <CONNECTION BUSINTERFACE="[DLMB]" INSTANCE="%microblaze_instance%" PORT="DCE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="dlmb_LMB_BE" DIR="O" ENDIAN="BIG" LEFT="0" LSB="3" MPD_INDEX="24" MSB="0" NAME="LMB_BE" RIGHT="3" SIGNAME="dlmb_LMB_BE" VECFORMULA="[0:(C_LMB_DWIDTH+7)/8-1]">
@@ -3169,10 +3169,10 @@
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="MEMORY" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="2" MPD_INDEX="0" MSB="0" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0x00000000">
           <DESCRIPTION>LMB BRAM Base Address</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="MEMORY" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="3" MPD_INDEX="1" MSB="0" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="0x0000FFFF">
+        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="MEMORY" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="3" MPD_INDEX="1" MSB="0" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="%highvalue%">
           <DESCRIPTION>LMB BRAM High Address</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_FAMILY" TYPE="string" VALUE="artix7"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_FAMILY" TYPE="string" VALUE="%family%"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="4" MPD_INDEX="3" MSB="0" NAME="C_MASK" TYPE="std_logic_vector" VALUE="0x80000000">
           <DESCRIPTION>SLMB Address Decode Mask</DESCRIPTION>
         </PARAMETER>
@@ -3251,10 +3251,10 @@
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="28" NAME="C_SPLB_CTRL_NATIVE_DWIDTH" TYPE="INTEGER" VALUE="32">
           <DESCRIPTION>Native Data Bus Width of PLB Slave</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="29" NAME="C_SPLB_CTRL_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="100000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="29" NAME="C_SPLB_CTRL_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="%freq%">
           <DESCRIPTION>Frequency of PLB Slave</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="30" NAME="C_S_AXI_CTRL_ACLK_FREQ_HZ" TYPE="INTEGER" VALUE="100000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="30" NAME="C_S_AXI_CTRL_ACLK_FREQ_HZ" TYPE="INTEGER" VALUE="%freq%">
           <DESCRIPTION>S_AXI_CTRL Clock Frequency</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" MPD_INDEX="31" NAME="C_S_AXI_CTRL_BASEADDR" TYPE="std_logic_vector" VALUE="0xFFFFFFFF">
@@ -3274,7 +3274,7 @@
         </PARAMETER>
       </PARAMETERS>
       <PORTS>
-        <PORT BUS="SLMB" CLKFREQUENCY="100000000" DEF_SIGNAME="Clk" DIR="I" MPD_INDEX="0" NAME="LMB_Clk" SIGIS="CLK" SIGNAME="Clk">
+        <PORT BUS="SLMB" CLKFREQUENCY="%freq%" DEF_SIGNAME="Clk" DIR="I" MPD_INDEX="0" NAME="LMB_Clk" SIGIS="CLK" SIGNAME="Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="external ports" PORT="Clk"/>
           </CONNECTIONS>
@@ -3613,7 +3613,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="65535" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0000FFFF" MEMTYPE="MEMORY" MINSIZE="0x800" SIZE="65536" SIZEABRV="64K">
+        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="%highdecimal%" HIGHNAME="C_HIGHADDR" HIGHVALUE="%highvalue%" MEMTYPE="MEMORY" MINSIZE="0x800" SIZE="%memorysize%" SIZEABRV="%sizeabrv%">
           <SLAVES>
             <SLAVE BUSINTERFACE="SLMB"/>
             <SLAVE BUSINTERFACE="SLMB1"/>
@@ -3639,10 +3639,10 @@
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="MEMORY" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="2" MPD_INDEX="0" MSB="0" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0x00000000">
           <DESCRIPTION>LMB BRAM Base Address</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="MEMORY" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="3" MPD_INDEX="1" MSB="0" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="0x0000FFFF">
+        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="MEMORY" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="3" MPD_INDEX="1" MSB="0" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="%highvalue%">
           <DESCRIPTION>LMB BRAM High Address</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_FAMILY" TYPE="string" VALUE="artix7"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_FAMILY" TYPE="string" VALUE="%family%"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="4" MPD_INDEX="3" MSB="0" NAME="C_MASK" TYPE="std_logic_vector" VALUE="0x80000000">
           <DESCRIPTION>SLMB Address Decode Mask</DESCRIPTION>
         </PARAMETER>
@@ -3721,10 +3721,10 @@
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="28" NAME="C_SPLB_CTRL_NATIVE_DWIDTH" TYPE="INTEGER" VALUE="32">
           <DESCRIPTION>Native Data Bus Width of PLB Slave</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="29" NAME="C_SPLB_CTRL_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="100000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="29" NAME="C_SPLB_CTRL_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="%freq%">
           <DESCRIPTION>Frequency of PLB Slave</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="30" NAME="C_S_AXI_CTRL_ACLK_FREQ_HZ" TYPE="INTEGER" VALUE="100000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="30" NAME="C_S_AXI_CTRL_ACLK_FREQ_HZ" TYPE="INTEGER" VALUE="%freq%">
           <DESCRIPTION>S_AXI_CTRL Clock Frequency</DESCRIPTION>
         </PARAMETER>
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" MPD_INDEX="31" NAME="C_S_AXI_CTRL_BASEADDR" TYPE="std_logic_vector" VALUE="0xFFFFFFFF">
@@ -3744,7 +3744,7 @@
         </PARAMETER>
       </PARAMETERS>
       <PORTS>
-        <PORT BUS="SLMB" CLKFREQUENCY="100000000" DEF_SIGNAME="Clk" DIR="I" MPD_INDEX="0" NAME="LMB_Clk" SIGIS="CLK" SIGNAME="Clk">
+        <PORT BUS="SLMB" CLKFREQUENCY="%freq%" DEF_SIGNAME="Clk" DIR="I" MPD_INDEX="0" NAME="LMB_Clk" SIGIS="CLK" SIGNAME="Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="external ports" PORT="Clk"/>
           </CONNECTIONS>
@@ -4083,7 +4083,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="65535" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0000FFFF" MEMTYPE="MEMORY" MINSIZE="0x800" SIZE="65536" SIZEABRV="64K">
+        <MEMRANGE BASEDECIMAL="0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHDECIMAL="%highdecimal%" HIGHNAME="C_HIGHADDR" HIGHVALUE="%highvalue%" MEMTYPE="MEMORY" MINSIZE="0x800" SIZE="%memorysize%" SIZEABRV="%sizeabrv%">
           <SLAVES>
             <SLAVE BUSINTERFACE="SLMB"/>
             <SLAVE BUSINTERFACE="SLMB1"/>
@@ -4123,7 +4123,7 @@
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="3" NAME="C_NUM_WE" TYPE="integer" VALUE="4">
           <DESCRIPTION>Number of Byte Write Enables</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="4" NAME="C_FAMILY" TYPE="string" VALUE="artix7">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="4" NAME="C_FAMILY" TYPE="string" VALUE="%family%">
           <DESCRIPTION>Device Family</DESCRIPTION>
         </PARAMETER>
       </PARAMETERS>
@@ -4224,14 +4224,14 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <!--
+    %mdm_comment_start%
     <MODULE HWVERSION="2.10.a" INSTANCE="mdm_0" IPTYPE="PERIPHERAL" MHS_INDEX="6" MODCLASS="DEBUG" MODTYPE="mdm">
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
       <PARAMETERS>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_FAMILY" TYPE="STRING" VALUE="artix7">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_FAMILY" TYPE="STRING" VALUE="%family%">
           <DESCRIPTION>Device Family</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="1" NAME="C_JTAG_CHAIN" TYPE="INTEGER" VALUE="2">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="1" NAME="C_JTAG_CHAIN" TYPE="INTEGER" VALUE="%jtag_chain%">
           <DESCRIPTION>Specifies the JTAG user-defined register used </DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="2" NAME="C_INTERCONNECT" TYPE="INTEGER" VALUE="2">
@@ -4290,12 +4290,12 @@
         <PORT DIR="O" MPD_INDEX="0" NAME="Interrupt" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__"/>
         <PORT DEF_SIGNAME="Ext_BRK" DIR="O" MPD_INDEX="2" NAME="Ext_BRK" SIGNAME="Ext_BRK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="placeholder" PORT="EXT_BRK"/>
+            <CONNECTION INSTANCE="%microblaze_instance%" PORT="EXT_BRK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="Ext_NM_BRK" DIR="O" MPD_INDEX="3" NAME="Ext_NM_BRK" SIGNAME="Ext_NM_BRK">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="placeholder" PORT="EXT_NM_BRK"/>
+            <CONNECTION INSTANCE="%microblaze_instance%" PORT="EXT_NM_BRK"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="__BUS__" DIR="I" MPD_INDEX="4" NAME="S_AXI_ACLK" SIGIS="CLK" SIGNAME="__NOC__"/>
@@ -4361,42 +4361,42 @@
         <PORT BUS="SPLB" DEF_SIGNAME="__BUS__" DIR="O" ENDIAN="BIG" LEFT="0" LSB="7" MPD_INDEX="64" MSB="0" NAME="Sl_MIRQ" RIGHT="7" SIGNAME="__NOC__" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_Clk" DIR="O" MPD_INDEX="65" NAME="Dbg_Clk_0" SIGIS="CLK" SIGNAME="mdm_0_MBDEBUG_0_Dbg_Clk">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_CLK"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_TDI" DIR="O" MPD_INDEX="66" NAME="Dbg_TDI_0" SIGNAME="mdm_0_MBDEBUG_0_Dbg_TDI">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_TDI"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_TDI"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_TDO" DIR="I" MPD_INDEX="67" NAME="Dbg_TDO_0" SIGNAME="mdm_0_MBDEBUG_0_Dbg_TDO">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_TDO"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_TDO"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_Reg_En" DIR="O" ENDIAN="BIG" LEFT="0" LSB="7" MPD_INDEX="68" MSB="0" NAME="Dbg_Reg_En_0" RIGHT="7" SIGNAME="mdm_0_MBDEBUG_0_Dbg_Reg_En" VECFORMULA="[0:7]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_REG_EN"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_REG_EN"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_Capture" DIR="O" MPD_INDEX="69" NAME="Dbg_Capture_0" SIGNAME="mdm_0_MBDEBUG_0_Dbg_Capture">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_CAPTURE"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_CAPTURE"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_Shift" DIR="O" MPD_INDEX="70" NAME="Dbg_Shift_0" SIGNAME="mdm_0_MBDEBUG_0_Dbg_Shift">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_SHIFT"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_SHIFT"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Dbg_Update" DIR="O" MPD_INDEX="71" NAME="Dbg_Update_0" SIGNAME="mdm_0_MBDEBUG_0_Dbg_Update">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DBG_UPDATE"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DBG_UPDATE"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_0" DEF_SIGNAME="mdm_0_MBDEBUG_0_Debug_Rst" DIR="O" MPD_INDEX="72" NAME="Dbg_Rst_0" SIGIS="RST" SIGNAME="mdm_0_MBDEBUG_0_Debug_Rst">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="placeholder" PORT="DEBUG_RST"/>
+            <CONNECTION BUSINTERFACE="[DEBUG]" INSTANCE="%microblaze_instance%" PORT="DEBUG_RST"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="MBDEBUG_1" DEF_SIGNAME="__BUS__" DIR="O" MPD_INDEX="73" NAME="Dbg_Clk_1" SIGIS="CLK" SIGNAME="__NOC__"/>
@@ -5148,14 +5148,14 @@
         </MEMRANGE>
       </MEMORYMAP>
     </MODULE>
-    -->
+    %mdm_comment_end%
     <MODULE HWVERSION="1.01.a" INSTANCE="iomodule_0" IPTYPE="PERIPHERAL" MHS_INDEX="7" MODCLASS="PERIPHERAL" MODTYPE="iomodule">
       <DESCRIPTION TYPE="SHORT">LMB I/O Module</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">LMB module which includes plenty of I/O peripherals</DESCRIPTION>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
       <PARAMETERS>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_FAMILY" TYPE="string" VALUE="artix7"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_FREQ" TYPE="integer" VALUE="100000000"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_FAMILY" TYPE="string" VALUE="%family%"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_FREQ" TYPE="integer" VALUE="%freq%"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_INSTANCE" TYPE="string" VALUE="iomodule_0"/>
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="IO" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="31" MHS_INDEX="2" MPD_INDEX="3" MSB="0" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0x80000000">
           <DESCRIPTION>I/O Module Register Base Address</DESCRIPTION>
@@ -5181,215 +5181,215 @@
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="10" NAME="C_LMB_DWIDTH" TYPE="integer" VALUE="32">
           <DESCRIPTION>LMB Data Bus Width </DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="45" MPD_INDEX="11" NAME="C_USE_IO_BUS" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="45" MPD_INDEX="11" NAME="C_USE_IO_BUS" TYPE="integer" VALUE="%use_io_bus%">
           <DESCRIPTION>Enable IO Bus</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="8" MPD_INDEX="12" NAME="C_USE_UART_RX" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="8" MPD_INDEX="12" NAME="C_USE_UART_RX" TYPE="integer" VALUE="%use_uart_rx%">
           <DESCRIPTION>Enable Receiver</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="9" MPD_INDEX="13" NAME="C_USE_UART_TX" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="9" MPD_INDEX="13" NAME="C_USE_UART_TX" TYPE="integer" VALUE="%use_uart_tx%">
           <DESCRIPTION>Enable Transmitter</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="14" NAME="C_UART_BAUDRATE" TYPE="integer" VALUE="9600">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="14" NAME="C_UART_BAUDRATE" TYPE="integer" VALUE="%uart_baudrate%">
           <DESCRIPTION>Define Baud Rate</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="15" NAME="C_UART_DATA_BITS" TYPE="integer" VALUE="8">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="15" NAME="C_UART_DATA_BITS" TYPE="integer" VALUE="%uart_data_bits%">
           <DESCRIPTION>Number of Data Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="16" NAME="C_UART_USE_PARITY" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="16" NAME="C_UART_USE_PARITY" TYPE="integer" VALUE="%uart_use_parity%">
           <DESCRIPTION>Use Parity</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="17" NAME="C_UART_ODD_PARITY" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="17" NAME="C_UART_ODD_PARITY" TYPE="integer" VALUE="%uart_odd_parity%">
           <DESCRIPTION>Even or Odd Parity</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="10" MPD_INDEX="18" NAME="C_UART_RX_INTERRUPT" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="10" MPD_INDEX="18" NAME="C_UART_RX_INTERRUPT" TYPE="integer" VALUE="%uart_rx_interrupt%">
           <DESCRIPTION>Implement Receive Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="11" MPD_INDEX="19" NAME="C_UART_TX_INTERRUPT" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="11" MPD_INDEX="19" NAME="C_UART_TX_INTERRUPT" TYPE="integer" VALUE="%uart_tx_interrupt%">
           <DESCRIPTION>Implement Transmit Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="12" MPD_INDEX="20" NAME="C_UART_ERROR_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="12" MPD_INDEX="20" NAME="C_UART_ERROR_INTERRUPT" TYPE="integer" VALUE="%uart_error_interrupt%">
           <DESCRIPTION>Implement Error Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="21" NAME="C_UART_PROG_BAUDRATE" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="21" NAME="C_UART_PROG_BAUDRATE" TYPE="integer" VALUE="%uart_prog_baudrate%">
           <DESCRIPTION>Programmable Baud Rate</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="13" MPD_INDEX="22" NAME="C_USE_FIT1" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="13" MPD_INDEX="22" NAME="C_USE_FIT1" TYPE="integer" VALUE="%use_fit1%">
           <DESCRIPTION>Use FIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="23" NAME="C_FIT1_No_CLOCKS" TYPE="integer" VALUE="6216">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="23" NAME="C_FIT1_No_CLOCKS" TYPE="integer" VALUE="%fit1_no_clocks%">
           <DESCRIPTION>Number of Clocks Between Strobes</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="14" MPD_INDEX="24" NAME="C_FIT1_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="14" MPD_INDEX="24" NAME="C_FIT1_INTERRUPT" TYPE="integer" VALUE="%fit1_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="15" MPD_INDEX="25" NAME="C_USE_FIT2" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="15" MPD_INDEX="25" NAME="C_USE_FIT2" TYPE="integer" VALUE="%use_fit2%">
           <DESCRIPTION>Use FIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="26" NAME="C_FIT2_No_CLOCKS" TYPE="integer" VALUE="6216">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="26" NAME="C_FIT2_No_CLOCKS" TYPE="integer" VALUE="%fit2_no_clocks%">
           <DESCRIPTION>Number of Clocks Between Strobes</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="16" MPD_INDEX="27" NAME="C_FIT2_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="16" MPD_INDEX="27" NAME="C_FIT2_INTERRUPT" TYPE="integer" VALUE="%fit2_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="17" MPD_INDEX="28" NAME="C_USE_FIT3" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="17" MPD_INDEX="28" NAME="C_USE_FIT3" TYPE="integer" VALUE="%use_fit3%">
           <DESCRIPTION>Use FIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="29" NAME="C_FIT3_No_CLOCKS" TYPE="integer" VALUE="6216">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="29" NAME="C_FIT3_No_CLOCKS" TYPE="integer" VALUE="%fit3_no_clocks%">
           <DESCRIPTION>Number of Clocks Between Strobes</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="18" MPD_INDEX="30" NAME="C_FIT3_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="18" MPD_INDEX="30" NAME="C_FIT3_INTERRUPT" TYPE="integer" VALUE="%fit3_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="19" MPD_INDEX="31" NAME="C_USE_FIT4" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="19" MPD_INDEX="31" NAME="C_USE_FIT4" TYPE="integer" VALUE="%use_fit4%">
           <DESCRIPTION>Use FIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="32" NAME="C_FIT4_No_CLOCKS" TYPE="integer" VALUE="6216">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="32" NAME="C_FIT4_No_CLOCKS" TYPE="integer" VALUE="%fit4_no_clocks%">
           <DESCRIPTION>Number of Clocks Between Strobes</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="20" MPD_INDEX="33" NAME="C_FIT4_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="20" MPD_INDEX="33" NAME="C_FIT4_INTERRUPT" TYPE="integer" VALUE="%fit4_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="21" MPD_INDEX="34" NAME="C_USE_PIT1" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="21" MPD_INDEX="34" NAME="C_USE_PIT1" TYPE="integer" VALUE="%use_pit1%">
           <DESCRIPTION>Use PIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="35" NAME="C_PIT1_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="35" NAME="C_PIT1_SIZE" TYPE="integer" VALUE="%pit1_size%">
           <DESCRIPTION>Number of Bits for Timer</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="36" NAME="C_PIT1_READABLE" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="36" NAME="C_PIT1_READABLE" TYPE="integer" VALUE="%pit1_readable%">
           <DESCRIPTION>Shall Counter Value Be Readable</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="22" MPD_INDEX="37" NAME="C_PIT1_PRESCALER" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="22" MPD_INDEX="37" NAME="C_PIT1_PRESCALER" TYPE="integer" VALUE="%pit1_prescaler%">
           <DESCRIPTION>Define Prescaler</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="23" MPD_INDEX="38" NAME="C_PIT1_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="23" MPD_INDEX="38" NAME="C_PIT1_INTERRUPT" TYPE="integer" VALUE="%pit1_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="24" MPD_INDEX="39" NAME="C_USE_PIT2" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="24" MPD_INDEX="39" NAME="C_USE_PIT2" TYPE="integer" VALUE="%use_pit2%">
           <DESCRIPTION>Use PIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="40" NAME="C_PIT2_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="40" NAME="C_PIT2_SIZE" TYPE="integer" VALUE="%pit2_size%">
           <DESCRIPTION>Number of Bits for Timer</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="41" NAME="C_PIT2_READABLE" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="41" NAME="C_PIT2_READABLE" TYPE="integer" VALUE="%pit2_readable%">
           <DESCRIPTION>Shall Counter Value Be Readable</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="25" MPD_INDEX="42" NAME="C_PIT2_PRESCALER" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="25" MPD_INDEX="42" NAME="C_PIT2_PRESCALER" TYPE="integer" VALUE="%pit2_prescaler%">
           <DESCRIPTION>Define Prescaler</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="26" MPD_INDEX="43" NAME="C_PIT2_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="26" MPD_INDEX="43" NAME="C_PIT2_INTERRUPT" TYPE="integer" VALUE="%pit2_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="27" MPD_INDEX="44" NAME="C_USE_PIT3" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="27" MPD_INDEX="44" NAME="C_USE_PIT3" TYPE="integer" VALUE="%use_pit3%">
           <DESCRIPTION>Use PIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="45" NAME="C_PIT3_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="45" NAME="C_PIT3_SIZE" TYPE="integer" VALUE="%pit3_size%">
           <DESCRIPTION>Number of Bits for Timer</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="46" NAME="C_PIT3_READABLE" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="46" NAME="C_PIT3_READABLE" TYPE="integer" VALUE="%pit3_readable%">
           <DESCRIPTION>Shall Counter Value be Readable</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="28" MPD_INDEX="47" NAME="C_PIT3_PRESCALER" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="28" MPD_INDEX="47" NAME="C_PIT3_PRESCALER" TYPE="integer" VALUE="%pit3_prescaler%">
           <DESCRIPTION>Define Prescaler</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="29" MPD_INDEX="48" NAME="C_PIT3_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="29" MPD_INDEX="48" NAME="C_PIT3_INTERRUPT" TYPE="integer" VALUE="%pit3_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="30" MPD_INDEX="49" NAME="C_USE_PIT4" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="30" MPD_INDEX="49" NAME="C_USE_PIT4" TYPE="integer" VALUE="%use_pit4%">
           <DESCRIPTION>Use PIT</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="50" NAME="C_PIT4_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="50" NAME="C_PIT4_SIZE" TYPE="integer" VALUE="%pit4_size%">
           <DESCRIPTION>Number of Bits for Timer</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="51" NAME="C_PIT4_READABLE" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="51" NAME="C_PIT4_READABLE" TYPE="integer" VALUE="%pit4_readable%">
           <DESCRIPTION>Shall Counter Value Be Readable</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="31" MPD_INDEX="52" NAME="C_PIT4_PRESCALER" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="31" MPD_INDEX="52" NAME="C_PIT4_PRESCALER" TYPE="integer" VALUE="%pit4_prescaler%">
           <DESCRIPTION>Define Prescaler</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="32" MPD_INDEX="53" NAME="C_PIT4_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="32" MPD_INDEX="53" NAME="C_PIT4_INTERRUPT" TYPE="integer" VALUE="%pit4_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="33" MPD_INDEX="54" NAME="C_USE_GPO1" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="33" MPD_INDEX="54" NAME="C_USE_GPO1" TYPE="integer" VALUE="%use_gpo1%">
           <DESCRIPTION>Use GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="55" NAME="C_GPO1_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="55" NAME="C_GPO1_SIZE" TYPE="integer" VALUE="%gpo1_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="56" NAME="C_GPO1_INIT" TYPE="std_logic_vector" VALUE="0x00000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="56" NAME="C_GPO1_INIT" TYPE="std_logic_vector" VALUE="%gpo1_init%">
           <DESCRIPTION>Initial Value of GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="34" MPD_INDEX="57" NAME="C_USE_GPO2" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="34" MPD_INDEX="57" NAME="C_USE_GPO2" TYPE="integer" VALUE="%use_gpo2%">
           <DESCRIPTION>Use GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="58" NAME="C_GPO2_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="58" NAME="C_GPO2_SIZE" TYPE="integer" VALUE="%gpo2_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="59" NAME="C_GPO2_INIT" TYPE="std_logic_vector" VALUE="0x00000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="59" NAME="C_GPO2_INIT" TYPE="std_logic_vector" VALUE="%gpo2_init%">
           <DESCRIPTION>Initial Value of GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="35" MPD_INDEX="60" NAME="C_USE_GPO3" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="35" MPD_INDEX="60" NAME="C_USE_GPO3" TYPE="integer" VALUE="%use_gpo3%">
           <DESCRIPTION>Use GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="61" NAME="C_GPO3_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="61" NAME="C_GPO3_SIZE" TYPE="integer" VALUE="%gpo3_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="62" NAME="C_GPO3_INIT" TYPE="std_logic_vector" VALUE="0x00000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="62" NAME="C_GPO3_INIT" TYPE="std_logic_vector" VALUE="%gpo3_init%">
           <DESCRIPTION>Initial Value of GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="36" MPD_INDEX="63" NAME="C_USE_GPO4" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="36" MPD_INDEX="63" NAME="C_USE_GPO4" TYPE="integer" VALUE="%use_gpo4%">
           <DESCRIPTION>Use GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="64" NAME="C_GPO4_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="64" NAME="C_GPO4_SIZE" TYPE="integer" VALUE="%gpo4_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="65" NAME="C_GPO4_INIT" TYPE="std_logic_vector" VALUE="0x00000000">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="65" NAME="C_GPO4_INIT" TYPE="std_logic_vector" VALUE="%gpo4_init%">
           <DESCRIPTION>Initial Value of GPO</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="37" MPD_INDEX="66" NAME="C_USE_GPI1" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="37" MPD_INDEX="66" NAME="C_USE_GPI1" TYPE="integer" VALUE="%use_gpi1%">
           <DESCRIPTION>Use GPI</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="67" NAME="C_GPI1_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="67" NAME="C_GPI1_SIZE" TYPE="integer" VALUE="%gpi1_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="38" MPD_INDEX="68" NAME="C_GPI1_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="38" MPD_INDEX="68" NAME="C_GPI1_INTERRUPT" TYPE="integer" VALUE="%gpi1_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="39" MPD_INDEX="69" NAME="C_USE_GPI2" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="39" MPD_INDEX="69" NAME="C_USE_GPI2" TYPE="integer" VALUE="%use_gpi2%">
           <DESCRIPTION>Use GPI</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="70" NAME="C_GPI2_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="70" NAME="C_GPI2_SIZE" TYPE="integer" VALUE="%gpi2_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="40" MPD_INDEX="71" NAME="C_GPI2_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="40" MPD_INDEX="71" NAME="C_GPI2_INTERRUPT" TYPE="integer" VALUE="%gpi2_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="41" MPD_INDEX="72" NAME="C_USE_GPI3" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="41" MPD_INDEX="72" NAME="C_USE_GPI3" TYPE="integer" VALUE="%use_gpi3%">
           <DESCRIPTION>Use GPI</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="73" NAME="C_GPI3_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="73" NAME="C_GPI3_SIZE" TYPE="integer" VALUE="%gpi3_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="42" MPD_INDEX="74" NAME="C_GPI3_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="42" MPD_INDEX="74" NAME="C_GPI3_INTERRUPT" TYPE="integer" VALUE="%gpi3_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="43" MPD_INDEX="75" NAME="C_USE_GPI4" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="43" MPD_INDEX="75" NAME="C_USE_GPI4" TYPE="integer" VALUE="%use_gpi4%">
           <DESCRIPTION>Use GPI</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="76" NAME="C_GPI4_SIZE" TYPE="integer" VALUE="32">
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="76" NAME="C_GPI4_SIZE" TYPE="integer" VALUE="%gpi4_size%">
           <DESCRIPTION>Number of Bits</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="44" MPD_INDEX="77" NAME="C_GPI4_INTERRUPT" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="44" MPD_INDEX="77" NAME="C_GPI4_INTERRUPT" TYPE="integer" VALUE="%gpi4_interrupt%">
           <DESCRIPTION>Generate Interrupt</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="46" MPD_INDEX="78" NAME="C_INTC_USE_EXT_INTR" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="46" MPD_INDEX="78" NAME="C_INTC_USE_EXT_INTR" TYPE="integer" VALUE="%intc_use_ext_intr%">
           <DESCRIPTION>Use External Interrupts</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="47" MPD_INDEX="79" NAME="C_INTC_INTR_SIZE" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="47" MPD_INDEX="79" NAME="C_INTC_INTR_SIZE" TYPE="integer" VALUE="%intc_intr_size%">
           <DESCRIPTION>Number of External Inputs</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="80" NAME="C_INTC_LEVEL_EDGE" TYPE="std_logic_vector" VALUE="0x0000"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="81" NAME="C_INTC_POSITIVE" TYPE="std_logic_vector" VALUE="0xFFFF"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="80" NAME="C_INTC_LEVEL_EDGE" TYPE="std_logic_vector" VALUE="%intc_level_edge%"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="81" NAME="C_INTC_POSITIVE" TYPE="std_logic_vector" VALUE="%intc_positive%"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="48" MPD_INDEX="82" NAME="C_INTC_HAS_FAST" TYPE="integer" VALUE="1">
           <DESCRIPTION>Use Low-latency Interrupt Handling</DESCRIPTION>
         </PARAMETER>
@@ -5401,7 +5401,7 @@
             <CONNECTION INSTANCE="External Ports" PORT="Reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="0" NAME="CLK" SIGIS="CLK" SIGNAME="Clk">
+        <PORT CLKFREQUENCY="%freq%" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="0" NAME="CLK" SIGIS="CLK" SIGNAME="Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="Clk"/>
           </CONNECTIONS>
@@ -5563,27 +5563,27 @@
             <CONNECTION INSTANCE="External Ports" PORT="PIT4_Toggle"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="33" MPD_INDEX="33" MSB="31" NAME="GPO1" RIGHT="0" SIGNAME="GPO1" VECFORMULA="[C_GPO1_SIZE-1:0]">
+        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpo1_size-1%" LSB="0" MHS_INDEX="33" MPD_INDEX="33" MSB="%gpo1_size-1%" NAME="GPO1" RIGHT="0" SIGNAME="GPO1" VECFORMULA="[C_GPO1_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPO1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="34" MPD_INDEX="34" MSB="31" NAME="GPO2" RIGHT="0" SIGNAME="GPO2" VECFORMULA="[C_GPO2_SIZE-1:0]">
+        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpo2_size-1%" LSB="0" MHS_INDEX="34" MPD_INDEX="34" MSB="%gpo2_size-1%" NAME="GPO2" RIGHT="0" SIGNAME="GPO2" VECFORMULA="[C_GPO2_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPO2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="35" MPD_INDEX="35" MSB="31" NAME="GPO3" RIGHT="0" SIGNAME="GPO3" VECFORMULA="[C_GPO3_SIZE-1:0]">
+        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpo3_size-1%" LSB="0" MHS_INDEX="35" MPD_INDEX="35" MSB="%gpo3_size-1%" NAME="GPO3" RIGHT="0" SIGNAME="GPO3" VECFORMULA="[C_GPO3_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPO3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="36" MPD_INDEX="36" MSB="31" NAME="GPO4" RIGHT="0" SIGNAME="GPO4" VECFORMULA="[C_GPO4_SIZE-1:0]">
+        <PORT DIR="O" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpo4_size-1%" LSB="0" MHS_INDEX="36" MPD_INDEX="36" MSB="%gpo4_size-1%" NAME="GPO4" RIGHT="0" SIGNAME="GPO4" VECFORMULA="[C_GPO4_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPO4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="37" MPD_INDEX="37" MSB="31" NAME="GPI1" RIGHT="0" SIGNAME="GPI1" VECFORMULA="[C_GPI1_SIZE-1:0]">
+        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpi1_size-1%" LSB="0" MHS_INDEX="37" MPD_INDEX="37" MSB="%gpi1_size-1%" NAME="GPI1" RIGHT="0" SIGNAME="GPI1" VECFORMULA="[C_GPI1_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPI1"/>
           </CONNECTIONS>
@@ -5593,7 +5593,7 @@
             <CONNECTION INSTANCE="External Ports" PORT="GPI1_Interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="39" MPD_INDEX="39" MSB="31" NAME="GPI2" RIGHT="0" SIGNAME="GPI2" VECFORMULA="[C_GPI2_SIZE-1:0]">
+        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpi2_size-1%" LSB="0" MHS_INDEX="39" MPD_INDEX="39" MSB="%gpi2_size-1%" NAME="GPI2" RIGHT="0" SIGNAME="GPI2" VECFORMULA="[C_GPI2_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPI2"/>
           </CONNECTIONS>
@@ -5603,7 +5603,7 @@
             <CONNECTION INSTANCE="External Ports" PORT="GPI2_Interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="41" MPD_INDEX="41" MSB="31" NAME="GPI3" RIGHT="0" SIGNAME="GPI3" VECFORMULA="[C_GPI3_SIZE-1:0]">
+        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpi3_size-1%" LSB="0" MHS_INDEX="41" MPD_INDEX="41" MSB="%gpi3_size-1%" NAME="GPI3" RIGHT="0" SIGNAME="GPI3" VECFORMULA="[C_GPI3_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPI3"/>
           </CONNECTIONS>
@@ -5613,7 +5613,7 @@
             <CONNECTION INSTANCE="External Ports" PORT="GPI3_Interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="43" MPD_INDEX="43" MSB="31" NAME="GPI4" RIGHT="0" SIGNAME="GPI4" VECFORMULA="[C_GPI4_SIZE-1:0]">
+        <PORT DIR="I" ENDIAN="LITTLE" IOS="gpio_0" IS_INSTANTIATED="TRUE" LEFT="%gpi4_size-1%" LSB="0" MHS_INDEX="43" MPD_INDEX="43" MSB="%gpi4_size-1%" NAME="GPI4" RIGHT="0" SIGNAME="GPI4" VECFORMULA="[C_GPI4_SIZE-1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="GPI4"/>
           </CONNECTIONS>
@@ -5623,83 +5623,83 @@
             <CONNECTION INSTANCE="External Ports" PORT="GPI4_Interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="0" LSB="0" MHS_INDEX="45" MPD_INDEX="45" MSB="0" NAME="INTC_Interrupt" RIGHT="0" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__" VECFORMULA="[(C_INTC_INTR_SIZE-1):0]">
-          <!--
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="%intc_intr_size-1%" LSB="0" MHS_INDEX="45" MPD_INDEX="45" MSB="%intc_intr_size-1%" NAME="INTC_Interrupt" RIGHT="0" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="%intc_interrupt%" VECFORMULA="[(C_INTC_INTR_SIZE-1):0]">
+          %intc_0_comment_start%
           <SIGNALS>
-          -->
-            <!--
+          %intc_0_comment_end%
+            %intc_15_comment_start%
             <SIGNAL NAME="INTC_Interrupt_15"/>
-            -->
-            <!--
+            %intc_15_comment_end%
+            %intc_14_comment_start%
             <SIGNAL NAME="INTC_Interrupt_14"/>
-            -->
-            <!--
+            %intc_14_comment_end%
+            %intc_13_comment_start%
             <SIGNAL NAME="INTC_Interrupt_13"/>
-            -->
-            <!--
+            %intc_13_comment_end%
+            %intc_12_comment_start%
             <SIGNAL NAME="INTC_Interrupt_12"/>
-            -->
-            <!--
+            %intc_12_comment_end%
+            %intc_11_comment_start%
             <SIGNAL NAME="INTC_Interrupt_11"/>
-            -->
-            <!--
+            %intc_11_comment_end%
+            %intc_10_comment_start%
             <SIGNAL NAME="INTC_Interrupt_10"/>
-            -->
-            <!--
+            %intc_10_comment_end%
+            %intc_9_comment_start%
             <SIGNAL NAME="INTC_Interrupt_9"/>
-            -->
-            <!--
+            %intc_9_comment_end%
+            %intc_8_comment_start%
             <SIGNAL NAME="INTC_Interrupt_8"/>
-            -->
-            <!--
+            %intc_8_comment_end%
+            %intc_7_comment_start%
             <SIGNAL NAME="INTC_Interrupt_7"/>
-            -->
-            <!--
+            %intc_7_comment_end%
+            %intc_6_comment_start%
             <SIGNAL NAME="INTC_Interrupt_6"/>
-            -->
-            <!--
+            %intc_6_comment_end%
+            %intc_5_comment_start%
             <SIGNAL NAME="INTC_Interrupt_5"/>
-            -->
-            <!--
+            %intc_5_comment_end%
+            %intc_4_comment_start%
             <SIGNAL NAME="INTC_Interrupt_4"/>
-            -->
-            <!--
+            %intc_4_comment_end%
+            %intc_3_comment_start%
             <SIGNAL NAME="INTC_Interrupt_3"/>
-            -->
-            <!--
+            %intc_3_comment_end%
+            %intc_2_comment_start%
             <SIGNAL NAME="INTC_Interrupt_2"/>
-            -->
-            <!--
+            %intc_2_comment_end%
+            %intc_1_comment_start%
             <SIGNAL NAME="INTC_Interrupt_1"/>
-            -->
+            %intc_1_comment_end%
             <SIGNAL NAME="INTC_Interrupt_0"/>
-          <!--
+          %intc_0_comment_start%
           </SIGNALS>
-          -->
+          %intc_0_comment_end%
           <DESCRIPTION>Interrupt Inputs</DESCRIPTION>
-          <!--
+          %intc_0_comment_start%
           <CONNECTIONS>
-            <CONNECTION INSTANCE="__NOC__"/>
+            <CONNECTION INSTANCE="%intc_interrupt%"/>
           </CONNECTIONS>
-          -->
+          %intc_0_comment_end%
         </PORT>
         <PORT BUS="INTERRUPT" DEF_SIGNAME="Interrupt" DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="46" MPD_INDEX="46" NAME="INTC_IRQ" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="INTC_IRQ">
           <DESCRIPTION>Interrupt Request Output</DESCRIPTION>
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[INTERRUPT]" INSTANCE="placeholder" PORT="INTERRUPT"/>
-            <CONNECTION INSTANCE="placeholder" PORT="WAKEUP"/>
+            <CONNECTION BUSINTERFACE="[INTERRUPT]" INSTANCE="%microblaze_instance%" PORT="INTERRUPT"/>
+            <CONNECTION INSTANCE="%microblaze_instance%" PORT="WAKEUP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="INTERRUPT" DEF_SIGNAME="Interrupt_Address" DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="31" LSB="0" MHS_INDEX="47" MPD_INDEX="48" MSB="31" NAME="INTC_Interrupt_Address" RIGHT="0" SIGNAME="Interrupt_Address" VECFORMULA="[31:0]">
           <DESCRIPTION>Interrupt Vector Address Output</DESCRIPTION>
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[INTERRUPT]" INSTANCE="placeholder" PORT="INTERRUPT_ADDRESS"/>
+            <CONNECTION BUSINTERFACE="[INTERRUPT]" INSTANCE="%microblaze_instance%" PORT="INTERRUPT_ADDRESS"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="INTERRUPT" DEF_SIGNAME="Interrupt_Ack" DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="1" LSB="0" MHS_INDEX="48" MPD_INDEX="47" MSB="1" NAME="INTC_Processor_Ack" RIGHT="0" SIGNAME="Interrupt_Ack" VECFORMULA="[1:0]">
           <DESCRIPTION>Interrupt Acknowledgement Input</DESCRIPTION>
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[INTERRUPT]" INSTANCE="placeholder" PORT="INTERRUPT_ACK"/>
+            <CONNECTION BUSINTERFACE="[INTERRUPT]" INSTANCE="%microblaze_instance%" PORT="INTERRUPT_ACK"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="SLMB" DEF_SIGNAME="dlmb_LMB_ABus" DIR="I" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="49" MSB="0" NAME="LMB_ABus" RIGHT="31" SIGNAME="dlmb_LMB_ABus" VECFORMULA="[0:C_LMB_AWIDTH-1]">
@@ -5830,4 +5830,4 @@
   </MODULES>
 
 </EDKSYSTEM>
-
+}

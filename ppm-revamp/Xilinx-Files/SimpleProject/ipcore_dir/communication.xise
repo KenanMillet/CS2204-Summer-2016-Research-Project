@@ -15,25 +15,25 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="microblaze_mcs/mb_bootloop_le.elf" xil_pn:type="FILE_ELF">
+    <file xil_pn:name="communication/mb_bootloop_le.elf" xil_pn:type="FILE_ELF">
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="microblaze_mcs/system_template.tcl" xil_pn:type="FILE_TCL"/>
-    <file xil_pn:name="microblaze_mcs/microblaze_mcs_setup.tcl" xil_pn:type="FILE_TCL"/>
-    <file xil_pn:name="microblaze_mcs.ngc" xil_pn:type="FILE_NGC">
+    <file xil_pn:name="communication/system_template.tcl" xil_pn:type="FILE_TCL"/>
+    <file xil_pn:name="communication/microblaze_mcs_setup.tcl" xil_pn:type="FILE_TCL"/>
+    <file xil_pn:name="communication.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
-    <file xil_pn:name="mb_bootloop_le.elf" xil_pn:type="FILE_ELF">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
+    <file xil_pn:name="communication.bmm" xil_pn:type="FILE_BMM">
       <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
-    <file xil_pn:name="microblaze_mcs.bmm" xil_pn:type="FILE_BMM">
-      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
+    <file xil_pn:name="communication_sdk.xml" xil_pn:type="FILE_FITTER_REPORT"/>
+    <file xil_pn:name="mb_bootloop_le.elf" xil_pn:type="FILE_ELF">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="7"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
     </file>
-    <file xil_pn:name="microblaze_mcs_sdk.xml" xil_pn:type="FILE_FITTER_REPORT"/>
     <file xil_pn:name="microblaze_mcs_setup.tcl" xil_pn:type="FILE_TCL"/>
-    <file xil_pn:name="microblaze_mcs.vho" xil_pn:type="FILE_VHO"/>
-    <file xil_pn:name="microblaze_mcs.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="communication.vho" xil_pn:type="FILE_VHO"/>
+    <file xil_pn:name="communication.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="10"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="10"/>
@@ -48,8 +48,8 @@
     <property xil_pn:name="Device" xil_pn:value="xc7a100t" xil_pn:valueState="default"/>
     <property xil_pn:name="Device Family" xil_pn:value="Artix7" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Stop View" xil_pn:value="PreSynthesis" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top" xil_pn:value="Module|microblaze_mcs" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/microblaze_mcs" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top" xil_pn:value="Module|communication" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/communication" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Manual Implementation Compile Order" xil_pn:value="true" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Package" xil_pn:value="csg324" xil_pn:valueState="default"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="Verilog" xil_pn:valueState="default"/>
@@ -63,10 +63,10 @@
     <!--                                                                                  -->
     <!-- The following properties are for internal use only. These should not be modified.-->
     <!--                                                                                  -->
-    <property xil_pn:name="PROP_DesignName" xil_pn:value="microblaze_mcs" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_DesignName" xil_pn:value="communication" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_DevFamilyPMName" xil_pn:value="artix7" xil_pn:valueState="default"/>
-    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2016-06-09T14:08:52" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="04E80D2D036042DE936BD1F8AEB062EB" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2016-06-10T16:36:55" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="5C36F2A49D7A4673A730502C5D22CE76" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirLocWRTProjDir" xil_pn:value="Same" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirUsed" xil_pn:value="No" xil_pn:valueState="non-default"/>
   </properties>

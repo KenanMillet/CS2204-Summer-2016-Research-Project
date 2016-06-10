@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/08/2016 16:43:52
+-- /___/   /\     Timestamp : 06/10/2016 16:41:01
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm revamp/Xilinx Files/SimpleProject/ipcore_dir" -intstyle ise -family artix7 -flat -suppress -vhdl "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm revamp/Xilinx Files/SimpleProject/simple.vhf" -w "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm revamp/Xilinx Files/SimpleProject/simple.sch"
+--Command: sch2hdl -sympath C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/SimpleProject/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/SimpleProject/simple.vhf -w C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/SimpleProject/simple.sch
 --Design Name: simple
 --Device: artix7
 --Purpose:
@@ -120,26 +120,85 @@ use ieee.numeric_std.ALL;
 library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
+entity RisingEdge_MUSER_simple is
+   port ( C : in    std_logic; 
+          D : in    std_logic; 
+          Q : out   std_logic);
+end RisingEdge_MUSER_simple;
+
+architecture BEHAVIORAL of RisingEdge_MUSER_simple is
+   attribute BOX_TYPE   : string ;
+   signal XLXN_7 : std_logic;
+   signal XLXN_9 : std_logic;
+   component AND2
+      port ( I0 : in    std_logic; 
+             I1 : in    std_logic; 
+             O  : out   std_logic);
+   end component;
+   attribute BOX_TYPE of AND2 : component is "BLACK_BOX";
+   
+   component INV
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute BOX_TYPE of INV : component is "BLACK_BOX";
+   
+   component FD
+      generic( INIT : bit :=  '0');
+      port ( C : in    std_logic; 
+             D : in    std_logic; 
+             Q : out   std_logic);
+   end component;
+   attribute BOX_TYPE of FD : component is "BLACK_BOX";
+   
+begin
+   XLXI_1 : AND2
+      port map (I0=>XLXN_7,
+                I1=>D,
+                O=>Q);
+   
+   XLXI_4 : INV
+      port map (I=>XLXN_9,
+                O=>XLXN_7);
+   
+   XLXI_7 : FD
+      port map (C=>C,
+                D=>D,
+                Q=>XLXN_9);
+   
+end BEHAVIORAL;
+
+
+
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.ALL;
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+
 entity simple is
-   port ( );
+   port ( OBClk   : in    std_logic; 
+          usb_in  : in    std_logic; 
+          usb_out : out   std_logic);
 end simple;
 
 architecture BEHAVIORAL of simple is
-   attribute HU_SET     : string ;
-   attribute BOX_TYPE   : string ;
-   signal CLOCK                             : std_logic;
-   signal uCont_gpi1                        : std_logic_vector (31 downto 0);
-   signal uCont_gpo1                        : std_logic_vector (31 downto 0);
-   signal usb_in                            : std_logic;
-   signal usb_out                           : std_logic;
-   signal XLXN_14                           : std_logic;
-   signal XLXN_15                           : std_logic;
-   signal XLXN_45                           : std_logic;
-   signal XLXN_46                           : std_logic;
-   signal XLXN_47                           : std_logic;
-   signal XLXN_48                           : std_logic;
-   signal XLXN_49                           : std_logic;
-   signal XLXI_13_intc_interrupt_openSignal : std_logic_vector (0 downto 0);
+   attribute HU_SET      : string ;
+   attribute BOX_TYPE    : string ;
+   attribute IOSTANDARD  : string ;
+   attribute CAPACITANCE : string ;
+   signal CLOCK      : std_logic;
+   signal uCont_gpi1 : std_logic_vector (31 downto 0);
+   signal uCont_gpo1 : std_logic_vector (31 downto 0);
+   signal XLXN_14    : std_logic;
+   signal XLXN_15    : std_logic;
+   signal XLXN_45    : std_logic;
+   signal XLXN_46    : std_logic;
+   signal XLXN_47    : std_logic;
+   signal XLXN_48    : std_logic;
+   signal XLXN_49    : std_logic;
+   signal XLXN_56    : std_logic;
+   signal XLXN_61    : std_logic;
    component FD4CE_HXILINX_simple
       port ( C   : in    std_logic; 
              CE  : in    std_logic; 
@@ -177,15 +236,35 @@ architecture BEHAVIORAL of simple is
    end component;
    attribute BOX_TYPE of GND : component is "BLACK_BOX";
    
-   component placeholder
+   component IBUF
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute IOSTANDARD of IBUF : component is "DEFAULT";
+   attribute CAPACITANCE of IBUF : component is "DONT_CARE";
+   attribute BOX_TYPE of IBUF : component is "BLACK_BOX";
+   
+   component BUFG
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute BOX_TYPE of BUFG : component is "BLACK_BOX";
+   
+   component RisingEdge_MUSER_simple
+      port ( D : in    std_logic; 
+             C : in    std_logic; 
+             Q : out   std_logic);
+   end component;
+   
+   component communication
       port ( clk            : in    std_logic; 
              reset          : in    std_logic; 
              uart_tx        : out   std_logic; 
              uart_rx        : in    std_logic; 
+             uart_interrupt : out   std_logic; 
              gpi1           : in    std_logic_vector (31 downto 0); 
              gpo1           : out   std_logic_vector (31 downto 0); 
-             intc_irq       : out   std_logic; 
-             intc_interrupt : in    std_logic_vector (0 downto 0));
+             intc_irq       : out   std_logic);
    end component;
    
    attribute HU_SET of XLXI_1 : label is "XLXI_1_0";
@@ -193,7 +272,7 @@ architecture BEHAVIORAL of simple is
 begin
    XLXI_1 : FD4CE_HXILINX_simple
       port map (C=>CLOCK,
-                CE=>uCont_gpo1(4),
+                CE=>XLXN_61,
                 CLR=>XLXN_48,
                 D0=>XLXN_14,
                 D1=>XLXN_15,
@@ -227,18 +306,31 @@ begin
    XLXI_12 : GND
       port map (G=>XLXN_48);
    
-   XLXI_13 : placeholder
+   XLXI_15 : GND
+      port map (G=>XLXN_49);
+   
+   XLXI_17 : IBUF
+      port map (I=>OBClk,
+                O=>XLXN_56);
+   
+   XLXI_18 : BUFG
+      port map (I=>XLXN_56,
+                O=>CLOCK);
+   
+   XLXI_22 : RisingEdge_MUSER_simple
+      port map (C=>CLOCK,
+                D=>uCont_gpo1(4),
+                Q=>XLXN_61);
+   
+   XLXI_23 : communication
       port map (clk=>CLOCK,
                 gpi1(31 downto 0)=>uCont_gpi1(31 downto 0),
-                intc_interrupt(0)=>XLXI_13_intc_interrupt_openSignal(0),
                 reset=>XLXN_49,
                 uart_rx=>usb_in,
                 gpo1(31 downto 0)=>uCont_gpo1(31 downto 0),
                 intc_irq=>open,
+                uart_interrupt=>open,
                 uart_tx=>usb_out);
-   
-   XLXI_15 : GND
-      port map (G=>XLXN_49);
    
 end BEHAVIORAL;
 

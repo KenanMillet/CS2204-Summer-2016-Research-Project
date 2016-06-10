@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<symbol version="7" name="placeholder">
+<symbol version="7" name="communication">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2016-6-10T20:15:38</timestamp>
+    <timestamp>2016-6-10T20:36:53</timestamp>
     <pin polarity="Input" x="0" y="80" name="clk" />
     <pin polarity="Input" x="0" y="112" name="reset" />
     <pin polarity="Output" x="768" y="80" name="uart_tx" />
@@ -11,7 +11,7 @@
     <pin polarity="Output" x="768" y="784" name="gpo1[31:0]" />
     <pin polarity="Output" x="768" y="912" name="intc_irq" />
     <graph>
-        <text style="fontsize:40;fontname:Arial" x="32" y="32">placeholder</text>
+        <text style="fontsize:40;fontname:Arial" x="32" y="32">communication</text>
         <rect width="704" x="32" y="32" height="1696" />
         <line x2="32" y1="80" y2="80" x1="0" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="80" type="pin clk" />
