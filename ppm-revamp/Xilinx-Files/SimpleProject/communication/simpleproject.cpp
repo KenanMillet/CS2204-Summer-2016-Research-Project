@@ -4,8 +4,9 @@
 
  #include "platform.h"
  #include <stdio.h>
+ #include <stdlib.h>	//strtol
  #include <xiomodule.h>
- #include <iostream>
+ #include <xparameters.h>
  using namespace std;
 
 XIOModule uart;
