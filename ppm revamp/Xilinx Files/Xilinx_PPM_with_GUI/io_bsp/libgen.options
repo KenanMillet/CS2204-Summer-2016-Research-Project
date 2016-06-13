@@ -1,3 +1,0 @@
-PROCESSOR=mcs_io
-REPOSITORIES=
-HWSPEC=../hw_platform_1/system.xml
