@@ -5,70 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="sim" num="172" delta="new" >Generating IP...
+<msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
 <msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">VHDL simulation file type &apos;Behavioral&apos; is not valid for this core. Overriding with simulation file type &apos;Structural&apos;.</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Could not open output file</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   &apos;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-rev</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   amp/Xilinx-Files/SimpleProject/ipcore_dir/tmp/_cg/_dbg/xil_718.out&apos;.</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Could not close output stream to</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   &apos;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-rev</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   amp/Xilinx-Files/SimpleProject/ipcore_dir/tmp/_cg/_dbg/xil_718.out&apos;.</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Could not make customization output file</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   &apos;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-rev</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   amp/Xilinx-Files/SimpleProject/ipcore_dir/tmp/_cg/_dbg/xil_718.out&apos; writable.</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Error writing to customization output file</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   &apos;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-rev</arg>
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   amp/Xilinx-Files/SimpleProject/ipcore_dir/tmp/_cg/_dbg/xil_718.out&apos;.</arg>
-</msg>
-
-<msg type="warning" file="coreutil" num="0" delta="new" >couldn&apos;t open &quot;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/SimpleProject/ipcore_dir/tmp/_cg/_dbg/xil_718.out&quot;: no such file or directory
-    while executing
-&quot;open ${outFileName} r&quot;
-    (procedure &quot;::xilinx::GeneratorUtils::readOutFile&quot; line 17)
-    invoked from within
-&quot;::xilinx::GeneratorUtils::readOutFile $componentInstanceID $outFileName&quot;
-    (procedure &quot;main&quot; line 40)
-    invoked from within
-&quot;main $argc $argv&quot;
-    invoked from within
-&quot;return [main $argc $argv]&quot;
-    (file &quot;C:\Xilinx\14.7\ISE_DS\ISE\coregen\repository\xilinx.com\generators\customization_generator_v1_0.tcl&quot; line 58)</msg>
-
-<msg type="error" file="sim" num="0" delta="new" >Unable to evaluate Tcl file:
-   C:\Xilinx\14.7\ISE_DS\ISE\coregen\repository\xilinx.com\generators\customization_generator_v1_0.tcl
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" >Failed executing Tcl generator.
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" >Failed to generate &apos;placeholder&apos;.  Failed executing Tcl generator.
-
 </msg>
 
 </messages>
