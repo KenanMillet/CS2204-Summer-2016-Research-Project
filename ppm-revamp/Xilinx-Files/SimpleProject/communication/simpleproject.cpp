@@ -30,12 +30,13 @@ void init_gpio(){
 }
 
 void serialize_GPI_data_send(){ //reads from GPI and send to USB 
-	(u8)gpiData = XIOModule_DiscreteRead($gpio, 1); // Reads Binary number in parallel from GPI1 line
+	(u8)gpiData = XIOModule_DiscreteRead(&gpio, 1); // Reads Binary number in parallel from GPI1 line
 	xil_printf("%x",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
 void deserialize_UART_data_send(){
 	u8 *dataBuffer = new u8[3];
+	u8 *end = dataBuffer;
 	
 	u32 data = 0;
 	
@@ -43,16 +44,19 @@ void deserialize_UART_data_send(){
 	dataBuffer[1] = inbyte();
 	dataBuffer[2] = '\0';
 	
-	data |= strtol(dataBuffer, dataBuffer+1, 16);
+	data |= strtol(dataBuffer, &(++end), 16);
 	if(data >> 1 == 0)
 	{
 		data <<= 4;
-		data |= strtol(dataBuffer+1, dataBuffer+2, 16);
+		data |= strtol(dataBuffer+1, &(++end), 16);
 	}
-	else data |= strtol(dataBuffer+1, dataBuffer+2, 16) << 4;
+	else data |= strtol(dataBuffer+1, &(++end), 16) << 4;
 	
-	XIOModule_DiscreteWrite($gpio, 1, data);
+	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
+
+//u32 data = inbyte();
+//dwrite(&gio, 1, data);
 
 int main(){
 	init_platform();
