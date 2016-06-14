@@ -25,8 +25,7 @@
         <signal name="XLXN_49" />
         <signal name="usb_in" />
         <signal name="usb_out" />
-        <signal name="CLOCK">
-        </signal>
+        <signal name="CLOCK" />
         <signal name="XLXN_56" />
         <signal name="OBClk" />
         <signal name="uCont_gpo1(4)" />
@@ -183,7 +182,7 @@
             <blockpin signalname="CLOCK" name="C" />
             <blockpin signalname="XLXN_61" name="Q" />
         </block>
-        <block symbolname="communication" name="XLXI_23">
+        <block symbolname="communication" name="mcs_0">
             <blockpin signalname="CLOCK" name="clk" />
             <blockpin signalname="XLXN_49" name="reset" />
             <blockpin signalname="usb_out" name="uart_tx" />
@@ -390,7 +389,7 @@
         </branch>
         <instance x="432" y="1344" name="XLXI_22" orien="M0">
         </instance>
-        <instance x="2176" y="272" name="XLXI_23" orien="R0">
+        <instance x="2176" y="272" name="mcs_0" orien="R0">
         </instance>
         <iomarker fontsize="28" x="3088" y="352" name="usb_out" orien="R0" />
         <iomarker fontsize="28" x="2048" y="480" name="usb_in" orien="R180" />

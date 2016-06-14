@@ -15,9 +15,7 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="microblaze_mcs/mb_bootloop_le.elf" xil_pn:type="FILE_ELF">
-      <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
-    </file>
+    <file xil_pn:name="microblaze_mcs/mb_bootloop_le.elf" xil_pn:type="FILE_ELF"/>
     <file xil_pn:name="microblaze_mcs/system_template.tcl" xil_pn:type="FILE_TCL"/>
     <file xil_pn:name="microblaze_mcs/microblaze_mcs_setup.tcl" xil_pn:type="FILE_TCL"/>
     <file xil_pn:name="microblaze_mcs.ngc" xil_pn:type="FILE_NGC">

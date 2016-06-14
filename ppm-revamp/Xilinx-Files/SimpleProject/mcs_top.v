@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    16:08:42 06/10/2016 
+// Create Date:    14:24:57 06/13/2016 
 // Design Name: 
 // Module Name:    mcs_top 
 // Project Name: 
@@ -20,31 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 module mcs_top(
 	input clk_fpga,
-
 	input reset,
-
 	input rx,
+	input tx,
+	input[31:0] number,
+	output[31:0] addition
+    );
 
-	output tx
-
-);
-
-microblaze_mcs mcs_0 (
-
-	.Clk(clk_fpga), // input Clk
-
-	.Reset(reset), // input Reset
-
-	.UART_Rx(rx), // input UART_Rx
-
-	.UART_Tx(tx), // output UART_Tx
-
-	.GPO1(leds), // ouput [7 : 0] GPO1
-
-	.GPI1(switch), // input [7 : 0] GPI1
-
-	.GPI1_Interrupt() // output GPI1_Interrupt
-);
-
-
+communication mcs_0(
+	.Clk(clk_fpga),
+	.Reset(reset),
+	.UART_Rx(rx),
+	.UART_Tx(tx),
+	.GPI1(number),
+	.GPO1(addition),
+	.GPI1_Interrupt()
+	
+	);
 endmodule

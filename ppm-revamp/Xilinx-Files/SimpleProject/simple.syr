@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: simple.prj
 
@@ -127,13 +127,13 @@ Parsing architecture <BEHAVIORAL> of entity <simple>.
 =========================================================================
 
 Elaborating entity <simple> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" Line 202: <communication> remains a black-box since it has no binding entity.
 
 Elaborating entity <FD4CE_HXILINX_simple> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ADD4_HXILINX_simple> (architecture <ADD4_HXILINX_simple_V>) from library <work>.
 
 Elaborating entity <RisingEdge_MUSER_simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" Line 259: <communication> remains a black-box since it has no binding entity.
 WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" Line 191: Net <uCont_gpi1[31]> does not have a driver.
 
 =========================================================================
@@ -146,10 +146,10 @@ Synthesizing Unit <simple>.
     Set property "HU_SET = XLXI_2_1" for instance <XLXI_2>.
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_17>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_17>.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 286: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 286: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 325: Output port <uart_interrupt> of the instance <XLXI_23> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 325: Output port <intc_irq> of the instance <XLXI_23> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 273: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 273: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 296: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\simple.vhf" line 296: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <uCont_gpi1<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
@@ -195,7 +195,7 @@ Macro Statistics
 =========================================================================
 
 Reading core <ipcore_dir/communication.ngc>.
-Loading core <communication> for timing and area information for instance <XLXI_23>.
+Loading core <communication> for timing and area information for instance <mcs_0>.
 INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
 INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
 
@@ -223,12 +223,12 @@ Optimizing unit <ADD4_HXILINX_simple> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block simple, actual ratio is 0.
-INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <XLXI_23> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <XLXI_23> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> 
-INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <XLXI_23> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <XLXI_23> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> 
 
@@ -348,26 +348,26 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Clock Signal                                                                       | Clock buffer(FF name)                                                                                                                                          | Load  |
------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-OBClk                                                                              | IBUF+BUFG                                                                                                                                                      | 647   |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0| NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 1     |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0| NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 1     |
------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+---------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                     | Clock buffer(FF name)                                                                                                                                        | Load  |
+---------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+OBClk                                                                            | IBUF+BUFG                                                                                                                                                    | 647   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 1     |
+---------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                                                                  | Buffer(FF name)                                                                                                                                                | Load  |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N11(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/XST_VCC:P)| NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 124   |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N11(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/XST_VCC:P)| NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 124   |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/XST_GND:G) | NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 72    |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/XST_GND:G) | NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 72    |
-XLXI_23/N1(XLXI_23/XST_GND:G)                                                                                                                                                   | NONE(XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 8     |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                              | Buffer(FF name)                                                                                                                                              | Load  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 72    |
+mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                                                   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 8     |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -388,12 +388,12 @@ Timing constraint: Default period analysis for Clock 'OBClk'
   Total number of paths / destination ports: 62018 / 2062
 -------------------------------------------------------------------------
 Delay:               3.726ns (Levels of Logic = 4)
-  Source:            XLXI_23/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
-  Destination:       XLXI_23/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF (FF)
+  Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF (FF)
   Source Clock:      OBClk rising
   Destination Clock: OBClk rising
 
-  Data Path: XLXI_23/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 to XLXI_23/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF
+  Data Path: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -413,15 +413,15 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'OBClk'
 -------------------------------------------------------------------------
 Offset:              0.401ns (Levels of Logic = 3)
   Source:            usb_in (PAD)
-  Destination:       XLXI_23/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1 (FF)
+  Destination:       mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1 (FF)
   Destination Clock: OBClk rising
 
-  Data Path: usb_in to XLXI_23/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+  Data Path: usb_in to mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.295  usb_in_IBUF (usb_in_IBUF)
-     begin scope: 'XLXI_23:uart_rx'
+     begin scope: 'mcs_0:uart_rx'
      LUT2:I1->O            1   0.097   0.000  U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/Mmux_RX_PWR_90_o_MUX_4561_o11 (U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/RX_PWR_90_o_MUX_4561_o)
      FD:D                      0.008          U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
     ----------------------------------------
@@ -433,16 +433,16 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'OBClk'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              0.640ns (Levels of Logic = 2)
-  Source:            XLXI_23/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (FF)
+  Source:            mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (FF)
   Destination:       usb_out (PAD)
   Source Clock:      OBClk rising
 
-  Data Path: XLXI_23/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX to usb_out
+  Data Path: mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX to usb_out
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDS:C->Q              1   0.361   0.279  U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (uart_tx)
-     end scope: 'XLXI_23:uart_tx'
+     end scope: 'mcs_0:uart_tx'
      OBUF:I->O                 0.000          usb_out_OBUF (usb_out)
     ----------------------------------------
     Total                      0.640ns (0.361ns logic, 0.279ns route)
@@ -454,20 +454,20 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock OBClk
------------------------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------------------------------------------------------+---------+---------+---------+---------+
-OBClk                                                                              |    3.726|         |         |         |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0|    4.135|         |         |         |
-XLXI_23/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0|    4.132|         |         |         |
------------------------------------------------------------------------------------+---------+---------+---------+---------+
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
+OBClk                                                                            |    3.726|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0|    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0|    4.132|         |         |         |
+---------------------------------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.29 secs
+Total CPU time to Xst completion: 9.42 secs
  
 --> 
 

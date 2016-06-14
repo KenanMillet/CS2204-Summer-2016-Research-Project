@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/10/2016 16:41:01
+-- /___/   /\     Timestamp : 06/14/2016 12:17:48
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -199,6 +199,17 @@ architecture BEHAVIORAL of simple is
    signal XLXN_49    : std_logic;
    signal XLXN_56    : std_logic;
    signal XLXN_61    : std_logic;
+   component communication
+      port ( clk            : in    std_logic; 
+             reset          : in    std_logic; 
+             uart_tx        : out   std_logic; 
+             uart_rx        : in    std_logic; 
+             uart_interrupt : out   std_logic; 
+             gpi1           : in    std_logic_vector (31 downto 0); 
+             gpo1           : out   std_logic_vector (31 downto 0); 
+             intc_irq       : out   std_logic);
+   end component;
+   
    component FD4CE_HXILINX_simple
       port ( C   : in    std_logic; 
              CE  : in    std_logic; 
@@ -256,20 +267,19 @@ architecture BEHAVIORAL of simple is
              Q : out   std_logic);
    end component;
    
-   component communication
-      port ( clk            : in    std_logic; 
-             reset          : in    std_logic; 
-             uart_tx        : out   std_logic; 
-             uart_rx        : in    std_logic; 
-             uart_interrupt : out   std_logic; 
-             gpi1           : in    std_logic_vector (31 downto 0); 
-             gpo1           : out   std_logic_vector (31 downto 0); 
-             intc_irq       : out   std_logic);
-   end component;
-   
    attribute HU_SET of XLXI_1 : label is "XLXI_1_0";
    attribute HU_SET of XLXI_2 : label is "XLXI_2_1";
 begin
+   mcs_0 : communication
+      port map (clk=>CLOCK,
+                gpi1(31 downto 0)=>uCont_gpi1(31 downto 0),
+                reset=>XLXN_49,
+                uart_rx=>usb_in,
+                gpo1(31 downto 0)=>uCont_gpo1(31 downto 0),
+                intc_irq=>open,
+                uart_interrupt=>open,
+                uart_tx=>usb_out);
+   
    XLXI_1 : FD4CE_HXILINX_simple
       port map (C=>CLOCK,
                 CE=>XLXN_61,
@@ -321,16 +331,6 @@ begin
       port map (C=>CLOCK,
                 D=>uCont_gpo1(4),
                 Q=>XLXN_61);
-   
-   XLXI_23 : communication
-      port map (clk=>CLOCK,
-                gpi1(31 downto 0)=>uCont_gpi1(31 downto 0),
-                reset=>XLXN_49,
-                uart_rx=>usb_in,
-                gpo1(31 downto 0)=>uCont_gpo1(31 downto 0),
-                intc_irq=>open,
-                uart_interrupt=>open,
-                uart_tx=>usb_out);
    
 end BEHAVIORAL;
 
