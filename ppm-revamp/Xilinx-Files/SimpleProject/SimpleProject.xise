@@ -38,6 +38,10 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="37"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
+    <file xil_pn:name="EDK/code2.0/Debug/code2.0.elf" xil_pn:type="FILE_ELF">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="75"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="75"/>
+    </file>
     <file xil_pn:name="ipcore_dir/communication.xise" xil_pn:type="FILE_COREGENISE">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>

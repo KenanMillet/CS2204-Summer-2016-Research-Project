@@ -331,18 +331,15 @@
             <wire x2="1056" y1="1440" y2="1456" x1="1056" />
         </branch>
         <branch name="XLXN_49">
-            <wire x2="2176" y1="384" y2="384" x1="2144" />
+            <wire x2="2160" y1="384" y2="384" x1="2144" />
+            <wire x2="2176" y1="384" y2="384" x1="2160" />
         </branch>
         <instance x="2016" y="320" name="XLXI_15" orien="R90" />
-        <branch name="usb_in">
-            <wire x2="2160" y1="480" y2="480" x1="2048" />
-            <wire x2="2176" y1="416" y2="416" x1="2160" />
-            <wire x2="2160" y1="416" y2="480" x1="2160" />
-        </branch>
         <branch name="usb_out">
             <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="3079" y="352" type="branch" />
             <wire x2="2960" y1="352" y2="352" x1="2944" />
-            <wire x2="3088" y1="352" y2="352" x1="2960" />
+            <wire x2="3072" y1="352" y2="352" x1="2960" />
+            <wire x2="3088" y1="352" y2="352" x1="3072" />
         </branch>
         <branch name="CLOCK">
             <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="2064" y="272" type="branch" />
@@ -389,10 +386,16 @@
         </branch>
         <instance x="432" y="1344" name="XLXI_22" orien="M0">
         </instance>
-        <instance x="2176" y="272" name="mcs_0" orien="R0">
-        </instance>
         <iomarker fontsize="28" x="3088" y="352" name="usb_out" orien="R0" />
         <iomarker fontsize="28" x="2048" y="480" name="usb_in" orien="R180" />
         <iomarker fontsize="28" x="400" y="2304" name="OBClk" orien="R180" />
+        <branch name="usb_in">
+            <wire x2="2064" y1="480" y2="480" x1="2048" />
+            <wire x2="2160" y1="480" y2="480" x1="2064" />
+            <wire x2="2160" y1="416" y2="480" x1="2160" />
+            <wire x2="2176" y1="416" y2="416" x1="2160" />
+        </branch>
+        <instance x="2176" y="272" name="mcs_0" orien="R0">
+        </instance>
     </sheet>
 </drawing>
