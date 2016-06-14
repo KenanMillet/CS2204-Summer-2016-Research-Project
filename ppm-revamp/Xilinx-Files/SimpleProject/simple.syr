@@ -196,8 +196,22 @@ Macro Statistics
 
 Reading core <ipcore_dir/communication.ngc>.
 Loading core <communication> for timing and area information for instance <mcs_0>.
-INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
-INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -262,37 +276,37 @@ Top Level Output File Name         : simple.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 823
+# BELS                             : 872
 #      AND2                        : 1
-#      GND                         : 4
+#      GND                         : 18
 #      INV                         : 13
 #      LUT1                        : 3
 #      LUT2                        : 47
 #      LUT3                        : 57
-#      LUT4                        : 233
-#      LUT5                        : 50
+#      LUT4                        : 245
+#      LUT5                        : 53
 #      LUT6                        : 129
 #      LUT6_2                      : 90
 #      MULT_AND                    : 3
-#      MUXCY_L                     : 73
+#      MUXCY_L                     : 76
 #      MUXF5                       : 66
 #      MUXF6                       : 1
 #      MUXF7                       : 1
-#      VCC                         : 3
-#      XORCY                       : 49
-# FlipFlops/Latches                : 531
-#      FD                          : 109
+#      VCC                         : 17
+#      XORCY                       : 52
+# FlipFlops/Latches                : 552
+#      FD                          : 112
 #      FDCE                        : 4
-#      FDE                         : 123
+#      FDE                         : 138
 #      FDR                         : 109
 #      FDRE                        : 161
 #      FDS                         : 9
-#      FDSE                        : 16
-# RAMS                             : 66
+#      FDSE                        : 19
+# RAMS                             : 80
 #      RAM32X1D                    : 64
-#      RAMB36E1                    : 2
-# Shift Registers                  : 50
-#      SRL16E                      : 49
+#      RAMB36E1                    : 16
+# Shift Registers                  : 53
+#      SRL16E                      : 52
 #      SRLC16E                     : 1
 # Clock Buffers                    : 1
 #      BUFG                        : 1
@@ -307,18 +321,18 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             531  out of  126800     0%  
- Number of Slice LUTs:                  800  out of  63400     1%  
-    Number used as Logic:               622  out of  63400     0%  
-    Number used as Memory:              178  out of  19000     0%  
+ Number of Slice Registers:             552  out of  126800     0%  
+ Number of Slice LUTs:                  818  out of  63400     1%  
+    Number used as Logic:               637  out of  63400     1%  
+    Number used as Memory:              181  out of  19000     0%  
        Number used as RAM:              128
-       Number used as SRL:               50
+       Number used as SRL:               53
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1080
-   Number with an unused Flip Flop:     549  out of   1080    50%  
-   Number with an unused LUT:           280  out of   1080    25%  
-   Number of fully used LUT-FF pairs:   251  out of   1080    23%  
+ Number of LUT Flip Flop pairs used:   1110
+   Number with an unused Flip Flop:     558  out of   1110    50%  
+   Number with an unused LUT:           292  out of   1110    26%  
+   Number of fully used LUT-FF pairs:   260  out of   1110    23%  
    Number of unique control sets:        44
 
 IO Utilization: 
@@ -326,8 +340,8 @@ IO Utilization:
  Number of bonded IOBs:                   3  out of    210     1%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                2  out of    135     1%  
-    Number using Block RAM only:          2
+ Number of Block RAM/FIFO:               16  out of    135    11%  
+    Number using Block RAM only:         16
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
@@ -348,26 +362,68 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Clock Signal                                                                     | Clock buffer(FF name)                                                                                                                                        | Load  |
----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-OBClk                                                                            | IBUF+BUFG                                                                                                                                                    | 647   |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 1     |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 1     |
----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                        | Clock buffer(FF name)                                                                                                              | Load  |
+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+OBClk                                                               | IBUF+BUFG                                                                                                                          | 685   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 1     |
+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                                                              | Buffer(FF name)                                                                                                                                              | Load  |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 124   |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 124   |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1)| 72    |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 72    |
-mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                                                   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1)| 8     |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                    | Buffer(FF name)                                                                                                                    | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
+mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                         | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 64    |
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -385,7 +441,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'OBClk'
   Clock period: 3.726ns (frequency: 268.393MHz)
-  Total number of paths / destination ports: 62018 / 2062
+  Total number of paths / destination ports: 63272 / 2119
 -------------------------------------------------------------------------
 Delay:               3.726ns (Levels of Logic = 4)
   Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
@@ -422,7 +478,7 @@ Offset:              0.401ns (Levels of Logic = 3)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.295  usb_in_IBUF (usb_in_IBUF)
      begin scope: 'mcs_0:uart_rx'
-     LUT2:I1->O            1   0.097   0.000  U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/Mmux_RX_PWR_90_o_MUX_4561_o11 (U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/RX_PWR_90_o_MUX_4561_o)
+     LUT2:I1->O            1   0.097   0.000  U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/Mmux_RX_PWR_118_o_MUX_4561_o11 (U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/RX_PWR_118_o_MUX_4561_o)
      FD:D                      0.008          U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
     ----------------------------------------
     Total                      0.401ns (0.106ns logic, 0.295ns route)
@@ -454,26 +510,40 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock OBClk
----------------------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------------------------------------------------------------------+---------+---------+---------+---------+
-OBClk                                                                            |    3.726|         |         |         |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[0].RAMB36_I1/N0|    4.135|         |         |         |
-mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B16_S18.Using_RAMB36.The_BRAMs[1].RAMB36_I1/N0|    4.132|         |         |         |
----------------------------------------------------------------------------------+---------+---------+---------+---------+
+--------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------+---------+---------+---------+---------+
+OBClk                                                               |    3.726|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0|    4.132|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0|    4.132|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 |    4.132|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132|         |         |         |
+--------------------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.15 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.03 secs
  
 --> 
 
-Total memory usage is 467432 kilobytes
+Total memory usage is 469480 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of infos    :   25 (   0 filtered)
 

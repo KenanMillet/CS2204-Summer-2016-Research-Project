@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="communication">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2016-6-10T20:36:53</timestamp>
+    <timestamp>2016-6-14T20:49:16</timestamp>
     <pin polarity="Input" x="0" y="80" name="clk" />
     <pin polarity="Input" x="0" y="112" name="reset" />
     <pin polarity="Output" x="768" y="80" name="uart_tx" />
