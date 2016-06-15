@@ -1,3 +1,0 @@
-PROCESSOR=communication
-REPOSITORIES=
-HWSPEC=../microblazebsp/system.xml

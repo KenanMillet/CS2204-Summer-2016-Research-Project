@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="bootloop" key="simple_hwp-communication-initElf"/>
-	<item value="system_bd.bmm" key="simple_hwp-bmmFile"/>
-	<item value="" key="simple_hwp-bitFile"/>
-</section>
