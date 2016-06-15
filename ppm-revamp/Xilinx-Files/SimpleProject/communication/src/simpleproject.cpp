@@ -12,6 +12,12 @@
 XIOModule uart;
 XIOModule gpio;
 
+char inbyte(void);
+void init_uart_interrupt();
+void init_gpio();
+void serialize_GPI_data_send();
+void deserialize_UART_data_send(void*);
+
 void init_uart_interrupt(){
 	XIOModule_Initialize(&uart, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
 
@@ -30,33 +36,33 @@ void init_gpio(){
 }
 
 void serialize_GPI_data_send(){ //reads from GPI and send to USB 
-	(u8)gpiData = XIOModule_DiscreteRead(&gpio, 1); // Reads Binary number in parallel from GPI1 line
+	u8 gpiData = XIOModule_DiscreteRead(&gpio, 1); // Reads Binary number in parallel from GPI1 line
 	xil_printf("%x",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
-void deserialize_UART_data_send(){
-	u8 *dataBuffer = new u8[3];
-	u8 *end = dataBuffer;
+void deserialize_UART_data_send(void*){
+	u8 dataBuffer[3];
+	const char *start = (const char*)&dataBuffer;
+	char *end = (char*)&dataBuffer;
+
+
 	
 	u32 data = 0;
 	
-	dataBuffer[0] = inbyte();
-	dataBuffer[1] = inbyte();
+	dataBuffer[0] = XIOModule_RecvByte(STDIN_BASEADDRESS);;
+	dataBuffer[1] = XIOModule_RecvByte(STDIN_BASEADDRESS);;
 	dataBuffer[2] = '\0';
 	
-	data |= strtol(dataBuffer, &(++end), 16);
+	data |= strtol(start++, &(++end), 16);
 	if(data >> 1 == 0)
 	{
 		data <<= 4;
-		data |= strtol(dataBuffer+1, &(++end), 16);
+		data |= strtol(start, &(++end), 16);
 	}
-	else data |= strtol(dataBuffer+1, &(++end), 16) << 4;
+	else data |= strtol(start, &(++end), 16) << 4;
 	
 	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
-
-//u32 data = inbyte();
-//dwrite(&gio, 1, data);
 
 int main(){
 	init_platform();
