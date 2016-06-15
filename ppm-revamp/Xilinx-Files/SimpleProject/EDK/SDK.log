@@ -1,0 +1,8 @@
+15:59:56.616 INFO  - Project 'communication_bsp' created. You can now create BSPs and application projects targeting this hardware platform. 
+16:04:42.119 ERROR - Exception while attemping to 'diff' hardware specification files. 
+16:04:42.250 INFO  - Project communication_bsp's source hardware specification located at C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\ipcore_dir\communication_sdk.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+16:04:58.585 ERROR - Unable to save current hardware specification file in a temporary location. 
+16:04:58.645 ERROR - File does not found exception. File provided:  C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\EDK\communication_bsp\system.xmljava.io.FileNotFoundException: C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\EDK\communication_bsp\system.xml (The system cannot find the path specified) 
+16:04:58.761 INFO  - Copied contents of C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\ipcore_dir\communication_sdk.xml into \communication_bsp\system.xml. 
+16:04:58.847 INFO  - Copied contents of C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\SimpleProject\ipcore_dir\communication.bmm into \communication_bsp\system_bd.bmm. 

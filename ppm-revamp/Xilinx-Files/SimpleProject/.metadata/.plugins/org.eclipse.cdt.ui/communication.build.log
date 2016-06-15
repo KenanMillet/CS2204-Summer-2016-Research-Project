@@ -1,0 +1,39 @@
+12:33:13 **** Auto Build of configuration Release for project communication ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../communication_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../communication_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: communication.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../communication_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "communication.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: communication.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size communication.elf  |tee "communication.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9682	    372	   2450	  12504	   30d8	communication.elf
+'Finished building: communication.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck communication.elf -hw ../../communication_hwp/system.xml -pe communication  |tee "communication.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../communication_hwp/system.xml -pe communication
+communication.elf 
+
+ELF file	: communication.elf
+elfcheck passed.
+'Finished building: communication.elf.elfcheck'
+' '
+
+12:33:15 Build Finished (took 1s.738ms)
+

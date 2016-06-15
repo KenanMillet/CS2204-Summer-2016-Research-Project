@@ -1,0 +1,7 @@
+16:04:58 **** Auto Build of project communication ****
+make -k all 
+Cannot run program "make": The directory name is invalid.
+
+
+16:04:58 Build Finished (took 23ms)
+
