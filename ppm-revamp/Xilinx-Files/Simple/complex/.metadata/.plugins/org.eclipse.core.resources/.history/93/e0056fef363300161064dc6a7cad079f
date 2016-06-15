@@ -11,6 +11,7 @@
 
 XIOModule uart;
 XIOModule gpio;
+u8 inc = 0;
 
 char inbyte(void);
 void init_uart_interrupt();
@@ -25,7 +26,8 @@ void init_uart_interrupt(){
 	microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID); // register the interrupt handler
 
 	XIOModule_Start(&uart); // start the GPO module
-	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)deserialize_UART_data_send, NULL); //set the receive function to run upon a uart_rx interrupt
+	//XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, deserialize_UART_data_send, NULL); //set the receive function to run upon a uart_rx interrupt
+	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, test, NULL);
 	XIOModule_Enable(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR); // enable the interrupt
 
 	microblaze_enable_interrupts(); // enable global interrupts
@@ -38,7 +40,7 @@ void init_gpio(){
 
 void serialize_GPI_data_send(){ //reads from GPI and send to USB 
 	u8 gpiData = XIOModule_DiscreteRead(&gpio, 1); // Reads Binary number in parallel from GPI1 line
-	xil_printf("%x\r\n",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
+	xil_printf("%x\r\n",gpiData+(inc++)); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
 void deserialize_UART_data_send(void*){
@@ -65,6 +67,10 @@ void deserialize_UART_data_send(void*){
 	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
+void test(void*){
+	u8 data = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	xil_printf("%x\r\n", data);
+}
 int main(){
 	init_platform();
 	init_gpio();

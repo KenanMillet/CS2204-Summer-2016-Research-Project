@@ -25,7 +25,8 @@ void init_uart_interrupt(){
 	microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID); // register the interrupt handler
 
 	XIOModule_Start(&uart); // start the GPO module
-	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)deserialize_UART_data_send, NULL); //set the receive function to run upon a uart_rx interrupt
+	//XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, deserialize_UART_data_send, NULL); //set the receive function to run upon a uart_rx interrupt
+	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)test, NULL);
 	XIOModule_Enable(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR); // enable the interrupt
 
 	microblaze_enable_interrupts(); // enable global interrupts
@@ -65,13 +66,17 @@ void deserialize_UART_data_send(void*){
 	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
+void test(void*){
+	u8 data = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	xil_printf("%c\r\n", data);
+}
 int main(){
 	init_platform();
 	init_gpio();
 	init_uart_interrupt();
 
 	while(1){
-		serialize_GPI_data_send();
+		//serialize_GPI_data_send();
 	}
 
 }

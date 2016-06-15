@@ -7,3 +7,45 @@
  
 13:17:21.468 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 13:20:15.250 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+15:42:58.026 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+16:05:53.482 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+16:22:59.381 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+16:23:14.975 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+16:23:43.262 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+16:26:17.507 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+16:28:21.652 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:29:43.304 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+16:30:07.909 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to connect to Xilinx hw_server. Check if the
+    hw_server is running and correct TCP port is used.
+ 
+16:30:23.173 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+16:38:00.814 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+17:14:50.586 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+17:21:57.264 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 

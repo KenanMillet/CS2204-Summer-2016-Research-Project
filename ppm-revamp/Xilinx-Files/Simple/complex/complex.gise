@@ -177,13 +177,14 @@
     <transform xil_pn:end_ts="1466005352" xil_pn:in_ck="5489788014013645" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1466005313">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="simple.bgn"/>
       <outfile xil_pn:name="simple.bit"/>
       <outfile xil_pn:name="simple.drc"/>
       <outfile xil_pn:name="simple.ut"/>
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
-      <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
     <transform xil_pn:end_ts="1466004707" xil_pn:in_ck="-5890225553600701533" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1466004695">
