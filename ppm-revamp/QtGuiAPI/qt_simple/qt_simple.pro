@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-07-14T12:17:02
+# Project created by QtCreator 2016-06-15T12:18:50
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = test_gui
+TARGET = qt_simple
 TEMPLATE = app
 
 

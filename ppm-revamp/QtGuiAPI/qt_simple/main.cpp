@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "workerthread.h"
 #include <QApplication>
-
+#include <QtSerialPort/QSerialPortInfo>
 #include <QThread>
 #include <QWaitCondition>
 #include <QDebug>
