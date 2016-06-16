@@ -40,7 +40,7 @@ void serialize_GPI_data_send(){ //reads from GPI and send to USB
 	xil_printf("%x\r\n",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
-void deserialize_UART_data_send(void* ){
+void deserialize_UART_data_send(void*){
 	// u8 dataBuffer[3];
 	// const char *start = (const char*)&dataBuffer;
 	// char *end = (char*)&dataBuffer;
@@ -49,7 +49,7 @@ void deserialize_UART_data_send(void* ){
 	// dataBuffer[1] = XIOModule_RecvByte(STDIN_BASEADDRESS);;
 	// dataBuffer[2] = '\0';
 
-	u8 buffer[32];
+	char buffer[32];
 	const char* start = (const char*)(&buffer);
 	char* end = (char*)(&buffer);
 

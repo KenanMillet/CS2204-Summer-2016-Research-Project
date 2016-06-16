@@ -1,8 +1,8 @@
-14:48:56 **** Auto Build of configuration Release for project complex ****
+16:49:56 **** Auto Build of configuration Release for project complex ****
 make all 
 'Building file: ../src/simpleproject.cpp'
 'Invoking: MicroBlaze g++ compiler'
-mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
 'Finished building: ../src/simpleproject.cpp'
 ' '
 'Building target: complex.elf'
@@ -13,7 +13,7 @@ mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlitt
 'Invoking: MicroBlaze Print Size'
 mb-size complex.elf  |tee "complex.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9710	    372	   2444	  12526	   30ee	complex.elf
+   9754	    372	   2450	  12576	   3120	complex.elf
 'Finished building: complex.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -30,5 +30,5 @@ elfcheck passed.
 'Finished building: complex.elf.elfcheck'
 ' '
 
-14:48:58 Build Finished (took 1s.794ms)
+16:49:59 Build Finished (took 3s.63ms)
 
