@@ -40,7 +40,7 @@ void serialize_GPI_data_send(){ //reads from GPI and send to USB
 	xil_printf("%x\r\n",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
-void deserialize_UART_data_send(void* instance){
+void deserialize_UART_data_send(void*){
 	// u8 dataBuffer[3];
 	// const char *start = (const char*)&dataBuffer;
 	// char *end = (char*)&dataBuffer;
@@ -53,8 +53,8 @@ void deserialize_UART_data_send(void* instance){
 	const char* start = (const char*)(&buffer);
 	char* end = (char*)(&buffer);
 
-	for(int i = 0; instance.ReceiveBuffer.RemainingBytes != 0 && i < 32; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	xil_printf("%s\r\n",&buffer);
+	for(int i = 0; uart.ReceiveBuffer.RemainingBytes != 0 && i < 32; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	xil_printf("%s\r\n", &buffer);
 
 	// u32 data = 0;
 	
@@ -81,7 +81,7 @@ int main(){
 	init_uart_interrupt();
 
 	while(1){
-		serialize_GPI_data_send();
+		//serialize_GPI_data_send();
 		clear_GPO();
 	}
 
