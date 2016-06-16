@@ -40,7 +40,7 @@ void serialize_GPI_data_send(){ //reads from GPI and send to USB
 	xil_printf("%x\r\n",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
-void deserialize_UART_data_send(void* ){
+void deserialize_UART_data_send(void* instance){
 	// u8 dataBuffer[3];
 	// const char *start = (const char*)&dataBuffer;
 	// char *end = (char*)&dataBuffer;
@@ -53,19 +53,20 @@ void deserialize_UART_data_send(void* ){
 	const char* start = (const char*)(&buffer);
 	char* end = (char*)(&buffer);
 
-	for(int i = 0; uart.ReceiveBuffer.RemainingBytes != 0 && i < 32; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	for(int i = 0; instance.ReceiveBuffer.RemainingBytes != 0 && i < 32; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	xil_printf("%x\r\n",gpiData);
 
-	u32 data = 0;
+	// u32 data = 0;
 	
-	data |= strtol(start++, &(++end), 16);
-	if(data >> 1 == 0)
-	{
-		data <<= 4;
-		data |= strtol(start++, &(++end), 16);
-	}
-	else data |= strtol(start++, &(++end), 16);
+	// data |= strtol(start++, &(++end), 16);
+	// if(data >> 1 == 0)
+	// {
+	// 	data <<= 4;
+	// 	data |= strtol(start++, &(++end), 16);
+	// }
+	// else data |= strtol(start++, &(++end), 16);
 	
-	XIOModule_DiscreteWrite(&gpio, 1, data);
+	// XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
 void clear_GPO()
