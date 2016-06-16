@@ -21,12 +21,75 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="test.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/microblazecore.asy" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/microblazecore.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mcs_top.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="mcs_top.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mcs_top.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="mcs_top.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="mcs_top.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="mcs_top_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="mcs_top_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mcs_top_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="test.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="test.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="test.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="test.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="test.vhf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="test.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="test_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="test_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="test_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1466107228" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1466107228">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1466107500" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7667683545772692295" xil_pn:start_ts="1466107500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1466107500" xil_pn:in_ck="-6040225741042025928" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="2023967724985066504" xil_pn:start_ts="1466107500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/microblazecore.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/microblazecore.vhd"/>
+    </transform>
     <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1466107500" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-1651160648446850213" xil_pn:start_ts="1466107500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1466107230" xil_pn:in_ck="3586735356418218919" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1466107230">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1466107500" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="371416472925421970" xil_pn:start_ts="1466107500">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1466107651" xil_pn:in_ck="-4744907968528959863" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2453028308125210008" xil_pn:start_ts="1466107643">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="mcs_top.lso"/>
+      <outfile xil_pn:name="mcs_top.prj"/>
+      <outfile xil_pn:name="mcs_top.syr"/>
+      <outfile xil_pn:name="mcs_top.xst"/>
+      <outfile xil_pn:name="mcs_top_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>
 

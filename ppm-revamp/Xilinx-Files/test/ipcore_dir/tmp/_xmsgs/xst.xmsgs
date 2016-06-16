@@ -53,136 +53,142 @@
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblaze_v8_50_a\pcores\microblaze_v8_50_a\hdl\vhdl\data_flow.vhd</arg>&quot; line <arg fmt="%d" index="2">1461</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">PVR_I</arg>&gt; of block &lt;<arg fmt="%s" index="4">PVR</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Data_Flow</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Address</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Address</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Byte_Enable</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Byte_Enable</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Write_Data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Write_Data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">GPO2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">GPO2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">GPO3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">GPO3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">GPO4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">GPO4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Instruction</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Instruction</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_PC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_PC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Reg_Addr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Reg_Addr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_MSR_Reg</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_MSR_Reg</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_New_Reg_Value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_New_Reg_Value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Address</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Address</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Write_Value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Write_Value</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Byte_Enable</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Byte_Enable</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Addr_Strobe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Addr_Strobe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Read_Strobe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Read_Strobe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Write_Strobe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">IO_Write_Strobe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT1_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">UART_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT1_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT1_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT2_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT1_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT2_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT2_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT3_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT2_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT3_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT3_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT4_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT3_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">FIT4_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT4_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT1_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">FIT4_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT1_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT1_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT2_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT1_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT2_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT2_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT3_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT2_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT3_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT3_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT4_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT3_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">PIT4_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT4_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">GPI2_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">PIT4_Toggle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">GPI3_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">GPI2_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">GPI4_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">GPI3_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Valid_Instr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">GPI4_Interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Reg_Write</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">INTC_IRQ</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Jump_Taken</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Valid_Instr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Delay_Slot</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Reg_Write</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Access</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Jump_Taken</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Read</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Delay_Slot</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Write</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Access</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">189</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_MB_Halted</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Read</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_Data_Write</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblazecore.vhd</arg>&quot; line <arg fmt="%s" index="2">185</arg>: Output port &lt;<arg fmt="%s" index="3">Trace_MB_Halted</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\test\ipcore_dir\tmp\_cg\_dbg\microblaze_mcs_v1_4\hdl\microblaze_mcs.vhd</arg>&quot; line <arg fmt="%s" index="2">1914</arg>: Output port &lt;<arg fmt="%s" index="3">LOCKSTEP_Master_Out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">microblaze_I</arg>&gt; is unconnected or connected to loadless signal.
@@ -3434,22 +3440,34 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">GPI_Read</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTR&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTR&lt;31:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTR_ACK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTC_CIVAR_ADDR&lt;4:4&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTC_CIVAR_ADDR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Write_Data&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Write_Data</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Write_Data&lt;31:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Reset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">INTC_CISR</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">3</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">intr_ctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTC_WRITE_CIAR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTC_WRITE_CIER</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTC_WRITE_CIMR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INTC_WRITE_CIVAR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">INTC_CISR</arg>&lt;<arg fmt="%d" index="2">1</arg>:<arg fmt="%d" index="3">32</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">intr_ctrl</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">UART_Status</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">Uart_Control_Status</arg>&gt;.
@@ -3459,9 +3477,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n1088</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">INTC_CISR_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">intr_ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">UART_Status_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Uart_Control_Status</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -8351,15 +8366,6 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Trace_Delay_Slot_early</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Decode</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;EX_delayslot_Instr_I&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">civr_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">intr_ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">civr_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">intr_ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">civr_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">intr_ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Mul_Handling.mul_first</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Decode</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -8541,6 +8547,15 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1303" delta="new" >From in and out of unit <arg fmt="%s" index="1">U0/lmb_bram_I/RAM_Inst</arg>, both signals <arg fmt="%s" index="2">DATA_INA&lt;31&gt;</arg> and <arg fmt="%s" index="3">N1</arg> have a KEEP attribute, signal <arg fmt="%s" index="4">DATA_INA&lt;31&gt;</arg> will be lost.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/active_wakeup</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">microblazecore</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/break_Pipe_i</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">microblazecore</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_interrupt</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/LOCKSTEP_Out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
@@ -16682,6 +16697,12 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Trace_OF_PipeRun</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Interrupt_Ack_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Interrupt_Ack_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_EX_i_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
@@ -16763,6 +16784,9 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/FPU_Cond_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_intr_2nd_cycle</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/fpu_started</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
@@ -16802,6 +16826,9 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Use_Store_Instr_Addr</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_dynamic_instr_Address.old_IE_value</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/ex_Valid_1st_cycle</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
@@ -16827,6 +16854,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/SWAP_BYTE_Instr</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/sleep_i</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDRSE</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">microblazecore</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -16859,518 +16889,14 @@
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDRSE</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">microblazecore</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_10_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_11_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_9_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_8_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_14_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_15_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_13_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_12_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_6_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_7_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_5_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Using_Fast.civar_4_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="387" delta="new" >The KEEP property attached to the net &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.normal_piperun</arg>&gt; may hinder timing optimization.
 You may achieve better results by removing this property
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/ilmb/POR_FF_I</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;U0/dlmb/POR_FF_I&gt; </arg>
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">29 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i&gt; &lt;U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i&gt; </arg>
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/ilmb/POR_FF_I</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">microblazecore</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;U0/dlmb/POR_FF_I&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDRSE</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">microblazecore</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

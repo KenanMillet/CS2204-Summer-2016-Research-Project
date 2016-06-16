@@ -61,11 +61,9 @@ COMPONENT microblazecore
     Reset : IN STD_LOGIC;
     UART_Rx : IN STD_LOGIC;
     UART_Tx : OUT STD_LOGIC;
-    UART_Interrupt : OUT STD_LOGIC;
     GPO1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     GPI1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    GPI1_Interrupt : OUT STD_LOGIC;
-    INTC_IRQ : OUT STD_LOGIC
+    GPI1_Interrupt : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -80,11 +78,9 @@ your_instance_name : microblazecore
     Reset => Reset,
     UART_Rx => UART_Rx,
     UART_Tx => UART_Tx,
-    UART_Interrupt => UART_Interrupt,
     GPO1 => GPO1,
     GPI1 => GPI1,
-    GPI1_Interrupt => GPI1_Interrupt,
-    INTC_IRQ => INTC_IRQ
+    GPI1_Interrupt => GPI1_Interrupt
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
 
