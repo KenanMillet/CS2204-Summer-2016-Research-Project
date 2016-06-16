@@ -54,7 +54,7 @@ void deserialize_UART_data_send(void* instance){
 	char* end = (char*)(&buffer);
 
 	for(int i = 0; instance.ReceiveBuffer.RemainingBytes != 0 && i < 32; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	xil_printf("%x\r\n",gpiData);
+	xil_printf("%s\r\n",buffer);
 
 	// u32 data = 0;
 	
