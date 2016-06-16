@@ -1,0 +1,989 @@
+13:11:16 **** Build of project complex_bsp ****
+make -k all 
+libgen -hw ../complex_hp/system.xml\
+	       \
+	       -pe communication \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../complex_hp/system.xml -pe communication -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling iomodule"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+13:11:37 **** Build of configuration Debug for project complex ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+mb-g++: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+make: *** [src/main.o] Error 1
+13:11:52 **** Clean-only build of configuration Debug for project complex ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+
+****  of configuration Debug for project complex ****
+
+Nothing to build for project complex
+13:11:56 **** Clean-only build of configuration Debug for project complex ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+
+****  of configuration Debug for project complex ****
+
+Nothing to build for project complex
+13:12:19 **** Auto Build of configuration Debug for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+mb-g++: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+make: *** [src/platform.o] Error 1
+13:15:28 **** Incremental Build of configuration Debug for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void serialize_GPI_data_send()':
+../src/simpleproject.cpp:41:15: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7548	    372	   2448	  10368	   2880	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:16:18 **** Auto Build of configuration Debug for project complex ****
+make all 
+make: Nothing to be done for `all'.
+13:16:21 **** Clean-only build of configuration Debug for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+13:16:21 **** Auto Build of configuration Debug for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void serialize_GPI_data_send()':
+../src/simpleproject.cpp:41:15: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7220	    372	   2448	  10040	   2738	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:16:33 **** Incremental Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void serialize_GPI_data_send()':
+../src/simpleproject.cpp:41:15: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7220	    372	   2448	  10040	   2738	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:17:22 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:19:56 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9686	    372	   2444	  12502	   30d6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:20:16 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+15:41:50 **** Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+15:41:51 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+15:41:51 **** Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void init_uart_interrupt()':
+../src/simpleproject.cpp:28:64: error: 'test' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+15:42:18 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8046	    372	   2444	  10862	   2a6e	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+15:42:27 **** Incremental Build of configuration Release for project complex ****
+make all 
+make: Nothing to be done for `all'.
+15:42:58 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+16:05:37 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8346	    372	   2450	  11168	   2ba0	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:05:54 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+16:22:52 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8086	    372	   2444	  10902	   2a96	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:30:24 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+16:37:03 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void test(void*)':
+../src/simpleproject.cpp:71:17: error: invalid conversion from 'u8 {aka unsigned char}' to 'const char*' [-fpermissive]
+../../complex_bsp/communication/include/xil_printf.h:48:6: error:   initializing argument 1 of 'void xil_printf(const char*, ...)' [-fpermissive]
+make: *** [src/simpleproject.o] Error 1
+16:37:09 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8086	    372	   2444	  10902	   2a96	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:37:48 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8094	    372	   2444	  10910	   2a9e	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:38:01 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+17:14:37 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8054	    372	   2444	  10870	   2a76	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+17:14:51 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+17:21:32 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9686	    372	   2444	  12502	   30d6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+17:21:58 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+14:48:56 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9710	    372	   2444	  12526	   30ee	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+15:07:13 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+16:24:48 **** Build of project complex_bsp ****
+make -k all 
+libgen -hw ../complex_hp/system.xml\
+	       \
+	       -pe communication \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../complex_hp/system.xml -pe communication -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling iomodule"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+16:25:30 **** Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp:64:2: warning: identifier 'nullptr' will become a keyword in C++0x [-Wc++0x-compat]
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:42: error: 'nullptr' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:26:38 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+16:26:39 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp:64:2: warning: identifier 'nullptr' will become a keyword in C++0x [-Wc++0x-compat]
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:53:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:42: error: 'nullptr' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:28:49 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+16:28:49 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -Wc++0x-compat -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -Wc++0x-compat -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp:64:2: warning: identifier 'nullptr' will become a keyword in C++0x [-Wc++0x-compat]
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:53:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:42: error: 'nullptr' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:28:51 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+16:28:51 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -Wc++0x-compat -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -Wc++0x-compat -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp:64:2: warning: identifier 'nullptr' will become a keyword in C++0x [-Wc++0x-compat]
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:53:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:42: error: 'nullptr' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:29:13 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+16:29:13 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -Wc++0x-compat -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -Wc++0x-compat -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp:64:2: warning: identifier 'nullptr' will become a keyword in C++0x [-Wc++0x-compat]
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:53:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:42: error: 'nullptr' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:30:09 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+16:30:10 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:53:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:30:20 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:54:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:54:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:59:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:59:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:65:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:65:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:30:22 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' is not a member of 'std'
+../src/simpleproject.cpp:53:14: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:31:49 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'string' was not declared in this scope
+../src/simpleproject.cpp:53:9: error: expected ';' before 'buffer'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:34:30 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:2: error: 'basic_string' was not declared in this scope
+../src/simpleproject.cpp:53:15: error: expected primary-expression before 'char'
+../src/simpleproject.cpp:53:15: error: expected ';' before 'char'
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:34:38 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:58:74: error: expected primary-expression before ')' token
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:35:08 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:35:47 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:6: error: expected unqualified-id before '[' token
+../src/simpleproject.cpp:58:58: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:15: error: 'buffer' was not declared in this scope
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:35:57 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:58:65: error: request for member 'append' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:64:22: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:64:53: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:68:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:70:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+make: *** [src/simpleproject.o] Error 1
+16:37:23 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:57:65: error: request for member 'append' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:63:22: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:63:53: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:67:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:69:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+make: *** [src/simpleproject.o] Error 1
+16:38:42 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:56:55: error: expected ',' or ';' before 'buffer'
+../src/simpleproject.cpp:56:8: warning: unused variable 'byteIn' [-Wunused-variable]
+../src/simpleproject.cpp:62:22: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:62:53: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:66:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:68:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+make: *** [src/simpleproject.o] Error 1
+16:39:08 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:62:22: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:62:53: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:66:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:68:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+make: *** [src/simpleproject.o] Error 1
+16:39:19 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:59:22: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:59:53: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:63:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:65:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+make: *** [src/simpleproject.o] Error 1
+16:39:27 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:59:24: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:63:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:63:54: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:65:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:65:58: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:40:20 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:59:26: error: expected primary-expression before ',' token
+../src/simpleproject.cpp:63:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:63:54: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:65:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:65:58: error: 'stol' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+16:41:46 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:65:23: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:65:54: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:67:27: error: request for member 'substr' in 'buffer', which is of non-class type 'char [32]'
+../src/simpleproject.cpp:67:58: error: 'stol' was not declared in this scope
+../src/simpleproject.cpp:53:14: warning: unused variable 'start' [-Wunused-variable]
+../src/simpleproject.cpp:54:8: warning: unused variable 'end' [-Wunused-variable]
+make: *** [src/simpleproject.o] Error 1
+16:43:56 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:59:9: warning: unused variable 'index' [-Wunused-variable]
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9754	    372	   2450	  12576	   3120	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:44:07 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9754	    372	   2450	  12576	   3120	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:44:33 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9754	    372	   2450	  12576	   3120	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+16:49:56 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9754	    372	   2450	  12576	   3120	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '

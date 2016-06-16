@@ -1,5 +1,0 @@
-MODULE simple
-	SUBMODULE RisingEdge
-		INSTANCE XLXI_22
-	SUBMODULE communication
-		INSTANCE XLXI_23

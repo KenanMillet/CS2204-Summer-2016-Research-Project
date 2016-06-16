@@ -1,0 +1,18 @@
+# Output products list for <communication>
+communication.asy
+communication.bmm
+communication.gise
+communication.ngc
+communication.sym
+communication.vhd
+communication.vho
+communication.xco
+communication.xise
+communication\mb_bootloop_le.elf
+communication\microblaze_mcs_setup.tcl
+communication\system_template.tcl
+communication_flist.txt
+communication_readme.txt
+communication_sdk.xml
+mb_bootloop_le.elf
+microblaze_mcs_setup.tcl
