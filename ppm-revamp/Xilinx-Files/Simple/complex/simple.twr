@@ -37,7 +37,7 @@ Setup/Hold to clock OBClk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-usb_in      |   -0.070(R)|      FAST  |    1.778(R)|      SLOW  |CLOCK_BUFG        |   0.000|
+usb_in      |   -0.179(R)|      FAST  |    1.949(R)|      SLOW  |CLOCK_BUFG        |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock OBClk to Pad
@@ -45,7 +45,20 @@ Clock OBClk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-usb_out     |         9.726(R)|      SLOW  |         3.757(R)|      FAST  |CLOCK_BUFG        |   0.000|
+add0        |        10.447(R)|      SLOW  |         3.630(R)|      FAST  |CLOCK_BUFG        |   0.000|
+add1        |        10.416(R)|      SLOW  |         3.479(R)|      FAST  |CLOCK_BUFG        |   0.000|
+add2        |        10.450(R)|      SLOW  |         3.446(R)|      FAST  |CLOCK_BUFG        |   0.000|
+add3        |        10.671(R)|      SLOW  |         3.494(R)|      FAST  |CLOCK_BUFG        |   0.000|
+enableBit   |         9.627(R)|      SLOW  |         3.696(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpi0        |         9.788(R)|      SLOW  |         3.660(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpi1        |         9.583(R)|      SLOW  |         3.575(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpi2        |        10.195(R)|      SLOW  |         3.917(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpi3        |         9.344(R)|      SLOW  |         3.471(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpo0        |        10.266(R)|      SLOW  |         4.029(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpo1        |         9.646(R)|      SLOW  |         3.673(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpo2        |         9.788(R)|      SLOW  |         3.772(R)|      FAST  |CLOCK_BUFG        |   0.000|
+gpo3        |        10.070(R)|      SLOW  |         3.911(R)|      FAST  |CLOCK_BUFG        |   0.000|
+usb_out     |        10.457(R)|      SLOW  |         4.073(R)|      FAST  |CLOCK_BUFG        |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock OBClk
@@ -53,18 +66,18 @@ Clock to Setup on destination clock OBClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OBClk          |    5.959|         |         |         |
+OBClk          |    6.683|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Jun 15 11:31:45 2016 
+Analysis completed Thu Jun 16 14:49:49 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 622 MB
+Peak Memory Usage: 620 MB
 
 
 

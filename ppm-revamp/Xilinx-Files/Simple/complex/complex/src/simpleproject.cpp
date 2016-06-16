@@ -17,7 +17,7 @@ void init_uart_interrupt();
 void init_gpio();
 void serialize_GPI_data_send();
 void deserialize_UART_data_send(void*);
-void test(void*);
+void clear_GPO();
 
 void init_uart_interrupt(){
 	XIOModule_Initialize(&uart, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
@@ -65,6 +65,12 @@ void deserialize_UART_data_send(void*){
 	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
+void clear_GPO()
+{
+	u32 data = 0;
+	XIOModule_DiscreteWrite(&gpio, 1, data);
+}
+
 int main(){
 	init_platform();
 	init_gpio();
@@ -72,6 +78,7 @@ int main(){
 
 	while(1){
 		serialize_GPI_data_send();
+		clear_GPO();
 	}
 
 }

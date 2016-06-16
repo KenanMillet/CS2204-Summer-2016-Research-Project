@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : RisingEdge.vhf
--- /___/   /\     Timestamp : 06/15/2016 11:20:20
+-- /___/   /\     Timestamp : 06/16/2016 14:47:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

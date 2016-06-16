@@ -1,4 +1,4 @@
-17:21:32 **** Auto Build of configuration Release for project complex ****
+14:48:56 **** Auto Build of configuration Release for project complex ****
 make all 
 'Building file: ../src/simpleproject.cpp'
 'Invoking: MicroBlaze g++ compiler'
@@ -13,7 +13,7 @@ mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlitt
 'Invoking: MicroBlaze Print Size'
 mb-size complex.elf  |tee "complex.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9686	    372	   2444	  12502	   30d6	complex.elf
+   9710	    372	   2444	  12526	   30ee	complex.elf
 'Finished building: complex.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -30,5 +30,5 @@ elfcheck passed.
 'Finished building: complex.elf.elfcheck'
 ' '
 
-17:21:33 Build Finished (took 1s.89ms)
+14:48:58 Build Finished (took 1s.794ms)
 

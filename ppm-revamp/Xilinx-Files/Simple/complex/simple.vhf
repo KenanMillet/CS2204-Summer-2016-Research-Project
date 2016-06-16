@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/15/2016 11:20:20
+-- /___/   /\     Timestamp : 06/16/2016 14:47:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -177,9 +177,22 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity simple is
-   port ( OBClk   : in    std_logic; 
-          usb_in  : in    std_logic; 
-          usb_out : out   std_logic);
+   port ( OBClk     : in    std_logic; 
+          usb_in    : in    std_logic; 
+          add0      : out   std_logic; 
+          add1      : out   std_logic; 
+          add2      : out   std_logic; 
+          add3      : out   std_logic; 
+          enableBit : out   std_logic; 
+          gpi0      : out   std_logic; 
+          gpi1      : out   std_logic; 
+          gpi2      : out   std_logic; 
+          gpi3      : out   std_logic; 
+          gpo0      : out   std_logic; 
+          gpo1      : out   std_logic; 
+          gpo2      : out   std_logic; 
+          gpo3      : out   std_logic; 
+          usb_out   : out   std_logic);
 end simple;
 
 architecture BEHAVIORAL of simple is
@@ -188,13 +201,15 @@ architecture BEHAVIORAL of simple is
    attribute IOSTANDARD   : string ;
    attribute CAPACITANCE  : string ;
    attribute IBUF_LOW_PWR : string ;
+   attribute SLEW         : string ;
+   attribute DRIVE        : string ;
    signal CLOCK      : std_logic;
-   signal uCont_gpi1 : std_logic_vector (31 downto 0);
-   signal uCont_gpo1 : std_logic_vector (31 downto 0);
-   signal XLXN_14    : std_logic;
-   signal XLXN_15    : std_logic;
-   signal XLXN_45    : std_logic;
-   signal XLXN_46    : std_logic;
+   signal comms_gpi1 : std_logic_vector (31 downto 0);
+   signal comms_gpo1 : std_logic_vector (31 downto 0);
+   signal result0    : std_logic;
+   signal result1    : std_logic;
+   signal result2    : std_logic;
+   signal result3    : std_logic;
    signal XLXN_47    : std_logic;
    signal XLXN_48    : std_logic;
    signal XLXN_49    : std_logic;
@@ -265,15 +280,25 @@ architecture BEHAVIORAL of simple is
    attribute IBUF_LOW_PWR of IBUFG : component is "TRUE";
    attribute BOX_TYPE of IBUFG : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_0";
-   attribute HU_SET of XLXI_2 : label is "XLXI_2_1";
+   component OBUF
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute IOSTANDARD of OBUF : component is "DEFAULT";
+   attribute CAPACITANCE of OBUF : component is "DONT_CARE";
+   attribute SLEW of OBUF : component is "SLOW";
+   attribute DRIVE of OBUF : component is "12";
+   attribute BOX_TYPE of OBUF : component is "BLACK_BOX";
+   
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_2";
+   attribute HU_SET of XLXI_2 : label is "XLXI_2_3";
 begin
    mcs_0 : communication
       port map (clk=>CLOCK,
-                gpi1(31 downto 0)=>uCont_gpi1(31 downto 0),
+                gpi1(31 downto 0)=>comms_gpi1(31 downto 0),
                 reset=>XLXN_49,
                 uart_rx=>usb_in,
-                gpo1(31 downto 0)=>uCont_gpo1(31 downto 0),
+                gpo1(31 downto 0)=>comms_gpo1(31 downto 0),
                 intc_irq=>open,
                 uart_interrupt=>open,
                 uart_tx=>usb_out);
@@ -282,31 +307,31 @@ begin
       port map (C=>CLOCK,
                 CE=>XLXN_61,
                 CLR=>XLXN_48,
-                D0=>XLXN_14,
-                D1=>XLXN_15,
-                D2=>XLXN_45,
-                D3=>XLXN_46,
-                Q0=>uCont_gpi1(0),
-                Q1=>uCont_gpi1(1),
-                Q2=>uCont_gpi1(2),
-                Q3=>uCont_gpi1(3));
+                D0=>result0,
+                D1=>result1,
+                D2=>result2,
+                D3=>result3,
+                Q0=>comms_gpi1(0),
+                Q1=>comms_gpi1(1),
+                Q2=>comms_gpi1(2),
+                Q3=>comms_gpi1(3));
    
    XLXI_2 : ADD4_HXILINX_simple
-      port map (A0=>uCont_gpi1(0),
-                A1=>uCont_gpi1(1),
-                A2=>uCont_gpi1(2),
-                A3=>uCont_gpi1(3),
-                B0=>uCont_gpo1(0),
-                B1=>uCont_gpo1(1),
-                B2=>uCont_gpo1(2),
-                B3=>uCont_gpo1(3),
+      port map (A0=>comms_gpi1(0),
+                A1=>comms_gpi1(1),
+                A2=>comms_gpi1(2),
+                A3=>comms_gpi1(3),
+                B0=>comms_gpo1(0),
+                B1=>comms_gpo1(1),
+                B2=>comms_gpo1(2),
+                B3=>comms_gpo1(3),
                 CI=>XLXN_47,
                 CO=>open,
                 OFL=>open,
-                S0=>XLXN_14,
-                S1=>XLXN_15,
-                S2=>XLXN_45,
-                S3=>XLXN_46);
+                S0=>result0,
+                S1=>result1,
+                S2=>result2,
+                S3=>result3);
    
    XLXI_11 : GND
       port map (G=>XLXN_47);
@@ -319,12 +344,64 @@ begin
    
    XLXI_22 : RisingEdge_MUSER_simple
       port map (C=>CLOCK,
-                D=>uCont_gpo1(4),
+                D=>comms_gpo1(4),
                 Q=>XLXN_61);
    
    XLXI_23 : IBUFG
       port map (I=>OBClk,
                 O=>CLOCK);
+   
+   XLXI_27 : OBUF
+      port map (I=>comms_gpi1(2),
+                O=>gpi2);
+   
+   XLXI_30 : OBUF
+      port map (I=>comms_gpi1(0),
+                O=>gpi0);
+   
+   XLXI_31 : OBUF
+      port map (I=>comms_gpi1(1),
+                O=>gpi1);
+   
+   XLXI_32 : OBUF
+      port map (I=>comms_gpi1(3),
+                O=>gpi3);
+   
+   XLXI_33 : OBUF
+      port map (I=>comms_gpo1(0),
+                O=>gpo0);
+   
+   XLXI_34 : OBUF
+      port map (I=>comms_gpo1(1),
+                O=>gpo1);
+   
+   XLXI_35 : OBUF
+      port map (I=>comms_gpo1(2),
+                O=>gpo2);
+   
+   XLXI_36 : OBUF
+      port map (I=>comms_gpo1(3),
+                O=>gpo3);
+   
+   XLXI_37 : OBUF
+      port map (I=>comms_gpo1(4),
+                O=>enableBit);
+   
+   XLXI_38 : OBUF
+      port map (I=>result0,
+                O=>add0);
+   
+   XLXI_39 : OBUF
+      port map (I=>result1,
+                O=>add1);
+   
+   XLXI_40 : OBUF
+      port map (I=>result2,
+                O=>add2);
+   
+   XLXI_41 : OBUF
+      port map (I=>result3,
+                O=>add3);
    
 end BEHAVIORAL;
 

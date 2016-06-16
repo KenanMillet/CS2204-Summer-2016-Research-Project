@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: simple.prj
 
@@ -127,14 +127,14 @@ Parsing architecture <BEHAVIORAL> of entity <simple>.
 =========================================================================
 
 Elaborating entity <simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 202: <communication> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 217: <communication> remains a black-box since it has no binding entity.
 
 Elaborating entity <FD4CE_HXILINX_simple> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ADD4_HXILINX_simple> (architecture <ADD4_HXILINX_simple_V>) from library <work>.
 
 Elaborating entity <RisingEdge_MUSER_simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 192: Net <uCont_gpi1[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 207: Net <comms_gpi1[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -142,16 +142,68 @@ WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-R
 
 Synthesizing Unit <simple>.
     Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
-    Set property "HU_SET = XLXI_1_0" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_1" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_1_2" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_3" for instance <XLXI_2>.
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_23>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_23>.
     Set property "IBUF_LOW_PWR = TRUE" for instance <XLXI_23>.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 271: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 271: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 294: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 294: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <uCont_gpi1<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_27>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_27>.
+    Set property "SLEW = SLOW" for instance <XLXI_27>.
+    Set property "DRIVE = 12" for instance <XLXI_27>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_30>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_30>.
+    Set property "SLEW = SLOW" for instance <XLXI_30>.
+    Set property "DRIVE = 12" for instance <XLXI_30>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_31>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_31>.
+    Set property "SLEW = SLOW" for instance <XLXI_31>.
+    Set property "DRIVE = 12" for instance <XLXI_31>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_32>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_32>.
+    Set property "SLEW = SLOW" for instance <XLXI_32>.
+    Set property "DRIVE = 12" for instance <XLXI_32>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_33>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_33>.
+    Set property "SLEW = SLOW" for instance <XLXI_33>.
+    Set property "DRIVE = 12" for instance <XLXI_33>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_34>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_34>.
+    Set property "SLEW = SLOW" for instance <XLXI_34>.
+    Set property "DRIVE = 12" for instance <XLXI_34>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_35>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_35>.
+    Set property "SLEW = SLOW" for instance <XLXI_35>.
+    Set property "DRIVE = 12" for instance <XLXI_35>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_36>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_36>.
+    Set property "SLEW = SLOW" for instance <XLXI_36>.
+    Set property "DRIVE = 12" for instance <XLXI_36>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_37>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_37>.
+    Set property "SLEW = SLOW" for instance <XLXI_37>.
+    Set property "DRIVE = 12" for instance <XLXI_37>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_38>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_38>.
+    Set property "SLEW = SLOW" for instance <XLXI_38>.
+    Set property "DRIVE = 12" for instance <XLXI_38>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_39>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_39>.
+    Set property "SLEW = SLOW" for instance <XLXI_39>.
+    Set property "DRIVE = 12" for instance <XLXI_39>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_40>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_40>.
+    Set property "SLEW = SLOW" for instance <XLXI_40>.
+    Set property "DRIVE = 12" for instance <XLXI_40>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_41>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_41>.
+    Set property "SLEW = SLOW" for instance <XLXI_41>.
+    Set property "DRIVE = 12" for instance <XLXI_41>.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <comms_gpi1<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <simple> synthesized.
@@ -311,10 +363,10 @@ Primitive and Black Box Usage:
 #      SRLC16E                     : 1
 # Clock Buffers                    : 1
 #      BUFG                        : 1
-# IO Buffers                       : 3
+# IO Buffers                       : 16
 #      IBUF                        : 1
 #      IBUFG                       : 1
-#      OBUF                        : 1
+#      OBUF                        : 14
 
 Device utilization summary:
 ---------------------------
@@ -338,8 +390,8 @@ Slice Logic Distribution:
    Number of unique control sets:        44
 
 IO Utilization: 
- Number of IOs:                           3
- Number of bonded IOBs:                   3  out of    210     1%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    210     7%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               16  out of    135    11%  
@@ -424,7 +476,7 @@ mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(mcs_0/U0/lmb
 mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
 mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
 mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
-mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                         | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 64    |
+mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                         | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 64    |
 --------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -433,7 +485,7 @@ Speed Grade: -3
 
    Minimum period: 3.726ns (Maximum Frequency: 268.393MHz)
    Minimum input arrival time before clock: 0.401ns
-   Maximum output required time after clock: 0.640ns
+   Maximum output required time after clock: 1.709ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -488,23 +540,27 @@ Offset:              0.401ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'OBClk'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 30 / 14
 -------------------------------------------------------------------------
-Offset:              0.640ns (Levels of Logic = 2)
-  Source:            mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (FF)
-  Destination:       usb_out (PAD)
+Offset:              1.709ns (Levels of Logic = 5)
+  Source:            XLXI_1/Q1 (FF)
+  Destination:       add3 (PAD)
   Source Clock:      OBClk rising
 
-  Data Path: mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX to usb_out
+  Data Path: XLXI_1/Q1 to add3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              1   0.361   0.279  U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (uart_tx)
-     end scope: 'mcs_0:uart_tx'
-     OBUF:I->O                 0.000          usb_out_OBUF (usb_out)
+     FDCE:C->Q             5   0.361   0.575  Q1 (Q1)
+     end scope: 'XLXI_1:Q1'
+     begin scope: 'XLXI_2:A1'
+     LUT4:I0->O            1   0.097   0.295  Madd_adsu_p.adsu_tmp_Madd_xor<3>11_SW0 (N01)
+     LUT5:I4->O            2   0.097   0.283  Madd_adsu_p.adsu_tmp_Madd_xor<3>11 (S3)
+     end scope: 'XLXI_2:S3'
+     OBUF:I->O                 0.000          XLXI_41 (add3)
     ----------------------------------------
-    Total                      0.640ns (0.361ns logic, 0.279ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                      1.709ns (0.555ns logic, 1.154ns route)
+                                       (32.5% logic, 67.5% route)
 
 =========================================================================
 
@@ -539,7 +595,7 @@ mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132| 
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.36 secs
+Total CPU time to Xst completion: 10.60 secs
  
 --> 
 

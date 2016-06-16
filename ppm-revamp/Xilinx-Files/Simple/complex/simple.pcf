@@ -1,12 +1,25 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Jun 15 11:31:08 2016
+// Written by: Map P.20131013 on Thu Jun 16 14:49:13 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 NET
         "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.pc_write_I"
         USELOWSKEWLINES;
+COMP "gpi0" LOCATE = SITE "H17" LEVEL 1;
+COMP "gpi1" LOCATE = SITE "K15" LEVEL 1;
+COMP "gpi2" LOCATE = SITE "J13" LEVEL 1;
+COMP "gpi3" LOCATE = SITE "N14" LEVEL 1;
+COMP "gpo0" LOCATE = SITE "U14" LEVEL 1;
+COMP "gpo1" LOCATE = SITE "T16" LEVEL 1;
+COMP "gpo2" LOCATE = SITE "V15" LEVEL 1;
+COMP "gpo3" LOCATE = SITE "V14" LEVEL 1;
+COMP "enableBit" LOCATE = SITE "V11" LEVEL 1;
 COMP "OBClk" LOCATE = SITE "E3" LEVEL 1;
+COMP "add0" LOCATE = SITE "V17" LEVEL 1;
+COMP "add1" LOCATE = SITE "U17" LEVEL 1;
+COMP "add2" LOCATE = SITE "U16" LEVEL 1;
+COMP "add3" LOCATE = SITE "V16" LEVEL 1;
 COMP "usb_in" LOCATE = SITE "C4" LEVEL 1;
 COMP "usb_out" LOCATE = SITE "D4" LEVEL 1;
 SCHEMATIC END;

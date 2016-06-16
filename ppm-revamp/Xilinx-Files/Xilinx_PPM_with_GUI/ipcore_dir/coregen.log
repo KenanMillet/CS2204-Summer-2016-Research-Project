@@ -4,4 +4,4 @@ Finished applying current project options.
 WARNING:sim - VHDL simulation file type 'Behavioral' is not valid for this core.
    Overriding with simulation file type 'Structural'.
 Cancelled executing Tcl generator.
-Wrote CGP file for project 'mcs_io'.
+Wrote CGP file for project 'mcs_machine_player'.
