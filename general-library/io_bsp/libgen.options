@@ -1,0 +1,3 @@
+PROCESSOR=io
+REPOSITORIES=
+HWSPEC=../io_hwp/system.xml
