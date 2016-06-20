@@ -11,7 +11,8 @@ src/simpleproject.d: ../src/simpleproject.cpp ../src/platform.h \
  ../../complex_bsp/communication/include/mb_interface.h \
  ../../complex_bsp/communication/include/xil_printf.h \
  ../../complex_bsp/communication/include/xio.h \
- ../../complex_bsp/communication/include/xparameters.h
+ ../../complex_bsp/communication/include/xparameters.h \
+ ../../complex_bsp/communication/include/xiomodule_l.h
 
 ../src/platform.h:
 
@@ -40,3 +41,5 @@ src/simpleproject.d: ../src/simpleproject.cpp ../src/platform.h \
 ../../complex_bsp/communication/include/xio.h:
 
 ../../complex_bsp/communication/include/xparameters.h:
+
+../../complex_bsp/communication/include/xiomodule_l.h:

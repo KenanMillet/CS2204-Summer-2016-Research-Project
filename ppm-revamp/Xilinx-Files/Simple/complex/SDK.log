@@ -105,3 +105,51 @@ Failed to Scan JTAG Chain
 14:08:42.638 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 14:55:02.932 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 15:31:53.001 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:56:09.604 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+11:56:40.008 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:58:05.334 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:59:46.523 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:01:16.731 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:02:43.410 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:04:26.876 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:06:43.152 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:24:20.193 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+12:24:33.624 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+12:25:02.828 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+12:26:30.741 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+12:26:30.741 ERROR - Timeout occured while waiting to get reply for command "xfpga  -cable type digilent_plugin -f C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit -report_progress" 
+12:26:30.741 ERROR - FPGA Configuration failed. 
+12:27:38.055 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+12:27:38.055 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+12:28:50.745 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+12:28:50.745 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+12:30:26.397 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:34:05.545 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:35:24.272 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:37:54.350 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:39:09.218 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:45:53.903 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:47:40.958 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:48:10.227 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 

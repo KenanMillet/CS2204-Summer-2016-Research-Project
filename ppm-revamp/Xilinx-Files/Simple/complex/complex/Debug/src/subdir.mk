@@ -27,14 +27,14 @@ CPP_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MicroBlaze g++ compiler'
-	mb-g++ -Wall -O3 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: MicroBlaze g++ compiler'
-	mb-g++ -Wall -O3 -g3 -c -fmessage-length=0 -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

@@ -18,9 +18,9 @@ void init_gpio();
 void serialize_GPI_data_send();
 void deserialize_UART_data_send(void*);
 void clear_GPO();
+void test(void*);
 
 u32 output;
-u32 test = 0;
 
 void init_uart_interrupt(){
 	XIOModule_Initialize(&uart, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
@@ -29,6 +29,7 @@ void init_uart_interrupt(){
 
 	XIOModule_Start(&uart); // start the GPO module
 	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)deserialize_UART_data_send, NULL); //set the receive function to run upon a uart_rx interrupt
+//	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)test, NULL); //set the receive function to run upon a uart_rx interrupt
 	XIOModule_Enable(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR); // enable the interrupt
 
 	microblaze_enable_interrupts(); // enable global interrupts
@@ -49,20 +50,21 @@ void deserialize_UART_data_send(void*){
 	u8 buffer[2];
 
 	for(int i = 0; i < 2; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	xil_printf("%s\r\n",&buffer);
 
-	const char* start = (const char*)(&buffer);
-	char* end = (char*)(&buffer);
-	u32 data = 0;
-	
-	data |= strtol(start++, &(++end), 16);
-	if(data >> 1 == 0)
-	{
-		data <<= 4;
-		data |= strtol(start++, &(++end), 16);
-	}
-	else data |= strtol(start++, &(++end), 16);
-	
-	output = data;
+//	const char* start = (const char*)(&buffer);
+//	char* end = (char*)(&buffer);
+//	u32 data = 0;
+//
+//	data |= strtol(start++, &(++end), 16);
+//	if(data >> 1 == 0)
+//	{
+//		data <<= 4;
+//		data |= strtol(start++, &(++end), 16);
+//	}
+//	else data |= strtol(start++, &(++end), 16);
+//
+//	output = data;
 }
 
 void clear_GPO()
@@ -71,14 +73,24 @@ void clear_GPO()
 	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
+void test(void*)
+{
+	u8 buffer[32];
+	for(int i = 0; i < 32 && XIOModule_IsReceiveEmpty(STDIN_BASEADDRESS); ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	xil_printf("%s\r\n", &buffer);
+}
+
 int main(){
 	init_platform();
 	init_gpio();
 	init_uart_interrupt();
 
+	long loopNo = 0;
+
 	while(1){
-		serialize_GPI_data_send();
-		XIOModule_DiscreteWrite(&gpio, 1, output);
-		clear_GPO();
+//		serialize_GPI_data_send();
+//		XIOModule_DiscreteWrite(&gpio, 1, output);
+//		clear_GPO();
+		xil_printf("%d\r\n", loopNo++);
 	}
 }
