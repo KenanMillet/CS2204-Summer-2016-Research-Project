@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\complex\Release\complex.elf" key="complex_hp-communication-initElf"/>
-	<item value="C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.bit" key="complex_hp-bitFile"/>
-	<item value="C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\ipcore_dir\communication_bd.bmm" key="complex_hp-bmmFile"/>
+	<item value="C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\complex\Release\complex.elf" key="complex_hp-communication-initElf"/>
+	<item value="C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.bit" key="complex_hp-bitFile"/>
+	<item value="C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\ipcore_dir\communication_bd.bmm" key="complex_hp-bmmFile"/>
 </section>
