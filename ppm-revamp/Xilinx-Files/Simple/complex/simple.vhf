@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/16/2016 14:47:50
+-- /___/   /\     Timestamp : 06/17/2016 13:31:53
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.vhf -w C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.sch
+--Command: sch2hdl -sympath C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.vhf -w C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.sch
 --Design Name: simple
 --Device: artix7
 --Purpose:
@@ -206,6 +206,7 @@ architecture BEHAVIORAL of simple is
    signal CLOCK      : std_logic;
    signal comms_gpi1 : std_logic_vector (31 downto 0);
    signal comms_gpo1 : std_logic_vector (31 downto 0);
+   signal enable     : std_logic;
    signal result0    : std_logic;
    signal result1    : std_logic;
    signal result2    : std_logic;
@@ -213,7 +214,6 @@ architecture BEHAVIORAL of simple is
    signal XLXN_47    : std_logic;
    signal XLXN_48    : std_logic;
    signal XLXN_49    : std_logic;
-   signal XLXN_61    : std_logic;
    component communication
       port ( clk            : in    std_logic; 
              reset          : in    std_logic; 
@@ -305,7 +305,7 @@ begin
    
    XLXI_1 : FD4CE_HXILINX_simple
       port map (C=>CLOCK,
-                CE=>XLXN_61,
+                CE=>enable,
                 CLR=>XLXN_48,
                 D0=>result0,
                 D1=>result1,
@@ -345,7 +345,7 @@ begin
    XLXI_22 : RisingEdge_MUSER_simple
       port map (C=>CLOCK,
                 D=>comms_gpo1(4),
-                Q=>XLXN_61);
+                Q=>enable);
    
    XLXI_23 : IBUFG
       port map (I=>OBClk,
@@ -384,7 +384,7 @@ begin
                 O=>gpo3);
    
    XLXI_37 : OBUF
-      port map (I=>comms_gpo1(4),
+      port map (I=>enable,
                 O=>enableBit);
    
    XLXI_38 : OBUF

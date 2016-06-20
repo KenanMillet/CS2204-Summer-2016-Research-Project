@@ -6,8 +6,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 xc7a100t-csg324-3 simple.ngc simple.ngd -bm ipcore_dir/communication.bmm
 
 Reading NGO file
-"C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp
-/Xilinx-Files/Simple/complex/simple.ngc" ...
+"C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Fi
+les/Simple/complex/simple.ngc" ...
 Loading design module "ipcore_dir/communication.ngc"...
 Gathering constraint information from source properties...
 Done.
@@ -205,10 +205,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  47
 
-Total memory usage is 223380 kilobytes
+Total memory usage is 269108 kilobytes
 
 Writing NGD file "simple.ngd" ...
-Total REAL time to NGDBUILD completion:  6 sec
-Total CPU time to NGDBUILD completion:   6 sec
+Total REAL time to NGDBUILD completion:  12 sec
+Total CPU time to NGDBUILD completion:   9 sec
 
 Writing NGDBUILD log file "simple.bld"...

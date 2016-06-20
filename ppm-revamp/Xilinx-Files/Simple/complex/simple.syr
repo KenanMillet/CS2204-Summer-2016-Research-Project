@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Reading design: simple.prj
 
@@ -108,11 +108,11 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\ipcore_dir\communication.vhd" into library work
-Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\RisingEdge.vhf" into library work
+Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\RisingEdge.vhf" into library work
 Parsing entity <RisingEdge>.
 Parsing architecture <BEHAVIORAL> of entity <risingedge>.
-Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" into library work
+Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" into library work
 Parsing entity <ADD4_HXILINX_simple>.
 Parsing architecture <ADD4_HXILINX_simple_V> of entity <add4_hxilinx_simple>.
 Parsing entity <FD4CE_HXILINX_simple>.
@@ -127,21 +127,21 @@ Parsing architecture <BEHAVIORAL> of entity <simple>.
 =========================================================================
 
 Elaborating entity <simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 217: <communication> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 217: <communication> remains a black-box since it has no binding entity.
 
 Elaborating entity <FD4CE_HXILINX_simple> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ADD4_HXILINX_simple> (architecture <ADD4_HXILINX_simple_V>) from library <work>.
 
 Elaborating entity <RisingEdge_MUSER_simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 207: Net <comms_gpi1[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 207: Net <comms_gpi1[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <simple>.
-    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Set property "HU_SET = XLXI_1_2" for instance <XLXI_1>.
     Set property "HU_SET = XLXI_2_3" for instance <XLXI_2>.
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_23>.
@@ -199,17 +199,17 @@ Synthesizing Unit <simple>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_41>.
     Set property "SLEW = SLOW" for instance <XLXI_41>.
     Set property "DRIVE = 12" for instance <XLXI_41>.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <comms_gpi1<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <simple> synthesized.
 
 Synthesizing Unit <FD4CE_HXILINX_simple>.
-    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Found 1-bit register for signal <Q2>.
     Found 1-bit register for signal <Q1>.
     Found 1-bit register for signal <Q0>.
@@ -219,7 +219,7 @@ Synthesizing Unit <FD4CE_HXILINX_simple>.
 Unit <FD4CE_HXILINX_simple> synthesized.
 
 Synthesizing Unit <ADD4_HXILINX_simple>.
-    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Found 5-bit adder for signal <n0024> created at line 58.
     Found 5-bit adder for signal <adsu_p.adsu_tmp> created at line 58.
     Summary:
@@ -227,7 +227,7 @@ Synthesizing Unit <ADD4_HXILINX_simple>.
 Unit <ADD4_HXILINX_simple> synthesized.
 
 Synthesizing Unit <RisingEdge_MUSER_simple>.
-    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Summary:
 	no macro.
 Unit <RisingEdge_MUSER_simple> synthesized.
@@ -476,7 +476,7 @@ mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(mcs_0/U0/lmb
 mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
 mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
 mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
-mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                         | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 64    |
+mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                         | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 64    |
 --------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -485,7 +485,7 @@ Speed Grade: -3
 
    Minimum period: 3.726ns (Maximum Frequency: 268.393MHz)
    Minimum input arrival time before clock: 0.401ns
-   Maximum output required time after clock: 1.709ns
+   Maximum output required time after clock: 2.240ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -540,27 +540,24 @@ Offset:              0.401ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'OBClk'
-  Total number of paths / destination ports: 30 / 14
+  Total number of paths / destination ports: 31 / 14
 -------------------------------------------------------------------------
-Offset:              1.709ns (Levels of Logic = 5)
-  Source:            XLXI_1/Q1 (FF)
-  Destination:       add3 (PAD)
+Offset:              2.240ns (Levels of Logic = 3)
+  Source:            XLXI_22/XLXI_7 (FF)
+  Destination:       enableBit (PAD)
   Source Clock:      OBClk rising
 
-  Data Path: XLXI_1/Q1 to add3
+  Data Path: XLXI_22/XLXI_7 to enableBit
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             5   0.361   0.575  Q1 (Q1)
-     end scope: 'XLXI_1:Q1'
-     begin scope: 'XLXI_2:A1'
-     LUT4:I0->O            1   0.097   0.295  Madd_adsu_p.adsu_tmp_Madd_xor<3>11_SW0 (N01)
-     LUT5:I4->O            2   0.097   0.283  Madd_adsu_p.adsu_tmp_Madd_xor<3>11 (S3)
-     end scope: 'XLXI_2:S3'
-     OBUF:I->O                 0.000          XLXI_41 (add3)
+     FD:C->Q               1   0.361   0.279  XLXI_22/XLXI_7 (XLXI_22/XLXN_9)
+     INV:I->O              1   0.511   0.693  XLXI_22/XLXI_4 (XLXI_22/XLXN_7)
+     AND2:I0->O            5   0.097   0.298  XLXI_22/XLXI_1 (enable)
+     OBUF:I->O                 0.000          XLXI_37 (enableBit)
     ----------------------------------------
-    Total                      1.709ns (0.555ns logic, 1.154ns route)
-                                       (32.5% logic, 67.5% route)
+    Total                      2.240ns (0.969ns logic, 1.271ns route)
+                                       (43.3% logic, 56.7% route)
 
 =========================================================================
 
@@ -594,12 +591,12 @@ mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132| 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.60 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.00 secs
  
 --> 
 
-Total memory usage is 469480 kilobytes
+Total memory usage is 427672 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

@@ -987,3 +987,1802 @@ ELF file	: complex.elf
 elfcheck passed.
 'Finished building: complex.elf.elfcheck'
 ' '
+18:22:07 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+18:22:08 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:53:14: warning: unused variable 'start' [-Wunused-variable]
+../src/simpleproject.cpp:54:8: warning: unused variable 'end' [-Wunused-variable]
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+18:22:49 **** Clean-only build of configuration Release for project complex ****
+make clean 
+rm -rf  ./src/platform.o ./src/simpleproject.o  ./src/platform.d  ./src/simpleproject.d  complex.elf.size  complex.elf.elfcheck  complex.elf
+' '
+18:22:49 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+18:31:30 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+19:23:21 **** Auto Build of project complex_bsp ****
+make -k all 
+libgen -hw ../complex_hp/system.xml\
+	       \
+	       -pe communication \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../complex_hp/system.xml -pe communication -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling iomodule"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+19:23:33 **** Auto Build of configuration Release for project complex ****
+make all 
+make: Nothing to be done for `all'.
+19:33:32 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+19:33:58 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+19:37:01 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8306	    372	   2450	  11128	   2b78	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+19:37:16 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+19:40:32 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8450	    372	   2450	  11272	   2c08	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+19:41:02 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+19:43:18 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8446	    372	   2444	  11262	   2bfe	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+19:44:02 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:12:54 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8446	    372	   2444	  11262	   2bfe	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:14:09 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8302	    372	   2444	  11118	   2b6e	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:14:20 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8302	    372	   2444	  11118	   2b6e	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:15:03 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:16:40 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8306	    372	   2450	  11128	   2b78	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:16:59 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:18:20 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4842	    368	   2446	   7656	   1de8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:18:28 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8426	    372	   2450	  11248	   2bf0	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:20:02 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8446	    372	   2444	  11262	   2bfe	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:20:22 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:21:24 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8426	    372	   2450	  11248	   2bf0	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:21:52 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:22:08 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8430	    372	   2444	  11246	   2bee	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:22:22 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:22:36 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:22:44 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:23:00 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:30:38 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8306	    372	   2450	  11128	   2b78	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:31:25 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:33:53 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:41:30 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:46:19 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8446	    372	   2444	  11262	   2bfe	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:47:05 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:50:43 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:55:8: warning: variable 'buffer' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4986	    368	   2446	   7800	   1e78	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:56:55 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+11:57:14 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+11:59:03 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8450	    372	   2450	  11272	   2c08	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:00:29 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+12:08:02 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8474	    372	   2450	  11296	   2c20	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:10:06 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+12:11:05 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8386	    372	   2450	  11208	   2bc8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:11:59 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+12:27:33 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8306	    372	   2450	  11128	   2b78	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:29:11 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+12:31:57 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8430	    372	   2444	  11246	   2bee	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:33:20 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8454	    372	   2444	  11270	   2c06	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:34:51 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+12:36:18 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:55:32: error: 'data2' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+12:36:23 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8454	    372	   2444	  11270	   2c06	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:37:19 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8454	    372	   2444	  11270	   2c06	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:37:31 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+12:41:34 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8330	    372	   2450	  11152	   2b90	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+12:42:42 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:10:35 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7002	    372	   2450	   9824	   2660	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:10:42 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9654	    372	   2444	  12470	   30b6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:11:03 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9654	    372	   2444	  12470	   30b6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:11:21 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:23:59 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:40:44 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:49:04 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9654	    372	   2444	  12470	   30b6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:49:18 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:51:42 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9678	    372	   2444	  12494	   30ce	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:51:57 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:55:18 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9654	    372	   2444	  12470	   30b6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:55:28 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9670	    372	   2444	  12486	   30c6	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:55:46 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:56:06 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+13:56:54 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+13:57:12 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+14:03:04 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:03:46 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+14:05:27 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9726	    372	   2452	  12550	   3106	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:05:51 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9742	    372	   2452	  12566	   3116	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:06:06 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+14:07:34 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:66:2: error: 'hi' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+14:07:38 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:66:2: error: 'hi' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+14:08:06 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+../src/simpleproject.cpp: In function 'void deserialize_UART_data_send(void*)':
+../src/simpleproject.cpp:66:2: error: 'hi' was not declared in this scope
+make: *** [src/simpleproject.o] Error 1
+14:08:15 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9466	    372	   2458	  12296	   3008	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:08:43 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+14:10:10 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:53:58 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:54:13 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:54:45 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9714	    372	   2458	  12544	   3100	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+14:55:03 **** Auto Build of project complex_bsp ****
+make -k all 
+'Finished building libraries'
+14:57:25 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9714	    372	   2458	  12544	   3100	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+15:15:33 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9714	    372	   2458	  12544	   3100	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '
+15:16:36 **** Auto Build of configuration Release for project complex ****
+make all 
+'Building file: ../src/simpleproject.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O3 -c -fmessage-length=0 -std=c++0x -I../../complex_bsp/communication/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simpleproject.d" -MT"src/simpleproject.d" -o "src/simpleproject.o" "../src/simpleproject.cpp"
+'Finished building: ../src/simpleproject.cpp'
+' '
+'Building target: complex.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../complex_bsp/communication/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "complex.elf"  ./src/platform.o ./src/simpleproject.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: complex.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size complex.elf  |tee "complex.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9698	    372	   2450	  12520	   30e8	complex.elf
+'Finished building: complex.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck complex.elf -hw ../../complex_hp/system.xml -pe communication  |tee "complex.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../complex_hp/system.xml -pe communication
+complex.elf 
+
+ELF file	: complex.elf
+elfcheck passed.
+'Finished building: complex.elf.elfcheck'
+' '

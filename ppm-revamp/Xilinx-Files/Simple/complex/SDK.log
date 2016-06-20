@@ -52,3 +52,56 @@ Failed to Scan JTAG Chain
 17:25:36.955 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 15:07:12.102 INFO  - FPGA configured successfully with bitstream "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 15:36:49.439 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+18:25:09.900 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+18:26:12.518 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+18:26:43.081 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+18:32:36.804 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:23:20.718 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+19:33:57.625 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+19:37:15.729 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+19:41:01.453 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+19:44:01.860 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+19:46:26.045 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:15:02.631 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:16:58.189 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:20:21.767 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:21:51.080 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:22:21.537 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:22:59.392 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:29:18.863 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:31:24.374 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:41:29.831 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:47:04.822 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+11:57:13.237 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:00:28.796 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:10:06.012 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:11:58.203 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:29:10.070 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:34:50.827 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:37:30.820 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:42:41.511 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:11:21.002 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:23:58.457 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:40:43.604 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:49:18.035 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:51:56.042 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:56:05.781 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:57:11.909 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+14:03:45.383 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+14:06:05.352 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+14:08:42.638 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+14:55:02.932 INFO  - FPGA configured successfully with bitstream "C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+15:31:53.001 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -24,7 +24,7 @@
         <signal name="usb_in" />
         <signal name="CLOCK" />
         <signal name="comms_gpo1(4)" />
-        <signal name="XLXN_61" />
+        <signal name="enable" />
         <signal name="usb_out" />
         <signal name="comms_gpi1(31:0)" />
         <signal name="comms_gpo1(31:0)" />
@@ -157,7 +157,7 @@
         </blockdef>
         <block symbolname="fd4ce" name="XLXI_1">
             <blockpin signalname="CLOCK" name="C" />
-            <blockpin signalname="XLXN_61" name="CE" />
+            <blockpin signalname="enable" name="CE" />
             <blockpin signalname="XLXN_48" name="CLR" />
             <blockpin signalname="result0" name="D0" />
             <blockpin signalname="result1" name="D1" />
@@ -197,7 +197,7 @@
         <block symbolname="RisingEdge" name="XLXI_22">
             <blockpin signalname="comms_gpo1(4)" name="D" />
             <blockpin signalname="CLOCK" name="C" />
-            <blockpin signalname="XLXN_61" name="Q" />
+            <blockpin signalname="enable" name="Q" />
         </block>
         <block symbolname="communication" name="mcs_0">
             <blockpin signalname="CLOCK" name="clk" />
@@ -242,7 +242,7 @@
             <blockpin signalname="gpo3" name="O" />
         </block>
         <block symbolname="obuf" name="XLXI_37">
-            <blockpin signalname="comms_gpo1(4)" name="I" />
+            <blockpin signalname="enable" name="I" />
             <blockpin signalname="enableBit" name="O" />
         </block>
         <block symbolname="obuf" name="XLXI_38">
@@ -397,7 +397,8 @@
             <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="528" y="1312" type="branch" />
             <wire x2="528" y1="1312" y2="1312" x1="432" />
         </branch>
-        <branch name="XLXN_61">
+        <branch name="enable">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="80" y="928" type="branch" />
             <wire x2="80" y1="928" y2="1248" x1="80" />
             <wire x2="176" y1="1248" y2="1248" x1="80" />
             <wire x2="416" y1="928" y2="928" x1="80" />
@@ -426,11 +427,6 @@
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1136" y="2080" type="branch" />
             <wire x2="1136" y1="2080" y2="2080" x1="1040" />
             <wire x2="1280" y1="2080" y2="2080" x1="1136" />
-        </branch>
-        <branch name="comms_gpo1(4)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1136" y="2160" type="branch" />
-            <wire x2="1136" y1="2160" y2="2160" x1="1040" />
-            <wire x2="1280" y1="2160" y2="2160" x1="1136" />
         </branch>
         <branch name="result0">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="2240" type="branch" />
@@ -483,9 +479,9 @@
             <wire x2="320" y1="2400" y2="2400" x1="176" />
         </branch>
         <branch name="comms_gpo1(1)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="177" y="2480" type="branch" />
-            <wire x2="177" y1="2480" y2="2480" x1="80" />
-            <wire x2="320" y1="2480" y2="2480" x1="177" />
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="177" y="2480" type="branch" />
+            <wire x2="176" y1="2480" y2="2480" x1="80" />
+            <wire x2="320" y1="2480" y2="2480" x1="176" />
         </branch>
         <branch name="comms_gpo1(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="176" y="2560" type="branch" />
@@ -568,5 +564,10 @@
         <iomarker fontsize="28" x="640" y="2240" name="gpi2" orien="R0" />
         <iomarker fontsize="28" x="640" y="2160" name="gpi1" orien="R0" />
         <iomarker fontsize="28" x="640" y="2080" name="gpi0" orien="R0" />
+        <branch name="enable">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1072" y="2160" type="branch" />
+            <wire x2="1072" y1="2160" y2="2160" x1="1040" />
+            <wire x2="1280" y1="2160" y2="2160" x1="1072" />
+        </branch>
     </sheet>
 </drawing>

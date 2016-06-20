@@ -5,6 +5,7 @@
  #include "platform.h"
  #include <xiomodule.h>
  #include <xparameters.h>
+ #include <xiomodule_l.h>
  #include <stdlib.h>        //strtol
  using namespace std;
 
@@ -17,6 +18,9 @@ void init_gpio();
 void serialize_GPI_data_send();
 void deserialize_UART_data_send(void*);
 void clear_GPO();
+
+u32 output;
+u32 test = 0;
 
 void init_uart_interrupt(){
 	XIOModule_Initialize(&uart, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
@@ -40,21 +44,14 @@ void serialize_GPI_data_send(){ //reads from GPI and send to USB
 	xil_printf("%x\r\n",gpiData); // sends to USB as one char in HEX since we do not need all 32 bits.
 }
 
-void deserialize_UART_data_send(void* ){
-	// u8 dataBuffer[3];
-	// const char *start = (const char*)&dataBuffer;
-	// char *end = (char*)&dataBuffer;
-	
-	// dataBuffer[0] = XIOModule_RecvByte(STDIN_BASEADDRESS);;
-	// dataBuffer[1] = XIOModule_RecvByte(STDIN_BASEADDRESS);;
-	// dataBuffer[2] = '\0';
+void deserialize_UART_data_send(void*){
 
-	u8 buffer[32];
+	u8 buffer[2];
+
+	for(int i = 0; i < 2; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
+
 	const char* start = (const char*)(&buffer);
 	char* end = (char*)(&buffer);
-
-	for(int i = 0; uart.ReceiveBuffer.RemainingBytes != 0 && i < 32; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
-
 	u32 data = 0;
 	
 	data |= strtol(start++, &(++end), 16);
@@ -65,7 +62,7 @@ void deserialize_UART_data_send(void* ){
 	}
 	else data |= strtol(start++, &(++end), 16);
 	
-	XIOModule_DiscreteWrite(&gpio, 1, data);
+	output = data;
 }
 
 void clear_GPO()
@@ -81,7 +78,7 @@ int main(){
 
 	while(1){
 		serialize_GPI_data_send();
+		XIOModule_DiscreteWrite(&gpio, 1, output);
 		clear_GPO();
 	}
-
 }
