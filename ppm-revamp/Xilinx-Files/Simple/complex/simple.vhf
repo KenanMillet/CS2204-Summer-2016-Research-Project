@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/17/2016 13:31:53
+-- /___/   /\     Timestamp : 06/20/2016 13:03:52
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.vhf -w C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.sch
+--Command: sch2hdl -sympath C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.vhf -w C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.sch
 --Design Name: simple
 --Device: artix7
 --Purpose:
@@ -356,7 +356,7 @@ begin
                 O=>gpi2);
    
    XLXI_30 : OBUF
-      port map (I=>comms_gpi1(0),
+      port map (I=>comms_gpo1(5),
                 O=>gpi0);
    
    XLXI_31 : OBUF

@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: simple.prj
 
@@ -108,11 +108,11 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\ipcore_dir\communication.vhd" into library work
-Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\RisingEdge.vhf" into library work
+Parsing VHDL file "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\RisingEdge.vhf" into library work
 Parsing entity <RisingEdge>.
 Parsing architecture <BEHAVIORAL> of entity <risingedge>.
-Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" into library work
+Parsing VHDL file "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" into library work
 Parsing entity <ADD4_HXILINX_simple>.
 Parsing architecture <ADD4_HXILINX_simple_V> of entity <add4_hxilinx_simple>.
 Parsing entity <FD4CE_HXILINX_simple>.
@@ -127,21 +127,21 @@ Parsing architecture <BEHAVIORAL> of entity <simple>.
 =========================================================================
 
 Elaborating entity <simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 217: <communication> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 217: <communication> remains a black-box since it has no binding entity.
 
 Elaborating entity <FD4CE_HXILINX_simple> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ADD4_HXILINX_simple> (architecture <ADD4_HXILINX_simple_V>) from library <work>.
 
 Elaborating entity <RisingEdge_MUSER_simple> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 207: Net <comms_gpi1[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" Line 207: Net <comms_gpi1[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <simple>.
-    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Set property "HU_SET = XLXI_1_2" for instance <XLXI_1>.
     Set property "HU_SET = XLXI_2_3" for instance <XLXI_2>.
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_23>.
@@ -199,17 +199,17 @@ Synthesizing Unit <simple>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_41>.
     Set property "SLEW = SLOW" for instance <XLXI_41>.
     Set property "DRIVE = 12" for instance <XLXI_41>.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 296: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <CO> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf" line 319: Output port <OFL> of the instance <XLXI_2> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <comms_gpi1<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <simple> synthesized.
 
 Synthesizing Unit <FD4CE_HXILINX_simple>.
-    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Found 1-bit register for signal <Q2>.
     Found 1-bit register for signal <Q1>.
     Found 1-bit register for signal <Q0>.
@@ -219,7 +219,7 @@ Synthesizing Unit <FD4CE_HXILINX_simple>.
 Unit <FD4CE_HXILINX_simple> synthesized.
 
 Synthesizing Unit <ADD4_HXILINX_simple>.
-    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Found 5-bit adder for signal <n0024> created at line 58.
     Found 5-bit adder for signal <adsu_p.adsu_tmp> created at line 58.
     Summary:
@@ -227,7 +227,7 @@ Synthesizing Unit <ADD4_HXILINX_simple>.
 Unit <ADD4_HXILINX_simple> synthesized.
 
 Synthesizing Unit <RisingEdge_MUSER_simple>.
-    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
+    Related source file is "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\ppm-revamp\Xilinx-Files\Simple\complex\simple.vhf".
     Summary:
 	no macro.
 Unit <RisingEdge_MUSER_simple> synthesized.
@@ -591,12 +591,12 @@ mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132| 
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 23.00 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.98 secs
  
 --> 
 
-Total memory usage is 427672 kilobytes
+Total memory usage is 293036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

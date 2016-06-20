@@ -42,6 +42,7 @@
         <signal name="gpi1" />
         <signal name="OBClk" />
         <signal name="gpi0" />
+        <signal name="comms_gpo1(5)" />
         <port polarity="Input" name="usb_in" />
         <port polarity="Output" name="usb_out" />
         <port polarity="Output" name="gpo3" />
@@ -214,7 +215,7 @@
             <blockpin signalname="gpi2" name="O" />
         </block>
         <block symbolname="obuf" name="XLXI_30">
-            <blockpin signalname="comms_gpi1(0)" name="I" />
+            <blockpin signalname="comms_gpo1(5)" name="I" />
             <blockpin signalname="gpi0" name="O" />
         </block>
         <block symbolname="obuf" name="XLXI_31">
@@ -452,8 +453,7 @@
             <wire x2="1584" y1="2080" y2="2080" x1="1504" />
         </branch>
         <branch name="enableBit">
-            <wire x2="1520" y1="2160" y2="2160" x1="1504" />
-            <wire x2="1536" y1="2160" y2="2160" x1="1520" />
+            <wire x2="1536" y1="2160" y2="2160" x1="1504" />
         </branch>
         <branch name="add0">
             <wire x2="1584" y1="2240" y2="2240" x1="1504" />
@@ -479,7 +479,7 @@
             <wire x2="320" y1="2400" y2="2400" x1="176" />
         </branch>
         <branch name="comms_gpo1(1)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="177" y="2480" type="branch" />
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="176" y="2480" type="branch" />
             <wire x2="176" y1="2480" y2="2480" x1="80" />
             <wire x2="320" y1="2480" y2="2480" x1="176" />
         </branch>
@@ -493,18 +493,11 @@
             <wire x2="176" y1="2160" y2="2160" x1="80" />
             <wire x2="320" y1="2160" y2="2160" x1="176" />
         </branch>
-        <branch name="comms_gpi1(0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="176" y="2080" type="branch" />
-            <wire x2="176" y1="2080" y2="2080" x1="80" />
-            <wire x2="320" y1="2080" y2="2080" x1="176" />
-        </branch>
         <branch name="gpi2">
-            <wire x2="560" y1="2240" y2="2240" x1="544" />
-            <wire x2="640" y1="2240" y2="2240" x1="560" />
+            <wire x2="640" y1="2240" y2="2240" x1="544" />
         </branch>
         <branch name="gpi3">
-            <wire x2="560" y1="2320" y2="2320" x1="544" />
-            <wire x2="640" y1="2320" y2="2320" x1="560" />
+            <wire x2="640" y1="2320" y2="2320" x1="544" />
         </branch>
         <branch name="gpo0">
             <wire x2="624" y1="2400" y2="2400" x1="544" />
@@ -516,8 +509,7 @@
             <wire x2="624" y1="2560" y2="2560" x1="544" />
         </branch>
         <branch name="gpi1">
-            <wire x2="560" y1="2160" y2="2160" x1="544" />
-            <wire x2="640" y1="2160" y2="2160" x1="560" />
+            <wire x2="640" y1="2160" y2="2160" x1="544" />
         </branch>
         <instance x="320" y="2112" name="XLXI_30" orien="R0" />
         <instance x="320" y="2192" name="XLXI_31" orien="R0" />
@@ -537,8 +529,7 @@
             <wire x2="320" y1="2240" y2="2240" x1="176" />
         </branch>
         <branch name="OBClk">
-            <wire x2="1264" y1="2560" y2="2560" x1="1152" />
-            <wire x2="1280" y1="2560" y2="2560" x1="1264" />
+            <wire x2="1280" y1="2560" y2="2560" x1="1152" />
         </branch>
         <branch name="CLOCK">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1632" y="2560" type="branch" />
@@ -548,8 +539,7 @@
         <instance x="1280" y="2592" name="XLXI_23" orien="R0" />
         <iomarker fontsize="28" x="1152" y="2560" name="OBClk" orien="R180" />
         <branch name="gpi0">
-            <wire x2="560" y1="2080" y2="2080" x1="544" />
-            <wire x2="640" y1="2080" y2="2080" x1="560" />
+            <wire x2="640" y1="2080" y2="2080" x1="544" />
         </branch>
         <iomarker fontsize="28" x="624" y="2400" name="gpo0" orien="R0" />
         <iomarker fontsize="28" x="624" y="2480" name="gpo1" orien="R0" />
@@ -568,6 +558,11 @@
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1072" y="2160" type="branch" />
             <wire x2="1072" y1="2160" y2="2160" x1="1040" />
             <wire x2="1280" y1="2160" y2="2160" x1="1072" />
+        </branch>
+        <branch name="comms_gpo1(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="176" y="2080" type="branch" />
+            <wire x2="176" y1="2080" y2="2080" x1="80" />
+            <wire x2="320" y1="2080" y2="2080" x1="176" />
         </branch>
     </sheet>
 </drawing>

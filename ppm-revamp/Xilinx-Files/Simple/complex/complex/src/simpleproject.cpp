@@ -52,6 +52,9 @@ void deserialize_UART_data_send(void*){
 	for(int i = 0; i < 2; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
 	xil_printf("%s\r\n",&buffer);
 
+	output = 0;
+	XIOModule_DiscreteWrite(&gpio, 1, output);
+
 //	const char* start = (const char*)(&buffer);
 //	char* end = (char*)(&buffer);
 //	u32 data = 0;
@@ -91,6 +94,8 @@ int main(){
 //		serialize_GPI_data_send();
 //		XIOModule_DiscreteWrite(&gpio, 1, output);
 //		clear_GPO();
+		output = 1 << 5;
 		xil_printf("%d\r\n", loopNo++);
+		XIOModule_DiscreteWrite(&gpio, 1, output);
 	}
 }

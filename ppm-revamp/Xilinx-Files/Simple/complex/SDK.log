@@ -153,3 +153,5 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 12:45:53.903 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 12:47:40.958 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 12:48:10.227 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+12:56:40.365 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
+13:06:20.590 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
