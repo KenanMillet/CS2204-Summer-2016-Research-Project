@@ -1,0 +1,3 @@
+PROCESSOR=communication
+REPOSITORIES=
+HWSPEC=../communication_hwp/system.xml
