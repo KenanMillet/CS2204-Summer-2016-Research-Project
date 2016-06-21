@@ -1,82 +1,30 @@
-Release 14.7 Map P.20131013 (nt64)
-Xilinx Map Application Log File for Design 'gomoku'
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Design Information
-------------------
-Command Line   : map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol
-high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
--power off -o gomoku_map.ncd gomoku.ngd gomoku.pcf 
-Target Device  : xc7a100t
-Target Package : csg324
-Target Speed   : -3
-Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Jun 21 15:47:50 2016
+HP-25::  Tue Jun 21 15:48:34 2016
 
-Mapping design into LUTs...
-Running directed packing...
-Running delay-based LUT packing...
-Updating timing models...
-INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
-   (.mrp).
-Running timing-driven placement...
-Total REAL time at the beginning of Placer: 16 secs 
-Total CPU  time at the beginning of Placer: 15 secs 
+par -w -intstyle ise -ol high -mt off gomoku_map.ncd gomoku.ncd gomoku.pcf 
 
-Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:10e2536f) REAL time: 17 secs 
 
-Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:10e2536f) REAL time: 17 secs 
+Constraints file: gomoku.pcf.
+Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "gomoku" is an NCD, version 3.2, device xc7a100t, package csg324, speed -3
 
-Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:10e2536f) REAL time: 17 secs 
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
 
-Phase 4.2  Initial Placement for Architecture Specific Features
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
-Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:f4c6c57d) REAL time: 20 secs 
+Device speed data version:  "PRODUCTION 1.10 2013-10-13".
 
-Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:f4c6c57d) REAL time: 20 secs 
 
-Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:f4c6c57d) REAL time: 21 secs 
 
-Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:f4c6c57d) REAL time: 21 secs 
+Device Utilization Summary:
 
-Phase 8.8  Global Placement
-........................................
-........................................
-...........
-...............
-.................
-.................
-Phase 8.8  Global Placement (Checksum:1a21708d) REAL time: 28 secs 
-
-Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:1a21708d) REAL time: 28 secs 
-
-Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:a37501ed) REAL time: 39 secs 
-
-Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:a37501ed) REAL time: 39 secs 
-
-Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:a37501ed) REAL time: 39 secs 
-
-Total REAL time to Placer completion: 39 secs 
-Total CPU  time to Placer completion: 39 secs 
-Running post-placement packing...
-Writing output files...
-
-Design Summary
---------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:    0
 Slice Logic Utilization:
   Number of Slice Registers:                   382 out of 126,800    1%
     Number used as Flip Flops:                 380
@@ -110,9 +58,8 @@ Slice Logic Distribution:
     Number with an unused Flip Flop:           362 out of     720   50%
     Number with an unused LUT:                  93 out of     720   12%
     Number of fully used LUT-FF pairs:         265 out of     720   36%
-    Number of unique control sets:              43
     Number of slice register sites lost
-      to control set restrictions:             175 out of 126,800    1%
+      to control set restrictions:               0 out of 126,800    0%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -161,11 +108,87 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.45
 
-Peak Memory Usage:  980 MB
-Total REAL time to MAP completion:  41 secs 
-Total CPU time to MAP completion:   40 secs 
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
 
-Mapping completed.
-See MAP report file "gomoku_map.mrp" for details.
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 10 secs 
+
+Starting Router
+
+
+Phase  1  : 6829 unrouted;      REAL time: 11 secs 
+
+Phase  2  : 4489 unrouted;      REAL time: 11 secs 
+
+Phase  3  : 1170 unrouted;      REAL time: 12 secs 
+
+Phase  4  : 1170 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Updating file: gomoku.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Total REAL time to Router completion: 17 secs 
+Total CPU time to Router completion: 17 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net CLO | SETUP       |         N/A|     5.891ns|     N/A|           0
+  CK_BUFG                                   | HOLD        |     0.060ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 18 secs 
+Total CPU time to PAR completion: 18 secs 
+
+Peak Memory Usage:  840 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file gomoku.ncd
+
+
+
+PAR done!

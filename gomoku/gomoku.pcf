@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jun 21 15:48:30 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+NET
+        "comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.pc_write_I"
+        USELOWSKEWLINES;
+COMP "OBClk" LOCATE = SITE "E3" LEVEL 1;
+COMP "UartRx" LOCATE = SITE "C4" LEVEL 1;
+COMP "UartTx" LOCATE = SITE "D4" LEVEL 1;
+SCHEMATIC END;
+
