@@ -1,0 +1,505 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: gomoku.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "gomoku.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "gomoku"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : gomoku
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" into library work
+Parsing entity <gomoku>.
+Parsing architecture <BEHAVIORAL> of entity <gomoku>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <gomoku> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:89 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 53: <communication> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 42: Net <comms_gpi1[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 43: Net <comms_gpi2[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 44: Net <comms_gpi3[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 45: Net <comms_gpi4[31]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <gomoku>.
+    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf".
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_7>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_7>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_8>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_8>.
+    Set property "IBUF_LOW_PWR = TRUE" for instance <XLXI_8>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_11>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_11>.
+    Set property "SLEW = SLOW" for instance <XLXI_11>.
+    Set property "DRIVE = 12" for instance <XLXI_11>.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo1> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo2> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo3> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo4> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <uart_interrupt> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <intc_irq> of the instance <comms> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <comms_gpi1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <comms_gpi2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <comms_gpi3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <comms_gpi4> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <gomoku> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/communication.ngc>.
+Loading core <communication> for timing and area information for instance <comms>.
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <gomoku> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block gomoku, actual ratio is 0.
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <comms> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <comms> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <comms> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <comms> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : gomoku.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 892
+#      GND                         : 18
+#      INV                         : 12
+#      LUT1                        : 3
+#      LUT2                        : 39
+#      LUT3                        : 81
+#      LUT4                        : 244
+#      LUT5                        : 60
+#      LUT6                        : 129
+#      LUT6_2                      : 90
+#      MULT_AND                    : 3
+#      MUXCY_L                     : 76
+#      MUXF5                       : 66
+#      MUXF6                       : 1
+#      MUXF7                       : 1
+#      VCC                         : 17
+#      XORCY                       : 52
+# FlipFlops/Latches                : 735
+#      FD                          : 111
+#      FDE                         : 138
+#      FDR                         : 203
+#      FDRE                        : 255
+#      FDS                         : 9
+#      FDSE                        : 19
+# RAMS                             : 80
+#      RAM32X1D                    : 64
+#      RAMB36E1                    : 16
+# Shift Registers                  : 53
+#      SRL16E                      : 52
+#      SRLC16E                     : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 3
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             735  out of  126800     0%  
+ Number of Slice LUTs:                  839  out of  63400     1%  
+    Number used as Logic:               658  out of  63400     1%  
+    Number used as Memory:              181  out of  19000     0%  
+       Number used as RAM:              128
+       Number used as SRL:               53
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1318
+   Number with an unused Flip Flop:     583  out of   1318    44%  
+   Number with an unused LUT:           479  out of   1318    36%  
+   Number of fully used LUT-FF pairs:   256  out of   1318    19%  
+   Number of unique control sets:        48
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    210     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of    135    11%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                        | Clock buffer(FF name)                                                                                                              | Load  |
+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+OBClk                                                               | IBUFG+BUFG                                                                                                                         | 868   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 1     |
+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                    | Buffer(FF name)                                                                                                                    | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_VCC:P)| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_VCC:P)| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_VCC:P)| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_VCC:P)| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_VCC:P)| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_VCC:P)| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_VCC:P)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_GND:G) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_GND:G) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_GND:G) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_GND:G) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_GND:G) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_GND:G) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
+comms/N1(comms/XST_GND:G)                                                                                                                         | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 64    |
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.726ns (Maximum Frequency: 268.393MHz)
+   Minimum input arrival time before clock: 0.401ns
+   Maximum output required time after clock: 0.640ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OBClk'
+  Clock period: 3.726ns (frequency: 268.393MHz)
+  Total number of paths / destination ports: 66059 / 2479
+-------------------------------------------------------------------------
+Delay:               3.726ns (Levels of Logic = 4)
+  Source:            comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF (FF)
+  Source Clock:      OBClk rising
+  Destination Clock: OBClk rising
+
+  Data Path: comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 to comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q        22   1.306   0.651  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>)
+     LUT4:I0->O            1   0.097   0.511  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_1)
+     LUT3:I0->O            1   0.097   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select)
+     MUXCY_L:S->LO        32   0.583   0.386  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.opsel1_SPR)
+     LUT6_2:I5->O6         1   0.086   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/op1_I)
+     FDRE:D                    0.008          U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Op1_DFF
+    ----------------------------------------
+    Total                      3.726ns (2.177ns logic, 1.549ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OBClk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.401ns (Levels of Logic = 3)
+  Source:            UartRx (PAD)
+  Destination:       comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1 (FF)
+  Destination Clock: OBClk rising
+
+  Data Path: UartRx to comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.295  XLXI_7 (USB_IN)
+     begin scope: 'comms:uart_rx'
+     LUT2:I1->O            1   0.097   0.000  U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/Mmux_RX_PWR_118_o_MUX_4561_o11 (U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/RX_PWR_118_o_MUX_4561_o)
+     FD:D                      0.008          U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+    ----------------------------------------
+    Total                      0.401ns (0.106ns logic, 0.295ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OBClk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (FF)
+  Destination:       UartTx (PAD)
+  Source Clock:      OBClk rising
+
+  Data Path: comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX to UartTx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.361   0.279  U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (uart_tx)
+     end scope: 'comms:uart_tx'
+     OBUF:I->O                 0.000          XLXI_11 (UartTx)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock OBClk
+--------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------+---------+---------+---------+---------+
+OBClk                                                               |    3.726|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0|    4.132|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0|    4.132|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 |    4.132|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132|         |         |         |
+--------------------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.88 secs
+ 
+--> 
+
+Total memory usage is 351316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+
