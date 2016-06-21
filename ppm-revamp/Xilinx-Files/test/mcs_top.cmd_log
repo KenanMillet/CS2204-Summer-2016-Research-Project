@@ -1,3 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/test/mcs_top.xst" -ofn "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/test/mcs_top.syr" 
-xst -intstyle ise -ifn "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/test/mcs_top.xst" -ofn "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/test/mcs_top.syr" 
-xst -intstyle ise -ifn "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/test/mcs_top.xst" -ofn "C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/test/mcs_top.syr" 

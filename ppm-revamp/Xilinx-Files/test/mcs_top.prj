@@ -1,2 +1,0 @@
-vhdl work "ipcore_dir/microblazecore.vhd"
-verilog work "mcs_top.v"

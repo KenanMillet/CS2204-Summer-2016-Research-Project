@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/20/2016 13:03:52
+-- /___/   /\     Timestamp : 06/20/2016 15:36:57
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.vhf -w C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.sch
+--Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -sympath C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl simple.vhf -w C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/simple.sch
 --Design Name: simple
 --Device: artix7
 --Purpose:
@@ -290,8 +290,8 @@ architecture BEHAVIORAL of simple is
    attribute DRIVE of OBUF : component is "12";
    attribute BOX_TYPE of OBUF : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_2";
-   attribute HU_SET of XLXI_2 : label is "XLXI_2_3";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_0";
+   attribute HU_SET of XLXI_2 : label is "XLXI_2_1";
 begin
    mcs_0 : communication
       port map (clk=>CLOCK,

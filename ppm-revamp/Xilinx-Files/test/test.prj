@@ -1,1 +1,2 @@
+vhdl work "ipcore_dir/mb_core.vhd"
 vhdl work "test.vhf"

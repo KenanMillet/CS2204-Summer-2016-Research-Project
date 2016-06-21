@@ -1,1 +1,3 @@
 MODULE test
+	SUBMODULE mb_core
+		INSTANCE mcs_0

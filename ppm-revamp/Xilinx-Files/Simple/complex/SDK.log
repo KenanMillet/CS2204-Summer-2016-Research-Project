@@ -155,3 +155,101 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 12:48:10.227 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 12:56:40.365 INFO  - FPGA configured successfully with bitstream "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/ppm-revamp/Xilinx-Files/Simple/complex/complex_hp/download.bit" 
 13:06:20.590 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:54:40.958 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+14:54:58.666 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+14:55:11.670 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+15:01:58.763 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:06:32.673 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+
+15:07:08.231 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to connect to Xilinx hw_server. Check if the
+    hw_server is running and correct TCP port is used.
+ 
+15:07:23.064 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:07:41.093 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+
+15:32:34.844 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:32:48.204 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:33:20.364 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to connect to Xilinx hw_server. Check if the
+    hw_server is running and correct TCP port is used.
+ 
+15:33:29.222 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+15:42:48.203 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+15:43:22.158 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:43:55.721 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:44:36.349 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:49:25.461 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:51:14.070 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+16:20:06.355 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
