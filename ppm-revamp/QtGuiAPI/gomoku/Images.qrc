@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/bishop_black.svg</file>
+        <file>Images/bishop_white.svg</file>
+        <file>Images/Desert.jpg</file>
+    </qresource>
+</RCC>
