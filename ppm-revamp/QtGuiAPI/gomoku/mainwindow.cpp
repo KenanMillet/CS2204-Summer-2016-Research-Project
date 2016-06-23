@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialog.h"
+#include "ui_dialog.h"
 #include "tile.h"
 #include "qDebug"
 MainWindow::MainWindow(QWidget *parent) :
@@ -146,11 +147,15 @@ void MainWindow::winornot(Tile& t){
 
     if(horizcount>=4 || verticalcount >=4 || uprightcount>=4 || upleftcount>=4){
     Dialog* mydialog = new Dialog;
-   // if(t.piece==1){
-  //      mydialog->Setr
-  //  }
+    if(t.piece==1){
+        mydialog->ui->Winlabel->setText("Black Wins");
+    }
+
+    else if(t.piece==2){
+        mydialog->ui->Winlabel->setText("White Wins");
+    }
     mydialog->show();
-}
+    }
 }
 
 

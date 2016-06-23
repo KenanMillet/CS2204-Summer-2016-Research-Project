@@ -16,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     QWidget widget;
+    Ui::MainWindow *ui;
      void dosetup(Tile& t);
     Tile *tile[15][15];
     int counttoleft(Tile& t, int count = 0, int piece = 0);
@@ -33,8 +34,9 @@ private slots:
 
     void winornot(Tile& t);
 
+
 private:
-    Ui::MainWindow *ui;
+    //Ui::MainWindow *ui;
 
 
 };

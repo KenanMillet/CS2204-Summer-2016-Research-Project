@@ -2,6 +2,7 @@
 #define DIALOG_H
 
 #include <QDialog>
+#include <QLabel>
 
 namespace Ui {
 class Dialog;
@@ -14,9 +15,11 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
+    Ui::Dialog *ui;
+
 
 private:
-    Ui::Dialog *ui;
+  //  Ui::Dialog *ui;
 
 };
 

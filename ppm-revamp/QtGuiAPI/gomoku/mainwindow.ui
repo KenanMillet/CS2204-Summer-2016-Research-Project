@@ -23,6 +23,16 @@
       <height>241</height>
      </rect>
     </property>
+    <widget class="QWidget" name="chessboardwidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>311</width>
+       <height>201</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

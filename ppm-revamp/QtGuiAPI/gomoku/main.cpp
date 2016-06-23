@@ -49,13 +49,17 @@ int main(int argc, char *argv[])
     MainWindow w;
 
     //w.setGeometry(0,0,2700,2700);
-    w.widget.setGeometry(30,30,1700,900);
+    //w.widget.setGeometry(30,30,1700,900);
+
+    w.setGeometry(30,30,1700,900);
+    w.setCentralWidget(w.ui->chessboardwidget);
+    w.ui->chessboardwidget->setGeometry(0,0,1500, 700);
 
 
-    chessBoard(&(w.widget),w.tile, w);
+    chessBoard(w.ui->chessboardwidget,w.tile, w);
 
 
-    w.widget.show();
+    w.show();
     return a.exec();
 }
 
