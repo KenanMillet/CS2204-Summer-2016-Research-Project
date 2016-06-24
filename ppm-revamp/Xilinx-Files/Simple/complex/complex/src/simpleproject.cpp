@@ -2,12 +2,13 @@
  * Game Version 0.0
  */
 
- #include "platform.h"
- #include <xiomodule.h>
- #include <xparameters.h>
- #include <xiomodule_l.h>
- #include <stdlib.h>        //strtol
- using namespace std;
+#include "platform.h"
+#include <xiomodule.h>
+#include <xparameters.h>
+#include <xiomodule_l.h>
+#include <stdlib.h>        //strtol
+//#include <stdio.h>
+using namespace std;
 
 XIOModule uart;
 XIOModule gpio;
@@ -50,24 +51,20 @@ void deserialize_UART_data_send(void*){
 	u8 buffer[2];
 
 	for(int i = 0; i < 2; ++i) buffer[i] = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	xil_printf("%s\r\n",&buffer);
 
-	output = 0;
-	XIOModule_DiscreteWrite(&gpio, 1, output);
+	const char* start = (const char*)(&buffer);
+	char* end = (char*)(&buffer);
+	u32 data = 0;
 
-//	const char* start = (const char*)(&buffer);
-//	char* end = (char*)(&buffer);
-//	u32 data = 0;
-//
-//	data |= strtol(start++, &(++end), 16);
-//	if(data >> 1 == 0)
-//	{
-//		data <<= 4;
-//		data |= strtol(start++, &(++end), 16);
-//	}
-//	else data |= strtol(start++, &(++end), 16);
-//
-//	output = data;
+	data |= strtol(start++, &(++end), 16);
+	if(data >> 1 == 0)
+	{
+		data <<= 4;
+		data |= strtol(start++, &(++end), 16);
+	}
+	else data |= strtol(start++, &(++end), 16);
+
+	output = data;
 }
 
 void clear_GPO()
@@ -88,14 +85,9 @@ int main(){
 	init_gpio();
 	init_uart_interrupt();
 
-	long loopNo = 0;
-
 	while(1){
-//		serialize_GPI_data_send();
-//		XIOModule_DiscreteWrite(&gpio, 1, output);
-//		clear_GPO();
-		output = 1 << 5;
-		xil_printf("%d\r\n", loopNo++);
 		XIOModule_DiscreteWrite(&gpio, 1, output);
+		XIOModule_DiscreteWrite(&gpio, 1, output & 0x0F);
+		serialize_GPI_data_send();
 	}
 }
