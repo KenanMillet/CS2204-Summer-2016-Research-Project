@@ -7,7 +7,9 @@
 #include <xparameters.h>
 #include <xiomodule_l.h>
 #include <stdlib.h>        //strtol
-//#include <stdio.h>
+#include <math.h>
+#include <stdio.h>
+
 using namespace std;
 
 XIOModule uart;
@@ -21,7 +23,7 @@ void deserialize_UART_data_send(void*);
 void clear_GPO();
 void test(void*);
 
-u32 output;
+u32 output = 0;
 
 void init_uart_interrupt(){
 	XIOModule_Initialize(&uart, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
@@ -86,8 +88,12 @@ int main(){
 	init_uart_interrupt();
 
 	while(1){
-		XIOModule_DiscreteWrite(&gpio, 1, output);
-		XIOModule_DiscreteWrite(&gpio, 1, output & 0x0F);
-		serialize_GPI_data_send();
+		//XIOModule_DiscreteWrite(&gpio, 1, output);
+		//XIOModule_DiscreteWrite(&gpio, 1, output & 0x0F);
+		//serialize_GPI_data_send();
+		//for(char i = 0; i < pow(2, 8*sizeof(char)-1); ++i);
+
+		long index = 0;
+		xil_printf("%d\r\n", index++);
 	}
 }
