@@ -42,7 +42,6 @@
         <signal name="gpi1" />
         <signal name="OBClk" />
         <signal name="gpi0" />
-        <signal name="comms_gpo1(5)" />
         <port polarity="Input" name="usb_in" />
         <port polarity="Output" name="usb_out" />
         <port polarity="Output" name="gpo3" />
@@ -215,7 +214,7 @@
             <blockpin signalname="gpi2" name="O" />
         </block>
         <block symbolname="obuf" name="XLXI_30">
-            <blockpin signalname="comms_gpo1(5)" name="I" />
+            <blockpin signalname="comms_gpi1(0)" name="I" />
             <blockpin signalname="gpi0" name="O" />
         </block>
         <block symbolname="obuf" name="XLXI_31">
@@ -420,10 +419,8 @@
             <wire x2="3360" y1="1056" y2="1056" x1="3344" />
         </branch>
         <branch name="usb_out">
-            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="3079" y="352" type="branch" />
             <wire x2="3088" y1="352" y2="352" x1="2944" />
         </branch>
-        <iomarker fontsize="28" x="3088" y="352" name="usb_out" orien="R0" />
         <branch name="comms_gpo1(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1136" y="2080" type="branch" />
             <wire x2="1136" y1="2080" y2="2080" x1="1040" />
@@ -559,10 +556,11 @@
             <wire x2="1072" y1="2160" y2="2160" x1="1040" />
             <wire x2="1280" y1="2160" y2="2160" x1="1072" />
         </branch>
-        <branch name="comms_gpo1(5)">
+        <branch name="comms_gpi1(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="176" y="2080" type="branch" />
             <wire x2="176" y1="2080" y2="2080" x1="80" />
             <wire x2="320" y1="2080" y2="2080" x1="176" />
         </branch>
+        <iomarker fontsize="28" x="3088" y="352" name="usb_out" orien="R0" />
     </sheet>
 </drawing>
