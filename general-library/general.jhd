@@ -1,3 +1,0 @@
-MODULE general
-	SUBMODULE io
-		INSTANCE XLXI_2

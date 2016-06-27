@@ -1,0 +1,4 @@
+BSPDIR = communication_bsp/communication
+LIBRARIES = -lxil
+MAKEDIR = blazeio/libsrc
+SUBDIRS = usb
