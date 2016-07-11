@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt64)
+Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml gomoku.twx gomoku.ncd -o gomoku.twr gomoku.pcf -ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml gomoku.twx gomoku.ncd -o gomoku.twr gomoku.pcf -ucf
 gomoku.ucf
 
 Design file:              gomoku.ncd
@@ -37,7 +37,7 @@ Setup/Hold to clock OBClk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-UartRx      |   -0.576(R)|      FAST  |    2.412(R)|      SLOW  |CLOCK_BUFG        |   0.000|
+UartRx      |   -0.379(R)|      FAST  |    2.197(R)|      SLOW  |CLOCK_BUFG        |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock OBClk to Pad
@@ -45,7 +45,7 @@ Clock OBClk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-UartTx      |         9.713(R)|      SLOW  |         3.751(R)|      FAST  |CLOCK_BUFG        |   0.000|
+UartTx      |         9.777(R)|      SLOW  |         3.760(R)|      FAST  |CLOCK_BUFG        |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock OBClk
@@ -53,18 +53,18 @@ Clock to Setup on destination clock OBClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OBClk          |    5.891|         |         |         |
+OBClk          |    5.993|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Jun 21 15:49:05 2016 
+Analysis completed Mon Jul 11 11:10:33 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 621 MB
+Peak Memory Usage: 418 MB
 
 
 

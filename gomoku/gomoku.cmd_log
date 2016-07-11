@@ -5,3 +5,9 @@ ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc gomoku.ucf -p x
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o gomoku_map.ncd gomoku.ngd gomoku.pcf 
 par -w -intstyle ise -ol high -mt off gomoku_map.ncd gomoku.ncd gomoku.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml gomoku.twx gomoku.ncd -o gomoku.twr gomoku.pcf -ucf gomoku.ucf 
+xst -intstyle ise -ifn "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku/gomoku.xst" -ofn "C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku/gomoku.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc gomoku.ucf -p xc7a100t-csg324-3 gomoku.ngc gomoku.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o gomoku_map.ncd gomoku.ngd gomoku.pcf 
+par -w -intstyle ise -ol high -mt off gomoku_map.ncd gomoku.ncd gomoku.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml gomoku.twx gomoku.ncd -o gomoku.twr gomoku.pcf -ucf gomoku.ucf 
+bitgen -intstyle ise -f gomoku.ut gomoku.ncd 

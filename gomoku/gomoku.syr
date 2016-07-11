@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: gomoku.prj
 
@@ -108,8 +108,8 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\ipcore_dir\communication.vhd" into library work
-Parsing VHDL file "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" into library work
+Parsing VHDL file "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" into library work
 Parsing entity <gomoku>.
 Parsing architecture <BEHAVIORAL> of entity <gomoku>.
 
@@ -118,18 +118,14 @@ Parsing architecture <BEHAVIORAL> of entity <gomoku>.
 =========================================================================
 
 Elaborating entity <gomoku> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 53: <communication> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 42: Net <comms_gpi1[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 43: Net <comms_gpi2[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 44: Net <comms_gpi3[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 45: Net <comms_gpi4[31]> does not have a driver.
+WARNING:HDLCompiler:89 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 53: <communication> remains a black-box since it has no binding entity.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <gomoku>.
-    Related source file is "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf".
+    Related source file is "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf".
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_7>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_7>.
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_8>.
@@ -139,16 +135,8 @@ Synthesizing Unit <gomoku>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_11>.
     Set property "SLEW = SLOW" for instance <XLXI_11>.
     Set property "DRIVE = 12" for instance <XLXI_11>.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo1> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo2> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo3> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <gpo4> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <uart_interrupt> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 106: Output port <intc_irq> of the instance <comms> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <comms_gpi1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <comms_gpi2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <comms_gpi3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <comms_gpi4> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 112: Output port <uart_interrupt> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" line 112: Output port <intc_irq> of the instance <comms> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <gomoku> synthesized.
@@ -233,7 +221,8 @@ Top Level Output File Name         : gomoku.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 892
+# BELS                             : 1020
+#      BUF                         : 128
 #      GND                         : 18
 #      INV                         : 12
 #      LUT1                        : 3
@@ -378,7 +367,7 @@ comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(comms/U0/lmb
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
-comms/N1(comms/XST_GND:G)                                                                                                                         | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 64    |
+comms/N1(comms/XST_GND:G)                                                                                                                         | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 64    |
 --------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -397,7 +386,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'OBClk'
   Clock period: 3.726ns (frequency: 268.393MHz)
-  Total number of paths / destination ports: 66059 / 2479
+  Total number of paths / destination ports: 66187 / 2607
 -------------------------------------------------------------------------
 Delay:               3.726ns (Levels of Logic = 4)
   Source:            comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
@@ -492,14 +481,14 @@ comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132| 
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.88 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.93 secs
  
 --> 
 
-Total memory usage is 351316 kilobytes
+Total memory usage is 349036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
-Number of infos    :   27 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   23 (   0 filtered)
 
