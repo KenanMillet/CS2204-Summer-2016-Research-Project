@@ -1,0 +1,3 @@
+MODULE gomoku
+	SUBMODULE communication
+		INSTANCE comms

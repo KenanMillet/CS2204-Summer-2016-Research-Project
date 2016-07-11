@@ -1,0 +1,3 @@
+PROCESSOR=communication
+REPOSITORIES=
+HWSPEC=../complex_hp/system.xml
