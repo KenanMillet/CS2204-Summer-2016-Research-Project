@@ -5,13 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf" Line 53: &lt;<arg fmt="%s" index="1">communication</arg>&gt; remains a black-box since it has no binding entity.
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\testing\gomoku.vhf" Line 64: &lt;<arg fmt="%s" index="1">communication</arg>&gt; remains a black-box since it has no binding entity.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf</arg>&quot; line <arg fmt="%s" index="2">112</arg>: Output port &lt;<arg fmt="%s" index="3">uart_interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\testing\gomoku.vhf</arg>&quot; line <arg fmt="%s" index="2">123</arg>: Output port &lt;<arg fmt="%s" index="3">uart_interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku\gomoku.vhf</arg>&quot; line <arg fmt="%s" index="2">112</arg>: Output port &lt;<arg fmt="%s" index="3">intc_irq</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\testing\gomoku.vhf</arg>&quot; line <arg fmt="%s" index="2">123</arg>: Output port &lt;<arg fmt="%s" index="3">intc_irq</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1</arg> in unit <arg fmt="%s" index="2">U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1</arg> of type <arg fmt="%s" index="3">RAMB36</arg> has been replaced by <arg fmt="%s" index="4">RAMB36E1</arg>

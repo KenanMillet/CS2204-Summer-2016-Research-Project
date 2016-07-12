@@ -37,7 +37,7 @@ Setup/Hold to clock OBClk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-UartRx      |   -0.379(R)|      FAST  |    2.197(R)|      SLOW  |CLOCK_BUFG        |   0.000|
+UartRx      |   -0.257(R)|      FAST  |    2.034(R)|      SLOW  |CLOCK_BUFG        |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock OBClk to Pad
@@ -45,7 +45,18 @@ Clock OBClk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-UartTx      |         9.777(R)|      SLOW  |         3.760(R)|      FAST  |CLOCK_BUFG        |   0.000|
+UartTx      |        10.533(R)|      SLOW  |         4.208(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led0        |         9.729(R)|      SLOW  |         3.668(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led2        |        10.411(R)|      SLOW  |         4.056(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led3        |         9.944(R)|      SLOW  |         3.867(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led4        |         9.781(R)|      SLOW  |         3.725(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led5        |         9.886(R)|      SLOW  |         3.781(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led7        |         9.751(R)|      SLOW  |         3.697(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led8        |         9.671(R)|      SLOW  |         3.666(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led9        |         9.738(R)|      SLOW  |         3.698(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led10       |         9.930(R)|      SLOW  |         3.780(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led12       |         9.822(R)|      SLOW  |         3.723(R)|      FAST  |CLOCK_BUFG        |   0.000|
+led13       |         9.841(R)|      SLOW  |         3.766(R)|      FAST  |CLOCK_BUFG        |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock OBClk
@@ -53,18 +64,18 @@ Clock to Setup on destination clock OBClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OBClk          |    5.993|         |         |         |
+OBClk          |    6.574|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Jul 11 16:33:35 2016 
+Analysis completed Tue Jul 12 12:26:13 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 624 MB
+Peak Memory Usage: 692 MB
 
 
 

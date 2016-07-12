@@ -6,8 +6,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 xc7a100t-csg324-3 gomoku.ngc gomoku.ngd
 
 Reading NGO file
-"C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku/gom
-oku.ngc" ...
+"C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/testing/gomoku.ngc"
+...
 Loading design module "ipcore_dir/communication.ngc"...
 Gathering constraint information from source properties...
 Done.
@@ -203,10 +203,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  47
 
-Total memory usage is 223248 kilobytes
+Total memory usage is 273132 kilobytes
 
 Writing NGD file "gomoku.ngd" ...
-Total REAL time to NGDBUILD completion:  6 sec
-Total CPU time to NGDBUILD completion:   6 sec
+Total REAL time to NGDBUILD completion:  17 sec
+Total CPU time to NGDBUILD completion:   14 sec
 
 Writing NGDBUILD log file "gomoku.bld"...

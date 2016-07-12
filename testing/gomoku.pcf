@@ -1,13 +1,24 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jul 11 16:32:59 2016
+// Written by: Map P.20131013 on Tue Jul 12 12:24:55 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 NET
         "comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.pc_write_I"
         USELOWSKEWLINES;
+COMP "led10" LOCATE = SITE "U14" LEVEL 1;
+COMP "led12" LOCATE = SITE "V15" LEVEL 1;
+COMP "led13" LOCATE = SITE "V14" LEVEL 1;
 COMP "OBClk" LOCATE = SITE "E3" LEVEL 1;
 COMP "UartRx" LOCATE = SITE "C4" LEVEL 1;
 COMP "UartTx" LOCATE = SITE "D4" LEVEL 1;
+COMP "led0" LOCATE = SITE "H17" LEVEL 1;
+COMP "led2" LOCATE = SITE "J13" LEVEL 1;
+COMP "led3" LOCATE = SITE "N14" LEVEL 1;
+COMP "led4" LOCATE = SITE "R18" LEVEL 1;
+COMP "led5" LOCATE = SITE "V17" LEVEL 1;
+COMP "led7" LOCATE = SITE "U16" LEVEL 1;
+COMP "led8" LOCATE = SITE "V16" LEVEL 1;
+COMP "led9" LOCATE = SITE "T15" LEVEL 1;
 SCHEMATIC END;
 

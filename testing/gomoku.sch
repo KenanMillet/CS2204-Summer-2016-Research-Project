@@ -20,30 +20,45 @@
         <signal name="comms_gpo1(31:0)" />
         <signal name="comms_gpo2(31:0)" />
         <signal name="comms_gpo4(31:0)" />
-        <signal name="XLXN_52(31:0)" />
-        <signal name="XLXN_53(31:0)" />
-        <signal name="XLXN_54(31:0)" />
-        <signal name="XLXN_55(31:0)" />
         <signal name="comms_gpo3(31:0)" />
-        <signal name="XLXN_66(31:0)" />
-        <signal name="XLXN_67(31:0)" />
-        <signal name="XLXN_68(31:0)" />
-        <signal name="XLXN_69(31:0)" />
-        <signal name="XLXN_70(31:0)" />
-        <signal name="XLXN_71(31:0)" />
-        <signal name="XLXN_72(31:0)" />
-        <signal name="XLXN_73(31:0)" />
-        <signal name="XLXN_74(31:0)" />
-        <signal name="XLXN_75(31:0)" />
-        <signal name="XLXN_76(31:0)" />
-        <signal name="XLXN_77(31:0)" />
-        <signal name="XLXN_78(31:0)" />
-        <signal name="XLXN_79(31:0)" />
+        <signal name="led0" />
+        <signal name="led2" />
+        <signal name="led3" />
+        <signal name="led4" />
+        <signal name="led5" />
+        <signal name="led7" />
+        <signal name="led8" />
+        <signal name="led9" />
+        <signal name="led10" />
+        <signal name="led12" />
+        <signal name="led13" />
+        <signal name="comms_gpi1(0)" />
+        <signal name="comms_gpi1(1)" />
+        <signal name="comms_gpi1(2)" />
+        <signal name="comms_gpi1(3)" />
+        <signal name="comms_gpi1(4)" />
+        <signal name="comms_gpi1(5)" />
+        <signal name="comms_gpi1(6)" />
+        <signal name="comms_gpi1(7)" />
+        <signal name="comms_gpi1(8)" />
+        <signal name="comms_gpi1(9)" />
+        <signal name="comms_gpi1(10)" />
         <port polarity="Input" name="OBClk" />
         <port polarity="Input" name="UartRx" />
         <port polarity="Output" name="UartTx" />
+        <port polarity="Output" name="led0" />
+        <port polarity="Output" name="led2" />
+        <port polarity="Output" name="led3" />
+        <port polarity="Output" name="led4" />
+        <port polarity="Output" name="led5" />
+        <port polarity="Output" name="led7" />
+        <port polarity="Output" name="led8" />
+        <port polarity="Output" name="led9" />
+        <port polarity="Output" name="led10" />
+        <port polarity="Output" name="led12" />
+        <port polarity="Output" name="led13" />
         <blockdef name="communication">
-            <timestamp>2016-6-21T16:58:56</timestamp>
+            <timestamp>2016-7-12T15:51:8</timestamp>
             <rect width="704" x="32" y="32" height="1696" />
             <line x2="32" y1="80" y2="80" x1="0" />
             <line x2="32" y1="112" y2="112" x1="0" />
@@ -307,6 +322,50 @@
             <blockpin signalname="comms_gpo4(31:0)" name="I" />
             <blockpin signalname="comms_gpi4(31:0)" name="O" />
         </block>
+        <block symbolname="obuf" name="XLXI_24">
+            <blockpin signalname="comms_gpi1(0)" name="I" />
+            <blockpin signalname="led0" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_25">
+            <blockpin signalname="comms_gpi1(1)" name="I" />
+            <blockpin signalname="led2" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_26">
+            <blockpin signalname="comms_gpi1(2)" name="I" />
+            <blockpin signalname="led3" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_27">
+            <blockpin signalname="comms_gpi1(3)" name="I" />
+            <blockpin signalname="led4" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_28">
+            <blockpin signalname="comms_gpi1(4)" name="I" />
+            <blockpin signalname="led5" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_29">
+            <blockpin signalname="comms_gpi1(5)" name="I" />
+            <blockpin signalname="led7" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_30">
+            <blockpin signalname="comms_gpi1(6)" name="I" />
+            <blockpin signalname="led8" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_31">
+            <blockpin signalname="comms_gpi1(7)" name="I" />
+            <blockpin signalname="led9" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_32">
+            <blockpin signalname="comms_gpi1(8)" name="I" />
+            <blockpin signalname="led10" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_33">
+            <blockpin signalname="comms_gpi1(9)" name="I" />
+            <blockpin signalname="led12" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_34">
+            <blockpin signalname="comms_gpi1(10)" name="I" />
+            <blockpin signalname="led13" name="O" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="3600" y="2800" name="XLXI_18" orien="R0">
@@ -338,8 +397,8 @@
             <wire x2="1088" y1="640" y2="640" x1="816" />
         </branch>
         <branch name="USB_OUT">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2160" y="496" type="branch" />
-            <wire x2="2496" y1="496" y2="496" x1="2160" />
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="496" type="branch" />
+            <wire x2="2496" y1="496" y2="496" x1="2112" />
         </branch>
         <instance x="2496" y="528" name="XLXI_11" orien="R0" />
         <branch name="UartTx">
@@ -350,6 +409,105 @@
         <iomarker fontsize="28" x="368" y="640" name="UartRx" orien="R180" />
         <instance x="3600" y="2800" name="XLXI_19" orien="R0">
         </instance>
+        <instance x="2496" y="816" name="XLXI_24" orien="R0" />
+        <instance x="2496" y="912" name="XLXI_25" orien="R0" />
+        <instance x="2496" y="1008" name="XLXI_26" orien="R0" />
+        <instance x="2496" y="1104" name="XLXI_27" orien="R0" />
+        <instance x="2496" y="1200" name="XLXI_28" orien="R0" />
+        <instance x="2496" y="1296" name="XLXI_29" orien="R0" />
+        <instance x="2496" y="1392" name="XLXI_30" orien="R0" />
+        <instance x="2496" y="1488" name="XLXI_31" orien="R0" />
+        <instance x="2496" y="1584" name="XLXI_32" orien="R0" />
+        <instance x="2496" y="1680" name="XLXI_33" orien="R0" />
+        <instance x="2496" y="1776" name="XLXI_34" orien="R0" />
+        <branch name="led0">
+            <wire x2="3104" y1="784" y2="784" x1="2720" />
+        </branch>
+        <branch name="led2">
+            <wire x2="3104" y1="880" y2="880" x1="2720" />
+        </branch>
+        <branch name="led3">
+            <wire x2="3104" y1="976" y2="976" x1="2720" />
+        </branch>
+        <branch name="led4">
+            <wire x2="3104" y1="1072" y2="1072" x1="2720" />
+        </branch>
+        <branch name="led5">
+            <wire x2="3104" y1="1168" y2="1168" x1="2720" />
+        </branch>
+        <branch name="led7">
+            <wire x2="3104" y1="1264" y2="1264" x1="2720" />
+        </branch>
+        <branch name="led8">
+            <wire x2="3104" y1="1360" y2="1360" x1="2720" />
+        </branch>
+        <branch name="led9">
+            <wire x2="3104" y1="1456" y2="1456" x1="2720" />
+        </branch>
+        <branch name="led10">
+            <wire x2="3104" y1="1552" y2="1552" x1="2720" />
+        </branch>
+        <branch name="led12">
+            <wire x2="3104" y1="1648" y2="1648" x1="2720" />
+        </branch>
+        <branch name="led13">
+            <wire x2="3104" y1="1744" y2="1744" x1="2720" />
+        </branch>
+        <branch name="comms_gpi1(0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="784" type="branch" />
+            <wire x2="2496" y1="784" y2="784" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(1)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="880" type="branch" />
+            <wire x2="2496" y1="880" y2="880" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(2)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="976" type="branch" />
+            <wire x2="2496" y1="976" y2="976" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(3)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1072" type="branch" />
+            <wire x2="2496" y1="1072" y2="1072" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(4)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1168" type="branch" />
+            <wire x2="2496" y1="1168" y2="1168" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(5)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1264" type="branch" />
+            <wire x2="2496" y1="1264" y2="1264" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(6)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1360" type="branch" />
+            <wire x2="2496" y1="1360" y2="1360" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(7)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1456" type="branch" />
+            <wire x2="2496" y1="1456" y2="1456" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(8)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1552" type="branch" />
+            <wire x2="2496" y1="1552" y2="1552" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(9)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1648" type="branch" />
+            <wire x2="2496" y1="1648" y2="1648" x1="2112" />
+        </branch>
+        <branch name="comms_gpi1(10)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2112" y="1744" type="branch" />
+            <wire x2="2496" y1="1744" y2="1744" x1="2112" />
+        </branch>
+        <iomarker fontsize="28" x="3104" y="784" name="led0" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="880" name="led2" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="976" name="led3" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1072" name="led4" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1168" name="led5" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1264" name="led7" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1360" name="led8" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1456" name="led9" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1552" name="led10" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1648" name="led12" orien="R0" />
+        <iomarker fontsize="28" x="3104" y="1744" name="led13" orien="R0" />
     </sheet>
     <sheet sheetnum="3" width="3520" height="2720">
         <instance x="3600" y="2800" name="XLXI_20" orien="R0">

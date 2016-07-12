@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : gomoku.vhf
--- /___/   /\     Timestamp : 07/11/2016 11:08:56
+-- /___/   /\     Timestamp : 07/12/2016 12:22:16
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku/gomoku.vhf -w C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku/gomoku.sch
+--Command: sch2hdl -sympath C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/testing/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/testing/gomoku.vhf -w C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/testing/gomoku.sch
 --Design Name: gomoku
 --Device: artix7
 --Purpose:
@@ -28,6 +28,17 @@ use UNISIM.Vcomponents.ALL;
 entity gomoku is
    port ( OBClk  : in    std_logic; 
           UartRx : in    std_logic; 
+          led0   : out   std_logic; 
+          led2   : out   std_logic; 
+          led3   : out   std_logic; 
+          led4   : out   std_logic; 
+          led5   : out   std_logic; 
+          led7   : out   std_logic; 
+          led8   : out   std_logic; 
+          led9   : out   std_logic; 
+          led10  : out   std_logic; 
+          led12  : out   std_logic; 
+          led13  : out   std_logic; 
           UartTx : out   std_logic);
 end gomoku;
 
@@ -651,6 +662,50 @@ begin
    XLXI_11 : OBUF
       port map (I=>USB_OUT,
                 O=>UartTx);
+   
+   XLXI_24 : OBUF
+      port map (I=>comms_gpi1(0),
+                O=>led0);
+   
+   XLXI_25 : OBUF
+      port map (I=>comms_gpi1(1),
+                O=>led2);
+   
+   XLXI_26 : OBUF
+      port map (I=>comms_gpi1(2),
+                O=>led3);
+   
+   XLXI_27 : OBUF
+      port map (I=>comms_gpi1(3),
+                O=>led4);
+   
+   XLXI_28 : OBUF
+      port map (I=>comms_gpi1(4),
+                O=>led5);
+   
+   XLXI_29 : OBUF
+      port map (I=>comms_gpi1(5),
+                O=>led7);
+   
+   XLXI_30 : OBUF
+      port map (I=>comms_gpi1(6),
+                O=>led8);
+   
+   XLXI_31 : OBUF
+      port map (I=>comms_gpi1(7),
+                O=>led9);
+   
+   XLXI_32 : OBUF
+      port map (I=>comms_gpi1(8),
+                O=>led10);
+   
+   XLXI_33 : OBUF
+      port map (I=>comms_gpi1(9),
+                O=>led12);
+   
+   XLXI_34 : OBUF
+      port map (I=>comms_gpi1(10),
+                O=>led13);
    
 end BEHAVIORAL;
 
