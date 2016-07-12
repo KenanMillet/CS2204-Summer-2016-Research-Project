@@ -98,7 +98,7 @@ end
 always@(posedge VerifyByte) begin
     if(UpFull == 1'b0) begin
         obuffer[oByte%IOWidth] <= UpByte;
-        oByte <= oByte+1;
+        oByte = oByte+1;
         UpFull = (oByte - rByte == IOWidth) ? 1'b1 : 1'b0;
     end
 end
