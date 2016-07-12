@@ -62,7 +62,7 @@ initial begin
         obuffer[oByte] = nullByte;
     end
     for(iByte = 0; iByte < IOWidth; iByte=iByte+1) begin
-        ibuffer[oByte] = nullByte;
+        ibuffer[iByte] = nullByte;
     end
     
     state = 0;

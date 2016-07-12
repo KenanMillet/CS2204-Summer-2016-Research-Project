@@ -1,0 +1,201 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Jul 12 11:07:40 2016
+# Process ID: 45296
+# Current directory: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.runs/synth_1
+# Command line: vivado.exe -log TopModule.vds -mode batch -messageDb vivado.pb -notrace -source TopModule.tcl
+# Log file: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.runs/synth_1/TopModule.vds
+# Journal file: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TopModule.tcl -notrace
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2016.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+Command: synth_design -top TopModule -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 44668 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 280.621 ; gain = 73.523
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TopModule' [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.srcs/sources_1/new/TopModule.sv:3]
+INFO: [Synth 8-638] synthesizing module 'UartController' [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv:23]
+	Parameter ClkFrequency bound to: 100000000 - type: integer 
+	Parameter BaudRate bound to: 9600 - type: integer 
+	Parameter IOWidth bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BaudGenerator_F_BR_AW_GI' [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv:1]
+	Parameter ClkFrequency bound to: 100000000 - type: integer 
+	Parameter BaudRate bound to: 9600 - type: integer 
+	Parameter BaudAccumulatorWidth bound to: 13 - type: integer 
+	Parameter BaudGeneratorInc bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BaudGenerator_F_BR_AW_GI' (1#1) [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv:122]
+INFO: [Synth 8-256] done synthesizing module 'UartController' (2#1) [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'TopModule' (3#1) [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.srcs/sources_1/new/TopModule.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 318.180 ; gain = 111.082
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 318.180 ; gain = 111.082
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.srcs/constrs_1/new/Constraints.xdc]
+Finished Parsing XDC File [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.srcs/constrs_1/new/Constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.srcs/constrs_1/new/Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopModule_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TopModule_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 616.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 616.727 ; gain = 409.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 616.727 ; gain = 409.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 616.727 ; gain = 409.629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "obuffer" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ibuffer" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "UpFull0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "DnEmpty0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "UartCTS" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "UartRx" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "rBit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "rByte" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state3" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tBit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tByte" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3971] The signal ibuffer_reg was recognized as a true dual port RAM template.
+Block RAM ibuffer_reg originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.byte width (1) is not a multiple of 8(data_only) or 9(data + parity)---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 616.727 ; gain = 409.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 2     
+	   4 Input     32 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              256 Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module BaudGenerator_F_BR_AW_GI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+Module UartController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 2     
+	   4 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              256 Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 616.727 ; gain = 409.629
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "rBit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "UpFull0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tBit" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "DnEmpty0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state3" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 616.727 ; gain = 409.629
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 616.727 ; gain = 409.629
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+ERROR: [Synth 8-2914] Unsupported RAM template [C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv:50]
+INFO: [Synth 8-3971] The signal uart/ibuffer_reg was recognized as a true dual port RAM template.
+ERROR: [Synth 8-5743] Unable to infer RAMs due to unsupported pattern.
+1
+Block RAM uart/ibuffer_reg originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.byte width (1) is not a multiple of 8(data_only) or 9(data + parity)Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 616.727 ; gain = 111.082
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 1 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 12 11:08:13 2016...
