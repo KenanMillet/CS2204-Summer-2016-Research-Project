@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 06/16/2016 14:47:50
+-- /___/   /\     Timestamp : 07/13/2016 17:22:29
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

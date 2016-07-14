@@ -16,10 +16,14 @@ XIOModule uart;
 
 int main()
 {
+	xil_printf("testmain\r\n");
 	init_platform();
 	init_gpio();
+	xil_printf("testmain1\r\n");
 	init_uart_interrupt();
-	init_gpi_interrupt();
+	xil_printf("testmain2\r\n");
+	//init_gpi_interrupt();
+	xil_printf("testmain3\r\n");
 
 	while(true);
 
@@ -79,18 +83,21 @@ void init_gpio(void){
 
 void init_gpi_interrupt()
 {
+	xil_printf("gpi_int1\r\n");
 	XIOModule_Initialize(&gpi_int, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
-
+	xil_printf("gpi_int2\r\n");
 	microblaze_register_handler(XIOModule_DeviceInterruptHandler,
 								  XPAR_IOMODULE_0_DEVICE_ID); // register the interrupt handler
-
+	xil_printf("gpi_int3\r\n");
 	XIOModule_Start(&gpi_int); // start the GPO module
-
+	xil_printf("gpi_int4\r\n");
 	XIOModule_Connect(&gpi_int, XIN_IOMODULE_GPI_1_INTERRUPT_INTR, (XInterruptHandler)gpi_interrupt,
 							NULL); // register timerTick() as our interrupt handler
+	xil_printf("gpi_int5\r\n");
 	XIOModule_Enable(&gpi_int, XIN_IOMODULE_GPI_1_INTERRUPT_INTR); // enable the interrupt
-
+	xil_printf("gpi_int6\r\n");
 	microblaze_enable_interrupts(); // enable global interrupts
+	xil_printf("gpi_int7\r\n");
 }
 
 void init_uart_interrupt(void){

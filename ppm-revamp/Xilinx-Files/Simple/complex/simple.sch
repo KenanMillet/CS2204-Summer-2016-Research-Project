@@ -136,7 +136,7 @@
             <line x2="64" y1="-32" y2="-32" x1="0" />
         </blockdef>
         <blockdef name="communication">
-            <timestamp>2016-6-15T15:15:15</timestamp>
+            <timestamp>2016-7-13T21:21:2</timestamp>
             <rect width="704" x="32" y="32" height="1696" />
             <line x2="32" y1="80" y2="80" x1="0" />
             <line x2="32" y1="112" y2="112" x1="0" />
@@ -483,9 +483,9 @@
             <wire x2="320" y1="2400" y2="2400" x1="176" />
         </branch>
         <branch name="comms_gpo1(1)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="177" y="2480" type="branch" />
-            <wire x2="177" y1="2480" y2="2480" x1="80" />
-            <wire x2="320" y1="2480" y2="2480" x1="177" />
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="177" y="2480" type="branch" />
+            <wire x2="176" y1="2480" y2="2480" x1="80" />
+            <wire x2="320" y1="2480" y2="2480" x1="176" />
         </branch>
         <branch name="comms_gpo1(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="176" y="2560" type="branch" />

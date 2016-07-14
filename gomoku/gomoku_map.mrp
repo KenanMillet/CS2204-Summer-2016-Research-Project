@@ -10,23 +10,23 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Mon Jul 11 16:32:18 2016
+Mapped Date    : Wed Jul 13 17:33:58 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                   654 out of 126,800    1%
-    Number used as Flip Flops:                 652
+  Number of Slice Registers:                   462 out of 126,800    1%
+    Number used as Flip Flops:                 460
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                2
-  Number of Slice LUTs:                        657 out of  63,400    1%
-    Number used as logic:                      538 out of  63,400    1%
-      Number using O6 output only:             374
+  Number of Slice LUTs:                        622 out of  63,400    1%
+    Number used as logic:                      504 out of  63,400    1%
+      Number using O6 output only:             342
       Number using O5 output only:              14
-      Number using O5 and O6:                  150
+      Number using O5 and O6:                  148
       Number used as ROM:                        0
     Number used as Memory:                     116 out of  19,000    1%
       Number used as Dual Port RAM:             64
@@ -38,18 +38,18 @@ Slice Logic Utilization:
         Number using O6 output only:            51
         Number using O5 output only:             0
         Number using O5 and O6:                  1
-    Number used exclusively as route-thrus:      3
-      Number with same-slice register load:      1
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   355 out of  15,850    2%
-  Number of LUT Flip Flop pairs used:        1,026
-    Number with an unused Flip Flop:           386 out of   1,026   37%
-    Number with an unused LUT:                 369 out of   1,026   35%
-    Number of fully used LUT-FF pairs:         271 out of   1,026   26%
-    Number of unique control sets:              51
+  Number of occupied Slices:                   285 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          794
+    Number with an unused Flip Flop:           347 out of     794   43%
+    Number with an unused LUT:                 172 out of     794   21%
+    Number of fully used LUT-FF pairs:         275 out of     794   34%
+    Number of unique control sets:              45
     Number of slice register sites lost
       to control set restrictions:             175 out of 126,800    1%
 
@@ -100,11 +100,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.97
+Average Fanout of Non-Clock Nets:                4.30
 
-Peak Memory Usage:  989 MB
-Total REAL time to MAP completion:  42 secs 
-Total CPU time to MAP completion:   39 secs 
+Peak Memory Usage:  990 MB
+Total REAL time to MAP completion:  38 secs 
+Total CPU time to MAP completion:   37 secs 
 
 Table of Contents
 -----------------
@@ -130,19 +130,15 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network comms/UART_Interrupt has no load.
-INFO:LIT:395 - The above info message is repeated 35 more times for the
+INFO:LIT:243 - Logical network
+   mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<31> has no load.
+INFO:LIT:395 - The above info message is repeated 131 more times for the
    following (max. 5 shown):
-   comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FP
-   GA.Not_All_Bits.PC_GEN[16].PC_Bit_I/MUXCY_X/LO,
-   comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY
-   _3/LO,
-   comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using
-   _FPGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/LO,
-   comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Usin
-   g_FPGA.Gen_RegFile[31].Register_File_Bit_I/Using_LUT6.RegFile_X2/SPO,
-   comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Usin
-   g_FPGA.Gen_RegFile[30].Register_File_Bit_I/Using_LUT6.RegFile_X2/SPO
+   mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<30>,
+   mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<29>,
+   mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<28>,
+   mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<27>,
+   mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<26>
    To see the details of these info messages, please use the -detail switch.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -157,9 +153,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  59 block(s) removed
-  40 block(s) optimized away
-  14 signal(s) removed
+ 161 block(s) removed
+ 160 block(s) optimized away
+ 116 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -175,203 +171,596 @@ above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Using_FPGA.F
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Using_FPGA.F
 PGA_LUT6_Target_ADDR.LOW_ADDR_OUT_LUT6" (LUT6_2) removed.
  The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/low_addr_i<1
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/low_addr_i<1
 >" is loadless and has been removed.
  The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/low_addr_i<0
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/low_addr_i<0
 >" is loadless and has been removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[16].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[17].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[18].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[19].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[20].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[21].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[22].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[23].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[25].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[27].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[29].PC_Bit_I/PC_EX_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[0].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[10].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[11].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[12].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[13].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[14].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[15].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[16].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[17].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[18].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[19].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[1].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[20].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[21].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[22].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[23].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[24].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[25].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[26].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[27].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[28].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[29].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[2].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[30].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[31].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[3].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[4].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[5].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[6].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[7].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[8].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
 A.Result_Mux_Bits[9].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
 Loadless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDR
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDR
 SE" (FF) removed.
-The signal "comms/UART_Interrupt" is sourceless and has been removed.
-The signal "comms/U0/filter_reset.reset_vec[2]_filter_reset.reset_vec[1]_OR_2_o"
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<31>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<30>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<29>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<28>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<27>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<26>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<25>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<24>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<23>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<22>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<21>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<20>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<19>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<18>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<17>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<16>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<15>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<14>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<13>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<12>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<11>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<10>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<9>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<8>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<7>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<6>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<5>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<4>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<3>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<2>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<1>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<0>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<31>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<30>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<29>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<28>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<27>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<26>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<25>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<24>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<23>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<22>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<21>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<20>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<19>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<18>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<17>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<16>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<15>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<14>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<13>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<12>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<11>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<10>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<9>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<8>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<7>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<6>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<5>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<4>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<3>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<2>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<1>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<0>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<31>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<30>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<29>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<28>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<27>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<26>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<25>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<24>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<23>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<22>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<21>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<20>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<19>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<18>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<17>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<16>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<15>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<14>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<13>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<12>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<11>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<10>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<9>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<8>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<7>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<6>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<5>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<4>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<3>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<2>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<1>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i<0>" is
+sourceless and has been removed.
+The signal "mcs_0/UART_Interrupt" is sourceless and has been removed.
+The signal "mcs_0/U0/filter_reset.reset_vec[2]_filter_reset.reset_vec[1]_OR_2_o"
 is sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/gpo2_write" is sourceless and has been removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_1" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_2" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_3" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_4" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_5" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_6" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_7" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_8" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_9" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_10" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_11" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_12" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_13" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_14" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_15" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_16" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_17" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_18" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_19" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_20" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_21" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_22" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_23" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_24" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_25" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_26" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_27" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_28" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_29" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_30" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_31" (SFF)
+removed.
+The signal "mcs_0/U0/iomodule_0/gpo3_write" is sourceless and has been removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_1" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_2" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_3" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_4" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_5" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_6" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_7" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_8" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_9" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_10" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_11" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_12" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_13" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_14" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_15" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_16" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_17" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_18" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_19" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_20" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_21" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_22" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_23" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_24" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_25" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_26" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_27" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_28" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_29" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_30" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_31" (SFF)
+removed.
+The signal "mcs_0/U0/iomodule_0/gpo4_write" is sourceless and has been removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_0" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_1" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_2" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_3" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_4" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_5" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_6" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_7" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_8" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_9" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_10" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_11" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_12" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_13" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_14" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_15" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_16" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_17" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_18" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_19" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_20" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_21" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_22" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_23" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_24" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_25" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_26" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_27" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_28" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_29" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_30" (SFF)
+removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_31" (SFF)
+removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_Read_inv" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_Read_inv" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_Read_inv" is
+sourceless and has been removed.
 The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n" is
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n" is
 sourceless and has been removed.
  Sourceless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
 " (MUX) removed.
   The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
 /O" is sourceless and has been removed.
    Sourceless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
 /MUXCY_L_BUF" (BUF) removed.
     The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
 /LO" is sourceless and has been removed.
 The signal
-"comms/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
+"mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
 terrupt" is sourceless and has been removed.
  Sourceless block
-"comms/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/UART_Int
+"mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/UART_Int
 errupt1" (ROM) removed.
 The signal
-"comms/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
+"mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
 terrupt_glue_set" is sourceless and has been removed.
  Sourceless block
-"comms/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
+"mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
 terrupt" (SFF) removed.
 The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[16].PC_Bit_I/MUXCY_X/O" is sourceless and has been removed.
  Sourceless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[16].PC_Bit_I/MUXCY_X/MUXCY_L_BUF" (BUF) removed.
   The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[16].PC_Bit_I/MUXCY_X/LO" is sourceless and has been
 removed.
 The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
 PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/O" is sourceless and has been removed.
  Sourceless block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
 PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/MUXCY_L_BUF" (BUF) removed.
   The signal
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
 PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/LO" is sourceless and has been removed.
 
 The trimmed logic reported below is either:
@@ -380,125 +769,374 @@ The trimmed logic reported below is either:
    3. a side-effect of other trimmed logic
 
 The signal "XLXN_2" is unused and has been removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_Read_inv1" (ROM)
+removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_Read_inv1" (ROM)
+removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_Read_inv1" (ROM)
+removed.
 Unused block
-"comms/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
+"mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/error_in
 terrupt_glue_set" (ROM) removed.
+Unused block "mcs_0/U0/iomodule_0/Mmux_gpo2_write11" (ROM) removed.
+Unused block "mcs_0/U0/iomodule_0/Mmux_gpo3_write11" (ROM) removed.
+Unused block "mcs_0/U0/iomodule_0/Mmux_gpo4_write11" (ROM) removed.
 Unused block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Using_FPGA.F
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Using_FPGA.F
 PGA_LUT6_Target.low_addr_i_INST" (LUT6_2) removed.
 Unused block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
 .Not_All_Bits.PC_GEN[16].PC_Bit_I/MUXCY_X" (MUX) removed.
 Unused block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
 PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L" (MUX) removed.
 Unused block
-"comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n1_INV
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n1_INV
 _0" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XLXI_3
-FD 		comms/U0/LMB_Rst
+FD 		mcs_0/U0/LMB_Rst
    optimized to 0
-LUT3 		comms/U0/filter_reset.reset_vec[2]_filter_reset.reset_vec[1]_OR_2_o1
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<0>_SW0
    optimized to 0
-FD 		comms/U0/filter_reset.reset_vec_0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<10>_SW0
    optimized to 0
-FD 		comms/U0/filter_reset.reset_vec_1
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<11>_SW0
    optimized to 0
-FD 		comms/U0/filter_reset.reset_vec_2
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<12>_SW0
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<13>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<14>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<15>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<16>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<17>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<18>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<19>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<1>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<20>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<21>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<22>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<23>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<2>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<3>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<4>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<5>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<6>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<7>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<8>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/dlmb/DBus_Oring.Res<9>_SW0
+   optimized to 0
+LUT3 		mcs_0/U0/filter_reset.reset_vec[2]_filter_reset.reset_vec[1]_OR_2_o1
+   optimized to 0
+FD 		mcs_0/U0/filter_reset.reset_vec_0
+   optimized to 0
+FD 		mcs_0/U0/filter_reset.reset_vec_1
+   optimized to 0
+FD 		mcs_0/U0/filter_reset.reset_vec_2
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_0
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_1
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_10
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_11
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_12
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_13
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_14
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_15
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_16
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_17
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_18
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_19
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_2
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_20
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_21
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_22
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_23
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_24
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_25
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_26
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_27
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_28
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_29
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_3
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_30
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_31
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_4
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_5
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_6
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_7
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_8
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_9
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_0
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_1
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_10
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_11
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_12
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_13
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_14
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_15
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_16
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_17
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_18
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_19
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_2
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_20
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_21
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_22
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_23
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_24
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_25
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_26
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_27
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_28
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_29
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_3
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_30
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_31
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_4
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_5
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_6
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_7
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_8
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_9
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_0
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_1
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_10
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_11
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_12
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_13
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_14
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_15
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_16
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_17
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_18
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_19
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_2
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_20
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_21
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_22
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_23
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_24
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_25
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_26
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_27
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_28
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_29
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_3
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_30
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_31
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_4
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_5
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_6
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_7
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_8
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/GPI_I4/GPI_In_9
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i
    optimized to 0
 FDR
-		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i
    optimized to 0
-FDR 		comms/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i
    optimized to 0
 LUT3
-		comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.No_
+		mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.No_
 Carry_Decoding.alu_carry_select_LUT
    optimized to 0
-FDR 		comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Write_DIV_result
+FDR 		mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Write_DIV_result
    optimized to 0
-GND 		comms/XST_GND
-VCC 		comms/XST_VCC
+GND 		mcs_0/XST_GND
+VCC 		mcs_0/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -511,8 +1149,8 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | OBClk                              | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| UartRx                             | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| UartTx                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| USB_IN                             | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| USB_OUT                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

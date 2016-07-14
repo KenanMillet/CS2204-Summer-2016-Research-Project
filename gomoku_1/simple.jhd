@@ -1,0 +1,3 @@
+MODULE simple
+	SUBMODULE communication
+		INSTANCE mcs_0

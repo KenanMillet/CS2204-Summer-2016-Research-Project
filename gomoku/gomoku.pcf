@@ -1,13 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jul 11 16:32:59 2016
+// Written by: Map P.20131013 on Wed Jul 13 17:34:35 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 NET
-        "comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.pc_write_I"
+        "mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.pc_write_I"
         USELOWSKEWLINES;
+COMP "USB_OUT" LOCATE = SITE "D4" LEVEL 1;
 COMP "OBClk" LOCATE = SITE "E3" LEVEL 1;
-COMP "UartRx" LOCATE = SITE "C4" LEVEL 1;
-COMP "UartTx" LOCATE = SITE "D4" LEVEL 1;
+COMP "USB_IN" LOCATE = SITE "C4" LEVEL 1;
 SCHEMATIC END;
 

@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/communication.vhd"
+vhdl work "simple.vhf"
+vhdl work "RisingEdge.vhf"

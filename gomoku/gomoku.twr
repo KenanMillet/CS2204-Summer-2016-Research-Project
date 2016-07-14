@@ -37,7 +37,7 @@ Setup/Hold to clock OBClk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-UartRx      |   -0.379(R)|      FAST  |    2.197(R)|      SLOW  |CLOCK_BUFG        |   0.000|
+USB_IN      |   -0.644(R)|      FAST  |    2.480(R)|      SLOW  |CLOCK_BUFG        |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock OBClk to Pad
@@ -45,7 +45,7 @@ Clock OBClk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-UartTx      |         9.777(R)|      SLOW  |         3.760(R)|      FAST  |CLOCK_BUFG        |   0.000|
+USB_OUT     |         9.123(R)|      SLOW  |         3.351(R)|      FAST  |CLOCK_BUFG        |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock OBClk
@@ -53,18 +53,18 @@ Clock to Setup on destination clock OBClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OBClk          |    5.993|         |         |         |
+OBClk          |    5.747|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Jul 11 16:33:35 2016 
+Analysis completed Wed Jul 13 17:35:10 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 624 MB
+Peak Memory Usage: 623 MB
 
 
 

@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: communication.vhd
--- /___/   /\     Timestamp: Wed Jun 15 11:15:14 2016
+-- /___/   /\     Timestamp: Wed Jul 13 17:21:01 2016
 -- \   \  /  \ 
 --  \___\/\___\
 --             

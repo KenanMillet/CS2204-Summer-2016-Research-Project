@@ -10,40 +10,13 @@
         <signal name="USB_IN" />
         <signal name="USB_OUT" />
         <signal name="OBClk" />
-        <signal name="UartRx" />
-        <signal name="UartTx" />
         <signal name="XLXN_2" />
-        <signal name="comms_gpi1(31:0)" />
-        <signal name="comms_gpi2(31:0)" />
-        <signal name="comms_gpi3(31:0)" />
-        <signal name="comms_gpi4(31:0)" />
-        <signal name="comms_gpo1(31:0)" />
-        <signal name="comms_gpo2(31:0)" />
-        <signal name="comms_gpo4(31:0)" />
-        <signal name="XLXN_52(31:0)" />
-        <signal name="XLXN_53(31:0)" />
-        <signal name="XLXN_54(31:0)" />
-        <signal name="XLXN_55(31:0)" />
-        <signal name="comms_gpo3(31:0)" />
-        <signal name="XLXN_66(31:0)" />
-        <signal name="XLXN_67(31:0)" />
-        <signal name="XLXN_68(31:0)" />
-        <signal name="XLXN_69(31:0)" />
-        <signal name="XLXN_70(31:0)" />
-        <signal name="XLXN_71(31:0)" />
-        <signal name="XLXN_72(31:0)" />
-        <signal name="XLXN_73(31:0)" />
-        <signal name="XLXN_74(31:0)" />
-        <signal name="XLXN_75(31:0)" />
-        <signal name="XLXN_76(31:0)" />
-        <signal name="XLXN_77(31:0)" />
-        <signal name="XLXN_78(31:0)" />
-        <signal name="XLXN_79(31:0)" />
+        <signal name="comms_gpi(31:0)" />
+        <port polarity="Input" name="USB_IN" />
+        <port polarity="Output" name="USB_OUT" />
         <port polarity="Input" name="OBClk" />
-        <port polarity="Input" name="UartRx" />
-        <port polarity="Output" name="UartTx" />
         <blockdef name="communication">
-            <timestamp>2016-6-21T16:58:56</timestamp>
+            <timestamp>2016-7-13T20:27:3</timestamp>
             <rect width="704" x="32" y="32" height="1696" />
             <line x2="32" y1="80" y2="80" x1="0" />
             <line x2="32" y1="112" y2="112" x1="0" />
@@ -69,14 +42,6 @@
             <line x2="64" y1="-64" y2="-80" x1="64" />
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
-        <blockdef name="ibuf">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="0" y2="-64" x1="64" />
-            <line x2="64" y1="-32" y2="0" x1="128" />
-            <line x2="128" y1="-64" y2="-32" x1="64" />
-            <line x2="128" y1="-32" y2="-32" x1="224" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-        </blockdef>
         <blockdef name="ibufg">
             <timestamp>2008-10-8T10:10:10</timestamp>
             <line x2="64" y1="0" y2="-64" x1="64" />
@@ -84,14 +49,6 @@
             <line x2="128" y1="-64" y2="-32" x1="64" />
             <line x2="128" y1="-32" y2="-32" x1="224" />
             <line x2="64" y1="-32" y2="-32" x1="0" />
-        </blockdef>
-        <blockdef name="obuf">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="0" y2="-64" x1="64" />
-            <line x2="64" y1="-32" y2="0" x1="128" />
-            <line x2="128" y1="-64" y2="-32" x1="64" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="128" y1="-32" y2="-32" x1="224" />
         </blockdef>
         <blockdef name="title">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -228,25 +185,9 @@
             <line x2="-144" y1="-128" y2="-128" x1="-176" />
             <line x2="-296" y1="-128" y2="-80" x1="-296" />
         </blockdef>
-        <blockdef name="buf">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="128" y1="-32" y2="-32" x1="224" />
-            <line x2="128" y1="0" y2="-32" x1="64" />
-            <line x2="64" y1="-32" y2="-64" x1="128" />
-            <line x2="64" y1="-64" y2="0" x1="64" />
-        </blockdef>
-        <block symbolname="ibuf" name="XLXI_7">
-            <blockpin signalname="UartRx" name="I" />
-            <blockpin signalname="USB_IN" name="O" />
-        </block>
         <block symbolname="ibufg" name="XLXI_8">
             <blockpin signalname="OBClk" name="I" />
             <blockpin signalname="CLOCK" name="O" />
-        </block>
-        <block symbolname="obuf" name="XLXI_11">
-            <blockpin signalname="USB_OUT" name="I" />
-            <blockpin signalname="UartTx" name="O" />
         </block>
         <block symbolname="title" name="XLXI_18">
             <attr value="Gomoku 1.0.0" name="TitleFieldText" />
@@ -272,40 +213,24 @@
             <attr value="Gomoku 1.0.0" name="TitleFieldText" />
             <attr value="Ana, Kenan, Xikun, Varron" name="NameFieldText" />
         </block>
-        <block symbolname="communication" name="comms">
+        <block symbolname="communication" name="mcs_0">
             <blockpin signalname="CLOCK" name="clk" />
             <blockpin signalname="XLXN_2" name="reset" />
             <blockpin signalname="USB_OUT" name="uart_tx" />
             <blockpin signalname="USB_IN" name="uart_rx" />
             <blockpin name="uart_interrupt" />
-            <blockpin signalname="comms_gpi1(31:0)" name="gpi1(31:0)" />
-            <blockpin signalname="comms_gpi2(31:0)" name="gpi2(31:0)" />
-            <blockpin signalname="comms_gpi3(31:0)" name="gpi3(31:0)" />
-            <blockpin signalname="comms_gpi4(31:0)" name="gpi4(31:0)" />
-            <blockpin signalname="comms_gpo1(31:0)" name="gpo1(31:0)" />
-            <blockpin signalname="comms_gpo2(31:0)" name="gpo2(31:0)" />
-            <blockpin signalname="comms_gpo3(31:0)" name="gpo3(31:0)" />
-            <blockpin signalname="comms_gpo4(31:0)" name="gpo4(31:0)" />
+            <blockpin signalname="comms_gpi(31:0)" name="gpi1(31:0)" />
+            <blockpin name="gpi2(31:0)" />
+            <blockpin name="gpi3(31:0)" />
+            <blockpin name="gpi4(31:0)" />
+            <blockpin signalname="comms_gpi(31:0)" name="gpo1(31:0)" />
+            <blockpin name="gpo2(31:0)" />
+            <blockpin name="gpo3(31:0)" />
+            <blockpin name="gpo4(31:0)" />
             <blockpin name="intc_irq" />
         </block>
         <block symbolname="gnd" name="XLXI_3">
             <blockpin signalname="XLXN_2" name="G" />
-        </block>
-        <block symbolname="buf" name="comms_bus1(31:0)">
-            <blockpin signalname="comms_gpo1(31:0)" name="I" />
-            <blockpin signalname="comms_gpi1(31:0)" name="O" />
-        </block>
-        <block symbolname="buf" name="comms_bus2(31:0)">
-            <blockpin signalname="comms_gpo2(31:0)" name="I" />
-            <blockpin signalname="comms_gpi2(31:0)" name="O" />
-        </block>
-        <block symbolname="buf" name="comms_bus3(31:0)">
-            <blockpin signalname="comms_gpo3(31:0)" name="I" />
-            <blockpin signalname="comms_gpi3(31:0)" name="O" />
-        </block>
-        <block symbolname="buf" name="comms_bus4(31:0)">
-            <blockpin signalname="comms_gpo4(31:0)" name="I" />
-            <blockpin signalname="comms_gpi4(31:0)" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -324,30 +249,12 @@
             <wire x2="416" y1="512" y2="512" x1="368" />
             <wire x2="592" y1="512" y2="512" x1="416" />
         </branch>
-        <branch name="UartRx">
-            <wire x2="592" y1="640" y2="640" x1="368" />
-        </branch>
-        <instance x="592" y="672" name="XLXI_7" orien="R0" />
         <instance x="592" y="544" name="XLXI_8" orien="R0" />
         <branch name="CLOCK">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="512" type="branch" />
             <wire x2="1088" y1="512" y2="512" x1="816" />
         </branch>
-        <branch name="USB_IN">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="640" type="branch" />
-            <wire x2="1088" y1="640" y2="640" x1="816" />
-        </branch>
-        <branch name="USB_OUT">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2160" y="496" type="branch" />
-            <wire x2="2496" y1="496" y2="496" x1="2160" />
-        </branch>
-        <instance x="2496" y="528" name="XLXI_11" orien="R0" />
-        <branch name="UartTx">
-            <wire x2="3104" y1="496" y2="496" x1="2720" />
-        </branch>
-        <iomarker fontsize="28" x="3104" y="496" name="UartTx" orien="R0" />
         <iomarker fontsize="28" x="368" y="512" name="OBClk" orien="R180" />
-        <iomarker fontsize="28" x="368" y="640" name="UartRx" orien="R180" />
         <instance x="3600" y="2800" name="XLXI_19" orien="R0">
         </instance>
     </sheet>
@@ -364,58 +271,12 @@
         </instance>
         <instance x="1120" y="416" name="XLXI_3" orien="R90" />
         <branch name="USB_IN">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="992" y="576" type="branch" />
             <wire x2="1152" y1="576" y2="576" x1="992" />
             <wire x2="1152" y1="512" y2="576" x1="1152" />
             <wire x2="1280" y1="512" y2="512" x1="1152" />
         </branch>
         <branch name="USB_OUT">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2352" y="448" type="branch" />
             <wire x2="2352" y1="448" y2="448" x1="2048" />
-        </branch>
-        <branch name="comms_gpo1(31:0)">
-            <wire x2="2064" y1="1152" y2="1152" x1="2048" />
-            <wire x2="2272" y1="1024" y2="1024" x1="2064" />
-            <wire x2="2064" y1="1024" y2="1152" x1="2064" />
-        </branch>
-        <branch name="comms_gpo2(31:0)">
-            <wire x2="2160" y1="1184" y2="1184" x1="2048" />
-            <wire x2="2160" y1="1136" y2="1184" x1="2160" />
-            <wire x2="2272" y1="1136" y2="1136" x1="2160" />
-        </branch>
-        <branch name="comms_gpi1(31:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2688" y="1152" type="branch" />
-            <wire x2="2672" y1="1024" y2="1024" x1="2496" />
-            <wire x2="2672" y1="1024" y2="1152" x1="2672" />
-            <wire x2="2688" y1="1152" y2="1152" x1="2672" />
-        </branch>
-        <branch name="comms_gpi2(31:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2688" y="1184" type="branch" />
-            <wire x2="2576" y1="1136" y2="1136" x1="2496" />
-            <wire x2="2576" y1="1136" y2="1184" x1="2576" />
-            <wire x2="2688" y1="1184" y2="1184" x1="2576" />
-        </branch>
-        <branch name="comms_gpi4(31:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2688" y="1248" type="branch" />
-            <wire x2="2672" y1="1376" y2="1376" x1="2496" />
-            <wire x2="2688" y1="1248" y2="1248" x1="2672" />
-            <wire x2="2672" y1="1248" y2="1376" x1="2672" />
-        </branch>
-        <branch name="comms_gpi4(31:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="768" type="branch" />
-            <wire x2="1280" y1="768" y2="768" x1="1088" />
-        </branch>
-        <branch name="comms_gpi3(31:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="736" type="branch" />
-            <wire x2="1280" y1="736" y2="736" x1="1088" />
-        </branch>
-        <branch name="comms_gpi2(31:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="704" type="branch" />
-            <wire x2="1280" y1="704" y2="704" x1="1088" />
-        </branch>
-        <branch name="comms_gpi1(31:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1088" y="672" type="branch" />
-            <wire x2="1280" y1="672" y2="672" x1="1088" />
         </branch>
         <branch name="XLXN_2">
             <wire x2="1280" y1="480" y2="480" x1="1248" />
@@ -426,36 +287,18 @@
             <wire x2="1152" y1="368" y2="448" x1="1152" />
             <wire x2="1280" y1="448" y2="448" x1="1152" />
         </branch>
-        <instance x="1280" y="368" name="comms" orien="R0">
+        <instance x="1280" y="368" name="mcs_0" orien="R0">
         </instance>
-        <branch name="comms_gpo4(31:0)">
-            <wire x2="2064" y1="1248" y2="1248" x1="2048" />
-            <wire x2="2064" y1="1248" y2="1376" x1="2064" />
-            <wire x2="2272" y1="1376" y2="1376" x1="2064" />
+        <iomarker fontsize="28" x="2352" y="448" name="USB_OUT" orien="R0" />
+        <branch name="comms_gpi(31:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1120" y="672" type="branch" />
+            <wire x2="1280" y1="672" y2="672" x1="1120" />
         </branch>
-        <branch name="comms_gpo3(31:0)">
-            <wire x2="2160" y1="1216" y2="1216" x1="2048" />
-            <wire x2="2160" y1="1216" y2="1264" x1="2160" />
-            <wire x2="2272" y1="1264" y2="1264" x1="2160" />
+        <branch name="comms_gpi(31:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2208" y="1152" type="branch" />
+            <wire x2="2208" y1="1152" y2="1152" x1="2048" />
         </branch>
-        <branch name="comms_gpi3(31:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2688" y="1216" type="branch" />
-            <wire x2="2576" y1="1264" y2="1264" x1="2496" />
-            <wire x2="2576" y1="1216" y2="1264" x1="2576" />
-            <wire x2="2688" y1="1216" y2="1216" x1="2576" />
-        </branch>
-        <instance x="2272" y="1168" name="comms_bus2(31:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="-80" type="instance" />
-        </instance>
-        <instance x="2272" y="1296" name="comms_bus3(31:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="-80" type="instance" />
-        </instance>
-        <instance x="2272" y="1408" name="comms_bus4(31:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="-80" type="instance" />
-        </instance>
-        <instance x="2272" y="1056" name="comms_bus1(31:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="-80" type="instance" />
-        </instance>
+        <iomarker fontsize="28" x="992" y="576" name="USB_IN" orien="R180" />
     </sheet>
     <sheet sheetnum="6" width="3520" height="2720">
         <instance x="3600" y="2800" name="XLXI_23" orien="R0">

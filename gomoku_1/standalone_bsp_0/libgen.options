@@ -1,0 +1,3 @@
+PROCESSOR=communication
+REPOSITORIES=
+HWSPEC=../gomoku_bsp/system.xml
