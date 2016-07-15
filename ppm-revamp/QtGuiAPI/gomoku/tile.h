@@ -1,10 +1,16 @@
 #ifndef TILE_H
 #define TILE_H
 #include <QLabel>
+#include <QEvent>
+
+
+class MainWindow;
 
 namespace Ui {
 class Tile;
 }
+
+class Player;
 
 class Tile: public QLabel
 {
@@ -14,8 +20,10 @@ class Tile: public QLabel
 public:
 
     //Fields
-    int tileColor,piece,row,col,tileNum;
+    int tileColor,piece,row,col;
+    static int tileid;
     char pieceName;
+    MainWindow* bosswindow;
 
 
     //Constructors
@@ -27,14 +35,16 @@ public:
     void display(char elem);
     void tileDisplay();
 
-
-
-
-private:
     static bool turn;
+    Player* cp1;
+    Player* cp2;
 
-signals:
-      void checkifwin(Tile&);
+
+
+
+
+
+
 };
 
 #endif // TILE_H

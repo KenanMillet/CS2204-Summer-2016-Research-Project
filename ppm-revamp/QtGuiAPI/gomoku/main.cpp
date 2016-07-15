@@ -4,37 +4,16 @@
 #include "ui_mainwindow.h"
 #include "QPicture"
 #include "qDebug"
+//#include "player.h"
+#include "machineplayer.h"
+#include "humanplayer.h"
+#include <QThread>
+#include "controlunit.h"
+#include "delay.h"
 
 
 
-
-void chessBoard(QWidget *baseWidget, Tile *tile[15][15], MainWindow& w)
-{
-    int i,j,k=0,hor,ver;
-
-
-    //Create 64 tiles (allocating memories to the objects of Tile class)
-    ver=30;
-    for(i=0;i<15;i++)
-    {
-        hor=30;
-        for(j=0;j<15;j++)
-        {
-            tile[i][j] = new Tile(baseWidget);
-            tile[i][j]->tileColor=(i+j)%2;
-            tile[i][j]->piece=0;
-            tile[i][j]->row=i;
-            tile[i][j]->col=j;
-            tile[i][j]->tileNum=k++;
-            tile[i][j]->tileDisplay();
-            tile[i][j]->setGeometry(hor,ver,45,45);
-            w.dosetup(*tile[i][j]);
-
-            hor+=45;
-        }
-        ver+=45;
-    }
-}
+class Wincheck;
 
 
 
@@ -46,20 +25,44 @@ int main(int argc, char *argv[])
 
 
   //  QWidget *myWidget = new QWidget();
-    MainWindow w;
-
-    //w.setGeometry(0,0,2700,2700);
-    //w.widget.setGeometry(30,30,1700,900);
-
-    w.setGeometry(30,30,1700,900);
-    w.setCentralWidget(w.ui->chessboardwidget);
-    w.ui->chessboardwidget->setGeometry(0,0,1500, 700);
+    MainWindow w(0, new ControlUnit);
 
 
-    chessBoard(w.ui->chessboardwidget,w.tile, w);
+    w.setGeometry(30,30,1000,1000);
+//    w.setCentralWidget(w.ui->chessboardwidget);
+//    w.ui->chessboardwidget->setGeometry(0,0,700, 700);
+    w.ui->P1P2label->setGeometry(720, 30, 200, 20);
+    w.ui->HumanMachine->setGeometry(720, 60, 200, 20);
+    w.ui->MachineHuman->setGeometry(720, 90, 200, 20);
+    w.ui->MachineMachine->setGeometry(720, 120, 200, 20);
+    w.ui->HumanHuman->setGeometry(720, 150, 200, 20);
+    w.ui->StartOver->setGeometry(720, 180, 200, 20);
+
+    QThread serialthread;
+
+
+    ControlUnit* CUnit = w.cunit;
+    CUnit->io = w.cThread;
+    Wincheck* wcheck = new Wincheck;
+    wcheck->w = &w;
+    CUnit->wcheck = wcheck;
+
+
+
+
+    //have to connect the FPGA here!!!!!!!!!
+    w.cThread->doSetup(serialthread);
+    w.cThread->moveToThread(&serialthread);
+    w.SetCommThread(w.cThread);
+    serialthread.start();
+
 
 
     w.show();
-    return a.exec();
+
+    CUnit->start();
+    serialthread.quit();
+    //return a.exec();
+    return 0;
 }
 
