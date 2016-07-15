@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Jul 12 12:31:51 2016
+# Process ID: 43852
+# Current directory: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12784 C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\side-projects\test-bench\test-bench.xpr
+# Log file: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/vivado.log
+# Journal file: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TopModule [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source TopModule.tcl
+restart
+add_force {/TopModule/UartTx} -radix hex {0 0ns}
+add_force {/TopModule/UartRTS} -radix hex {0 0ns}
+add_force {/TopModule/Clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+add_force {/TopModule/UpByte} -radix hex {C 0ns}
+add_force {/TopModule/VerifyByte} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+add_force {/TopModule/ReceiveByte} -radix hex {0 0ns}
+add_force {/TopModule/SendData} -radix hex {0 0ns}
+run 10 ns
+run 10 ns
+add_force {/TopModule/UpByte} -radix hex {A 0ns}
+run 10 ns
+restart
+run 10 ns
+restart
+add_force {/TopModule/UpByte} -radix hex {C 0ns}
+run 10 ns
+add_force {/TopModule/UpByte} -radix hex {A 0ns}
+run 10 ns
+add_force {/TopModule/UpByte} -radix hex {T 0ns}
+restart
+add_force {/TopModule/UpByte} -radix ascii {C 0ns}
+run 10 ns
+add_force {/TopModule/UpByte} -radix ascii {A 0ns}
+run 10 ns
+add_force {/TopModule/UpByte} -radix ascii {T 0ns}
+run 10 ns
+add_force {/TopModule/UpByte} -radix hex {0 0ns}
+run 10 ns
+add_force {/TopModule/VerifyByte} -radix hex {0 0ns}
+add_force {/TopModule/SendData} -radix hex {2 0ns} -cancel_after 10ns
+add_force {/TopModule/SendData} -radix hex {1 0ns} -cancel_after 10ns
+run 10 ns
+add_force {/TopModule/UartRTS} -radix hex {1 0ns}
+run 10 ns
+add_force {/TopModule/SendData} -radix hex {0 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+add_force {/TopModule/Clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+restart
+add_force {/TopModule/UartRTS} -radix hex {0 0ns}
+add_force {/TopModule/VerifyByte} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/SendData} -radix hex {0 0ns}
+add_force {/TopModule/ReceiveByte} -radix hex {0 0ns}
+add_force {/TopModule/UpByte} -radix ascii {C 0ns}
+run 10 ns
+relaunch_sim
+relaunch_sim
+close_sim
+close_project
+open_project C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation

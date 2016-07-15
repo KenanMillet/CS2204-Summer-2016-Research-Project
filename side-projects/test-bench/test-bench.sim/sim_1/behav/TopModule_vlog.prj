@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib  "../../../../UartController.sv"
-sv xil_defaultlib  "../../../test-bench.srcs/sources_1/new/TopModule.sv"
+sv xil_defaultlib  "../../../../projects/BaudGenerator.sv" --include "../../../../projects/VHC"
+sv xil_defaultlib  "../../../../projects/UartController.sv" --include "../../../../projects/VHC"
+sv xil_defaultlib  "../../../test-bench.srcs/sources_1/new/TopModule.sv" --include "../../../../projects/VHC"
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
