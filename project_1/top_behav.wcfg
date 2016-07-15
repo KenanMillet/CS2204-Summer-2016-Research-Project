@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5632fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/top/p1played" type="logic">
+      <obj_property name="ElementShortName">p1played</obj_property>
+      <obj_property name="ObjectShortName">p1played</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/p2played" type="logic">
+      <obj_property name="ElementShortName">p2played</obj_property>
+      <obj_property name="ObjectShortName">p2played</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/p2canplay" type="logic">
+      <obj_property name="ElementShortName">p2canplay</obj_property>
+      <obj_property name="ObjectShortName">p2canplay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/check" type="logic">
+      <obj_property name="ElementShortName">check</obj_property>
+      <obj_property name="ObjectShortName">check</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/valid" type="array">
+      <obj_property name="ElementShortName">valid[1:0]</obj_property>
+      <obj_property name="ObjectShortName">valid[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/player" type="array">
+      <obj_property name="ElementShortName">player[1:0]</obj_property>
+      <obj_property name="ObjectShortName">player[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/p1row" type="array">
+      <obj_property name="ElementShortName">p1row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p1row[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/p1column" type="array">
+      <obj_property name="ElementShortName">p1column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p1column[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/USBp1row" type="array">
+      <obj_property name="ElementShortName">USBp1row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp1row[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/USBp1column" type="array">
+      <obj_property name="ElementShortName">USBp1column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp1column[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider263">
+      <obj_property name="label">io</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/io_instant/USBp1row" type="array">
+      <obj_property name="ElementShortName">USBp1row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp1row[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/io_instant/USBp1column" type="array">
+      <obj_property name="ElementShortName">USBp1column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp1column[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/io_instant/p1row" type="array">
+      <obj_property name="ElementShortName">p1row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p1row[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/io_instant/p1column" type="array">
+      <obj_property name="ElementShortName">p1column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p1column[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider268">
+      <obj_property name="label">cu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/p1played" type="logic">
+      <obj_property name="ElementShortName">p1played</obj_property>
+      <obj_property name="ObjectShortName">p1played</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/p2played" type="logic">
+      <obj_property name="ElementShortName">p2played</obj_property>
+      <obj_property name="ObjectShortName">p2played</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/invalidPlay" type="logic">
+      <obj_property name="ElementShortName">invalidPlay</obj_property>
+      <obj_property name="ObjectShortName">invalidPlay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/p2canplay" type="logic">
+      <obj_property name="ElementShortName">p2canplay</obj_property>
+      <obj_property name="ObjectShortName">p2canplay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/check" type="logic">
+      <obj_property name="ElementShortName">check</obj_property>
+      <obj_property name="ObjectShortName">check</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/player" type="array">
+      <obj_property name="ElementShortName">player[1:0]</obj_property>
+      <obj_property name="ObjectShortName">player[1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/cu_instant/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider275">
+      <obj_property name="label">pc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/pc_instant/check" type="logic">
+      <obj_property name="ElementShortName">check</obj_property>
+      <obj_property name="ObjectShortName">check</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/pc_instant/player" type="array">
+      <obj_property name="ElementShortName">player[1:0]</obj_property>
+      <obj_property name="ObjectShortName">player[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/pc_instant/p1row" type="array">
+      <obj_property name="ElementShortName">p1row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p1row[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/pc_instant/p1column" type="array">
+      <obj_property name="ElementShortName">p1column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p1column[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/pc_instant/valid" type="array">
+      <obj_property name="ElementShortName">valid[1:0]</obj_property>
+      <obj_property name="ObjectShortName">valid[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/pc_instant/board" type="array">
+      <obj_property name="ElementShortName">board[0:14][0:14][1:0]</obj_property>
+      <obj_property name="ObjectShortName">board[0:14][0:14][1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>
