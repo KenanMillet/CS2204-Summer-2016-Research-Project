@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>411</width>
     <height>300</height>
    </rect>
   </property>
@@ -14,25 +14,83 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QRadioButton" name="MachineHuman">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>331</width>
-      <height>241</height>
+      <x>260</x>
+      <y>90</y>
+      <width>82</width>
+      <height>17</height>
      </rect>
     </property>
-    <widget class="QWidget" name="chessboardwidget" native="true">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>311</width>
-       <height>201</height>
-      </rect>
-     </property>
-    </widget>
+    <property name="text">
+     <string>Machine vs. Human</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="HumanMachine">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>130</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Human vs. Machine</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="MachineMachine">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>160</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Machine vs. Machine</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="HumanHuman">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>190</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Human vs .Human</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="P1P2label">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>40</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>      P1          P2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="StartOver">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Over</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -40,7 +98,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>411</width>
      <height>21</height>
     </rect>
    </property>

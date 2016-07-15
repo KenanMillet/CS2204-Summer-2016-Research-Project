@@ -1,29 +1,67 @@
 #include "tile.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "dialog.h"
 #include <QApplication>
+#include "player.h"
+#include "qdebug.h"
+
 
 
 bool Tile::turn = true;
+int Tile::tileid = 0;
 
-void Tile::mousePressEvent(QMouseEvent *event)
+//mousepressevent:
+//    if(turn)
+//    {
+//        if(cp1->playthere(this)) cp1->currenttile = this;
+//        else cp1->currenttile = nullptr;
+//    }
+//    else
+//    {
+//        if(cp2->playthere(this)) cp2->currenttile = this;
+//        else cp2->currenttile = nullptr;
+//    }
+
+//HumanPlayer:
+//    while(!turnends && currenttile == nullptr)
+//    { ... }
+//    turnends = false;
+//    Tile* temp = currenttile;
+//    currenttile = nullptr;
+//    return temp;
+
+//MachinePlayer:
+//    Tile* playtile;
+//    do
+//    {
+//        some ai logic to select playtile...
+//        playtile->mousepressevent(nullptr);
+//    } while(currenttile == nullptr);
+//    return currenttile;
+
+
+
+
+
+void Tile::mousePressEvent(QMouseEvent*)
 {
-
-   if(this->piece == 0){
-        if(turn){
-        this->setPixmap(QPixmap(":/Images/bishop_black.svg"));
-        this->piece=1;
+        if(turn)
+        {
+            if(bosswindow->cThread->player1->playthere(this)) bosswindow->cThread->player1->currenttile = this;
+            else bosswindow->cThread->player1->currenttile = nullptr;
         }
-
-        else{
-        this->setPixmap(QPixmap(":/Images/bishop_white.svg"));
-        this->piece = 2;
-       }
-    turn=!turn;
-    emit checkifwin(*this);
-   }
+        else
+        {
+            if(bosswindow->cThread->player2->playthere(this)) bosswindow->cThread->player2->currenttile = this;
+            else bosswindow->cThread->player2->currenttile = nullptr;
+        }
+        qDebug() << "CP1 Current tile = " << ((bosswindow->cThread->player1->currenttile == nullptr) ? "nullptr":"valid") << ".";
+        qDebug() << "CP2 Current tile = " << ((bosswindow->cThread->player2->currenttile == nullptr) ? "nullptr":"valid") << ".";
 }
+
+
+
+
 
 
 
