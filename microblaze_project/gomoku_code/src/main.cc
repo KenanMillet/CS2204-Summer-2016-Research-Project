@@ -12,6 +12,14 @@ void gpi_interrupt(void*);
 
 void sendUSB(u32);
 
+u32 gpoData;
+
+void getPlayer();
+void getXLoc();
+void getYLoc();
+void getWin();
+
+void (*uartOp)(void);
 
 XIOModule gpio;
 XIOModule gpi_int;
@@ -81,26 +89,61 @@ void init_uart_interrupt(void){
 	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)rx_interrupt,
 					NULL); // register timerTick() as our interrupt handler
 	XIOModule_Start(&uart); // start the GPO module
+
+	uartOp = &getPlayer;
 }
 
 void rx_interrupt(void*){
-	u32 data = 0;
-	u8 byte = 0;
+	uartOp();
+	// u32 data = 0;
+	// u8 byte = 0;
 
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	// data |= ((byte - '0') << 0);
+
+	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	// data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+
+	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	// data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+
+	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	// data |= ((byte - '0') << 9);
+
+	// XIOModule_DiscreteWrite(&gpio, 1, data);
+}
+
+void getPlayer()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
 	data |= ((byte - '0') << 0);
+	uartOp = &getXLoc;
+}
 
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+void getXLoc()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
 	data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+	uartOp = &getYLoc;
+}
 
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+void getYLoc()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
 	data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+	uartOp = &getWin;
+}
 
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+void getWin()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
 	data |= ((byte - '0') << 9);
-
+	uartOp = &getPlayer;
 	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
+
+
+
 
 void gpi_interrupt(void*){
 //probably wouldn't work right even if we could initalize it properly
