@@ -1,0 +1,86 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Mon Jul 18 13:23:43 2016
+| Host         : Kenan_PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TopModule_control_sets_placed.rpt
+| Design       : TopModule
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |   230 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               2 |            1 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              32 |           32 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------+----------------------------+------------------+------------------+----------------+
+|    Clock Signal    |        Enable Signal       | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------------+----------------------------+------------------+------------------+----------------+
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata39_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata11_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata13_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata15_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata17_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata19_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata1_out           | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata21_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata23_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata25_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata27_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata29_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata31_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata33_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata35_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata37_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata[31][0]_i_1_n_0 | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata3_out           | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata41_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata43_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata45_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata47_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata49_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata51_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata53_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata55_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata57_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata59_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata5_out           | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata60_out          | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata7_out           | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG | dh/Imuxdata9_out           | Reset_IBUF       |                1 |              1 |
+|  PrgmClk_IBUF_BUFG |                            | Reset_IBUF       |                1 |              2 |
++--------------------+----------------------------+------------------+------------------+----------------+
+
+

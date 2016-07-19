@@ -1,0 +1,275 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Jul 12 14:23:24 2016
+# Process ID: 45488
+# Current directory: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6920 C:\Users\Owner\Desktop\CS2204-Summer-2016-Research-Project\side-projects\test-bench\test-bench.xpr
+# Log file: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/vivado.log
+# Journal file: C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv
+update_compile_order -fileset sim_1
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/Datahub.sv
+add_files -norecurse C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/BaudGenerator.sv
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source TopModule.tcl
+run 100000 ns
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 100000 ns
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+source TopModule.tcl
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+restart
+run 100000 ns
+restart
+run 10 ns
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation
+source TopModule.tcl
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+relaunch_sim
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+relaunch_sim
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+restart
+update_compile_order -fileset sources_1
+relaunch_sim
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+update_compile_order -fileset sources_1
+launch_simulation
+source TopModule.tcl
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+add_force {/TopModule/clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+synth_design -rtl -name rtl_1
+close_design
+update_compile_order -fileset sources_1
+add_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/BaudGenerator.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/Datahub.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.sim/sim_1/behav/glbl.v
+remove_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/VHC/vchip.h
+remove_files {C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/VHC/vhc.h C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/VHC/vport.h}
+add_files C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/projects
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TopModule [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source TopModule.tcl
+close_sim
+launch_simulation
+source TopModule.tcl
+restart
+add_force {/TopModule/Clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/UpByte_A} -radix ascii {C 0ns}
+add_force {/TopModule/Verify_A} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/Send_A} -radix hex {0 0ns}
+add_force {/TopModule/Recv_A} -radix hex {0 0ns}
+add_force {/TopModule/UpByte_B} -radix hex {0 0ns}
+add_force {/TopModule/Verify_B} -radix hex {0 0ns}
+add_force {/TopModule/Send_B} -radix hex {0 0ns}
+add_force {/TopModule/Recv_B} -radix hex {0 0ns}
+run 10 ns
+add_force {/TopModule/UpByte_A} -radix hex {A 0ns}
+run 10 ns
+add_force {/TopModule/UpByte_A} -radix ascii {T 0ns}
+run 10 ns
+add_force {/TopModule/Verify_A} -radix hex {0 0ns}
+add_force {/TopModule/Send_A} -radix hex {1 0ns}
+run 10 ns
+add_force {/TopModule/Send_A} -radix hex {0 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+add_force {/TopModule/Clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/UpByte_A} -radix ascii {C 0ns}
+add_force {/TopModule/Verify_A} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/Send_A} -radix hex {0 0ns}
+add_force {/TopModule/Recv_A} -radix hex {0 0ns}
+add_force {/TopModule/UpByte_B} -radix hex {0 0ns}
+add_force {/TopModule/Verify_B} -radix hex {0 0ns}
+add_force {/TopModule/Send_B} -radix hex {0 0ns}
+add_force {/TopModule/Recv_B} -radix hex {0 0ns}
+run 10 ns
+add_force {/TopModule/UpByte_A} -radix ascii {A 0ns}
+run 10 ns
+add_force {/TopModule/UpByte_A} -radix hex {T 0ns}
+add_force {/TopModule/UpByte_A} -radix ascii {T 0ns}
+run 10 ns
+add_force {/TopModule/UpByte_A} -radix hex {0 0ns}
+add_force {/TopModule/Verify_A} -radix hex {0 0ns}
+run 10 ns
+add_force {/TopModule/Send_A} -radix hex {1 0ns}
+run 10 ns
+add_force {/TopModule/Send_A} -radix hex {0 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+relaunch_sim
+restart
+add_force {/TopModule/Clk} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/UpByte_A} -radix ascii {C 0ns}
+add_force {/TopModule/Verify_A} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/TopModule/Send_A} -radix hex {0 0ns}
+close_sim

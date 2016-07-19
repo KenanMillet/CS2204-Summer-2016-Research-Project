@@ -15,7 +15,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/UartController.sv
+  C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/projects/Datahub.sv
   C:/Users/Owner/Desktop/CS2204-Summer-2016-Research-Project/side-projects/test-bench/test-bench.srcs/sources_1/new/TopModule.sv
 }
 foreach dcp [get_files -quiet -all *.dcp] {
