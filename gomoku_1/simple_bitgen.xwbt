@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku_1\simple.ncd
-OUTFILE=C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku_1\simple.bit
+INFILE=C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku_1\simple.ncd
+OUTFILE=C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku_1\simple.bit
 FAMILY=Artix7
 PART=xc7a100t-3csg324
-WORKINGDIR=C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku_1
+WORKINGDIR=C:\Users\kvm237\Desktop\CS2204-Summer-2016-Research-Project\gomoku_1
 LICENSE=ISE
 USER_INFO=174150314_1777501427_210610473_043

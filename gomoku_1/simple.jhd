@@ -1,3 +1,5 @@
 MODULE simple
 	SUBMODULE communication
 		INSTANCE mcs_0
+	SUBMODULE Gomoku_Verilog
+		INSTANCE XLXI_26

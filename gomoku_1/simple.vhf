@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : simple.vhf
--- /___/   /\     Timestamp : 07/14/2016 19:07:51
+-- /___/   /\     Timestamp : 07/19/2016 16:37:27
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/simple.vhf -w C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/simple.sch
+--Command: sch2hdl -sympath C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/simple.vhf -w C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/simple.sch
 --Design Name: simple
 --Device: artix7
 --Purpose:
@@ -36,9 +36,10 @@ architecture BEHAVIORAL of simple is
    attribute IOSTANDARD   : string ;
    attribute CAPACITANCE  : string ;
    attribute IBUF_LOW_PWR : string ;
-   signal CLOCK     : std_logic;
-   signal comms_gpi : std_logic_vector (31 downto 0);
-   signal XLXN_49   : std_logic;
+   signal CLOCK   : std_logic;
+   signal gpi     : std_logic_vector (31 downto 0);
+   signal gpo     : std_logic_vector (31 downto 0);
+   signal XLXN_49 : std_logic;
    component communication
       port ( clk            : in    std_logic; 
              reset          : in    std_logic; 
@@ -67,13 +68,23 @@ architecture BEHAVIORAL of simple is
    attribute IBUF_LOW_PWR of IBUFG : component is "TRUE";
    attribute BOX_TYPE of IBUFG : component is "BLACK_BOX";
    
+   component Gomoku_Verilog
+      port ( Clk       : in    std_logic; 
+             PlayerIn  : in    std_logic; 
+             RowIn     : in    std_logic_vector (3 downto 0); 
+             ColIn     : in    std_logic_vector (3 downto 0); 
+             PlayerOut : out   std_logic; 
+             RowOut    : out   std_logic_vector (3 downto 0); 
+             ColOut    : out   std_logic_vector (3 downto 0));
+   end component;
+   
 begin
    mcs_0 : communication
       port map (clk=>CLOCK,
-                gpi1(31 downto 0)=>comms_gpi(31 downto 0),
+                gpi1(31 downto 0)=>gpi(31 downto 0),
                 reset=>XLXN_49,
                 uart_rx=>usb_in,
-                gpo1(31 downto 0)=>comms_gpi(31 downto 0),
+                gpo1(31 downto 0)=>gpo(31 downto 0),
                 intc_irq=>open,
                 uart_interrupt=>open,
                 uart_tx=>usb_out);
@@ -84,6 +95,15 @@ begin
    XLXI_23 : IBUFG
       port map (I=>OBClk,
                 O=>CLOCK);
+   
+   XLXI_26 : Gomoku_Verilog
+      port map (Clk=>CLOCK,
+                ColIn(3 downto 0)=>gpo(8 downto 5),
+                PlayerIn=>gpo(0),
+                RowIn(3 downto 0)=>gpo(4 downto 1),
+                ColOut(3 downto 0)=>gpi(8 downto 5),
+                PlayerOut=>gpi(0),
+                RowOut(3 downto 0)=>gpi(4 downto 1));
    
 end BEHAVIORAL;
 
