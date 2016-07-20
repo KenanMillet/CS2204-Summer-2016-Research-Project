@@ -36,24 +36,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_6a9c_lmb_bra
 # IP: bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/ip/ip_7/bd_6a9c_iomodule_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_6a9c_iomodule_0_0 || ORIG_REF_NAME==bd_6a9c_iomodule_0_0}]
 
-# IP: bd/microblaze/ip/microblaze_top_0_0/microblaze_top_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_top_0_0 || ORIG_REF_NAME==microblaze_top_0_0}]
-
-# IP: bd/microblaze/ip/microblaze_xlslice_0_0/microblaze_xlslice_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xlslice_0_0 || ORIG_REF_NAME==microblaze_xlslice_0_0}]
-
-# IP: bd/microblaze/ip/microblaze_xlslice_1_1/microblaze_xlslice_1_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xlslice_1_1 || ORIG_REF_NAME==microblaze_xlslice_1_1}]
-
-# IP: bd/microblaze/ip/microblaze_xlslice_1_2/microblaze_xlslice_1_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xlslice_1_2 || ORIG_REF_NAME==microblaze_xlslice_1_2}]
-
-# IP: bd/microblaze/ip/microblaze_xlslice_1_3/microblaze_xlslice_1_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xlslice_1_3 || ORIG_REF_NAME==microblaze_xlslice_1_3}]
-
-# IP: bd/microblaze/ip/microblaze_xlconcat_0_0/microblaze_xlconcat_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xlconcat_0_0 || ORIG_REF_NAME==microblaze_xlconcat_0_0}]
-
 # XDC: bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/ip/ip_0/bd_6a9c_microblaze_I_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_6a9c_microblaze_I_0 || ORIG_REF_NAME==bd_6a9c_microblaze_I_0}] {/U0 }]/U0 ]]
 

@@ -37,13 +37,6 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source microblaze_script.tcl
 
-
-# The design that will be created by this Tcl script contains the following 
-# module references:
-# top
-
-# Please add the sources of those modules before sourcing this Tcl script.
-
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -198,74 +191,12 @@ CONFIG.USE_UART_RX {1} \
 CONFIG.USE_UART_TX {1} \
  ] $microblaze_mcs_0
 
-  # Create instance: top_0, and set properties
-  set block_name top
-  set block_cell_name top_0
-  if { [catch {set top_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $top_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: xlconcat_0, and set properties
-  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
-  set_property -dict [ list \
-CONFIG.IN0_WIDTH {1} \
-CONFIG.IN1_WIDTH {4} \
-CONFIG.IN2_WIDTH {4} \
-CONFIG.NUM_PORTS {3} \
- ] $xlconcat_0
-
-  # Create instance: xlslice_0, and set properties
-  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
-  set_property -dict [ list \
-CONFIG.DIN_FROM {8} \
-CONFIG.DIN_TO {0} \
-CONFIG.DOUT_WIDTH {9} \
- ] $xlslice_0
-
-  # Create instance: xlslice_1, and set properties
-  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
-  set_property -dict [ list \
-CONFIG.DIN_FROM {0} \
-CONFIG.DIN_TO {0} \
-CONFIG.DIN_WIDTH {9} \
- ] $xlslice_1
-
-  # Create instance: xlslice_2, and set properties
-  set xlslice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2 ]
-  set_property -dict [ list \
-CONFIG.DIN_FROM {4} \
-CONFIG.DIN_TO {1} \
-CONFIG.DIN_WIDTH {9} \
-CONFIG.DOUT_WIDTH {4} \
- ] $xlslice_2
-
-  # Create instance: xlslice_3, and set properties
-  set xlslice_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_3 ]
-  set_property -dict [ list \
-CONFIG.DIN_FROM {8} \
-CONFIG.DIN_TO {5} \
-CONFIG.DIN_WIDTH {9} \
-CONFIG.DOUT_WIDTH {4} \
- ] $xlslice_3
-
   # Create port connections
   connect_bd_net -net CLOCK_1 [get_bd_ports CLOCK] [get_bd_pins microblaze_mcs_0/Clk]
   connect_bd_net -net RESET_1 [get_bd_ports RESET] [get_bd_pins microblaze_mcs_0/Reset]
   connect_bd_net -net USB_IN_1 [get_bd_ports USB_IN] [get_bd_pins microblaze_mcs_0/UART_rxd]
-  connect_bd_net -net microblaze_mcs_0_GPIO1_tri_o [get_bd_pins microblaze_mcs_0/GPIO1_tri_o] [get_bd_pins xlslice_0/Din]
+  connect_bd_net -net microblaze_mcs_0_GPIO1_tri_o [get_bd_pins microblaze_mcs_0/GPIO1_tri_i] [get_bd_pins microblaze_mcs_0/GPIO1_tri_o]
   connect_bd_net -net microblaze_mcs_0_UART_txd [get_bd_ports USB_OUT] [get_bd_pins microblaze_mcs_0/UART_txd]
-  connect_bd_net -net top_0_oLastPlayer [get_bd_pins top_0/oLastPlayer] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net top_0_oXLoc [get_bd_pins top_0/oXLoc] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net top_0_oYLoc [get_bd_pins top_0/oYLoc] [get_bd_pins xlconcat_0/In2]
-  connect_bd_net -net xlconcat_0_dout [get_bd_pins microblaze_mcs_0/GPIO1_tri_i] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlslice_0_Dout [get_bd_pins xlslice_0/Dout] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
-  connect_bd_net -net xlslice_1_Dout [get_bd_pins top_0/iLastPlayer] [get_bd_pins xlslice_1/Dout]
-  connect_bd_net -net xlslice_2_Dout [get_bd_pins top_0/iXLoc] [get_bd_pins xlslice_2/Dout]
-  connect_bd_net -net xlslice_3_Dout [get_bd_pins top_0/iYLoc] [get_bd_pins xlslice_3/Dout]
 
   # Create address segments
 
@@ -274,30 +205,16 @@ CONFIG.DOUT_WIDTH {4} \
    guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
 preplace port CLOCK -pg 1 -y 10 -defaultsOSRD
-preplace port USB_OUT -pg 1 -y 100 -defaultsOSRD
-preplace port USB_IN -pg 1 -y 30 -defaultsOSRD -right
+preplace port USB_OUT -pg 1 -y -110 -defaultsOSRD
+preplace port USB_IN -pg 1 -y -180 -defaultsOSRD -right
 preplace port RESET -pg 1 -y 260 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -y 310 -defaultsOSRD -resize 154 58
 preplace inst microblaze_mcs_0 -pg 1 -lvl 1 -y -70 -defaultsOSRD -resize 427 432
-preplace inst xlslice_1 -pg 1 -lvl 3 -y 390 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 3 -y 470 -defaultsOSRD
-preplace inst xlslice_3 -pg 1 -lvl 3 -y 550 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 5 -y 470 -defaultsOSRD
-preplace inst top_0 -pg 1 -lvl 4 -y 470 -defaultsOSRD
-preplace netloc microblaze_mcs_0_UART_txd 1 1 5 N -110 N -110 N -110 N -110 1590
-preplace netloc xlslice_3_Dout 1 3 1 1160
-preplace netloc xlslice_1_Dout 1 3 1 1160
+preplace netloc microblaze_mcs_0_UART_txd 1 1 4 N -110 N -110 N -110 N
 preplace netloc CLOCK_1 1 0 1 -420
 preplace netloc microblaze_mcs_0_GPIO1_tri_o 1 1 1 740
-preplace netloc top_0_oXLoc 1 4 1 N
-preplace netloc top_0_oYLoc 1 4 1 N
-preplace netloc USB_IN_1 1 1 5 N -180 N -180 N -180 N -180 1600
-preplace netloc xlconcat_0_dout 1 1 5 N 30 NJ 30 NJ 30 NJ 30 1580
-preplace netloc xlslice_2_Dout 1 3 1 N
-preplace netloc top_0_oLastPlayer 1 4 1 N
+preplace netloc USB_IN_1 1 1 4 N -180 N -180 N -180 N
 preplace netloc RESET_1 1 0 1 -420
-preplace netloc xlslice_0_Dout 1 2 1 940
-levelinfo -pg 1 -440 500 840 1070 1280 1490 1620 -top -300 -bot 600
+levelinfo -pg 1 -440 500 840 1070 1290 2090 -top -940 -bot 500
 ",
 }
 

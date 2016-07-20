@@ -14,6 +14,7 @@ void sendUSB(u32);
 
 u32 gpoData;
 
+
 void getPlayer();
 void getXLoc();
 void getYLoc();
@@ -32,16 +33,18 @@ int main()
 	init_gpio();
 	//init_uart_interrupt();
 	//init_gpi_interrupt();
+	u32 i = 0;
 
 	while(1)
 	{
-		rx_interrupt(NULL); //Doing this in polled mode instead of actually using interrupts because I am frustrated and gave up on stupid Xilinx software that doesn't work.
-		gpiNew = XIOModule_DiscreteRead(&gpio, 1);
-		if(gpiOld != gpiNew)
-		{
-			gpiOld = gpiNew;
-			sendUSB(gpiNew);
-		}
+		//rx_interrupt(NULL); //Doing this in polled mode instead of actually using interrupts because I am frustrated and gave up on stupid Xilinx software that doesn't work.
+		xil_printf("test %x", i++);
+		//gpiNew = XIOModule_DiscreteRead(&gpio, 1);
+//		if(gpiOld != gpiNew)
+//		{
+//			gpiOld = gpiNew;
+////			sendUSB(gpiNew);
+//		}
 	}
 
 	return 0;
@@ -94,52 +97,54 @@ void init_uart_interrupt(void){
 }
 
 void rx_interrupt(void*){
-	uartOp();
-	// u32 data = 0;
-	// u8 byte = 0;
+//	uartOp();
+	 u32 data = 0;
+	 u8 byte = 0;
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - '0') << 0);
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - '0') << 0);
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - '0') << 9);
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - '0') << 9);
 
-	// XIOModule_DiscreteWrite(&gpio, 1, data);
+	 sendUSB(data);
+
+//	 XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
 void getPlayer()
 {
 	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - '0') << 0);
+	gpoData |= ((byte - '0') << 0);
 	uartOp = &getXLoc;
 }
 
 void getXLoc()
 {
 	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+	gpoData |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
 	uartOp = &getYLoc;
 }
 
 void getYLoc()
 {
 	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+	gpoData |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
 	uartOp = &getWin;
 }
 
 void getWin()
 {
 	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - '0') << 9);
+	gpoData |= ((byte - '0') << 9);
 	uartOp = &getPlayer;
-	XIOModule_DiscreteWrite(&gpio, 1, data);
+	XIOModule_DiscreteWrite(&gpio, 1, gpoData);
 }
 
 

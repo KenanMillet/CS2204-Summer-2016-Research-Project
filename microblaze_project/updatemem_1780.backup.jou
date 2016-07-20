@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# 
+# Start of session at: Mon Jul 18 15:47:57 2016
+# Process ID: 1780
+# Current directory: C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper_hw_platform_0/microblaze_wrapper.mmi -data C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/gomoku_code/Debug/gomoku_code.elf -proc microblaze_i/microblaze_mcs_0/U0/microblaze_I -bit C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper_hw_platform_0/microblaze_wrapper.bit -out C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/updatemem.log
+# Journal file: C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace

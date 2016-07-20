@@ -8,8 +8,8 @@ set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLOCK 
 set_property src_info {type:XDC file:2 line:82 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C12   IOSTANDARD LVCMOS33 } [get_ports { RESET }]; #IO_L3P_T0_DQS_AD1P_15 Sch=cpu_resetn
 set_property src_info {type:XDC file:2 line:219 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { USB_OUT }]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
+set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { USB_IN }]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
 set_property src_info {type:XDC file:2 line:220 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { USB_IN }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out
+set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { USB_OUT }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out
 set_property src_info {type:XDC file:3 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze || ORIG_REF_NAME==microblaze}]

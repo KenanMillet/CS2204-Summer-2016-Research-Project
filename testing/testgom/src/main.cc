@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "platform.h"
-#include <xparameters.h> // add
+#include <xparameters.h>
 #include <xiomodule.h>
 
 void init_gpio();
@@ -10,70 +10,49 @@ void init_gpi_interrupt();
 void rx_interrupt(void*);
 void gpi_interrupt(void*);
 
+void sendUSB(u32);
+
+u32 gpoData;
+
+
+void getPlayer();
+void getXLoc();
+void getYLoc();
+void getWin();
+
+void (*uartOp)(void);
+
 XIOModule gpio;
 XIOModule gpi_int;
 XIOModule uart;
 
 int main()
 {
-	xil_printf("testmain\r\n");
+	u32 gpiOld, gpiNew;
 	init_platform();
 	init_gpio();
-	xil_printf("testmain1\r\n");
-	init_uart_interrupt();
-	xil_printf("testmain2\r\n");
+	//init_uart_interrupt();
 	//init_gpi_interrupt();
-	xil_printf("testmain3\r\n");
 
-	while(true);
+	while(1)
+	{
+		rx_interrupt(NULL); //Doing this in polled mode instead of actually using interrupts because I am frustrated and gave up on stupid Xilinx software that doesn't work.
+		gpiNew = XIOModule_DiscreteRead(&gpio, 1);
+		if(gpiOld != gpiNew)
+		{
+			gpiOld = gpiNew;
+			sendUSB(gpiNew);
+		}
+	}
 
 	return 0;
 }
 
-void rx_interrupt(void*){
-	u32 data = 0;
-	u8 byte = 0;
-	XIOModule_Disable(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR);
-
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - '0') << 0);
-
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - ((byte > '9') ? 'A':'0')) << 1);
-
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - ((byte > '9') ? 'A':'0')) << 4);
-
-	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	data |= ((byte - '0') << 4);
-
-	XIOModule_Enable(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR);
-
-	XIOModule_DiscreteWrite(&gpio, 1, data);
-}
-
-void gpi_interrupt(void*){
-	XIOModule_Disable(&gpi_int, XIN_IOMODULE_GPI_1_INTERRUPT_INTR);
-
-	u8 buffer[5];
-	u32 data = XIOModule_DiscreteRead(&gpio, 1);
-
-	buffer[0] = (data & 1) + '0';
-	data >>= 1;
-
-	buffer[1] = (data & (((u8)1 << 4) - 1));
-	buffer[1] += (buffer[1] > 9) ? 'A':'0';
-	data >>= 4;
-
-	buffer[2] = (data & (((u8)1 << 4) - 1));
-	buffer[2] += (buffer[2] > 9) ? 'A':'0';
-	data >>= 4;
-
-	buffer[3] = (data & (((u8)1 << 2) - 1)) + '0';
-
-	XIOModule_Enable(&gpi_int, XIN_IOMODULE_GPI_1_INTERRUPT_INTR);
-
-	xil_printf("%s\r\n", &buffer);
+void sendUSB(u32 data){
+	xil_printf("%x", (data << 31) >> 31);
+	xil_printf("%x", (data << 27) >> 28);
+	xil_printf("%x", (data << 23) >> 28);
+	xil_printf("%x\r\n", (data << 21) >> 30);
 }
 
 void init_gpio(void){
@@ -82,36 +61,92 @@ void init_gpio(void){
 }
 
 void init_gpi_interrupt()
+//doesn't work with this serial comm code. Problem starts somewhere around Connect function.
 {
-	xil_printf("gpi_int1\r\n");
 	XIOModule_Initialize(&gpi_int, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
-	xil_printf("gpi_int2\r\n");
+
 	microblaze_register_handler(XIOModule_DeviceInterruptHandler,
 								  XPAR_IOMODULE_0_DEVICE_ID); // register the interrupt handler
-	xil_printf("gpi_int3\r\n");
+
 	XIOModule_Start(&gpi_int); // start the GPO module
-	xil_printf("gpi_int4\r\n");
+
 	XIOModule_Connect(&gpi_int, XIN_IOMODULE_GPI_1_INTERRUPT_INTR, (XInterruptHandler)gpi_interrupt,
 							NULL); // register timerTick() as our interrupt handler
-	xil_printf("gpi_int5\r\n");
 	XIOModule_Enable(&gpi_int, XIN_IOMODULE_GPI_1_INTERRUPT_INTR); // enable the interrupt
-	xil_printf("gpi_int6\r\n");
+
 	microblaze_enable_interrupts(); // enable global interrupts
-	xil_printf("gpi_int7\r\n");
 }
 
 void init_uart_interrupt(void){
+//somehow manages to break while loops and probably doesn't return properly. Apparently the drivers for interrupt based io in XIOModule is garbage
+	microblaze_enable_interrupts(); // enable global interrupts
+
+	microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID); // register the interrupt handler
+
 	XIOModule_Initialize(&uart, XPAR_IOMODULE_0_DEVICE_ID); // Initialize the GPO module
 
-	microblaze_register_handler(XIOModule_DeviceInterruptHandler,
-							  XPAR_IOMODULE_0_DEVICE_ID); // register the interrupt handler
-
-	XIOModule_Start(&uart); // start the GPO module
+	XIOModule_Uart_EnableInterrupt(&uart);
 
 	XIOModule_Connect(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR, (XInterruptHandler)rx_interrupt,
 					NULL); // register timerTick() as our interrupt handler
-	XIOModule_Enable(&uart, XIN_IOMODULE_UART_RX_INTERRUPT_INTR); // enable the interrupt
+	XIOModule_Start(&uart); // start the GPO module
 
-	microblaze_enable_interrupts(); // enable global interrupts
+	uartOp = &getPlayer;
+}
 
+void rx_interrupt(void*){
+//	uartOp();
+	 u32 data = 0;
+	 u8 byte = 0;
+
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - '0') << 0);
+
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+
+	 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	 data |= ((byte - '0') << 9);
+
+	 XIOModule_DiscreteWrite(&gpio, 1, data);
+}
+
+void getPlayer()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	gpoData |= ((byte - '0') << 0);
+	uartOp = &getXLoc;
+}
+
+void getXLoc()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	gpoData |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+	uartOp = &getYLoc;
+}
+
+void getYLoc()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	gpoData |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+	uartOp = &getWin;
+}
+
+void getWin()
+{
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	gpoData |= ((byte - '0') << 9);
+	uartOp = &getPlayer;
+	XIOModule_DiscreteWrite(&gpio, 1, gpoData);
+}
+
+
+
+
+void gpi_interrupt(void*){
+//probably wouldn't work right even if we could initalize it properly
+	sendUSB(XIOModule_DiscreteRead(&gpio, 1));
 }

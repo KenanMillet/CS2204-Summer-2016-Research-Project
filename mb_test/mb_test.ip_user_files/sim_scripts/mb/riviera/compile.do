@@ -1,0 +1,112 @@
+vlib work
+vlib riviera
+
+vlib riviera/xil_defaultlib
+vlib riviera/xpm
+vlib riviera/microblaze_v9_6_1
+vlib riviera/lmb_v10_v3_0_8
+vlib riviera/lmb_bram_if_cntlr_v4_0_9
+vlib riviera/blk_mem_gen_v8_3_3
+vlib riviera/axi_lite_ipif_v3_0_4
+vlib riviera/mdm_v3_2_6
+vlib riviera/lib_cdc_v1_0_2
+vlib riviera/proc_sys_reset_v5_0_9
+
+vmap xil_defaultlib riviera/xil_defaultlib
+vmap xpm riviera/xpm
+vmap microblaze_v9_6_1 riviera/microblaze_v9_6_1
+vmap lmb_v10_v3_0_8 riviera/lmb_v10_v3_0_8
+vmap lmb_bram_if_cntlr_v4_0_9 riviera/lmb_bram_if_cntlr_v4_0_9
+vmap blk_mem_gen_v8_3_3 riviera/blk_mem_gen_v8_3_3
+vmap axi_lite_ipif_v3_0_4 riviera/axi_lite_ipif_v3_0_4
+vmap mdm_v3_2_6 riviera/mdm_v3_2_6
+vmap lib_cdc_v1_0_2 riviera/lib_cdc_v1_0_2
+vmap proc_sys_reset_v5_0_9 riviera/proc_sys_reset_v5_0_9
+
+vlog -work xil_defaultlib -v2k5 -sv "+incdir+../../../ipstatic/clk_wiz_v5_3" "+incdir+../../../ipstatic/clk_wiz_v5_3" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" \
+
+vcom -work xpm -93 \
+"C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vcom -work microblaze_v9_6_1 -93 \
+"../../../ipstatic/microblaze_v9_6/hdl/microblaze_v9_6_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb/ip/mb_microblaze_0_0/sim/mb_microblaze_0_0.vhd" \
+
+vcom -work lmb_v10_v3_0_8 -93 \
+"../../../ipstatic/lmb_v10_v3_0/hdl/vhdl/lmb_v10.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb/ip/mb_dlmb_v10_0/sim/mb_dlmb_v10_0.vhd" \
+"../../../bd/mb/ip/mb_ilmb_v10_0/sim/mb_ilmb_v10_0.vhd" \
+
+vcom -work lmb_bram_if_cntlr_v4_0_9 -93 \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_funcs.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_primitives.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/xor18.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/parity.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/parityenable.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/checkbit_handler.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/correct_one_bit.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/pselect_mask.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/axi_interface.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_mux.vhd" \
+"../../../ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_cntlr.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb/ip/mb_dlmb_bram_if_cntlr_0/sim/mb_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/mb/ip/mb_ilmb_bram_if_cntlr_0/sim/mb_ilmb_bram_if_cntlr_0.vhd" \
+
+vlog -work blk_mem_gen_v8_3_3 -v2k5 "+incdir+../../../ipstatic/clk_wiz_v5_3" "+incdir+../../../ipstatic/clk_wiz_v5_3" \
+"../../../ipstatic/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v" \
+
+vlog -work xil_defaultlib -v2k5 "+incdir+../../../ipstatic/clk_wiz_v5_3" "+incdir+../../../ipstatic/clk_wiz_v5_3" \
+"../../../bd/mb/ip/mb_lmb_bram_0/sim/mb_lmb_bram_0.v" \
+
+vcom -work axi_lite_ipif_v3_0_4 -93 \
+"../../../ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/ipif_pkg.vhd" \
+"../../../ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd" \
+"../../../ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/address_decoder.vhd" \
+"../../../ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd" \
+"../../../ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd" \
+
+vcom -work mdm_v3_2_6 -93 \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/mdm_primitives.vhd" \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/arbiter.vhd" \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/srl_fifo.vhd" \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/bus_master.vhd" \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/jtag_control.vhd" \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/mdm_core.vhd" \
+"../../../ipstatic/mdm_v3_2/hdl/vhdl/mdm.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb/ip/mb_mdm_1_0/sim/mb_mdm_1_0.vhd" \
+
+vlog -work xil_defaultlib -v2k5 "+incdir+../../../ipstatic/clk_wiz_v5_3" "+incdir+../../../ipstatic/clk_wiz_v5_3" \
+"../../../bd/mb/ip/mb_clk_wiz_1_0/mb_clk_wiz_1_0_clk_wiz.v" \
+"../../../bd/mb/ip/mb_clk_wiz_1_0/mb_clk_wiz_1_0.v" \
+
+vcom -work lib_cdc_v1_0_2 -93 \
+"../../../ipstatic/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd" \
+
+vcom -work proc_sys_reset_v5_0_9 -93 \
+"../../../ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd" \
+"../../../ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd" \
+"../../../ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd" \
+"../../../ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb/ip/mb_rst_clk_wiz_1_100M_0/sim/mb_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/mb/hdl/mb.vhd" \
+
+vlog -work xil_defaultlib "glbl.v"
+

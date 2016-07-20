@@ -1,0 +1,200 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Jul 18 14:37:08 2016
+# Process ID: 9148
+# Current directory: C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12540 C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\microblaze_project\microblaze_project.xpr
+# Log file: C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/vivado.log
+# Journal file: C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/microblaze.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.runs/impl_1/microblaze_wrapper.sysdef C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.sdk/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.sdk -hwspec C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.sdk/microblaze_wrapper.hdf
+file copy -force C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.runs/impl_1/microblaze_wrapper.sysdef C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project -hwspec C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+delete_bd_objs [get_bd_nets microblaze_mcs_0_GPIO1_tri_o]
+connect_bd_net [get_bd_pins microblaze_mcs_0/GPIO1_tri_o] [get_bd_pins microblaze_mcs_0/GPIO1_tri_i]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+startgroup
+disconnect_bd_net /xlslice_1_Dout [get_bd_pins top_0/iLastPlayer] [get_bd_pins xlslice_1/Dout]
+disconnect_bd_net /xlslice_3_Dout [get_bd_pins xlslice_3/Dout] [get_bd_pins top_0/iYLoc]
+disconnect_bd_net /xlslice_0_Dout [get_bd_pins xlslice_3/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_0/Dout]
+disconnect_bd_net /xlslice_2_Dout [get_bd_pins xlslice_2/Dout] [get_bd_pins top_0/iXLoc]
+disconnect_bd_net /top_0_oLastPlayer [get_bd_pins xlconcat_0/In0] [get_bd_pins top_0/oLastPlayer]
+disconnect_bd_net /top_0_oXLoc [get_bd_pins xlconcat_0/In1] [get_bd_pins top_0/oXLoc]
+disconnect_bd_net /top_0_oYLoc [get_bd_pins xlconcat_0/In2] [get_bd_pins top_0/oYLoc]
+endgroup
+undo
+startgroup
+delete_bd_objs [get_bd_nets top_0_oLastPlayer] [get_bd_nets top_0_oXLoc] [get_bd_nets top_0_oYLoc] [get_bd_nets xlslice_0_Dout] [get_bd_nets xlslice_1_Dout] [get_bd_nets xlslice_2_Dout] [get_bd_nets xlslice_3_Dout]
+delete_bd_objs [get_bd_cells top_0] [get_bd_cells xlconcat_0] [get_bd_cells xlslice_0] [get_bd_cells xlslice_1] [get_bd_cells xlslice_2] [get_bd_cells xlslice_3]
+endgroup
+update_compile_order -fileset sources_1
+undo
+update_compile_order -fileset sources_1
+redo
+update_compile_order -fileset sources_1
+undo
+update_compile_order -fileset sources_1
+startgroup
+set_property location {5.5 1895 147} [get_bd_cells xlconcat_0]
+set_property location {4 1895 147} [get_bd_cells xlslice_0]
+set_property location {4 1895 147} [get_bd_cells xlslice_1]
+set_property location {4 1895 147} [get_bd_cells xlslice_2]
+set_property location {4 1895 147} [get_bd_cells xlslice_3]
+set_property location {3 1895 147} [get_bd_cells top_0]
+endgroup
+undo
+startgroup
+set_property location {4 1311 -876} [get_bd_cells xlconcat_0]
+set_property location {1 521 -846} [get_bd_cells xlslice_0]
+set_property location {2 861 -816} [get_bd_cells xlslice_2]
+set_property location {2 861 -736} [get_bd_cells xlslice_3]
+set_property location {3 1091 -876} [get_bd_cells top_0]
+set_property location {2 861 -896} [get_bd_cells xlslice_1]
+endgroup
+create_bd_design "gomoku"
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs microblaze]
+current_bd_design [get_bd_designs gomoku]
+current_bd_design microblaze
+set tmpCopyObjs [concat  [get_bd_cells {top_0 xlconcat_0 xlslice_0 xlslice_1 xlslice_2 xlslice_3}] [get_bd_nets {top_0_oLastPlayer top_0_oXLoc top_0_oYLoc xlslice_0_Dout xlslice_1_Dout xlslice_2_Dout xlslice_3_Dout}]]
+current_bd_design gomoku
+copy_bd_objs -from_design microblaze / $tmpCopyObjs
+startgroup
+current_bd_design [get_bd_designs microblaze]
+delete_bd_objs [get_bd_nets top_0_oLastPlayer] [get_bd_nets top_0_oXLoc] [get_bd_nets top_0_oYLoc] [get_bd_nets xlslice_0_Dout] [get_bd_nets xlslice_1_Dout] [get_bd_nets xlslice_2_Dout] [get_bd_nets xlslice_3_Dout]
+delete_bd_objs [get_bd_cells top_0] [get_bd_cells xlconcat_0] [get_bd_cells xlslice_0] [get_bd_cells xlslice_1] [get_bd_cells xlslice_2] [get_bd_cells xlslice_3]
+endgroup
+update_compile_order -fileset sources_1
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+current_bd_design [get_bd_designs gomoku]
+save_bd_design
+current_bd_design [get_bd_designs microblaze]
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+file copy -force C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.runs/impl_1/microblaze_wrapper.sysdef C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project -hwspec C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+open_bd_design {C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/microblaze.bd}
+current_bd_design [get_bd_designs gomoku]
+close_bd_design [get_bd_designs gomoku]
+set_property is_enabled false [get_files  C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/gomoku/gomoku.bd]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.runs/impl_1/microblaze_wrapper.sysdef C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project -hwspec C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+close_bd_design [get_bd_designs bd_6a9c]
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+current_bd_design [get_bd_designs microblaze]
+open_bd_design {C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/microblaze.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.runs/impl_1/microblaze_wrapper.sysdef C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project -hwspec C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_wrapper.hdf
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+current_bd_design [get_bd_designs microblaze]
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+current_bd_design [get_bd_designs microblaze]
+open_bd_design {C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/microblaze.bd}
+open_bd_design {C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/microblaze.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+current_bd_design [get_bd_designs microblaze]
+set_property location {1 555 -25} [get_bd_cells microblaze_mcs_0]
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+open_bd_design {c:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/microblaze_project/microblaze_project.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_mcs_0_0/bd_0/bd_6a9c.bd}
+current_bd_design [get_bd_designs microblaze]
+save_bd_design
