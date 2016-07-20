@@ -9,19 +9,23 @@
         <signal name="CLOCK" />
         <signal name="OBClk" />
         <signal name="XLXN_49" />
-        <signal name="usb_in" />
-        <signal name="usb_out" />
         <signal name="gpi(31:0)" />
         <signal name="gpo(31:0)" />
+        <signal name="gpo(0)" />
+        <signal name="gpo(4:1)" />
+        <signal name="gpo(8:5)" />
+        <signal name="gpo(9)" />
         <signal name="gpi(0)" />
         <signal name="gpi(4:1)" />
         <signal name="gpi(8:5)" />
-        <signal name="gpo(8:5)" />
-        <signal name="gpo(4:1)" />
-        <signal name="gpo(0)" />
+        <signal name="gpi(9)" />
+        <signal name="UartTx" />
+        <signal name="USB_OUT" />
+        <signal name="USB_IN" />
+        <signal name="UartRx" />
         <port polarity="Input" name="OBClk" />
-        <port polarity="Input" name="usb_in" />
-        <port polarity="Output" name="usb_out" />
+        <port polarity="Input" name="UartTx" />
+        <port polarity="Output" name="UartRx" />
         <blockdef name="gnd">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="-96" x1="64" />
@@ -43,65 +47,85 @@
             <line x2="736" y1="784" y2="784" style="linewidth:W" x1="768" />
             <line x2="736" y1="912" y2="912" x1="768" />
         </blockdef>
-        <blockdef name="ibufg">
-            <timestamp>2008-10-8T10:10:10</timestamp>
+        <blockdef name="Gomoku_Verilog">
+            <timestamp>2016-7-20T15:25:41</timestamp>
+            <rect width="416" x="64" y="-320" height="320" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="544" y1="-224" y2="-224" x1="480" />
+            <line x2="544" y1="-160" y2="-160" x1="480" />
+            <rect width="64" x="480" y="-172" height="24" />
+            <line x2="544" y1="-96" y2="-96" x1="480" />
+            <rect width="64" x="480" y="-108" height="24" />
+            <line x2="544" y1="-32" y2="-32" x1="480" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <line x2="80" y1="-276" y2="-288" x1="64" />
+            <line x2="64" y1="-288" y2="-300" x1="80" />
+        </blockdef>
+        <blockdef name="ibuf">
+            <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="0" y2="-64" x1="64" />
             <line x2="64" y1="-32" y2="0" x1="128" />
             <line x2="128" y1="-64" y2="-32" x1="64" />
             <line x2="128" y1="-32" y2="-32" x1="224" />
             <line x2="64" y1="-32" y2="-32" x1="0" />
         </blockdef>
-        <blockdef name="Gomoku_Verilog">
-            <timestamp>2016-7-19T20:35:30</timestamp>
-            <rect width="416" x="64" y="-256" height="256" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="544" y1="-224" y2="-224" x1="480" />
-            <line x2="544" y1="-160" y2="-160" x1="480" />
-            <rect width="64" x="480" y="-172" height="24" />
-            <line x2="544" y1="-96" y2="-96" x1="480" />
-            <rect width="64" x="480" y="-108" height="24" />
+        <blockdef name="obuf">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="0" y2="-64" x1="64" />
+            <line x2="64" y1="-32" y2="0" x1="128" />
+            <line x2="128" y1="-64" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
         </blockdef>
-        <block symbolname="ibufg" name="XLXI_23">
-            <blockpin signalname="OBClk" name="I" />
-            <blockpin signalname="CLOCK" name="O" />
-        </block>
         <block symbolname="gnd" name="XLXI_15">
             <blockpin signalname="XLXN_49" name="G" />
         </block>
         <block symbolname="communication" name="mcs_0">
             <blockpin signalname="CLOCK" name="clk" />
             <blockpin signalname="XLXN_49" name="reset" />
-            <blockpin signalname="usb_out" name="uart_tx" />
-            <blockpin signalname="usb_in" name="uart_rx" />
+            <blockpin signalname="USB_OUT" name="uart_tx" />
+            <blockpin signalname="USB_IN" name="uart_rx" />
             <blockpin name="uart_interrupt" />
             <blockpin signalname="gpi(31:0)" name="gpi1(31:0)" />
             <blockpin signalname="gpo(31:0)" name="gpo1(31:0)" />
             <blockpin name="intc_irq" />
         </block>
-        <block symbolname="Gomoku_Verilog" name="XLXI_26">
-            <blockpin signalname="CLOCK" name="Clk" />
-            <blockpin signalname="gpo(0)" name="PlayerIn" />
-            <blockpin signalname="gpo(4:1)" name="RowIn(3:0)" />
-            <blockpin signalname="gpo(8:5)" name="ColIn(3:0)" />
-            <blockpin signalname="gpi(0)" name="PlayerOut" />
-            <blockpin signalname="gpi(4:1)" name="RowOut(3:0)" />
-            <blockpin signalname="gpi(8:5)" name="ColOut(3:0)" />
+        <block symbolname="Gomoku_Verilog" name="XLXI_25">
+            <blockpin signalname="gpo(0)" name="playerIn" />
+            <blockpin signalname="gpo(4:1)" name="rowIn(3:0)" />
+            <blockpin signalname="gpo(8:5)" name="colIn(3:0)" />
+            <blockpin signalname="gpo(9)" name="winIn" />
+            <blockpin signalname="gpi(0)" name="playerOut" />
+            <blockpin signalname="gpi(4:1)" name="rowOut(3:0)" />
+            <blockpin signalname="gpi(8:5)" name="colOut(3:0)" />
+            <blockpin signalname="gpi(9)" name="winOut" />
+            <blockpin signalname="CLOCK" name="clk" />
+        </block>
+        <block symbolname="ibuf" name="XLXI_26">
+            <blockpin signalname="UartTx" name="I" />
+            <blockpin signalname="USB_IN" name="O" />
+        </block>
+        <block symbolname="obuf" name="XLXI_27">
+            <blockpin signalname="USB_OUT" name="I" />
+            <blockpin signalname="UartRx" name="O" />
+        </block>
+        <block symbolname="ibuf" name="XLXI_28">
+            <blockpin signalname="OBClk" name="I" />
+            <blockpin signalname="CLOCK" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <text style="fontsize:64;fontname:Arial" x="484" y="160">Main Functionality</text>
         <line x2="1712" y1="1824" y2="1824" x1="36" />
         <text style="fontsize:64;fontname:Arial" x="776" y="1904">Buffers</text>
-        <instance x="640" y="2256" name="XLXI_23" orien="R0" />
         <branch name="CLOCK">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="992" y="2224" type="branch" />
-            <wire x2="992" y1="2224" y2="2224" x1="864" />
-            <wire x2="1040" y1="2224" y2="2224" x1="992" />
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1040" y="2224" type="branch" />
+            <wire x2="1040" y1="2224" y2="2224" x1="864" />
         </branch>
         <branch name="OBClk">
             <wire x2="624" y1="2224" y2="2224" x1="512" />
@@ -115,63 +139,89 @@
         </branch>
         <instance x="1872" y="304" name="XLXI_15" orien="R90" />
         <branch name="CLOCK">
-            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1920" y="256" type="branch" />
-            <wire x2="1920" y1="256" y2="256" x1="1904" />
-            <wire x2="2016" y1="256" y2="256" x1="1920" />
+            <attrtext style="alignment:SOFT-RIGHT" attrname="Name" x="1904" y="256" type="branch" />
+            <wire x2="2016" y1="256" y2="256" x1="1904" />
             <wire x2="2016" y1="256" y2="336" x1="2016" />
             <wire x2="2032" y1="336" y2="336" x1="2016" />
         </branch>
-        <branch name="usb_in">
-            <wire x2="1920" y1="464" y2="464" x1="1904" />
-            <wire x2="2016" y1="464" y2="464" x1="1920" />
-            <wire x2="2016" y1="400" y2="464" x1="2016" />
-            <wire x2="2032" y1="400" y2="400" x1="2016" />
-        </branch>
         <instance x="2032" y="256" name="mcs_0" orien="R0">
         </instance>
-        <branch name="usb_out">
-            <wire x2="2928" y1="336" y2="336" x1="2800" />
-            <wire x2="2944" y1="336" y2="336" x1="2928" />
-        </branch>
-        <iomarker fontsize="28" x="1904" y="464" name="usb_in" orien="R180" />
-        <iomarker fontsize="28" x="2944" y="336" name="usb_out" orien="R0" />
         <branch name="gpi(31:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1840" y="560" type="branch" />
+            <attrtext style="alignment:SOFT-RIGHT" attrname="Name" x="1840" y="560" type="branch" />
             <wire x2="2032" y1="560" y2="560" x1="1840" />
         </branch>
         <branch name="gpo(31:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2960" y="1040" type="branch" />
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="2960" y="1040" type="branch" />
             <wire x2="2960" y1="1040" y2="1040" x1="2800" />
         </branch>
-        <branch name="gpi(0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1296" y="944" type="branch" />
-            <wire x2="1296" y1="944" y2="944" x1="1120" />
-        </branch>
-        <branch name="gpi(4:1)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1296" y="1008" type="branch" />
-            <wire x2="1296" y1="1008" y2="1008" x1="1120" />
-        </branch>
-        <branch name="gpi(8:5)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1296" y="1072" type="branch" />
-            <wire x2="1296" y1="1072" y2="1072" x1="1120" />
-        </branch>
-        <branch name="gpo(8:5)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="416" y="1136" type="branch" />
-            <wire x2="576" y1="1136" y2="1136" x1="416" />
-        </branch>
-        <branch name="gpo(4:1)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="416" y="1072" type="branch" />
-            <wire x2="576" y1="1072" y2="1072" x1="416" />
+        <instance x="544" y="1184" name="XLXI_25" orien="R0">
+        </instance>
+        <branch name="CLOCK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="400" y="896" type="branch" />
+            <wire x2="544" y1="896" y2="896" x1="400" />
         </branch>
         <branch name="gpo(0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="416" y="1008" type="branch" />
-            <wire x2="576" y1="1008" y2="1008" x1="416" />
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="400" y="960" type="branch" />
+            <wire x2="544" y1="960" y2="960" x1="400" />
         </branch>
-        <branch name="CLOCK">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="416" y="944" type="branch" />
-            <wire x2="576" y1="944" y2="944" x1="416" />
+        <branch name="gpo(4:1)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="400" y="1024" type="branch" />
+            <wire x2="544" y1="1024" y2="1024" x1="400" />
         </branch>
-        <instance x="576" y="1168" name="XLXI_26" orien="R0">
-        </instance>
+        <branch name="gpo(8:5)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="400" y="1088" type="branch" />
+            <wire x2="544" y1="1088" y2="1088" x1="400" />
+        </branch>
+        <branch name="gpo(9)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="400" y="1152" type="branch" />
+            <wire x2="544" y1="1152" y2="1152" x1="400" />
+        </branch>
+        <branch name="gpi(0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1280" y="960" type="branch" />
+            <wire x2="1280" y1="960" y2="960" x1="1088" />
+        </branch>
+        <branch name="gpi(4:1)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1280" y="1024" type="branch" />
+            <wire x2="1280" y1="1024" y2="1024" x1="1088" />
+        </branch>
+        <branch name="gpi(8:5)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1280" y="1088" type="branch" />
+            <wire x2="1280" y1="1088" y2="1088" x1="1088" />
+        </branch>
+        <branch name="gpi(9)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1280" y="1152" type="branch" />
+            <wire x2="1280" y1="1152" y2="1152" x1="1088" />
+        </branch>
+        <instance x="640" y="2352" name="XLXI_26" orien="R0" />
+        <instance x="640" y="2432" name="XLXI_27" orien="R0" />
+        <branch name="UartTx">
+            <wire x2="624" y1="2320" y2="2320" x1="512" />
+            <wire x2="640" y1="2320" y2="2320" x1="624" />
+        </branch>
+        <branch name="USB_OUT">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="512" y="2400" type="branch" />
+            <wire x2="640" y1="2400" y2="2400" x1="512" />
+        </branch>
+        <iomarker fontsize="28" x="512" y="2320" name="UartTx" orien="R180" />
+        <branch name="USB_IN">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1040" y="2320" type="branch" />
+            <wire x2="1040" y1="2320" y2="2320" x1="864" />
+        </branch>
+        <branch name="UartRx">
+            <wire x2="880" y1="2400" y2="2400" x1="864" />
+            <wire x2="1040" y1="2400" y2="2400" x1="880" />
+        </branch>
+        <iomarker fontsize="28" x="1040" y="2400" name="UartRx" orien="R0" />
+        <branch name="USB_IN">
+            <attrtext style="alignment:SOFT-RIGHT" attrname="Name" x="1904" y="480" type="branch" />
+            <wire x2="2016" y1="480" y2="480" x1="1904" />
+            <wire x2="2032" y1="400" y2="400" x1="2016" />
+            <wire x2="2016" y1="400" y2="480" x1="2016" />
+        </branch>
+        <branch name="USB_OUT">
+            <attrtext style="alignment:SOFT-LEFT" attrname="Name" x="2880" y="336" type="branch" />
+            <wire x2="2880" y1="336" y2="336" x1="2800" />
+        </branch>
+        <instance x="640" y="2256" name="XLXI_28" orien="R0" />
     </sheet>
 </drawing>

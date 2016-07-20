@@ -48,10 +48,10 @@ int main()
 }
 
 void sendUSB(u32 data){
-	xil_printf("%x", (data << 31) >> 31);
-	xil_printf("%x", (data << 27) >> 28);
-	xil_printf("%x", (data << 23) >> 28);
-	xil_printf("%x\r\n", (data << 21) >> 30);
+	xil_printf("%X", (data << 31) >> 31);
+	xil_printf("%X", (data << 27) >> 28);
+	xil_printf("%X", (data << 23) >> 28);
+	xil_printf("%X\r\n", (data << 21) >> 30);
 }
 
 void init_gpio(void){
@@ -94,23 +94,23 @@ void init_uart_interrupt(void){
 }
 
 void rx_interrupt(void*){
-	uartOp();
-	// u32 data = 0;
-	// u8 byte = 0;
+	//uartOp();
+	u32 data = 0;
+	u8 byte = 0;
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - '0') << 0);
+	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	data |= ((byte - '0') << 0);
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
+	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 1);
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
+	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	data |= ((byte - ((byte > '9') ? 'A'-10:'0')) << 5);
 
-	// byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-	// data |= ((byte - '0') << 9);
+	byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	data |= ((byte - '0') << 9);
 
-	// XIOModule_DiscreteWrite(&gpio, 1, data);
+	XIOModule_DiscreteWrite(&gpio, 1, data);
 }
 
 void getPlayer()

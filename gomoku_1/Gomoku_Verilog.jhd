@@ -1,0 +1,9 @@
+MODULE Gomoku_Verilog
+	SUBMODULE Gomoku_ControlUnit_V
+		INSTANCE XLXI_9
+	SUBMODULE Gomoku_IO_V
+		INSTANCE XLXI_10
+	SUBMODULE Gomoku_MachinePlayer_V
+		INSTANCE XLXI_11
+	SUBMODULE Gomoku_PlayCheck_V
+		INSTANCE XLXI_12

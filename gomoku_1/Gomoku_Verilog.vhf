@@ -6,13 +6,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
---  /   /         Filename : simple.vhf
+--  /   /         Filename : Gomoku_Verilog.vhf
 -- /___/   /\     Timestamp : 07/20/2016 12:40:17
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/simple.vhf -w C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/simple.sch
---Design Name: simple
+--Command: sch2hdl -sympath C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_Verilog.vhf -w C:/Users/kvm237/Desktop/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_Verilog.sch
+--Design Name: Gomoku_Verilog
 --Device: artix7
 --Purpose:
 --    This vhdl netlist is translated from an ECS schematic. It can be 
@@ -25,7 +25,7 @@ use ieee.numeric_std.ALL;
 library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
-entity Gomoku_Verilog_MUSER_simple is
+entity Gomoku_Verilog is
    port ( clk       : in    std_logic; 
           colIn     : in    std_logic_vector (3 downto 0); 
           playerIn  : in    std_logic; 
@@ -35,9 +35,9 @@ entity Gomoku_Verilog_MUSER_simple is
           playerOut : out   std_logic; 
           rowOut    : out   std_logic_vector (3 downto 0); 
           winOut    : out   std_logic);
-end Gomoku_Verilog_MUSER_simple;
+end Gomoku_Verilog;
 
-architecture BEHAVIORAL of Gomoku_Verilog_MUSER_simple is
+architecture BEHAVIORAL of Gomoku_Verilog is
    attribute BOX_TYPE   : string ;
    signal XLXN_2       : std_logic;
    signal XLXN_3       : std_logic;
@@ -199,117 +199,6 @@ begin
       port map (I0=>winOut_DUMMY,
                 I1=>winIn,
                 O=>XLXN_9);
-   
-end BEHAVIORAL;
-
-
-
-library ieee;
-use ieee.std_logic_1164.ALL;
-use ieee.numeric_std.ALL;
-library UNISIM;
-use UNISIM.Vcomponents.ALL;
-
-entity simple is
-   port ( OBClk  : in    std_logic; 
-          UartTx : in    std_logic; 
-          UartRx : out   std_logic);
-end simple;
-
-architecture BEHAVIORAL of simple is
-   attribute BOX_TYPE    : string ;
-   attribute IOSTANDARD  : string ;
-   attribute CAPACITANCE : string ;
-   attribute SLEW        : string ;
-   attribute DRIVE       : string ;
-   signal CLOCK   : std_logic;
-   signal gpi     : std_logic_vector (31 downto 0);
-   signal gpo     : std_logic_vector (31 downto 0);
-   signal USB_IN  : std_logic;
-   signal USB_OUT : std_logic;
-   signal XLXN_49 : std_logic;
-   component communication
-      port ( clk            : in    std_logic; 
-             reset          : in    std_logic; 
-             uart_tx        : out   std_logic; 
-             uart_rx        : in    std_logic; 
-             uart_interrupt : out   std_logic; 
-             gpi1           : in    std_logic_vector (31 downto 0); 
-             gpo1           : out   std_logic_vector (31 downto 0); 
-             intc_irq       : out   std_logic);
-   end component;
-   
-   component GND
-      port ( G : out   std_logic);
-   end component;
-   attribute BOX_TYPE of GND : component is "BLACK_BOX";
-   
-   component Gomoku_Verilog_MUSER_simple
-      port ( playerIn  : in    std_logic; 
-             rowIn     : in    std_logic_vector (3 downto 0); 
-             colIn     : in    std_logic_vector (3 downto 0); 
-             winIn     : in    std_logic; 
-             playerOut : out   std_logic; 
-             rowOut    : out   std_logic_vector (3 downto 0); 
-             colOut    : out   std_logic_vector (3 downto 0); 
-             winOut    : out   std_logic; 
-             clk       : in    std_logic);
-   end component;
-   
-   component IBUF
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute IOSTANDARD of IBUF : component is "DEFAULT";
-   attribute CAPACITANCE of IBUF : component is "DONT_CARE";
-   attribute BOX_TYPE of IBUF : component is "BLACK_BOX";
-   
-   component OBUF
-      port ( I : in    std_logic; 
-             O : out   std_logic);
-   end component;
-   attribute IOSTANDARD of OBUF : component is "DEFAULT";
-   attribute CAPACITANCE of OBUF : component is "DONT_CARE";
-   attribute SLEW of OBUF : component is "SLOW";
-   attribute DRIVE of OBUF : component is "12";
-   attribute BOX_TYPE of OBUF : component is "BLACK_BOX";
-   
-begin
-   mcs_0 : communication
-      port map (clk=>CLOCK,
-                gpi1(31 downto 0)=>gpi(31 downto 0),
-                reset=>XLXN_49,
-                uart_rx=>USB_IN,
-                gpo1(31 downto 0)=>gpo(31 downto 0),
-                intc_irq=>open,
-                uart_interrupt=>open,
-                uart_tx=>USB_OUT);
-   
-   XLXI_15 : GND
-      port map (G=>XLXN_49);
-   
-   XLXI_25 : Gomoku_Verilog_MUSER_simple
-      port map (clk=>CLOCK,
-                colIn(3 downto 0)=>gpo(8 downto 5),
-                playerIn=>gpo(0),
-                rowIn(3 downto 0)=>gpo(4 downto 1),
-                winIn=>gpo(9),
-                colOut(3 downto 0)=>gpi(8 downto 5),
-                playerOut=>gpi(0),
-                rowOut(3 downto 0)=>gpi(4 downto 1),
-                winOut=>gpi(9));
-   
-   XLXI_26 : IBUF
-      port map (I=>UartTx,
-                O=>USB_IN);
-   
-   XLXI_27 : OBUF
-      port map (I=>USB_OUT,
-                O=>UartRx);
-   
-   XLXI_28 : IBUF
-      port map (I=>OBClk,
-                O=>CLOCK);
    
 end BEHAVIORAL;
 

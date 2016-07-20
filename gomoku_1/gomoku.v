@@ -40,11 +40,11 @@ module top(
     .p1column(p1column), 
     .USBp1row(USBp1row), 
     .USBp1column(USBp1column), 
-    .USBp1played,
-    .USBp2canplay,
+    .USBp1played(USBp1played),
+    .USBp2canplay(USBp2canplay),
     .p2row(p2row),
     .p2column(p2column),
-    .invalidPlay,
+    .invalidPlay(invalidPlay),
     .player(player),
     .p1sturn(p1sturn),
     .USBp2row(USBp2row),
@@ -61,7 +61,9 @@ module top(
     .check(check), 
     .p2sturn(p2sturn),
     .p1sturn(p1sturn),
-    .invalidPlay(invalidPlay));
+    .invalidPlay(invalidPlay)
+	.reset(reset),
+	.enable(enable));
     
     playCheck pc_instant(
     .valid(valid), 

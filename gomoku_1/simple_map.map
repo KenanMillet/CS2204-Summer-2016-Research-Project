@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Jul 19 16:37:54 2016
+Mapped Date    : Wed Jul 20 12:40:44 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,959 +23,959 @@ Total REAL time at the beginning of Placer: 15 secs
 Total CPU  time at the beginning of Placer: 15 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3c2a7b9f) REAL time: 17 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:b67e4c35) REAL time: 16 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:3c2a7b9f) REAL time: 17 secs 
+Phase 2.7  Design Feasibility Check (Checksum:b67e4c35) REAL time: 16 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3c2a7b9f) REAL time: 17 secs 
+Phase 3.31  Local Placement Optimization (Checksum:b67e4c35) REAL time: 16 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:58f7a5c) REAL time: 21 secs 
+(Checksum:f89de548) REAL time: 20 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:58f7a5c) REAL time: 21 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:f89de548) REAL time: 20 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:58f7a5c) REAL time: 21 secs 
+Phase 6.3  Local Placement Optimization (Checksum:f89de548) REAL time: 20 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:58f7a5c) REAL time: 21 secs 
+Phase 7.5  Local Placement Optimization (Checksum:f89de548) REAL time: 20 secs 
 
 Phase 8.8  Global Placement
 ........................................
 ........................................
 ............
-........................................................
-.......................................................................................................................................................
-........................................................................................................
-Phase 8.8  Global Placement (Checksum:c60e58de) REAL time: 30 secs 
+...............................................................
+................................
+................................................
+Phase 8.8  Global Placement (Checksum:3cbce3b1) REAL time: 29 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:c60e58de) REAL time: 30 secs 
+Phase 9.5  Local Placement Optimization (Checksum:3cbce3b1) REAL time: 29 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:833c25ce) REAL time: 38 secs 
+Phase 10.18  Placement Optimization (Checksum:dbafba02) REAL time: 39 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:833c25ce) REAL time: 38 secs 
+Phase 11.5  Local Placement Optimization (Checksum:dbafba02) REAL time: 39 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:833c25ce) REAL time: 38 secs 
+Phase 12.34  Placement Validation (Checksum:dbafba02) REAL time: 39 secs 
 
 Total REAL time to Placer completion: 40 secs 
-Total CPU  time to Placer completion: 39 secs 
+Total CPU  time to Placer completion: 40 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/cu_instant/state[2]_player[1]_Select_32_o is sourced
-   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   XLXI_25/XLXI_9/cu_instant/state[2]_p1played_Select_31_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_836_o is sourced by a
+   XLXI_25/XLXI_9/cu_instant/state[2]_GND_9_o_select_24_OUT<1>3 is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_932_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_388_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_532_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_412_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_700_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_508_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_668_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1036_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_996_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1252_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_464_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_988_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1156_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_664_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_420_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_520_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_388_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_848_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1120_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1204_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_884_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_908_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_924_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_728_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1136_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_992_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1276_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_832_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_580_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_548_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1256_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1136_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_644_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1144_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1172_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_900_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1008_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_708_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_476_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1132_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_504_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_812_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_640_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1220_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1264_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_396_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1088_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_684_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_968_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_844_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_408_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1060_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1148_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1016_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1208_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_568_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_652_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1072_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_492_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_576_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1160_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_500_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_688_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_444_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_440_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1268_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_556_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1244_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_944_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_912_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_916_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_880_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_432_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_888_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_764_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1012_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1068_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_956_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_828_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_468_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_524_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_472_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_952_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_476_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_776_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1264_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_672_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_756_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_620_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_772_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1004_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1104_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_568_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_792_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_800_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_588_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1072_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1044_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_676_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_972_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1220_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_552_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_468_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_804_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_784_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_672_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_864_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_748_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1036_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_768_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1252_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_656_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_708_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_816_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1168_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1120_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_616_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1096_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_428_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1216_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_892_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1156_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_856_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_784_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1128_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_640_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/cu_instant/state[2]_p1played_Select_31_o is sourced by
-   a combinatorial pin. This is not good design practice. Use the CE pin to
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_652_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_552_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1048_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_588_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1100_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_756_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_380_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_832_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_416_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_664_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1140_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1056_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_532_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_768_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_996_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_424_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_836_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_728_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_484_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1032_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_712_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_964_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_904_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_448_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_976_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_880_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1080_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_380_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_560_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_876_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_872_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_736_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_964_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1044_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_604_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_712_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_544_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1188_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_480_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_460_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_696_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_956_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_780_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1100_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1188_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1012_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1172_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1084_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_960_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_608_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1028_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1144_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1128_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1204_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1212_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_936_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_740_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1076_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_704_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1232_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_952_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_592_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_524_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1064_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1040_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_760_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_516_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_824_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_572_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_480_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1164_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_904_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1092_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_404_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_636_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_908_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1152_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1000_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_460_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_540_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_392_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_704_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_400_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_960_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_448_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_840_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_916_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_536_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_744_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1020_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_736_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_496_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_616_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1184_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_628_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_928_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_592_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1272_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_892_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1212_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1192_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_648_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_676_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1192_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1024_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_656_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1108_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_912_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_980_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_752_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_796_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_980_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_436_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_444_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_556_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_548_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1236_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_488_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1084_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_696_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1228_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_788_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_936_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_528_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_808_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1116_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_688_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_472_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1160_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_520_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_856_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1052_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1116_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_400_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_868_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_816_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1168_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_992_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1064_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_940_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_884_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_820_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_920_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_812_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_860_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1060_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_680_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_692_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1276_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_636_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_496_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_456_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_456_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_576_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_876_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_632_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_724_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1048_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_752_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_452_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_924_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_512_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_564_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1236_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_928_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_396_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1184_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_516_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_944_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_392_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1180_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_572_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_700_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_716_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_580_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1180_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_452_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1240_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_864_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_804_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_384_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_772_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_464_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1016_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_760_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1176_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1000_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_596_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_620_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_872_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_800_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_988_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1176_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_808_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1056_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_748_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_424_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_896_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1052_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_416_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_504_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1112_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_584_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_584_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_764_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1132_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1004_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_508_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_404_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_684_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1240_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_744_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_940_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_680_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_820_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_740_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_440_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_920_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1112_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_984_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1232_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_860_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_624_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_500_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1124_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1040_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_824_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1124_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_644_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_868_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_932_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_412_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_692_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_628_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1272_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_624_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_492_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_564_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_720_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1024_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_660_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1244_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_732_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1224_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_432_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_560_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_840_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_484_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_632_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_544_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_512_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_844_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_984_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1228_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1224_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1104_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_852_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_604_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1032_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1108_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_612_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1164_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_776_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_384_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_600_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_436_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1260_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_948_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_608_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1196_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_716_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_888_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1256_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1248_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_536_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_724_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_596_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1200_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_420_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1096_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_896_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1260_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1196_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_796_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_540_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1140_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1020_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_976_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1200_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1216_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1148_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1268_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_788_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_660_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1248_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1028_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_528_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1152_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1076_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_848_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_408_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_900_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_488_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1080_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_668_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_612_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1208_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_600_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_828_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_792_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1088_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_780_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_428_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_972_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_948_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_732_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_968_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_720_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_648_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_1092_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1068_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   XLXI_26/gomoku_instant/pc_instant/check_column[4]_AND_852_o is sourced by a
+   XLXI_25/XLXI_12/pc_instant/check_column[4]_AND_1008_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 
@@ -986,16 +986,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:  227
 Slice Logic Utilization:
-  Number of Slice Registers:                   847 out of 126,800    1%
-    Number used as Flip Flops:                 390
-    Number used as Latches:                    455
+  Number of Slice Registers:                   846 out of 126,800    1%
+    Number used as Flip Flops:                 391
+    Number used as Latches:                    453
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                2
-  Number of Slice LUTs:                      1,111 out of  63,400    1%
-    Number used as logic:                      993 out of  63,400    1%
-      Number using O6 output only:             812
+  Number of Slice LUTs:                      1,006 out of  63,400    1%
+    Number used as logic:                      888 out of  63,400    1%
+      Number using O6 output only:             719
       Number using O5 output only:              14
-      Number using O5 and O6:                  167
+      Number using O5 and O6:                  155
       Number used as ROM:                        0
     Number used as Memory:                     116 out of  19,000    1%
       Number used as Dual Port RAM:             64
@@ -1013,14 +1013,14 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   607 out of  15,850    3%
-  Number of LUT Flip Flop pairs used:        1,514
-    Number with an unused Flip Flop:           678 out of   1,514   44%
-    Number with an unused LUT:                 403 out of   1,514   26%
-    Number of fully used LUT-FF pairs:         433 out of   1,514   28%
+  Number of occupied Slices:                   549 out of  15,850    3%
+  Number of LUT Flip Flop pairs used:        1,439
+    Number with an unused Flip Flop:           605 out of   1,439   42%
+    Number with an unused LUT:                 433 out of   1,439   30%
+    Number of fully used LUT-FF pairs:         401 out of   1,439   27%
     Number of unique control sets:             272
     Number of slice register sites lost
-      to control set restrictions:           1,550 out of 126,800    1%
+      to control set restrictions:           1,551 out of 126,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -1069,11 +1069,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.67
+Average Fanout of Non-Clock Nets:                4.74
 
-Peak Memory Usage:  754 MB
-Total REAL time to MAP completion:  41 secs 
-Total CPU time to MAP completion:   41 secs 
+Peak Memory Usage:  753 MB
+Total REAL time to MAP completion:  42 secs 
+Total CPU time to MAP completion:   42 secs 
 
 Mapping completed.
 See MAP report file "simple_map.mrp" for details.
