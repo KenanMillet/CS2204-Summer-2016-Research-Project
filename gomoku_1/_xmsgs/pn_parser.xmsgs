@@ -8,5 +8,17 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_ControlUnit_V.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_IO_V.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_MachinePlayer_V.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_PlayCheck_V.v&quot; into library work</arg>
+</msg>
+
 </messages>
 

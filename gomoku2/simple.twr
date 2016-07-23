@@ -1,0 +1,116 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml simple.twx simple.ncd -o simple.twr simple.pcf -ucf
+simple.ucf
+
+Design file:              simple.ncd
+Physical constraint file: simple.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock OBClk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+UartTx      |   -0.150(R)|      FAST  |    1.944(R)|      SLOW  |CLOCK_BUFG        |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock OBClk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+UartRx      |        10.407(R)|      SLOW  |         3.985(R)|      FAST  |CLOCK_BUFG        |   0.000|
+lp          |        11.027(R)|      SLOW  |         4.387(R)|      FAST  |CLOCK_BUFG        |   0.000|
+recv        |         9.477(R)|      SLOW  |         3.575(R)|      FAST  |CLOCK_BUFG        |   0.000|
+recvConf    |         9.372(R)|      SLOW  |         3.519(R)|      FAST  |CLOCK_BUFG        |   0.000|
+send        |        10.757(R)|      SLOW  |         4.289(R)|      FAST  |CLOCK_BUFG        |   0.000|
+sendConf    |        10.387(R)|      SLOW  |         4.068(R)|      FAST  |CLOCK_BUFG        |   0.000|
+win         |        10.178(R)|      SLOW  |         3.858(R)|      FAST  |CLOCK_BUFG        |   0.000|
+x0          |        10.845(R)|      SLOW  |         4.104(R)|      FAST  |CLOCK_BUFG        |   0.000|
+x1          |        10.738(R)|      SLOW  |         3.868(R)|      FAST  |CLOCK_BUFG        |   0.000|
+x2          |        10.681(R)|      SLOW  |         4.005(R)|      FAST  |CLOCK_BUFG        |   0.000|
+x3          |        10.825(R)|      SLOW  |         3.975(R)|      FAST  |CLOCK_BUFG        |   0.000|
+y0          |        10.551(R)|      SLOW  |         3.907(R)|      FAST  |CLOCK_BUFG        |   0.000|
+y1          |        10.872(R)|      SLOW  |         3.989(R)|      FAST  |CLOCK_BUFG        |   0.000|
+y2          |        10.945(R)|      SLOW  |         4.128(R)|      FAST  |CLOCK_BUFG        |   0.000|
+y3          |        10.399(R)|      SLOW  |         3.808(R)|      FAST  |CLOCK_BUFG        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock OBClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OBClk          |    6.053|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock btnc
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OBClk          |    0.860|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sw15
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OBClk          |    0.860|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+sw0            |lp             |    8.829|
+sw0            |win            |    7.976|
+sw0            |x0             |    9.269|
+sw0            |x1             |    8.423|
+sw0            |x2             |    8.647|
+sw0            |x3             |    8.882|
+sw0            |y0             |    9.020|
+sw0            |y1             |    9.456|
+sw0            |y2             |    9.369|
+sw0            |y3             |    8.302|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Jul 23 13:05:22 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 732 MB
+
+
+

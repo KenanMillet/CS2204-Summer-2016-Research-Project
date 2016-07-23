@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\simple.vhf" Line 329: &lt;<arg fmt="%s" index="1">communication</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1128" delta="new" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_ControlUnit_V.v" Line 109: Assignment under multiple single edges is not supported for synthesis
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_ControlUnit_V.v" Line 88: Empty module &lt;<arg fmt="%s" index="1">controlUnit</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_MachinePlayer_V.v" Line 57: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_MachinePlayer_V.v" Line 58: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_MachinePlayer_V.v" Line 68: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_PlayCheck_V.v" Line 101: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="462" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_IO_V.v" Line 75: if-condition does not match any sensitivity list edge
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1128" delta="new" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_IO_V.v" Line 79: Assignment under multiple single edges is not supported for synthesis
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\Gomoku_IO_V.v" Line 19: Empty module &lt;<arg fmt="%s" index="1">Gomoku_IO_V</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku2\simple.vhf" Line 289: Net &lt;<arg fmt="%s" index="1">gpi[31]</arg>&gt; does not have a driver.
+</msg>
+
+</messages>
+

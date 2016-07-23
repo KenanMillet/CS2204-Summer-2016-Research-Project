@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Thu Jul 14 19:09:06 2016">
+  <application stringID="par" timeStamp="Thu Jul 21 16:26:07 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -63,12 +63,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="17 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="17 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="20 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="20 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="17 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="17 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="20 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="21 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -348,7 +348,7 @@
           </row>
           <row stringID="row" value="40">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C4"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="usb_in"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="UartTx"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L7P_T1_AD6P_35"/>
             <item stringID="Direction" value="INPUT"/>
@@ -470,7 +470,7 @@
           </row>
           <row stringID="row" value="58">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D4"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="usb_out"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="UartRx"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11N_T1_SRCC_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2125,7 +2125,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Thu Jul 14 19:09:06 2016">
+  <application stringID="Par" timeStamp="Thu Jul 21 16:26:08 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -2175,16 +2175,16 @@
     </section>
     <task label="Device Utilization Summary" stringID="PAR_DEVICE_UTLIZATION">
       <section stringID="PAR_SLICE_REPORTING">
-        <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="462">
-          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="460"/>
-          <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="0"/>
+        <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="869">
+          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="402"/>
+          <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="465"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="2"/>
         </item>
-        <item AVAILABLE="63400" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="624">
+        <item AVAILABLE="63400" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="1013">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="14"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="342"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="148"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="713"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="167"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ANDO6" value="0"/>
@@ -2198,20 +2198,20 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="51"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="1"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="2"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="2"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="1"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="2"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="1"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="2"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="15850" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="281">
-          <item AVAILABLE="11100" dataType="int" stringID="PAR_NUM_SLICEL" value="240"/>
-          <item AVAILABLE="4750" dataType="int" stringID="PAR_NUM_SLICEM" value="41"/>
+        <item AVAILABLE="15850" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="567">
+          <item AVAILABLE="11100" dataType="int" stringID="PAR_NUM_SLICEL" value="520"/>
+          <item AVAILABLE="4750" dataType="int" stringID="PAR_NUM_SLICEM" value="47"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="784">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="336"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="160"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="288"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="1449">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="598"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="436"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="415"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">

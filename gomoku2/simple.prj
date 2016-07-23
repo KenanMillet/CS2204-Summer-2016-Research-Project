@@ -1,0 +1,7 @@
+vhdl work "ipcore_dir/communication.vhd"
+verilog work "Gomoku_PlayCheck_V.v"
+verilog work "Gomoku_MachinePlayer_V.v"
+verilog work "Gomoku_IO_V.v"
+verilog work "Gomoku_ControlUnit_V.v"
+vhdl work "Gomoku_Verilog.vhf"
+vhdl work "simple.vhf"

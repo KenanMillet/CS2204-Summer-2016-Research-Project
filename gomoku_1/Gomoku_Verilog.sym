@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="Gomoku_Verilog">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2016-7-20T21:12:18</timestamp>
+    <pin polarity="Input" x="0" y="-224" name="playerIn" />
+    <pin polarity="Input" x="0" y="-160" name="rowIn(3:0)" />
+    <pin polarity="Input" x="0" y="-96" name="colIn(3:0)" />
+    <pin polarity="Input" x="0" y="-32" name="winIn" />
+    <pin polarity="Output" x="544" y="-224" name="playerOut" />
+    <pin polarity="Output" x="544" y="-160" name="rowOut(3:0)" />
+    <pin polarity="Output" x="544" y="-96" name="colOut(3:0)" />
+    <pin polarity="Output" x="544" y="-32" name="winOut" />
+    <pin polarity="Input" x="0" y="-288" name="clk" />
+    <pin polarity="Input" x="0" y="-352" name="start" />
+    <pin polarity="Output" x="544" y="-288" name="confirm" />
+    <graph>
+        <rect width="416" x="64" y="-380" height="380" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <rect width="64" x="0" y="-172" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <line x2="544" y1="-224" y2="-224" x1="480" />
+        <line x2="544" y1="-160" y2="-160" x1="480" />
+        <rect width="64" x="480" y="-172" height="24" />
+        <line x2="544" y1="-96" y2="-96" x1="480" />
+        <rect width="64" x="480" y="-108" height="24" />
+        <line x2="544" y1="-32" y2="-32" x1="480" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <line x2="80" y1="-276" y2="-288" x1="64" />
+        <line x2="64" y1="-288" y2="-300" x1="80" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="84" y="-288" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="84" y="-224" type="pin playerIn" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="84" y="-160" type="pin rowIn(3:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="84" y="-96" type="pin colIn(3:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="84" y="-32" type="pin winIn" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="460" y="-96" type="pin colOut(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="460" y="-160" type="pin rowOut(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="460" y="-224" type="pin playerOut" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="460" y="-32" type="pin winOut" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="272" y="-384" type="symbol" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="84" y="-352" type="pin start" />
+        <line x2="544" y1="-288" y2="-288" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-288" type="pin confirm" />
+    </graph>
+</symbol>

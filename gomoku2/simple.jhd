@@ -1,0 +1,5 @@
+MODULE simple
+	SUBMODULE communication
+		INSTANCE XLXI_32
+	SUBMODULE Gomoku_Verilog
+		INSTANCE XLXI_36

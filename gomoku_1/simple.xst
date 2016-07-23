@@ -2,6 +2,7 @@ set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
 -ifn simple.prj
+-change_error_to_warning "HDLCompiler:1128"
 -ofn simple
 -ofmt NGC
 -p xc7a100t-3-csg324

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/acb610/Documents/GitHub/CS2204-Summer-2016-Research-Project/gomoku_1/Gomoku_Verilog_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="gomoku_verilog" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="vcomponents" />
+            <top_module name="vl_types" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/gomoku_verilog/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/colin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">colin[3:0]</obj_property>
+      <obj_property name="ObjectShortName">colin[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/playerin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">playerin</obj_property>
+      <obj_property name="ObjectShortName">playerin</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/rowin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rowin[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rowin[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/winin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">winin</obj_property>
+      <obj_property name="ObjectShortName">winin</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/colout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">colout[3:0]</obj_property>
+      <obj_property name="ObjectShortName">colout[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/playerout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">playerout</obj_property>
+      <obj_property name="ObjectShortName">playerout</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/rowout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rowout[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rowout[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/winout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">winout</obj_property>
+      <obj_property name="ObjectShortName">winout</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/confirm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">confirm</obj_property>
+      <obj_property name="ObjectShortName">confirm</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider43" type="divider">
+      <obj_property name="label">CU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/p1played" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p1played</obj_property>
+      <obj_property name="ObjectShortName">p1played</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/p2played" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p2played</obj_property>
+      <obj_property name="ObjectShortName">p2played</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/p2canplay" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p2canplay</obj_property>
+      <obj_property name="ObjectShortName">p2canplay</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/check" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">check</obj_property>
+      <obj_property name="ObjectShortName">check</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/p2sturn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p2sturn</obj_property>
+      <obj_property name="ObjectShortName">p2sturn</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/p1sturn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p1sturn</obj_property>
+      <obj_property name="ObjectShortName">p1sturn</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/invalidPlay" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">invalidPlay</obj_property>
+      <obj_property name="ObjectShortName">invalidPlay</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/player" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">player[1:0]</obj_property>
+      <obj_property name="ObjectShortName">player[1:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_9/cu_instant/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider44" type="divider">
+      <obj_property name="label">PC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">board[0:14,0:14,1:0]</obj_property>
+      <obj_property name="ObjectShortName">board[0:14,0:14,1:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[0,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[1,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[2,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[3,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[4,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[5,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[6,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[7,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[8,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[9,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[10,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[11,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[12,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[13,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_12/pc_instant/board[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14,0:14,1:0]</obj_property>
+         <obj_property name="ObjectShortName">board[14,0:14,1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider53" type="divider">
+      <obj_property name="label">MP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/p2sturn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p2sturn</obj_property>
+      <obj_property name="ObjectShortName">p2sturn</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/p2played" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p2played</obj_property>
+      <obj_property name="ObjectShortName">p2played</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/p2row" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p2row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p2row[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/p2column" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p2column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">p2column[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/row" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">row[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/column" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">column[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_11/mp_instant/p2p" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p2p[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p2p[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider103" type="divider">
+      <obj_property name="label">IO</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2canplay" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp2canplay</obj_property>
+      <obj_property name="ObjectShortName">USBp2canplay</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1played" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp1played</obj_property>
+      <obj_property name="ObjectShortName">USBp1played</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1row" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp1row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp1row[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1row[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">USBp1row[3]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1row[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">USBp1row[2]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1row[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">USBp1row[1]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1row[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">USBp1row[0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1column" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp1column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp1column[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1column[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">USBp1column[3]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1column[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">USBp1column[2]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1column[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">USBp1column[1]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1column[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">USBp1column[0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2row" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp2row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp2row[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2row[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">USBp2row[3]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2row[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">USBp2row[2]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2row[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">USBp2row[1]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2row[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">USBp2row[0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2column" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp2column[3:0]</obj_property>
+      <obj_property name="ObjectShortName">USBp2column[3:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2column[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">USBp2column[3]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2column[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">USBp2column[2]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2column[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">USBp2column[1]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp2column[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">USBp2column[0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/USBp1sturn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">USBp1sturn</obj_property>
+      <obj_property name="ObjectShortName">USBp1sturn</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/invalidPlay" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">invalidPlay</obj_property>
+      <obj_property name="ObjectShortName">invalidPlay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gomoku_verilog/XLXI_28/io_instant/confirm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">confirm</obj_property>
+      <obj_property name="ObjectShortName">confirm</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+</wave_config>

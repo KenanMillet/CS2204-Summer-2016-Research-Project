@@ -1,0 +1,1516 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: gomoku.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "gomoku.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "gomoku"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : gomoku
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+change_error_to_warning            : "HDLCompiler:1128"
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+INFO:Xst - Changing 'HDLCompiler:1128' to warning
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_PlayCheck_V.v" into library work
+Parsing module <Gomoku_PlayCheck_V>.
+Parsing module <playCheck>.
+Analyzing Verilog file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_MachinePlayer_V.v" into library work
+Parsing module <Gomoku_MachinePlayer_V>.
+Parsing module <machinePlayer>.
+Analyzing Verilog file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_IO_V.v" into library work
+Parsing module <Gomoku_IO_V>.
+Parsing module <i_o>.
+Analyzing Verilog file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" into library work
+Parsing module <edgeDetect>.
+Parsing module <Gomoku_ControlUnit_V>.
+Parsing module <controlUnit>.
+Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_Verilog.vhf" into library work
+Parsing entity <Gomoku_Verilog>.
+Parsing architecture <BEHAVIORAL> of entity <gomoku_verilog>.
+Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf" into library work
+Parsing entity <M2_1_HXILINX_gomoku>.
+Parsing architecture <M2_1_HXILINX_gomoku_V> of entity <m2_1_hxilinx_gomoku>.
+Parsing entity <Gomoku_Verilog_MUSER_gomoku>.
+Parsing architecture <BEHAVIORAL> of entity <gomoku_verilog_muser_gomoku>.
+Parsing entity <gomoku>.
+Parsing architecture <BEHAVIORAL> of entity <gomoku>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <gomoku> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf" Line 302: <communication> remains a black-box since it has no binding entity.
+
+Elaborating entity <Gomoku_Verilog_MUSER_gomoku> (architecture <BEHAVIORAL>) from library <work>.
+Going to verilog side to elaborate module Gomoku_ControlUnit_V
+
+Elaborating module <Gomoku_ControlUnit_V>.
+
+Elaborating module <edgeDetect>.
+
+Elaborating module <controlUnit>.
+WARNING:HDLCompiler:1128 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" Line 106: Assignment under multiple single edges is not supported for synthesis
+WARNING:HDLCompiler:91 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" Line 109: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" Line 174: Signal <p1played> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" Line 181: Signal <valid> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" Line 195: Signal <p2played> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" Line 202: Signal <valid> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module Gomoku_MachinePlayer_V
+
+Elaborating module <Gomoku_MachinePlayer_V>.
+
+Elaborating module <machinePlayer>.
+WARNING:HDLCompiler:413 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_MachinePlayer_V.v" Line 55: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_MachinePlayer_V.v" Line 56: Result of 32-bit expression is truncated to fit in 4-bit target.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module Gomoku_PlayCheck_V
+
+Elaborating module <Gomoku_PlayCheck_V>.
+
+Elaborating module <playCheck>.
+WARNING:HDLCompiler:413 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_PlayCheck_V.v" Line 99: Result of 32-bit expression is truncated to fit in 1-bit target.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module Gomoku_IO_V
+
+Elaborating module <Gomoku_IO_V(BUSY=1,AVAIL=0)>.
+
+Elaborating module <i_o>.
+Back to vhdl to continue elaboration
+
+Elaborating entity <M2_1_HXILINX_gomoku> (architecture <M2_1_HXILINX_gomoku_V>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf" Line 44. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf" Line 282: Net <gpi[31]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <gomoku>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf".
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_26>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_26>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_27>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_27>.
+    Set property "SLEW = SLOW" for instance <XLXI_27>.
+    Set property "DRIVE = 12" for instance <XLXI_27>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_28>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_28>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_37>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_37>.
+    Set property "HU_SET = XLXI_38_0" for instance <XLXI_38>.
+    Set property "HU_SET = XLXI_39_1" for instance <XLXI_39>.
+    Set property "HU_SET = XLXI_40_2" for instance <XLXI_40>.
+    Set property "HU_SET = XLXI_41_3" for instance <XLXI_41>.
+    Set property "HU_SET = XLXI_42_4" for instance <XLXI_42>.
+    Set property "HU_SET = XLXI_43_5" for instance <XLXI_43>.
+    Set property "HU_SET = XLXI_44_6" for instance <XLXI_44>.
+    Set property "HU_SET = XLXI_45_7" for instance <XLXI_45>.
+    Set property "HU_SET = XLXI_46_8" for instance <XLXI_46>.
+    Set property "HU_SET = XLXI_47_9" for instance <XLXI_47>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_48>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_48>.
+    Set property "SLEW = SLOW" for instance <XLXI_48>.
+    Set property "DRIVE = 12" for instance <XLXI_48>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_49>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_49>.
+    Set property "SLEW = SLOW" for instance <XLXI_49>.
+    Set property "DRIVE = 12" for instance <XLXI_49>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_59>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_59>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_66>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_66>.
+    Set property "SLEW = SLOW" for instance <XLXI_66>.
+    Set property "DRIVE = 12" for instance <XLXI_66>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_67>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_67>.
+    Set property "SLEW = SLOW" for instance <XLXI_67>.
+    Set property "DRIVE = 12" for instance <XLXI_67>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_68>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_68>.
+    Set property "SLEW = SLOW" for instance <XLXI_68>.
+    Set property "DRIVE = 12" for instance <XLXI_68>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_69>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_69>.
+    Set property "SLEW = SLOW" for instance <XLXI_69>.
+    Set property "DRIVE = 12" for instance <XLXI_69>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_70>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_70>.
+    Set property "SLEW = SLOW" for instance <XLXI_70>.
+    Set property "DRIVE = 12" for instance <XLXI_70>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_71>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_71>.
+    Set property "SLEW = SLOW" for instance <XLXI_71>.
+    Set property "DRIVE = 12" for instance <XLXI_71>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_72>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_72>.
+    Set property "SLEW = SLOW" for instance <XLXI_72>.
+    Set property "DRIVE = 12" for instance <XLXI_72>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_73>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_73>.
+    Set property "SLEW = SLOW" for instance <XLXI_73>.
+    Set property "DRIVE = 12" for instance <XLXI_73>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_78>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_78>.
+    Set property "HU_SET = XLXI_79_10" for instance <XLXI_79>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_80>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_80>.
+    Set property "SLEW = SLOW" for instance <XLXI_80>.
+    Set property "DRIVE = 12" for instance <XLXI_80>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_81>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_81>.
+    Set property "SLEW = SLOW" for instance <XLXI_81>.
+    Set property "DRIVE = 12" for instance <XLXI_81>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_82>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_82>.
+    Set property "SLEW = SLOW" for instance <XLXI_82>.
+    Set property "DRIVE = 12" for instance <XLXI_82>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_83>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_83>.
+    Set property "SLEW = SLOW" for instance <XLXI_83>.
+    Set property "DRIVE = 12" for instance <XLXI_83>.
+    Set property "HU_SET = XLXI_84_12" for instance <XLXI_84>.
+    Set property "HU_SET = XLXI_85_11" for instance <XLXI_85>.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf" line 379: Output port <uart_interrupt> of the instance <mcs_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf" line 379: Output port <intc_irq> of the instance <mcs_0> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <gpi<31:12>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <gomoku> synthesized.
+
+Synthesizing Unit <Gomoku_Verilog_MUSER_gomoku>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf".
+    Summary:
+	no macro.
+Unit <Gomoku_Verilog_MUSER_gomoku> synthesized.
+
+Synthesizing Unit <Gomoku_ControlUnit_V>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v".
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v" line 67: Output port <falling> of the instance <startED> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Gomoku_ControlUnit_V> synthesized.
+
+Synthesizing Unit <edgeDetect>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v".
+    Found 1-bit register for signal <signalOld>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <edgeDetect> synthesized.
+
+Synthesizing Unit <controlUnit>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_ControlUnit_V.v".
+        STATE0 = 3'b000
+        STATE1 = 3'b001
+        STATE2 = 3'b010
+        STATE3 = 3'b011
+        STATE4 = 3'b100
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <p2canplay> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit 7-to-1 multiplexer for signal <state[2]_reset_Mux_18_o> created at line 109.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <confirm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <p1sturn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <p2sturn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   7 Latch(s).
+	inferred  24 Multiplexer(s).
+Unit <controlUnit> synthesized.
+
+Synthesizing Unit <Gomoku_MachinePlayer_V>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_MachinePlayer_V.v".
+    Summary:
+	no macro.
+Unit <Gomoku_MachinePlayer_V> synthesized.
+
+Synthesizing Unit <machinePlayer>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_MachinePlayer_V.v".
+WARNING:Xst:647 - Input <valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit adder for signal <n0030[4:0]> created at line 55.
+    Found 4-bit adder for signal <column[3]_GND_21_o_add_5_OUT> created at line 56.
+WARNING:Xst:737 - Found 1-bit latch for signal <row<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <column<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <column<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <column<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <column<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <row<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 Latch(s).
+	inferred   4 Multiplexer(s).
+Unit <machinePlayer> synthesized.
+
+Synthesizing Unit <Gomoku_PlayCheck_V>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_PlayCheck_V.v".
+    Summary:
+	no macro.
+Unit <Gomoku_PlayCheck_V> synthesized.
+
+Synthesizing Unit <playCheck>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_PlayCheck_V.v".
+WARNING:Xst:2935 - Signal 'win', unconnected in block 'playCheck', is tied to its initial value (0).
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_14>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_14> for signal <board_14>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_13>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_13> for signal <board_13>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_12>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_12> for signal <board_12>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_11>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_11> for signal <board_11>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_10>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_10> for signal <board_10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_9>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_9> for signal <board_9>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_8>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_8> for signal <board_8>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_7>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_7> for signal <board_7>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_6>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_6> for signal <board_6>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_5>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_5> for signal <board_5>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_4>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_4> for signal <board_4>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_3>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_3> for signal <board_3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_2>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_2> for signal <board_2>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_1>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_1> for signal <board_1>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <board_0>, simulation mismatch.
+    Found 15x2-bit single-port RAM <Mram_board_0> for signal <board_0>.
+    Found 32-bit register for signal <validPlay>.
+    Found 32-bit comparator greater for signal <row[31]_GND_31_o_LessThan_5_o> created at line 87
+    Found 32-bit comparator greater for signal <column[31]_GND_31_o_LessThan_6_o> created at line 87
+    Summary:
+	inferred  30 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <playCheck> synthesized.
+
+Synthesizing Unit <Gomoku_IO_V>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_IO_V.v".
+        BUSY = 1
+        AVAIL = 0
+WARNING:Xst:737 - Found 1-bit latch for signal <USBrowStore<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBrowStore<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBrowStore<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBcolStore<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBcolStore<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBcolStore<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBcolStore<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBplayerStore>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <USBrowStore<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   9 Latch(s).
+	inferred   9 Multiplexer(s).
+Unit <Gomoku_IO_V> synthesized.
+
+Synthesizing Unit <i_o>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\Gomoku_IO_V.v".
+WARNING:Xst:647 - Input <player> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <i_o> synthesized.
+
+Synthesizing Unit <M2_1_HXILINX_gomoku>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\gomoku3\gomoku.vhf".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <M2_1_HXILINX_gomoku> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 30
+ 15x2-bit single-port RAM                              : 30
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 32-bit register                                       : 1
+# Latches                                              : 24
+ 1-bit latch                                           : 24
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 53
+ 1-bit 2-to-1 multiplexer                              : 50
+ 1-bit 7-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 84
+ 1-bit xor2                                            : 84
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/communication.ngc>.
+Loading core <communication> for timing and area information for instance <mcs_0>.
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+WARNING:Xst:2677 - Node <validPlay_1> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_2> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_3> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_4> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_5> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_6> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_7> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_8> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_9> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_10> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_11> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_12> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_13> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_14> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_15> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_16> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_17> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_18> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_19> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_20> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_21> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_22> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_23> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_24> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_25> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_26> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_27> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_28> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_29> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_30> of sequential type is unconnected in block <pc_instant>.
+WARNING:Xst:2677 - Node <validPlay_31> of sequential type is unconnected in block <pc_instant>.
+
+Synthesizing (advanced) Unit <playCheck>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_14> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_13> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_12> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_11> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_9> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_8> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_7> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_6> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_5> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_4> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_0> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_01> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_15> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_21> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_31> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_41> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_51> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_61> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_71> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_81> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_91> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_101> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_111> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_121> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_131> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_board_141> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15-word x 2-bit                     |          |
+    |     clkA           | connected to signal <check>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <column<3:0>>   |          |
+    |     diA            | connected to signal <player>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <playCheck> synthesized (advanced).
+WARNING:Xst:2677 - Node <validPlay_1> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_2> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_3> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_4> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_5> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_6> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_7> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_8> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_9> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_10> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_11> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_12> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_13> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_14> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_15> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_16> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_17> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_18> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_19> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_20> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_21> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_22> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_23> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_24> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_25> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_26> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_27> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_28> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_29> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_30> of sequential type is unconnected in block <playCheck>.
+WARNING:Xst:2677 - Node <validPlay_31> of sequential type is unconnected in block <playCheck>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 30
+ 15x2-bit single-port distributed RAM                  : 30
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 37
+ 1-bit 7-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 84
+ 1-bit xor2                                            : 84
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit Gomoku_IO_V : the following signal(s) form a combinatorial loop: send.
+
+Optimizing unit <gomoku> ...
+
+Optimizing unit <M2_1_HXILINX_gomoku> ...
+
+Optimizing unit <Gomoku_Verilog_MUSER_gomoku> ...
+
+Optimizing unit <Gomoku_IO_V> ...
+
+Optimizing unit <controlUnit> ...
+
+Optimizing unit <playCheck> ...
+
+Optimizing unit <machinePlayer> ...
+WARNING:Xst:1294 - Latch <XLXI_36/XLXI_9/cu_instant/state_0> is equivalent to a wire in block <gomoku>.
+WARNING:Xst:1294 - Latch <XLXI_36/XLXI_9/cu_instant/state_1> is equivalent to a wire in block <gomoku>.
+WARNING:Xst:1294 - Latch <XLXI_36/XLXI_9/cu_instant/state_2> is equivalent to a wire in block <gomoku>.
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1312>, <XLXI_36/XLXI_12/pc_instant/Mram_board_133> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1311>, <XLXI_36/XLXI_12/pc_instant/Mram_board_132> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1212>, <XLXI_36/XLXI_12/pc_instant/Mram_board_123> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1211>, <XLXI_36/XLXI_12/pc_instant/Mram_board_122> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1412>, <XLXI_36/XLXI_12/pc_instant/Mram_board_143> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1411>, <XLXI_36/XLXI_12/pc_instant/Mram_board_142> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1111>, <XLXI_36/XLXI_12/pc_instant/Mram_board_112> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1012>, <XLXI_36/XLXI_12/pc_instant/Mram_board_103> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1112>, <XLXI_36/XLXI_12/pc_instant/Mram_board_113> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_1011>, <XLXI_36/XLXI_12/pc_instant/Mram_board_102> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_912>, <XLXI_36/XLXI_12/pc_instant/Mram_board_93> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_911>, <XLXI_36/XLXI_12/pc_instant/Mram_board_92> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_812>, <XLXI_36/XLXI_12/pc_instant/Mram_board_83> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_811>, <XLXI_36/XLXI_12/pc_instant/Mram_board_82> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_712>, <XLXI_36/XLXI_12/pc_instant/Mram_board_73> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_612>, <XLXI_36/XLXI_12/pc_instant/Mram_board_63> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_611>, <XLXI_36/XLXI_12/pc_instant/Mram_board_62> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_711>, <XLXI_36/XLXI_12/pc_instant/Mram_board_72> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_512>, <XLXI_36/XLXI_12/pc_instant/Mram_board_53> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_511>, <XLXI_36/XLXI_12/pc_instant/Mram_board_52> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_412>, <XLXI_36/XLXI_12/pc_instant/Mram_board_43> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_411>, <XLXI_36/XLXI_12/pc_instant/Mram_board_42> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_312>, <XLXI_36/XLXI_12/pc_instant/Mram_board_33> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_311>, <XLXI_36/XLXI_12/pc_instant/Mram_board_32> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_211>, <XLXI_36/XLXI_12/pc_instant/Mram_board_22> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_152>, <XLXI_36/XLXI_12/pc_instant/Mram_board_12> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_212>, <XLXI_36/XLXI_12/pc_instant/Mram_board_23> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_151>, <XLXI_36/XLXI_12/pc_instant/Mram_board_11> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_012>, <XLXI_36/XLXI_12/pc_instant/Mram_board_03> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <XLXI_36/XLXI_12/pc_instant/Mram_board_011>, <XLXI_36/XLXI_12/pc_instant/Mram_board_02> are equivalent, second RAM is removed
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block gomoku, actual ratio is 1.
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcs_0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcs_0> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : gomoku.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 966
+#      GND                         : 18
+#      INV                         : 17
+#      LUT1                        : 3
+#      LUT2                        : 49
+#      LUT3                        : 76
+#      LUT4                        : 267
+#      LUT5                        : 72
+#      LUT6                        : 156
+#      LUT6_2                      : 90
+#      MULT_AND                    : 3
+#      MUXCY_L                     : 76
+#      MUXF5                       : 66
+#      MUXF6                       : 1
+#      MUXF7                       : 1
+#      OR2                         : 2
+#      VCC                         : 17
+#      XORCY                       : 52
+# FlipFlops/Latches                : 566
+#      FD                          : 113
+#      FDE                         : 138
+#      FDR                         : 107
+#      FDRE                        : 159
+#      FDS                         : 9
+#      FDSE                        : 19
+#      LD                          : 16
+#      LD_1                        : 1
+#      LDE                         : 4
+# RAMS                             : 110
+#      RAM32X1D                    : 64
+#      RAM32X1S                    : 30
+#      RAMB36E1                    : 16
+# Shift Registers                  : 53
+#      SRL16E                      : 52
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 20
+#      IBUF                        : 5
+#      OBUF                        : 15
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             566  out of  126800     0%  
+ Number of Slice LUTs:                  941  out of  63400     1%  
+    Number used as Logic:               730  out of  63400     1%  
+    Number used as Memory:              211  out of  19000     1%  
+       Number used as RAM:              158
+       Number used as SRL:               53
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1228
+   Number with an unused Flip Flop:     662  out of   1228    53%  
+   Number with an unused LUT:           287  out of   1228    23%  
+   Number of fully used LUT-FF pairs:   279  out of   1228    22%  
+   Number of unique control sets:        51
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    210     9%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of    135    11%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                       | Clock buffer(FF name)                                                                                                              | Load  |
+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+XLXI_79/O(XLXI_79/Mmux_O11:O)                                                                                      | NONE(*)(XLXI_36/XLXI_9/startED/signalOld)                                                                                          | 1     |
+gpi<10>(XLXI_36/XLXI_28/Mmux_send111:O)                                                                            | NONE(*)(XLXI_36/XLXI_28/USBrowStore_0)                                                                                             | 9     |
+XLXI_36/XLXI_9/cu_instant/state[2]_GND_14_o_Mux_20_o(XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_GND_14_o_Mux_20_o11:O)| NONE(*)(XLXI_36/XLXI_9/cu_instant/confirm)                                                                                         | 1     |
+XLXI_36/XLXI_9/cu_instant/state[2]_GND_15_o_Mux_21_o(XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_GND_15_o_Mux_21_o11:O)| NONE(*)(XLXI_36/XLXI_9/cu_instant/check)                                                                                           | 1     |
+XLXI_36/XLXI_9/cu_instant/_n0072<4>(XLXI_36/XLXI_9/cu_instant/_n0072<4>1:O)                                        | NONE(*)(XLXI_36/XLXI_9/cu_instant/p1sturn)                                                                                         | 2     |
+XLXI_36/XLXI_9/cu_instant/check                                                                                    | BUFG                                                                                                                               | 31    |
+XLXI_36/XLXI_9/cu_instant/p2sturn                                                                                  | NONE(XLXI_36/XLXI_11/mp_instant/row_2)                                                                                             | 8     |
+OBClk                                                                                                              | IBUF+BUFG                                                                                                                          | 676   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0                                               | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0                                               | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0                                               | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0                                               | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0                                               | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0                                               | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 1     |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0                                                | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 1     |
+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                    | Buffer(FF name)                                                                                                                    | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_VCC:P)| NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N11(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_VCC:P)  | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 124   |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_GND:G) | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
+mcs_0/N1(mcs_0/XST_GND:G)                                                                                                                         | NONE(mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 64    |
+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.726ns (Maximum Frequency: 268.393MHz)
+   Minimum input arrival time before clock: 0.401ns
+   Maximum output required time after clock: 1.831ns
+   Maximum combinational path delay: 1.733ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_36/XLXI_9/cu_instant/_n0072<4>'
+  Clock period: 2.817ns (frequency: 354.942MHz)
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Delay:               2.817ns (Levels of Logic = 4)
+  Source:            XLXI_36/XLXI_9/cu_instant/p2sturn (LATCH)
+  Destination:       XLXI_36/XLXI_9/cu_instant/p1sturn (LATCH)
+  Source Clock:      XLXI_36/XLXI_9/cu_instant/_n0072<4> falling
+  Destination Clock: XLXI_36/XLXI_9/cu_instant/_n0072<4> falling
+
+  Data Path: XLXI_36/XLXI_9/cu_instant/p2sturn to XLXI_36/XLXI_9/cu_instant/p1sturn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              45   0.472   0.404  XLXI_36/XLXI_9/cu_instant/p2sturn (XLXI_36/XLXI_9/cu_instant/p2sturn)
+     LUT2:I1->O            9   0.097   0.548  XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_state[2]_wide_mux_12_OUT<2>11 (XLXI_36/XLXI_9/cu_instant/state<2>)
+     LUT5:I2->O            8   0.097   0.589  XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_state[2]_wide_mux_12_OUT<1>11 (XLXI_36/XLXI_9/cu_instant/state<1>)
+     LUT5:I1->O            9   0.097   0.416  XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_state[2]_wide_mux_12_OUT<0>11 (XLXI_36/XLXI_9/cu_instant/state<0>)
+     LUT3:I1->O            1   0.097   0.000  XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_GND_15_o_Mux_21_o1211 (XLXI_36/XLXI_9/cu_instant/Mmux_state[2]_GND_15_o_Mux_21_o121)
+     LD:D                     -0.028          XLXI_36/XLXI_9/cu_instant/p1sturn
+    ----------------------------------------
+    Total                      2.817ns (0.860ns logic, 1.957ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_36/XLXI_9/cu_instant/check'
+  Clock period: 3.201ns (frequency: 312.432MHz)
+  Total number of paths / destination ports: 517 / 31
+-------------------------------------------------------------------------
+Delay:               3.201ns (Levels of Logic = 3)
+  Source:            XLXI_36/XLXI_12/pc_instant/Mram_board_012 (RAM)
+  Destination:       XLXI_36/XLXI_12/pc_instant/Mram_board_1212 (RAM)
+  Source Clock:      XLXI_36/XLXI_9/cu_instant/check rising
+  Destination Clock: XLXI_36/XLXI_9/cu_instant/check rising
+
+  Data Path: XLXI_36/XLXI_12/pc_instant/Mram_board_012 to XLXI_36/XLXI_12/pc_instant/Mram_board_1212
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32X1S:WCLK->O      2   0.862   0.560  XLXI_36/XLXI_12/pc_instant/Mram_board_012 (XLXI_36/XLXI_12/pc_instant/column<3>_read_port_46_OUT<1>)
+     LUT5:I1->O            1   0.097   0.511  XLXI_36/XLXI_12/pc_instant/row[3]_GND_31_o_equal_8_o<1>3 (XLXI_36/XLXI_12/pc_instant/row[3]_GND_31_o_equal_8_o<1>2)
+     LUT6:I3->O            9   0.097   0.332  XLXI_36/XLXI_12/pc_instant/row[3]_GND_31_o_equal_8_o<1>6 (XLXI_36/XLXI_12/pc_instant/row[3]_GND_31_o_equal_8_o<1>5)
+     LUT6:I5->O            2   0.097   0.283  XLXI_36/XLXI_12/pc_instant/PWR_36_o_BUS_0001_AND_66_o1 (XLXI_36/XLXI_12/pc_instant/PWR_36_o_BUS_0001_AND_66_o)
+     RAM32X1S:WE               0.360          XLXI_36/XLXI_12/pc_instant/Mram_board_1411
+    ----------------------------------------
+    Total                      3.201ns (1.513ns logic, 1.688ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_36/XLXI_9/cu_instant/p2sturn'
+  Clock period: 1.542ns (frequency: 648.677MHz)
+  Total number of paths / destination ports: 42 / 12
+-------------------------------------------------------------------------
+Delay:               1.542ns (Levels of Logic = 1)
+  Source:            XLXI_36/XLXI_11/mp_instant/row_3 (LATCH)
+  Destination:       XLXI_36/XLXI_11/mp_instant/column_3 (LATCH)
+  Source Clock:      XLXI_36/XLXI_9/cu_instant/p2sturn falling
+  Destination Clock: XLXI_36/XLXI_9/cu_instant/p2sturn falling
+
+  Data Path: XLXI_36/XLXI_11/mp_instant/row_3 to XLXI_36/XLXI_11/mp_instant/column_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               7   0.472   0.584  XLXI_36/XLXI_11/mp_instant/row_3 (XLXI_36/XLXI_11/mp_instant/row_3)
+     LUT4:I0->O            4   0.097   0.293  XLXI_36/XLXI_11/mp_instant/GND_21_o_GND_21_o_equal_5_o<3>1 (XLXI_36/XLXI_11/mp_instant/GND_21_o_GND_21_o_equal_5_o)
+     LDE:GE                    0.095          XLXI_36/XLXI_11/mp_instant/column_0
+    ----------------------------------------
+    Total                      1.542ns (0.664ns logic, 0.878ns route)
+                                       (43.1% logic, 56.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OBClk'
+  Clock period: 3.726ns (frequency: 268.393MHz)
+  Total number of paths / destination ports: 63182 / 2098
+-------------------------------------------------------------------------
+Delay:               3.726ns (Levels of Logic = 4)
+  Source:            mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF (FF)
+  Source Clock:      OBClk rising
+  Destination Clock: OBClk rising
+
+  Data Path: mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 to mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q        22   1.306   0.651  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>)
+     LUT4:I0->O            1   0.097   0.511  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_1)
+     LUT3:I0->O            1   0.097   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select)
+     MUXCY_L:S->LO        32   0.583   0.386  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.opsel1_SPR)
+     LUT6_2:I5->O6         1   0.086   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/op1_I)
+     FDRE:D                    0.008          U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Op1_DFF
+    ----------------------------------------
+    Total                      3.726ns (2.177ns logic, 1.549ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OBClk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.401ns (Levels of Logic = 3)
+  Source:            UartTx (PAD)
+  Destination:       mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1 (FF)
+  Destination Clock: OBClk rising
+
+  Data Path: UartTx to mcs_0/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.295  XLXI_26 (USB_IN)
+     begin scope: 'mcs_0:uart_rx'
+     LUT2:I1->O            1   0.097   0.000  U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/Mmux_RX_PWR_118_o_MUX_4561_o11 (U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/RX_PWR_118_o_MUX_4561_o)
+     FD:D                      0.008          U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+    ----------------------------------------
+    Total                      0.401ns (0.106ns logic, 0.295ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OBClk'
+  Total number of paths / destination ports: 16 / 13
+-------------------------------------------------------------------------
+Offset:              1.831ns (Levels of Logic = 5)
+  Source:            mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_9 (FF)
+  Destination:       win (PAD)
+  Source Clock:      OBClk rising
+
+  Data Path: mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_9 to win
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.361   0.697  U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_9 (gpo1<9>)
+     end scope: 'mcs_0:gpo1<9>'
+     OR2:I0->O             2   0.097   0.299  XLXI_36/XLXI_30 (gpi<9>)
+     begin scope: 'XLXI_43:D0'
+     LUT3:I2->O            1   0.097   0.279  Mmux_O11 (O)
+     end scope: 'XLXI_43:O'
+     OBUF:I->O                 0.000          XLXI_73 (win)
+    ----------------------------------------
+    Total                      1.831ns (0.555ns logic, 1.276ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'gpi<10>'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              1.543ns (Levels of Logic = 4)
+  Source:            XLXI_36/XLXI_28/USBplayerStore (LATCH)
+  Destination:       lp (PAD)
+  Source Clock:      gpi<10> rising
+
+  Data Path: XLXI_36/XLXI_28/USBplayerStore to lp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             1   0.475   0.279  XLXI_36/XLXI_28/USBplayerStore (XLXI_36/XLXI_28/USBplayerStore)
+     INV:I->O              2   0.113   0.299  XLXI_36/XLXI_28/USBp1sturn1_INV_0 (gpi<0>)
+     begin scope: 'XLXI_39:D0'
+     LUT3:I2->O            1   0.097   0.279  Mmux_O11 (O)
+     end scope: 'XLXI_39:O'
+     OBUF:I->O                 0.000          XLXI_48 (lp)
+    ----------------------------------------
+    Total                      1.543ns (0.685ns logic, 0.858ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_36/XLXI_9/cu_instant/state[2]_GND_14_o_Mux_20_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.639ns (Levels of Logic = 4)
+  Source:            XLXI_36/XLXI_9/cu_instant/confirm (LATCH)
+  Destination:       sendRecv (PAD)
+  Source Clock:      XLXI_36/XLXI_9/cu_instant/state[2]_GND_14_o_Mux_20_o falling
+
+  Data Path: XLXI_36/XLXI_9/cu_instant/confirm to sendRecv
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.379  XLXI_36/XLXI_9/cu_instant/confirm (XLXI_36/XLXI_9/cu_instant/confirm)
+     LUT3:I1->O            5   0.097   0.314  XLXI_36/XLXI_28/Mmux_send111 (gpi<10>)
+     begin scope: 'XLXI_84:D0'
+     LUT3:I2->O            1   0.097   0.279  Mmux_O11 (O)
+     end scope: 'XLXI_84:O'
+     OBUF:I->O                 0.000          XLXI_80 (sendRecv)
+    ----------------------------------------
+    Total                      1.639ns (0.666ns logic, 0.973ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Delay:               1.733ns (Levels of Logic = 5)
+  Source:            sw14 (PAD)
+  Destination:       confirm (PAD)
+
+  Data Path: sw14 to confirm
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.283  XLXI_59 (data_sel)
+     INV:I->O             12   0.511   0.562  XLXI_87 (XLXN_163)
+     begin scope: 'XLXI_85:S0'
+     LUT3:I0->O            1   0.097   0.279  Mmux_O11 (O)
+     end scope: 'XLXI_85:O'
+     OBUF:I->O                 0.000          XLXI_81 (confirm)
+    ----------------------------------------
+    Total                      1.733ns (0.609ns logic, 1.124ns route)
+                                       (35.1% logic, 64.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock OBClk
+--------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------+---------+---------+---------+---------+
+OBClk                                                               |    3.726|         |         |         |
+XLXI_36/XLXI_9/cu_instant/state[2]_GND_14_o_Mux_20_o                |         |    0.956|         |         |
+gpi<10>                                                             |    1.159|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0|    4.132|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0|    4.132|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0|    4.121|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 |    4.135|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 |    4.128|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 |    4.132|         |         |         |
+mcs_0/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132|         |         |         |
+--------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_36/XLXI_9/cu_instant/_n0072<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+OBClk                              |         |         |    3.545|         |
+XLXI_36/XLXI_9/cu_instant/_n0072<4>|         |         |    2.817|         |
+XLXI_36/XLXI_9/cu_instant/check    |         |         |    2.050|         |
+XLXI_79/O                          |         |         |    1.659|         |
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_36/XLXI_9/cu_instant/check
+----------------------------------------------------+---------+---------+---------+---------+
+                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------+---------+---------+---------+---------+
+OBClk                                               |    3.850|         |         |         |
+XLXI_36/XLXI_9/cu_instant/_n0072<4>                 |         |    4.009|         |         |
+XLXI_36/XLXI_9/cu_instant/check                     |    3.201|         |         |         |
+XLXI_36/XLXI_9/cu_instant/p2sturn                   |         |    3.714|         |         |
+XLXI_36/XLXI_9/cu_instant/state[2]_GND_15_o_Mux_21_o|         |    1.260|         |         |
+----------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_36/XLXI_9/cu_instant/p2sturn
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+XLXI_36/XLXI_9/cu_instant/p2sturn|         |         |    1.542|         |
+---------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_36/XLXI_9/cu_instant/state[2]_GND_14_o_Mux_20_o
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+OBClk                              |         |         |    3.677|         |
+XLXI_36/XLXI_9/cu_instant/_n0072<4>|         |         |    2.949|         |
+XLXI_36/XLXI_9/cu_instant/check    |         |         |    2.182|         |
+XLXI_79/O                          |         |         |    1.791|         |
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_36/XLXI_9/cu_instant/state[2]_GND_15_o_Mux_21_o
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+OBClk                              |         |         |    3.545|         |
+XLXI_36/XLXI_9/cu_instant/_n0072<4>|         |         |    2.817|         |
+XLXI_36/XLXI_9/cu_instant/check    |         |         |    2.050|         |
+XLXI_79/O                          |         |         |    1.659|         |
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_79/O
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OBClk          |    0.667|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gpi<10>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+OBClk                              |    0.772|         |         |         |
+XLXI_36/XLXI_9/cu_instant/_n0072<4>|         |    1.189|         |         |
+XLXI_36/XLXI_9/cu_instant/p2sturn  |         |    1.162|         |         |
+-----------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.28 secs
+ 
+--> 
+
+Total memory usage is 469860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  122 (   0 filtered)
+Number of infos    :   85 (   0 filtered)
+

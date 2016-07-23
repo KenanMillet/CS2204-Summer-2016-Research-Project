@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="Gomoku_IO_V">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2016-7-22T17:33:28</timestamp>
+    <pin polarity="Input" x="0" y="-416" name="USBp2canplay" />
+    <pin polarity="Input" x="0" y="-352" name="USBp1played" />
+    <pin polarity="Input" x="0" y="-288" name="p2row(3:0)" />
+    <pin polarity="Input" x="0" y="-224" name="p2col(3:0)" />
+    <pin polarity="Input" x="0" y="-160" name="USBp1row(3:0)" />
+    <pin polarity="Input" x="0" y="-96" name="USBp1col(3:0)" />
+    <pin polarity="Input" x="0" y="-32" name="player(1:0)" />
+    <pin polarity="Output" x="544" y="-544" name="p1row(3:0)" />
+    <pin polarity="Output" x="544" y="-480" name="p1col(3:0)" />
+    <pin polarity="Output" x="544" y="-416" name="USBp2row(3:0)" />
+    <pin polarity="Output" x="544" y="-352" name="USBp2col(3:0)" />
+    <pin polarity="Output" x="544" y="-288" name="USBp1sturn" />
+    <pin polarity="Output" x="544" y="-224" name="p2canplay" />
+    <pin polarity="Output" x="544" y="-160" name="p1played" />
+    <pin polarity="Output" x="544" y="-96" name="sendOut" />
+    <pin polarity="Input" x="0" y="-608" name="sendConfirmedIn" />
+    <pin polarity="Output" x="544" y="-608" name="recvConfirmedOut" />
+    <pin polarity="Input" x="0" y="-480" name="p1sturn" />
+    <pin polarity="Input" x="0" y="-544" name="sendIn" />
+    <pin polarity="Input" x="0" y="-672" name="recvIn" />
+    <pin polarity="Output" x="544" y="-672" name="recvOut" />
+    <graph>
+        <rect width="416" x="64" y="-696" height="696" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin USBp2canplay" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin USBp1played" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin p2row(3:0)" />
+        <rect width="64" x="0" y="-300" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin p2col(3:0)" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin USBp1row(3:0)" />
+        <rect width="64" x="0" y="-172" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin USBp1col(3:0)" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin player(1:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="544" y1="-544" y2="-544" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-544" type="pin p1row(3:0)" />
+        <rect width="64" x="480" y="-556" height="24" />
+        <line x2="544" y1="-480" y2="-480" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-480" type="pin p1col(3:0)" />
+        <rect width="64" x="480" y="-492" height="24" />
+        <line x2="544" y1="-416" y2="-416" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-416" type="pin USBp2row(3:0)" />
+        <rect width="64" x="480" y="-428" height="24" />
+        <line x2="544" y1="-352" y2="-352" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-352" type="pin USBp2col(3:0)" />
+        <rect width="64" x="480" y="-364" height="24" />
+        <line x2="544" y1="-288" y2="-288" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-288" type="pin USBp1sturn" />
+        <line x2="544" y1="-224" y2="-224" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-224" type="pin p2canplay" />
+        <line x2="544" y1="-160" y2="-160" x1="480" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-160" type="pin p1played" />
+        <line x2="480" y1="-96" y2="-96" x1="544" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="468" y="-96" type="pin sendOut" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin sendConfirmedIn" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-608" type="pin recvConfirmedOut" />
+        <line x2="544" y1="-608" y2="-608" x1="480" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin p1sturn" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin sendIn" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin recvIn" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-672" type="pin recvOut" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <line x2="544" y1="-672" y2="-672" x1="480" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="272" y="-700" type="symbol" />
+    </graph>
+</symbol>
