@@ -1,0 +1,18 @@
+# Output products list for <pong_game>
+mb_bootloop_le.elf
+microblaze_mcs_setup.tcl
+pong_game.asy
+pong_game.bmm
+pong_game.gise
+pong_game.ngc
+pong_game.sym
+pong_game.vhd
+pong_game.vho
+pong_game.xco
+pong_game.xise
+pong_game\mb_bootloop_le.elf
+pong_game\microblaze_mcs_setup.tcl
+pong_game\system_template.tcl
+pong_game_flist.txt
+pong_game_readme.txt
+pong_game_sdk.xml

@@ -1,0 +1,5 @@
+MODULE pong
+	SUBMODULE communication
+		INSTANCE comms
+	SUBMODULE pong_game
+		INSTANCE XLXI_2
