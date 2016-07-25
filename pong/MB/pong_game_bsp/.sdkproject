@@ -1,0 +1,3 @@
+THIRPARTY=false
+PROCESSOR=pong_game
+MSS_FILE=system.mss

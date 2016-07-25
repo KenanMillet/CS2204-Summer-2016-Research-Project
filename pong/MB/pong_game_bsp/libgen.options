@@ -1,0 +1,3 @@
+PROCESSOR=pong_game
+REPOSITORIES=
+HWSPEC=../pong_game_hwp/system.xml
