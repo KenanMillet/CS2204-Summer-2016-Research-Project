@@ -8,6 +8,8 @@ class Tick
 public:
 u32 operator()();
 private:
+u32 getTime();
+u32 timeStamp;
 };
 
 #endif
