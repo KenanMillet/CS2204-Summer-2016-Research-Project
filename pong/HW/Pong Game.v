@@ -18,6 +18,47 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+module controlUnit(
+    input scored, start, reset, win, clk,
+    input[3:0] player1Dec, player2Dec,
+    output reg tickEnable, tickReset, playerReset, ballReset, extIntReset
+);
+    parameter STATE0 = 3'b000, STATE1 = 3'b001, STATE2 = 3'b010, STATE3 = 3'b100, UNKNOWN = 4'b1111;
+    reg[2:0] state;
+
+    always @(posedge clk) begin
+        if (~reset || win || scored) begin
+            state <= STATE0;
+        end
+    end
+    always @(posedge clk) begin
+    case(state)
+        STATE0: begin
+                    if (start) begin
+                        state <= STATE1;
+                    end
+                    tickReset <= 0;
+                    playerReset <= 0;
+                    ballReset <=0;
+                    extIntReset <= 0;
+                end
+        STATE1: begin
+                    if(player1Dec == UNKNOWN || player2Dec == UNKNOWN) begin
+                        tickEnable <= 0;
+                    end
+                    else begin
+                        tickEnable <= 1;
+                        state <= STATE2;
+                    end
+                end
+        STATE2: begin
+                    tickEnable <= 0;
+                    state <= STATE1;
+                end
+    endcase
+    end
+endmodule
+
 module physics(
     input[9:0] aTop, aBottom, aLeft, aRight, bTop, bBottom, bLeft, bRight,
     output reg aCollTop, aCollBottom, aCollLeft, aCollRight, bCollTop, bCollBottom, bCollLeft, bCollRight
@@ -145,7 +186,7 @@ module player(
     output reg[3:0] extOut
 );
 
-    reg[3:0] ipcOut, bpcOut;
+    wire[3:0] ipcOut, bpcOut;
     
     IPC ipc_inst(clk, reset, extIn,
     ipcOut);
