@@ -18,6 +18,26 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+module extInterface(
+    input reset, clk,
+    input[3:0] p1decision, p2decision, extIn1, extIn2,
+    output reg player1Dec, player2Dec, extOut1, extOut2
+);
+    localparam UNKNOWN = 4'b1111;
+    always @(posedge clk) begin
+        if (~reset) begin
+            player1Dec <= UNKNOWN;
+            player2Dec <= UNKNOWN;
+        end
+        else begin
+            player1Dec <= p1decision;
+            player2Dec <= p2decision;
+        end
+        extOut1 <= extIn1;
+        extOut2 <= extIn2;
+    end
+endmodule
+
 module controlUnit(
     input scored, start, reset, win, clk,
     input[3:0] player1Dec, player2Dec,
@@ -230,7 +250,6 @@ module BPC(
     output reg[3:0] extOut
 );
     localparam NONE = 4'b0000;
-    localparam UNDECIDED = 4'b1111;
     localparam UP = 4'b0001;
     localparam DOWN = 4'b0010;
     localparam LEFT = 4'b0100;
