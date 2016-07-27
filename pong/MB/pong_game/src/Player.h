@@ -6,7 +6,7 @@
 class Player
 {
 public:
-	enum class Decision : char
+	enum class Decision : u8
 	{
 		NONE	=	0,
 		UP		=	1 << 0,
