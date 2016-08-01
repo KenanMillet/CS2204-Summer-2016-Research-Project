@@ -1,0 +1,4 @@
+vhdl work "ipcore_dir/communication.vhd"
+vhdl work "ipcore_dir/pong_game.vhd"
+verilog work "ball.v"
+vhdl work "pong.vhf"

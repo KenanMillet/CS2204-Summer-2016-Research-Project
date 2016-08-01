@@ -1,0 +1,828 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: pong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pong.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pong"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : pong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ball.v" into library work
+Parsing module <top>.
+Parsing module <ball>.
+Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ipcore_dir\pong_game.vhd" into library work
+Parsing VHDL file "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" into library work
+Parsing entity <pong>.
+Parsing architecture <BEHAVIORAL> of entity <pong>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <pong> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 56: <communication> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 73: <pong_game> remains a black-box since it has no binding entity.
+Going to verilog side to elaborate module ball
+
+Elaborating module <ball>.
+WARNING:HDLCompiler:872 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ball.v" Line 53: Using initial value of ballSpeed since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ball.v" Line 70: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ball.v" Line 71: Result of 32-bit expression is truncated to fit in 10-bit target.
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:439 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 97: Formal port colltop of mode in cannot be associated with actual port colltop of mode out
+INFO:HDLCompiler:1408 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ball.v" Line 47. colltop is declared here
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 42: Net <gpi1[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 43: Net <gpi2[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 48: Net <comms_gpi3_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 49: Net <comms_gpi4_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 50: Net <XLXI_2_clk_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 51: Net <XLXI_2_gpi1_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 52: Net <XLXI_2_gpi2_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 53: Net <XLXI_2_gpi3_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 54: Net <XLXI_2_gpi4_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" Line 55: Net <XLXI_2_reset_openSignal> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pong>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf".
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_5>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_5>.
+    Set property "IBUF_LOW_PWR = TRUE" for instance <XLXI_5>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_6>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_6>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_7>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_7>.
+    Set property "SLEW = SLOW" for instance <XLXI_7>.
+    Set property "DRIVE = 12" for instance <XLXI_7>.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 136: Output port <gpo2> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 136: Output port <gpo3> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 136: Output port <gpo4> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 136: Output port <uart_interrupt> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 136: Output port <intc_irq> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 152: Output port <gpo1> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 152: Output port <gpo2> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 152: Output port <gpo3> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\pong.vhf" line 152: Output port <gpo4> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <gpi1<31:26>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <gpi2<31:10>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <comms_gpi3_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <comms_gpi4_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_gpi1_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_gpi2_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_gpi3_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_gpi4_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_clk_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_2_reset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <pong> synthesized.
+
+Synthesizing Unit <ball>.
+    Related source file is "C:\Users\acb610\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\TOP\ball.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'ballWidth', unconnected in block 'ball', is tied to its initial value (00010100).
+WARNING:Xst:2935 - Signal 'ballHeight', unconnected in block 'ball', is tied to its initial value (00010100).
+    Found 32-bit register for signal <xDir>.
+    Found 10-bit register for signal <ballPosX>.
+    Found 10-bit register for signal <ballPosY>.
+    Found 32-bit register for signal <yDir>.
+    Found 32-bit subtractor for signal <yDir[31]_unary_minus_4_OUT> created at line 65.
+    Found 32-bit subtractor for signal <xDir[31]_unary_minus_8_OUT> created at line 68.
+    Found 32-bit adder for signal <n0030> created at line 70.
+    Found 32-bit adder for signal <n0032> created at line 71.
+    Found 20x4-bit multiplier for signal <elapseTime[19]_PWR_7_o_MuLt_9_OUT> created at line 70.
+    Found 24x32-bit multiplier for signal <n0029> created at line 70.
+    Found 24x32-bit multiplier for signal <n0031> created at line 71.
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <ball> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 20x4-bit multiplier                                   : 1
+ 32x24-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+# Registers                                            : 4
+ 10-bit register                                       : 2
+ 32-bit register                                       : 2
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/communication.ngc>.
+Reading core <ipcore_dir/pong_game.ngc>.
+Loading core <communication> for timing and area information for instance <comms>.
+Loading core <pong_game> for timing and area information for instance <XLXI_2>.
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+
+Synthesizing (advanced) Unit <ball>.
+The following registers are absorbed into accumulator <ballPosY>: 1 register on signal <ballPosY>.
+The following registers are absorbed into accumulator <ballPosX>: 1 register on signal <ballPosX>.
+Unit <ball> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 20x4-bit multiplier                                   : 1
+ 32x24-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 2
+ 32-bit subtractor                                     : 2
+# Accumulators                                         : 2
+ 10-bit up accumulator                                 : 2
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <xDir_10> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_11> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_12> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_13> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_14> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_15> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_16> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_17> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_18> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_19> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_20> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_21> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_22> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_23> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_24> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_25> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_26> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_27> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_28> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_29> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_30> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <xDir_31> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_10> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_11> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_12> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_13> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_14> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_15> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_16> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_17> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_18> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_19> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_20> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_21> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_22> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_23> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_24> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_25> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_26> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_27> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_28> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_29> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_30> of sequential type is unconnected in block <ball>.
+WARNING:Xst:2677 - Node <yDir_31> of sequential type is unconnected in block <ball>.
+
+Optimizing unit <pong> ...
+
+Optimizing unit <ball> ...
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_0> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_1> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_2> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_3> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_4> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_5> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_6> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_7> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_8> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/xDir_9> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_0> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_1> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_2> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_3> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_4> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_5> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_6> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_7> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_8> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <XLXI_3/yDir_9> (without init value) has a constant value of 0 in block <pong>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pong, actual ratio is 1.
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <comms> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <comms> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <XLXI_2> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <XLXI_2> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <comms> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <comms> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <XLXI_2> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <XLXI_2> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pong.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1737
+#      GND                         : 35
+#      INV                         : 19
+#      LUT1                        : 6
+#      LUT2                        : 112
+#      LUT3                        : 148
+#      LUT4                        : 427
+#      LUT5                        : 109
+#      LUT6                        : 223
+#      LUT6_2                      : 180
+#      MULT_AND                    : 6
+#      MUXCY                       : 24
+#      MUXCY_L                     : 150
+#      MUXF5                       : 130
+#      MUXF6                       : 1
+#      MUXF7                       : 4
+#      VCC                         : 35
+#      XORCY                       : 128
+# FlipFlops/Latches                : 1335
+#      FD                          : 215
+#      FDE                         : 217
+#      FDR                         : 378
+#      FDRE                        : 475
+#      FDS                         : 15
+#      FDSE                        : 35
+# RAMS                             : 160
+#      RAM32X1D                    : 128
+#      RAMB36E1                    : 32
+# Shift Registers                  : 99
+#      SRL16E                      : 98
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 3
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 1
+# DSPs                             : 2
+#      DSP48E1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1335  out of  126800     1%  
+ Number of Slice LUTs:                 1579  out of  63400     2%  
+    Number used as Logic:              1224  out of  63400     1%  
+    Number used as Memory:              355  out of  19000     1%  
+       Number used as RAM:              256
+       Number used as SRL:               99
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2441
+   Number with an unused Flip Flop:    1106  out of   2441    45%  
+   Number with an unused LUT:           862  out of   2441    35%  
+   Number of fully used LUT-FF pairs:   473  out of   2441    19%  
+   Number of unique control sets:        77
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    210     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of    135    23%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48E1s:                      2  out of    240     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)                                                                                                               | Load  |
+---------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------+
+comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>              | BUFG                                                                                                                                | 20    |
+CLOCK                                                                | IBUFG+BUFG                                                                                                                          | 868   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1) | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1) | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1) | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1) | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1) | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0 | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1) | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)   | 1     |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)   | 1     |
+XLXI_3/Mmux_xDir[31]_xDir[31]_mux_8_OUT_rs_A<0>_mand1                | NONE(XLXI_2/U0/ilmb_cntlr/Sl_Rdy)                                                                                                   | 706   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 1     |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 1     |
+---------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                     | Buffer(FF name)                                                                                                                     | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------+
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_VCC:P)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_VCC:P)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_VCC:P)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_VCC:P)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_VCC:P)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_VCC:P)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N1(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_VCC:P)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_VCC:P) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1) | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_VCC:P) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1) | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_VCC:P) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1) | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_VCC:P) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1) | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_VCC:P) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1) | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_VCC:P) | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1) | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)   | 124   |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N11(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_VCC:P)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)   | 124   |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_GND:G)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_GND:G)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_GND:G)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_GND:G)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_GND:G)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_GND:G)| NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)  | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_GND:G)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1) | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_GND:G)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1) | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_GND:G)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1) | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_GND:G)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1) | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_GND:G)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1) | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_GND:G)  | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1) | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)   | 72    |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)    | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)   | 72    |
+XLXI_2/GPI4_Interrupt(XLXI_2/XST_GND:G)                                                                                                            | NONE(XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 64    |
+comms/N1(comms/XST_GND:G)                                                                                                                          | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1) | 64    |
+---------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.726ns (Maximum Frequency: 268.393MHz)
+   Minimum input arrival time before clock: 0.401ns
+   Maximum output required time after clock: 0.640ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>'
+  Clock period: 1.757ns (frequency: 569.314MHz)
+  Total number of paths / destination ports: 200 / 20
+-------------------------------------------------------------------------
+Delay:               1.757ns (Levels of Logic = 11)
+  Source:            XLXI_3/ballPosX_0 (FF)
+  Destination:       XLXI_3/ballPosX_9 (FF)
+  Source Clock:      comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0> rising
+  Destination Clock: comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0> rising
+
+  Data Path: XLXI_3/ballPosX_0 to XLXI_3/ballPosX_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.361   0.383  XLXI_3/ballPosX_0 (XLXI_3/ballPosX_0)
+     LUT2:I0->O            1   0.097   0.000  XLXI_3/Maccum_ballPosX_lut<0> (XLXI_3/Maccum_ballPosX_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  XLXI_3/Maccum_ballPosX_cy<0> (XLXI_3/Maccum_ballPosX_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<1> (XLXI_3/Maccum_ballPosX_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<2> (XLXI_3/Maccum_ballPosX_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<3> (XLXI_3/Maccum_ballPosX_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<4> (XLXI_3/Maccum_ballPosX_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<5> (XLXI_3/Maccum_ballPosX_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<6> (XLXI_3/Maccum_ballPosX_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<7> (XLXI_3/Maccum_ballPosX_cy<7>)
+     MUXCY:CI->O           0   0.023   0.000  XLXI_3/Maccum_ballPosX_cy<8> (XLXI_3/Maccum_ballPosX_cy<8>)
+     XORCY:CI->O           1   0.370   0.000  XLXI_3/Maccum_ballPosX_xor<9> (XLXI_3/Result<9>1)
+     FD:D                      0.008          XLXI_3/ballPosX_9
+    ----------------------------------------
+    Total                      1.757ns (1.373ns logic, 0.383ns route)
+                                       (78.2% logic, 21.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 3.726ns (frequency: 268.393MHz)
+  Total number of paths / destination ports: 66059 / 2479
+-------------------------------------------------------------------------
+Delay:               3.726ns (Levels of Logic = 4)
+  Source:            comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 to comms/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q        22   1.306   0.651  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>)
+     LUT4:I0->O            1   0.097   0.511  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_1)
+     LUT3:I0->O            1   0.097   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select)
+     MUXCY_L:S->LO        32   0.583   0.386  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.opsel1_SPR)
+     LUT6_2:I5->O6         1   0.086   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/op1_I)
+     FDRE:D                    0.008          U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Op1_DFF
+    ----------------------------------------
+    Total                      3.726ns (2.177ns logic, 1.549ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_3/Mmux_xDir[31]_xDir[31]_mux_8_OUT_rs_A<0>_mand1'
+  Clock period: 3.726ns (frequency: 268.393MHz)
+  Total number of paths / destination ports: 63041 / 2144
+-------------------------------------------------------------------------
+Delay:               3.726ns (Levels of Logic = 4)
+  Source:            XLXI_2/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       XLXI_2/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF (FF)
+  Source Clock:      XLXI_3/Mmux_xDir[31]_xDir[31]_mux_8_OUT_rs_A<0>_mand1 rising
+  Destination Clock: XLXI_3/Mmux_xDir[31]_xDir[31]_mux_8_OUT_rs_A<0>_mand1 rising
+
+  Data Path: XLXI_2/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 to XLXI_2/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op1_DFF
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q        22   1.306   0.651  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>)
+     LUT4:I0->O            1   0.097   0.511  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_1)
+     LUT3:I0->O            1   0.097   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select)
+     MUXCY_L:S->LO        32   0.583   0.386  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.opsel1_SPR)
+     LUT6_2:I5->O6         1   0.086   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT6_1.Only_PC.Op1_LUT6 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/op1_I)
+     FDRE:D                    0.008          U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Op1_DFF
+    ----------------------------------------
+    Total                      3.726ns (2.177ns logic, 1.549ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.401ns (Levels of Logic = 3)
+  Source:            usb_in (PAD)
+  Destination:       comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1 (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: usb_in to comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.295  XLXI_6 (uart_rx)
+     begin scope: 'comms:uart_rx'
+     LUT2:I1->O            1   0.097   0.000  U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/Mmux_RX_PWR_118_o_MUX_4561_o11 (U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/RX_PWR_118_o_MUX_4561_o)
+     FD:D                      0.008          U0/iomodule_0/IOModule_Core_I1/Using_UART_RX.UART_RX_I1/rx_1
+    ----------------------------------------
+    Total                      0.401ns (0.106ns logic, 0.295ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 2)
+  Source:            comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (FF)
+  Destination:       usb_out (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX to usb_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.361   0.279  U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (uart_tx)
+     end scope: 'comms:uart_tx'
+     OBUF:I->O                 0.000          XLXI_7 (usb_out)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK
+--------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------+---------+---------+---------+---------+
+CLOCK                                                               |    3.726|         |         |         |
+comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>             |    0.653|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0|    4.132|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0|    4.132|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0|    4.121|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 |    4.135|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 |    4.128|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 |    4.132|         |         |         |
+comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132|         |         |         |
+--------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_3/Mmux_xDir[31]_xDir[31]_mux_8_OUT_rs_A<0>_mand1
+---------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------+---------+---------+---------+---------+
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0 |    4.135|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0|    4.132|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0|    4.132|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0|    4.121|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0|    4.121|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0|    4.121|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0|    4.121|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0 |    4.135|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0 |    4.135|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0 |    4.135|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0 |    4.128|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0 |    4.128|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0 |    4.128|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0 |    4.128|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0 |    4.132|         |         |         |
+XLXI_2/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132|         |         |         |
+XLXI_3/Mmux_xDir[31]_xDir[31]_mux_8_OUT_rs_A<0>_mand1                |    3.726|         |         |         |
+---------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>
+-------------------------------------------------------+---------+---------+---------+---------+
+                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------------+---------+---------+---------+---------+
+CLOCK                                                  |    6.093|         |         |         |
+comms/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>|    1.757|         |         |         |
+-------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.17 secs
+ 
+--> 
+
+Total memory usage is 477600 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
+Number of infos    :   51 (   0 filtered)
+
