@@ -18,6 +18,11 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+module drivers(
+     
+);
+endmodule
+
 module extInterface(
     input reset, clk,
     input[3:0] p1decision, p2decision, extIn1, extIn2,
@@ -113,7 +118,7 @@ endmodule
 
 module tick(
     input clk,
-    input enable,
+    input enable, reset,
     output reg tickOut,
     output reg[19:0] elapseTime
 );
@@ -169,7 +174,7 @@ module paddle(
     endmodule
 
 module ball(
-    input tickIn, collTop, collBottom, collLeft, collRight,
+    input tickIn, collTop, collBottom, collLeft, collRight, reset,
     input[19:0] elapseTime,
     output reg[7:0] ballWidth, ballHeight,
     output reg[9:0] ballPosX, ballPosY
