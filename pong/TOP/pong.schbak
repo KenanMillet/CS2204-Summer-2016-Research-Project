@@ -115,121 +115,6 @@
             <line x2="64" y1="-32" y2="-32" x1="0" />
             <line x2="128" y1="-32" y2="-32" x1="224" />
         </blockdef>
-        <blockdef name="player">
-            <timestamp>2016-8-1T20:36:4</timestamp>
-            <rect width="256" x="64" y="-512" height="512" />
-            <line x2="0" y1="-480" y2="-480" x1="64" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <rect width="64" x="0" y="-364" height="24" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <rect width="64" x="0" y="-300" height="24" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <rect width="64" x="0" y="-236" height="24" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-172" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="384" y1="-480" y2="-480" x1="320" />
-            <rect width="64" x="320" y="-492" height="24" />
-        </blockdef>
-        <blockdef name="tick">
-            <timestamp>2016-8-1T20:39:39</timestamp>
-            <rect width="304" x="64" y="-192" height="192" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="432" y1="-160" y2="-160" x1="368" />
-            <line x2="432" y1="-96" y2="-96" x1="368" />
-            <rect width="64" x="368" y="-108" height="24" />
-        </blockdef>
-        <blockdef name="controlUnit">
-            <timestamp>2016-8-1T20:46:23</timestamp>
-            <rect width="256" x="64" y="-448" height="448" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="384" y1="-416" y2="-416" x1="320" />
-            <line x2="384" y1="-352" y2="-352" x1="320" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-        </blockdef>
-        <blockdef name="extInterface">
-            <timestamp>2016-8-1T20:49:24</timestamp>
-            <rect width="320" x="64" y="-384" height="384" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <rect width="64" x="0" y="-236" height="24" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-172" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="448" y1="-224" y2="-224" x1="384" />
-            <line x2="448" y1="-352" y2="-352" x1="384" />
-            <line x2="448" y1="-288" y2="-288" x1="384" />
-            <line x2="448" y1="-160" y2="-160" x1="384" />
-        </blockdef>
-        <blockdef name="paddle">
-            <timestamp>2016-8-1T20:53:19</timestamp>
-            <rect width="336" x="64" y="-448" height="448" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="464" y1="-416" y2="-416" x1="400" />
-            <rect width="64" x="400" y="-428" height="24" />
-            <line x2="464" y1="-352" y2="-352" x1="400" />
-            <rect width="64" x="400" y="-364" height="24" />
-            <line x2="464" y1="-288" y2="-288" x1="400" />
-            <rect width="64" x="400" y="-300" height="24" />
-            <line x2="464" y1="-224" y2="-224" x1="400" />
-            <rect width="64" x="400" y="-236" height="24" />
-        </blockdef>
-        <blockdef name="physics">
-            <timestamp>2016-8-1T21:0:3</timestamp>
-            <rect width="320" x="64" y="-512" height="512" />
-            <line x2="0" y1="-480" y2="-480" x1="64" />
-            <rect width="64" x="0" y="-492" height="24" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
-            <rect width="64" x="0" y="-428" height="24" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <rect width="64" x="0" y="-364" height="24" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <rect width="64" x="0" y="-300" height="24" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <rect width="64" x="0" y="-236" height="24" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-172" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="448" y1="-480" y2="-480" x1="384" />
-            <line x2="448" y1="-416" y2="-416" x1="384" />
-            <line x2="448" y1="-352" y2="-352" x1="384" />
-            <line x2="448" y1="-288" y2="-288" x1="384" />
-            <line x2="448" y1="-224" y2="-224" x1="384" />
-            <line x2="448" y1="-160" y2="-160" x1="384" />
-            <line x2="448" y1="-96" y2="-96" x1="384" />
-            <line x2="448" y1="-32" y2="-32" x1="384" />
-        </blockdef>
         <block symbolname="communication" name="comms">
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="XLXN_15" name="reset" />
@@ -285,81 +170,6 @@
             <blockpin signalname="gpi1(25:16)" name="ballPosX(9:0)" />
             <blockpin signalname="gpi2(9:0)" name="ballPosY(9:0)" />
             <blockpin signalname="gpo1(1)" name="collTop" />
-        </block>
-        <block symbolname="player" name="XLXI_8">
-            <blockpin name="clk" />
-            <blockpin name="reset" />
-            <blockpin name="ctrlSel(1:0)" />
-            <blockpin name="extIn(3:0)" />
-            <blockpin name="ballPosX(9:0)" />
-            <blockpin name="ballPosY(9:0)" />
-            <blockpin name="paddlePosX(9:0)" />
-            <blockpin name="paddlePosY(9:0)" />
-            <blockpin name="extOut(3:0)" />
-        </block>
-        <block symbolname="tick" name="XLXI_9">
-            <blockpin name="clk" />
-            <blockpin name="enable" />
-            <blockpin name="reset" />
-            <blockpin name="tickOut" />
-            <blockpin name="elapseTime(19:0)" />
-        </block>
-        <block symbolname="controlUnit" name="XLXI_10">
-            <blockpin name="scored" />
-            <blockpin name="start" />
-            <blockpin name="reset" />
-            <blockpin name="win" />
-            <blockpin name="clk" />
-            <blockpin name="player1Dec(3:0)" />
-            <blockpin name="player2Dec(3:0)" />
-            <blockpin name="tickEnable" />
-            <blockpin name="tickReset" />
-            <blockpin name="playerReset" />
-            <blockpin name="ballReset" />
-            <blockpin name="extIntReset" />
-        </block>
-        <block symbolname="extInterface" name="XLXI_11">
-            <blockpin name="reset" />
-            <blockpin name="clk" />
-            <blockpin name="p1decision(3:0)" />
-            <blockpin name="p2decision(3:0)" />
-            <blockpin name="extIn1(3:0)" />
-            <blockpin name="extIn2(3:0)" />
-            <blockpin name="player1Dec" />
-            <blockpin name="player2Dec" />
-            <blockpin name="extOut1" />
-            <blockpin name="extOut2" />
-        </block>
-        <block symbolname="paddle" name="XLXI_12">
-            <blockpin name="tickIn" />
-            <blockpin name="collTop" />
-            <blockpin name="collBottom" />
-            <blockpin name="collLeft" />
-            <blockpin name="collRight" />
-            <blockpin name="elapseTime(19:0)" />
-            <blockpin name="extIn(3:0)" />
-            <blockpin name="paddleWidth(7:0)" />
-            <blockpin name="paddleHeight(7:0)" />
-            <blockpin name="paddlePosX(9:0)" />
-            <blockpin name="paddlePosY(9:0)" />
-        </block>
-        <block symbolname="physics" name="XLXI_13">
-            <blockpin name="aTop(9:0)" />
-            <blockpin name="aBottom(9:0)" />
-            <blockpin name="aLeft(9:0)" />
-            <blockpin name="aRight(9:0)" />
-            <blockpin name="bTop(9:0)" />
-            <blockpin name="bBottom(9:0)" />
-            <blockpin name="bLeft(9:0)" />
-            <blockpin name="bRight(9:0)" />
-            <blockpin name="aCollTop" />
-            <blockpin name="aCollBottom" />
-            <blockpin name="aCollLeft" />
-            <blockpin name="aCollRight" />
-            <blockpin name="bCollTop" />
-            <blockpin name="bCollBottom" />
-            <blockpin name="bCollLeft" />
-            <blockpin name="bCollRight" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -457,33 +267,17 @@
             <wire x2="336" y1="608" y2="608" x1="256" />
         </branch>
         <branch name="gpi1(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="224" type="branch" />
             <wire x2="848" y1="224" y2="224" x1="768" />
         </branch>
         <branch name="gpi1(15:8)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="288" type="branch" />
             <wire x2="848" y1="288" y2="288" x1="768" />
         </branch>
         <branch name="gpi1(25:16)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="352" type="branch" />
             <wire x2="848" y1="352" y2="352" x1="768" />
         </branch>
         <branch name="gpi2(9:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="416" type="branch" />
             <wire x2="832" y1="416" y2="416" x1="768" />
             <wire x2="848" y1="416" y2="416" x1="832" />
         </branch>
-        <instance x="1264" y="672" name="XLXI_8" orien="R0">
-        </instance>
-        <instance x="336" y="1040" name="XLXI_9" orien="R0">
-        </instance>
-        <instance x="2016" y="624" name="XLXI_10" orien="R0">
-        </instance>
-        <instance x="1152" y="1248" name="XLXI_11" orien="R0">
-        </instance>
-        <instance x="304" y="1744" name="XLXI_12" orien="R0">
-        </instance>
-        <instance x="1936" y="1296" name="XLXI_13" orien="R0">
-        </instance>
     </sheet>
 </drawing>

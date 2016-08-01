@@ -1,0 +1,11 @@
+add instance player 1264 672 R0 -sn=2
+select figure at 1030 802 8 -branches -sn=2
+select figure at 873 558 8 -branches -sn=2
+select figure at 1497 301 8 -branches -sn=2
+select figure at 593 557 8 -branches -sn=2
+select figure at 1632 1717 8 -branches -sn=2
+add instance tick 336 1040 R0 -sn=2
+select figure at 1169 1389 8 -branches -sn=2
+select figure at 553 1200 8 -branches -sn=2
+select figure at 649 1018 8 -branches -sn=2
+select figure at 812 1536 8 -branches -sn=2

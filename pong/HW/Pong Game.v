@@ -171,7 +171,7 @@ module paddle(
         paddlePosX <= paddlePosX + (elapseTime * paddleSpeed * xDir);
         paddlePosY <= paddlePosY + (elapseTime * paddleSpeed * yDir);      
     end
-    endmodule
+endmodule
 
 module ball(
     input tickIn, collTop, collBottom, collLeft, collRight, reset,

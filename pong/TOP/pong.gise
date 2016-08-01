@@ -89,11 +89,14 @@
     <transform xil_pn:end_ts="1470082781" xil_pn:in_ck="4921047382784" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4478828396451294344" xil_pn:start_ts="1470082779">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="pong.vhf"/>
     </transform>
     <transform xil_pn:end_ts="1470082781" xil_pn:in_ck="5490976827735010737" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8386480056458106951" xil_pn:start_ts="1470082781">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <outfile xil_pn:name="ipcore_dir/communication.ngc"/>
       <outfile xil_pn:name="ipcore_dir/communication.vhd"/>
       <outfile xil_pn:name="ipcore_dir/pong_game.ngc"/>
@@ -110,16 +113,22 @@
     <transform xil_pn:end_ts="1470082781" xil_pn:in_ck="-3311512871870857425" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1470082781">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1470082781" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4327687974066531823" xil_pn:start_ts="1470082781">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1470082797" xil_pn:in_ck="-4407017016776224506" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-8964689972024269081" xil_pn:start_ts="1470082781">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="pong.jhd"/>
@@ -137,11 +146,13 @@
     <transform xil_pn:end_ts="1470082797" xil_pn:in_ck="5078817571116" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="123229027436050870" xil_pn:start_ts="1470082797">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1470082807" xil_pn:in_ck="4142025740583223027" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2185603059617475170" xil_pn:start_ts="1470082797">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="pong.bld"/>
@@ -152,6 +163,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -167,6 +179,7 @@
     <transform xil_pn:end_ts="1470082884" xil_pn:in_ck="-5060038804292702208" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="2516432636991085863" xil_pn:start_ts="1470082851">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="pong.ncd"/>
       <outfile xil_pn:name="pong.pad"/>
@@ -181,6 +194,7 @@
     <transform xil_pn:end_ts="1470082921" xil_pn:in_ck="4921047377335" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1470082884">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="pong.bgn"/>
       <outfile xil_pn:name="pong.bit"/>
@@ -193,6 +207,7 @@
     <transform xil_pn:end_ts="1470082884" xil_pn:in_ck="6426734353856835043" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1470082872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="pong.twr"/>
       <outfile xil_pn:name="pong.twx"/>

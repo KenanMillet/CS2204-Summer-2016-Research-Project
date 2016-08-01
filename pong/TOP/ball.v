@@ -16,7 +16,7 @@
 //
 `timescale 1ns / 1ps
 
-module top(collBottom, 
+module top_ball(collBottom, 
             collLeft, 
             collRight, 
             elapseTime, 
@@ -39,7 +39,7 @@ module top(collBottom,
    output [9:0] ballPosY;
    output [7:0] ballWidth;
    output collTop;
-   ball instant(tickIn, collTop, collBottom, collLeft, collRight, reset, elapseTime, ballWidth, ballHeight, ballPosX, ballPosY);
+   ball instant_ball(tickIn, collTop, collBottom, collLeft, collRight, reset, elapseTime, ballWidth, ballHeight, ballPosX, ballPosY);
    
 endmodule
 
