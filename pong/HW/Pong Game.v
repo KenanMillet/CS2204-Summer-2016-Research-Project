@@ -137,6 +137,10 @@ module tick(
     end
 endmodule
 
+module hitbox(
+    input[7:0] ballWidth, ballHeight, paddleWidth, paddleHeight
+);
+endmodule 
 module paddle(
     input tickIn, collTop, collBottom, collLeft, collRight,
     input[19:0] elapseTime,

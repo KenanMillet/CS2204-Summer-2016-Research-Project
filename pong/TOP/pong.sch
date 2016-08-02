@@ -16,17 +16,39 @@
         <signal name="usb_out" />
         <signal name="uart_tx" />
         <signal name="uart_rx" />
-        <signal name="gpo1(0)" />
-        <signal name="gpo1(1)" />
-        <signal name="gpo1(2)" />
-        <signal name="gpo1(3)" />
-        <signal name="gpo1(4)" />
-        <signal name="gpo1(5)" />
-        <signal name="gpo1(25:6)" />
-        <signal name="gpi1(7:0)" />
-        <signal name="gpi1(15:8)" />
-        <signal name="gpi1(25:16)" />
-        <signal name="gpi2(9:0)" />
+        <signal name="XLXN_16(3:0)" />
+        <signal name="XLXN_17(3:0)" />
+        <signal name="XLXN_18" />
+        <signal name="XLXN_19" />
+        <signal name="XLXN_20" />
+        <signal name="XLXN_21" />
+        <signal name="XLXN_22" />
+        <signal name="XLXN_23" />
+        <signal name="XLXN_25" />
+        <signal name="XLXN_27" />
+        <signal name="XLXN_32(19:0)" />
+        <signal name="XLXN_33" />
+        <signal name="XLXN_34(19:0)" />
+        <signal name="XLXN_39(9:0)" />
+        <signal name="XLXN_40(9:0)" />
+        <signal name="XLXN_41(9:0)" />
+        <signal name="XLXN_42(9:0)" />
+        <signal name="XLXN_43" />
+        <signal name="XLXN_44(9:0)" />
+        <signal name="XLXN_45(9:0)" />
+        <signal name="XLXN_46(9:0)" />
+        <signal name="XLXN_47" />
+        <signal name="XLXN_48(9:0)" />
+        <signal name="XLXN_51(9:0)" />
+        <signal name="XLXN_52(9:0)" />
+        <signal name="XLXN_53(9:0)" />
+        <signal name="XLXN_54(9:0)" />
+        <signal name="XLXN_55" />
+        <signal name="XLXN_56(9:0)" />
+        <signal name="XLXN_58(9:0)" />
+        <signal name="XLXN_60" />
+        <signal name="XLXN_61(9:0)" />
+        <signal name="XLXN_63(9:0)" />
         <port polarity="Input" name="CLOCK" />
         <port polarity="Input" name="usb_in" />
         <port polarity="Output" name="usb_out" />
@@ -273,36 +295,12 @@
             <blockpin signalname="uart_tx" name="I" />
             <blockpin signalname="usb_out" name="O" />
         </block>
-        <block symbolname="ball" name="XLXI_3">
-            <blockpin signalname="gpo1(0)" name="tickIn" />
-            <blockpin signalname="gpo1(2)" name="collBottom" />
-            <blockpin signalname="gpo1(3)" name="collLeft" />
-            <blockpin signalname="gpo1(4)" name="collRight" />
-            <blockpin signalname="gpo1(5)" name="reset" />
-            <blockpin signalname="gpo1(25:6)" name="elapseTime(19:0)" />
-            <blockpin signalname="gpi1(7:0)" name="ballWidth(7:0)" />
-            <blockpin signalname="gpi1(15:8)" name="ballHeight(7:0)" />
-            <blockpin signalname="gpi1(25:16)" name="ballPosX(9:0)" />
-            <blockpin signalname="gpi2(9:0)" name="ballPosY(9:0)" />
-            <blockpin signalname="gpo1(1)" name="collTop" />
-        </block>
-        <block symbolname="player" name="XLXI_8">
-            <blockpin name="clk" />
-            <blockpin name="reset" />
-            <blockpin name="ctrlSel(1:0)" />
-            <blockpin name="extIn(3:0)" />
-            <blockpin name="ballPosX(9:0)" />
-            <blockpin name="ballPosY(9:0)" />
-            <blockpin name="paddlePosX(9:0)" />
-            <blockpin name="paddlePosY(9:0)" />
-            <blockpin name="extOut(3:0)" />
-        </block>
         <block symbolname="tick" name="XLXI_9">
             <blockpin name="clk" />
-            <blockpin name="enable" />
-            <blockpin name="reset" />
-            <blockpin name="tickOut" />
-            <blockpin name="elapseTime(19:0)" />
+            <blockpin signalname="XLXN_22" name="enable" />
+            <blockpin signalname="XLXN_20" name="reset" />
+            <blockpin signalname="XLXN_33" name="tickOut" />
+            <blockpin signalname="XLXN_34(19:0)" name="elapseTime(19:0)" />
         </block>
         <block symbolname="controlUnit" name="XLXI_10">
             <blockpin name="scored" />
@@ -310,38 +308,38 @@
             <blockpin name="reset" />
             <blockpin name="win" />
             <blockpin name="clk" />
-            <blockpin name="player1Dec(3:0)" />
-            <blockpin name="player2Dec(3:0)" />
-            <blockpin name="tickEnable" />
-            <blockpin name="tickReset" />
-            <blockpin name="playerReset" />
-            <blockpin name="ballReset" />
-            <blockpin name="extIntReset" />
+            <blockpin signalname="XLXN_17(3:0)" name="player1Dec(3:0)" />
+            <blockpin signalname="XLXN_16(3:0)" name="player2Dec(3:0)" />
+            <blockpin signalname="XLXN_22" name="tickEnable" />
+            <blockpin signalname="XLXN_20" name="tickReset" />
+            <blockpin signalname="XLXN_34(19:0)" name="playerReset" />
+            <blockpin signalname="XLXN_19" name="ballReset" />
+            <blockpin signalname="XLXN_23" name="extIntReset" />
         </block>
         <block symbolname="extInterface" name="XLXI_11">
-            <blockpin name="reset" />
+            <blockpin signalname="XLXN_23" name="reset" />
             <blockpin name="clk" />
             <blockpin name="p1decision(3:0)" />
             <blockpin name="p2decision(3:0)" />
             <blockpin name="extIn1(3:0)" />
             <blockpin name="extIn2(3:0)" />
-            <blockpin name="player1Dec" />
-            <blockpin name="player2Dec" />
+            <blockpin signalname="XLXN_17(3:0)" name="player1Dec" />
+            <blockpin signalname="XLXN_16(3:0)" name="player2Dec" />
             <blockpin name="extOut1" />
             <blockpin name="extOut2" />
         </block>
         <block symbolname="paddle" name="XLXI_12">
-            <blockpin name="tickIn" />
+            <blockpin signalname="XLXN_33" name="tickIn" />
             <blockpin name="collTop" />
             <blockpin name="collBottom" />
             <blockpin name="collLeft" />
             <blockpin name="collRight" />
-            <blockpin name="elapseTime(19:0)" />
+            <blockpin signalname="XLXN_34(19:0)" name="elapseTime(19:0)" />
             <blockpin name="extIn(3:0)" />
             <blockpin name="paddleWidth(7:0)" />
             <blockpin name="paddleHeight(7:0)" />
-            <blockpin name="paddlePosX(9:0)" />
-            <blockpin name="paddlePosY(9:0)" />
+            <blockpin signalname="XLXN_51(9:0)" name="paddlePosX(9:0)" />
+            <blockpin signalname="XLXN_53(9:0)" name="paddlePosY(9:0)" />
         </block>
         <block symbolname="physics" name="XLXI_13">
             <blockpin name="aTop(9:0)" />
@@ -360,6 +358,59 @@
             <blockpin name="bCollBottom" />
             <blockpin name="bCollLeft" />
             <blockpin name="bCollRight" />
+        </block>
+        <block symbolname="ball" name="XLXI_3">
+            <blockpin signalname="XLXN_33" name="tickIn" />
+            <blockpin name="collBottom" />
+            <blockpin name="collLeft" />
+            <blockpin name="collRight" />
+            <blockpin signalname="XLXN_19" name="reset" />
+            <blockpin signalname="XLXN_34(19:0)" name="elapseTime(19:0)" />
+            <blockpin name="ballWidth(7:0)" />
+            <blockpin name="ballHeight(7:0)" />
+            <blockpin signalname="XLXN_39(9:0)" name="ballPosX(9:0)" />
+            <blockpin signalname="XLXN_40(9:0)" name="ballPosY(9:0)" />
+            <blockpin name="collTop" />
+        </block>
+        <block symbolname="physics" name="XLXI_19">
+            <blockpin name="aTop(9:0)" />
+            <blockpin name="aBottom(9:0)" />
+            <blockpin name="aLeft(9:0)" />
+            <blockpin name="aRight(9:0)" />
+            <blockpin name="bTop(9:0)" />
+            <blockpin name="bBottom(9:0)" />
+            <blockpin name="bLeft(9:0)" />
+            <blockpin name="bRight(9:0)" />
+            <blockpin name="aCollTop" />
+            <blockpin name="aCollBottom" />
+            <blockpin name="aCollLeft" />
+            <blockpin name="aCollRight" />
+            <blockpin name="bCollTop" />
+            <blockpin name="bCollBottom" />
+            <blockpin name="bCollLeft" />
+            <blockpin name="bCollRight" />
+        </block>
+        <block symbolname="player" name="XLXI_8">
+            <blockpin name="clk" />
+            <blockpin signalname="XLXN_34(19:0)" name="reset" />
+            <blockpin name="ctrlSel(1:0)" />
+            <blockpin name="extIn(3:0)" />
+            <blockpin signalname="XLXN_39(9:0)" name="ballPosX(9:0)" />
+            <blockpin signalname="XLXN_40(9:0)" name="ballPosY(9:0)" />
+            <blockpin signalname="XLXN_51(9:0)" name="paddlePosX(9:0)" />
+            <blockpin signalname="XLXN_53(9:0)" name="paddlePosY(9:0)" />
+            <blockpin name="extOut(3:0)" />
+        </block>
+        <block symbolname="player" name="XLXI_18">
+            <blockpin name="clk" />
+            <blockpin signalname="XLXN_34(19:0)" name="reset" />
+            <blockpin name="ctrlSel(1:0)" />
+            <blockpin name="extIn(3:0)" />
+            <blockpin signalname="XLXN_39(9:0)" name="ballPosX(9:0)" />
+            <blockpin signalname="XLXN_40(9:0)" name="ballPosY(9:0)" />
+            <blockpin signalname="XLXN_51(9:0)" name="paddlePosX(9:0)" />
+            <blockpin signalname="XLXN_53(9:0)" name="paddlePosY(9:0)" />
+            <blockpin name="extOut(3:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -425,65 +476,112 @@
         </branch>
     </sheet>
     <sheet sheetnum="2" width="3520" height="2720">
-        <instance x="336" y="640" name="XLXI_3" orien="R0">
+        <instance x="1232" y="1216" name="XLXI_10" orien="R0">
         </instance>
-        <branch name="gpo1(0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="224" type="branch" />
-            <wire x2="320" y1="224" y2="224" x1="256" />
-            <wire x2="336" y1="224" y2="224" x1="320" />
-        </branch>
-        <branch name="gpo1(1)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="288" type="branch" />
-            <wire x2="336" y1="288" y2="288" x1="256" />
-        </branch>
-        <branch name="gpo1(2)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="352" type="branch" />
-            <wire x2="336" y1="352" y2="352" x1="256" />
-        </branch>
-        <branch name="gpo1(3)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="416" type="branch" />
-            <wire x2="336" y1="416" y2="416" x1="256" />
-        </branch>
-        <branch name="gpo1(4)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="480" type="branch" />
-            <wire x2="336" y1="480" y2="480" x1="256" />
-        </branch>
-        <branch name="gpo1(5)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="544" type="branch" />
-            <wire x2="336" y1="544" y2="544" x1="256" />
-        </branch>
-        <branch name="gpo1(25:6)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="608" type="branch" />
-            <wire x2="336" y1="608" y2="608" x1="256" />
-        </branch>
-        <branch name="gpi1(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="224" type="branch" />
-            <wire x2="848" y1="224" y2="224" x1="768" />
-        </branch>
-        <branch name="gpi1(15:8)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="288" type="branch" />
-            <wire x2="848" y1="288" y2="288" x1="768" />
-        </branch>
-        <branch name="gpi1(25:16)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="352" type="branch" />
-            <wire x2="848" y1="352" y2="352" x1="768" />
-        </branch>
-        <branch name="gpi2(9:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="848" y="416" type="branch" />
-            <wire x2="832" y1="416" y2="416" x1="768" />
-            <wire x2="848" y1="416" y2="416" x1="832" />
-        </branch>
-        <instance x="1264" y="672" name="XLXI_8" orien="R0">
+        <instance x="576" y="1152" name="XLXI_11" orien="R0">
         </instance>
-        <instance x="336" y="1040" name="XLXI_9" orien="R0">
+        <branch name="XLXN_16(3:0)">
+            <wire x2="1120" y1="800" y2="800" x1="1024" />
+            <wire x2="1120" y1="800" y2="1184" x1="1120" />
+            <wire x2="1232" y1="1184" y2="1184" x1="1120" />
+        </branch>
+        <branch name="XLXN_17(3:0)">
+            <wire x2="1104" y1="928" y2="928" x1="1024" />
+            <wire x2="1104" y1="928" y2="1120" x1="1104" />
+            <wire x2="1232" y1="1120" y2="1120" x1="1104" />
+        </branch>
+        <branch name="XLXN_34(19:0)">
+            <wire x2="1632" y1="928" y2="928" x1="1616" />
+            <wire x2="1632" y1="912" y2="928" x1="1632" />
+            <wire x2="2400" y1="912" y2="912" x1="1632" />
+            <wire x2="2400" y1="912" y2="944" x1="2400" />
+            <wire x2="2592" y1="944" y2="944" x1="2400" />
+            <wire x2="2496" y1="912" y2="912" x1="2400" />
+            <wire x2="2496" y1="912" y2="1584" x1="2496" />
+            <wire x2="2592" y1="1584" y2="1584" x1="2496" />
+        </branch>
+        <branch name="XLXN_20">
+            <wire x2="1744" y1="864" y2="864" x1="1616" />
+            <wire x2="1744" y1="768" y2="864" x1="1744" />
+            <wire x2="1872" y1="768" y2="768" x1="1744" />
+        </branch>
+        <branch name="XLXN_23">
+            <wire x2="512" y1="688" y2="800" x1="512" />
+            <wire x2="576" y1="800" y2="800" x1="512" />
+            <wire x2="1712" y1="688" y2="688" x1="512" />
+            <wire x2="1712" y1="688" y2="1056" x1="1712" />
+            <wire x2="1712" y1="1056" y2="1056" x1="1616" />
+        </branch>
+        <instance x="1904" y="1440" name="XLXI_3" orien="R0">
         </instance>
-        <instance x="2016" y="624" name="XLXI_10" orien="R0">
+        <branch name="XLXN_19">
+            <wire x2="1632" y1="992" y2="992" x1="1616" />
+            <wire x2="1632" y1="992" y2="1344" x1="1632" />
+            <wire x2="1904" y1="1344" y2="1344" x1="1632" />
+        </branch>
+        <instance x="1888" y="2000" name="XLXI_12" orien="R0">
         </instance>
-        <instance x="1152" y="1248" name="XLXI_11" orien="R0">
+        <branch name="XLXN_33">
+            <wire x2="2368" y1="864" y2="864" x1="1872" />
+            <wire x2="1872" y1="864" y2="1024" x1="1872" />
+            <wire x2="1872" y1="1024" y2="1584" x1="1872" />
+            <wire x2="1888" y1="1584" y2="1584" x1="1872" />
+            <wire x2="1904" y1="1024" y2="1024" x1="1872" />
+            <wire x2="2368" y1="640" y2="640" x1="2304" />
+            <wire x2="2368" y1="640" y2="864" x1="2368" />
+        </branch>
+        <branch name="XLXN_34(19:0)">
+            <wire x2="2352" y1="832" y2="832" x1="1808" />
+            <wire x2="1808" y1="832" y2="1408" x1="1808" />
+            <wire x2="1904" y1="1408" y2="1408" x1="1808" />
+            <wire x2="1808" y1="1408" y2="1968" x1="1808" />
+            <wire x2="1888" y1="1968" y2="1968" x1="1808" />
+            <wire x2="2352" y1="704" y2="704" x1="2304" />
+            <wire x2="2352" y1="704" y2="832" x1="2352" />
+        </branch>
+        <instance x="1872" y="800" name="XLXI_9" orien="R0">
         </instance>
-        <instance x="304" y="1744" name="XLXI_12" orien="R0">
+        <branch name="XLXN_22">
+            <wire x2="1632" y1="800" y2="800" x1="1616" />
+            <wire x2="1872" y1="704" y2="704" x1="1632" />
+            <wire x2="1632" y1="704" y2="800" x1="1632" />
+        </branch>
+        <instance x="1200" y="2528" name="XLXI_13" orien="R0">
         </instance>
-        <instance x="1936" y="1296" name="XLXI_13" orien="R0">
+        <instance x="1184" y="1888" name="XLXI_19" orien="R0">
         </instance>
+        <instance x="2592" y="1360" name="XLXI_8" orien="R0">
+        </instance>
+        <instance x="2592" y="2000" name="XLXI_18" orien="R0">
+        </instance>
+        <branch name="XLXN_53(9:0)">
+            <wire x2="2368" y1="1776" y2="1776" x1="2352" />
+            <wire x2="2368" y1="1776" y2="1968" x1="2368" />
+            <wire x2="2592" y1="1968" y2="1968" x1="2368" />
+            <wire x2="2592" y1="1328" y2="1328" x1="2368" />
+            <wire x2="2368" y1="1328" y2="1776" x1="2368" />
+        </branch>
+        <branch name="XLXN_39(9:0)">
+            <wire x2="2376" y1="1152" y2="1152" x1="2336" />
+            <wire x2="2384" y1="1152" y2="1152" x1="2376" />
+            <wire x2="2384" y1="1152" y2="1776" x1="2384" />
+            <wire x2="2592" y1="1776" y2="1776" x1="2384" />
+            <wire x2="2592" y1="1136" y2="1136" x1="2384" />
+            <wire x2="2384" y1="1136" y2="1152" x1="2384" />
+        </branch>
+        <branch name="XLXN_51(9:0)">
+            <wire x2="2416" y1="1712" y2="1712" x1="2352" />
+            <wire x2="2416" y1="1712" y2="1904" x1="2416" />
+            <wire x2="2592" y1="1904" y2="1904" x1="2416" />
+            <wire x2="2592" y1="1264" y2="1264" x1="2416" />
+            <wire x2="2416" y1="1264" y2="1712" x1="2416" />
+        </branch>
+        <branch name="XLXN_40(9:0)">
+            <wire x2="2432" y1="1216" y2="1216" x1="2336" />
+            <wire x2="2432" y1="1216" y2="1840" x1="2432" />
+            <wire x2="2592" y1="1840" y2="1840" x1="2432" />
+            <wire x2="2592" y1="1200" y2="1200" x1="2432" />
+            <wire x2="2432" y1="1200" y2="1216" x1="2432" />
+        </branch>
     </sheet>
 </drawing>
