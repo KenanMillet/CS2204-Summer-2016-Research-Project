@@ -1,6 +1,6 @@
 #include "Tick.h"
 
-#include <xbasic_types.h>
+const u8 Tick::busWidth = 20;
 
 u32 Tick::operator()()
 {

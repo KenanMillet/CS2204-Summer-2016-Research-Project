@@ -1,5 +1,7 @@
 #include "Player.h"
 
+const u8 Player::busWidth = 20;
+
 Player::Decision Player::operator()(bool reset, u8 ctrlSel, u16 ballPosX, u16 ballPosY, u16 paddlePosX, u16 paddlePosY, u8 extIn)
 {
 	if(reset)

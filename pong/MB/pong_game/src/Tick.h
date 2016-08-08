@@ -6,10 +6,13 @@
 class Tick
 {
 public:
-u32 operator()();
+	u32 operator()();
+	Tick(u8 bp) : busPos(bp) {}
+	const static u8 busWidth;
+	const u8 busPos;
 private:
-u32 getTime();
-u32 timeStamp;
+	u32 getTime();
+	u32 timeStamp;
 };
 
 #endif

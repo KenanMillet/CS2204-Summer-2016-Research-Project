@@ -32,6 +32,9 @@ private:
 
 public:
 	Decision operator()(bool, u8, u16, u16, u16, u16, u8);
+	Player(u8 bp) : busPos(bp) {}
+	const static u8 busWidth;
+	const u8 busPos;
 private:
 	IPC ipc;
 	BPC bpc;

@@ -1,5 +1,7 @@
 #include "Paddle.h"
 
+const u8 Paddle::busWidth = 20;
+
 u32 Paddle::operator()(bool tick, u32 delta, Player::Decision cmd, bool topColl, bool botColl, bool leftColl, bool rightColl)
 {
 	if(topColl)   cmd = Player::Decision( u8(cmd) & (~(u8(Player::Decision::UP)))    );

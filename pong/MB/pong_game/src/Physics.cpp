@@ -1,5 +1,7 @@
 #include "Physics.h"
 
+const u8 Physics::busWidth = 20;
+
 u8 Physics::operator()(u16 aTop, u16 aBot, u16 aLeft, u16 aRight, u16 bTop, u16 bBot, u16 bLeft, u16 bRight)
 {
 	u8 horizCollA = 0;
