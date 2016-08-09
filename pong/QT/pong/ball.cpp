@@ -14,13 +14,15 @@ ball::ball(qreal x, qreal y, qreal w, qreal h): QGraphicsEllipseItem(x, y, w, h)
 void ball::tick(void* instance, qreal timeelapsed){
     ball* self = (ball*)instance;
     self->moveBy(timeelapsed * self->velocityX, timeelapsed * self->velocityY);
+
+
 }
 
 void ball::onTick(qreal delta)
 {
     //qDebug() << "the position of the ball is " << this->pos().x() << ", " << this->pos().y();
     //qDebug() << "the direction of the ball is " << ((velocityY < 0) ? "Up -":((velocityY > 0) ? "Down -":"")) << ((velocityX < 0) ? "Left":((velocityX > 0) ? "Right":""));
-    moveBy(delta * velocityX*2, delta * velocityY*2);
+    moveBy(delta * velocityX*3, delta * velocityY*3);
 }
 
 void ball::flipY()

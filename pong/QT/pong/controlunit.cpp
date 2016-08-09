@@ -3,6 +3,7 @@
 #include <QCoreApplication>
 #include <QTime>
 #include "qdebug.h"
+#include "qstring.h"
 ControlUnit::ControlUnit(): state(0), thetick(new tick), player1(new Player), player2(new Player), interface(new ExtInterface(this)) {}
 
 
@@ -33,6 +34,8 @@ void ControlUnit::statemachine(bool start){
         if(interface->p1decision!=UNKNOWN && interface->p2decision!=UNKNOWN) state = 2;
     }
     else if(state == 2){
+
+
 //        (*thetick)();
         (*thetick)(0);
         interface->reset();

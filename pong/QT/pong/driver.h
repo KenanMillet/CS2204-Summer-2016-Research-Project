@@ -7,9 +7,9 @@
 class DataHub;
 
 
-class Driver/* : public QObject*/
+class Driver : public QObject
 {
-//    Q_OBJECT
+    Q_OBJECT
 public:
     Driver(ExtInterface*, unsigned int);
     ExtInterface* Extpointer;

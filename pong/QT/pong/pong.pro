@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     driver.cpp \
     datahub.cpp \
     keyboarddriver.cpp \
-    driverbank.cpp
+    driverbank.cpp \
+    usbdriver.cpp
 
 HEADERS  += mainwindow.h \
     game.h \
@@ -40,7 +41,8 @@ HEADERS  += mainwindow.h \
     datahub.h \
     tickable.h \
     keyboarddriver.h \
-    driverbank.h
+    driverbank.h \
+    usbdriver.h
 
 FORMS    += mainwindow.ui
 

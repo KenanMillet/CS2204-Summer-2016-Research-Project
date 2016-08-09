@@ -10,6 +10,9 @@
 #include "qpixmap.h"
 #include "keyboarddriver.h"
 #include "driverbank.h"
+#include "usbdriver.h"
+#include "qobject.h"
+#include <QThread>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -62,16 +65,29 @@ void MainWindow::SetupScene(){
 
 
     Driver* driver1 = new Keyboarddriver(CU->interface, 1, Qt::Key_I, Qt::Key_K, Qt::Key_J, Qt::Key_L);
-    Driver* driver2 = new Keyboarddriver(CU->interface, 2, Qt::Key_W, Qt::Key_S, Qt::Key_A, Qt::Key_D);
+//    Driver* driver2 = new Keyboarddriver(CU->interface, 2, Qt::Key_W, Qt::Key_S, Qt::Key_A, Qt::Key_D);
 //    Driver* driver3 = new Keyboarddriver(CU->interface, 3, Qt::Key_Up, Qt::Key_Down, Qt::Key_Left, Qt::Key_Right);
+    QThread serialthread;
+    USBdriver* usb = new USBdriver(CU->interface, 4, CU, &serialthread);
+    Driver* driver4 = usb;
+
 
     CU->interface->p1driver = driver1;
-    CU->interface->p2driver = driver2;
+    CU->interface->p2driver = driver4;
+
+
+    usb->moveToThread(&serialthread);
+    serialthread.start();
+
+
+
+
+
 
 //    CU->interface->p1driver = driver3;
 
     CU->interface->P1sel = SEL_IPC;
-    CU->interface->P2sel = SEL_BPC;
+    CU->interface->P2sel = SEL_IPC;
 
     ui->scene->setScene(CU->scene);
 
@@ -80,7 +96,7 @@ void MainWindow::SetupScene(){
 
     db = new DriverBank;
     db->addDriver(driver1);
-    db->addDriver(driver2);
+//    db->addDriver(driver2);
 
 //    db->addDriver(driver3);
 

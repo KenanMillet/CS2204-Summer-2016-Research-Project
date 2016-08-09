@@ -21,6 +21,7 @@ public:
     Decision p2decision;
     void reset();
     bool sendtoplayer(Driver* d, Decision data);
+    bool updateDecision(Driver *d, Decision data);
 
     DataHub* dh;
     Driver* p1driver;

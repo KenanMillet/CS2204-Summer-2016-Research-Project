@@ -15,16 +15,17 @@ int main(int argc, char *argv[])
     w.SetupScene();
     //w.show();
     w.showMaximized();
+
+
     while(!w.stop)
     {
         QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 
         w.CU->start();
         w.thephysics->start();
+
     }
 
-
-
-
-    return 0;
+    exit(0);
+//    return 0;
 }
