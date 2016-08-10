@@ -1,0 +1,5 @@
+MODULE pong
+	SUBMODULE communication
+		INSTANCE comms
+	SUBMODULE player
+		INSTANCE XLXI_19

@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/communication.vhd"
+verilog work "player.v"
+vhdl work "pong.vhf"
