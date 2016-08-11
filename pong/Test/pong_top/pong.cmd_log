@@ -27,3 +27,14 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off pong_map.ncd pong.ncd pong.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml pong.twx pong.ncd -o pong.twr pong.pcf -ucf pong.ucf 
 bitgen -intstyle ise -f pong.ut pong.ncd 
+xst -intstyle ise -ifn "C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/pong.xst" -ofn "C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc pong.ucf -p xc7a100t-csg324-3 pong.ngc pong.ngd -bm ipcore_dir/communication.bmm 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o pong_map.ncd pong.ngd pong.pcf 
+par -w -intstyle ise -ol high -mt off pong_map.ncd pong.ncd pong.pcf 
+bitgen -intstyle ise -f pong.ut pong.ncd 
+xst -intstyle ise -ifn "C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/pong.xst" -ofn "C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc pong.ucf -p xc7a100t-csg324-3 pong.ngc pong.ngd -bm ipcore_dir/communication.bmm 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o pong_map.ncd pong.ngd pong.pcf 
+par -w -intstyle ise -ol high -mt off pong_map.ncd pong.ncd pong.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml pong.twx pong.ncd -o pong.twr pong.pcf -ucf pong.ucf 
+bitgen -intstyle ise -f pong.ut pong.ncd 

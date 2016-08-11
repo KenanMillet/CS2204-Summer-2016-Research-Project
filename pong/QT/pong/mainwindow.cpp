@@ -11,6 +11,7 @@
 #include "keyboarddriver.h"
 #include "driverbank.h"
 #include "usbdriver.h"
+#include "usbasyncdriver.h"
 #include "qobject.h"
 #include <QThread>
 
@@ -45,7 +46,7 @@ void MainWindow::SetupScene(){
     CU->thepaddle1->setBrush(QBrush(Qt::blue));
     CU->thepaddle2 = new paddle(0, 0, 100, 20);
     CU->thepaddle2->setBrush(QBrush(Qt::green));
-    CU->thepaddle1->setPos(135, 5);
+    CU->thepaddle1->setPos(135, 0);
     CU->thepaddle2->setPos(135, 680);
     CU->theball->setPos(150, 150);
 
@@ -112,8 +113,8 @@ void MainWindow::keyboard_vs_bot(){
     CU->interface->p2driver = nullptr;
 
 
-//    CU->interface->P1sel = SEL_IPC;
-    CU->interface->P1sel = SEL_BPC; //Wanted to test bot vs bot
+    CU->interface->P1sel = SEL_IPC;
+//    CU->interface->P1sel = SEL_BPC; //Wanted to test bot vs bot
 
     CU->interface->P2sel = SEL_BPC;
 
@@ -135,14 +136,17 @@ void MainWindow::keyboard_vs_USB(){
     KeyboardDriverIKJL = new Keyboarddriver(CU->interface, 1, Qt::Key_I, Qt::Key_K, Qt::Key_J, Qt::Key_L, db);
     }
 
-    if(usb == nullptr){
-    usb = new USBdriver(CU->interface, 2, CU, &serialthread);
+    if(usba == nullptr) usba = new USBasyncDriver(CU->interface, 2, CU, &serialthread);
 
-    usb->moveToThread(&serialthread);
-    serialthread.start();
-    }
+//    if(usb == nullptr){
+//    usb = new USBdriver(CU->interface, 2, CU, &serialthread);
 
-    Driver* driver4 = usb;
+//    usb->moveToThread(&serialthread);
+//    serialthread.start();
+//    }
+
+    Driver* driver4 = usba;
+//    Driver* driver4 = usb;
 
     CU->interface->p1driver = KeyboardDriverIKJL;
     CU->interface->p2driver = driver4;

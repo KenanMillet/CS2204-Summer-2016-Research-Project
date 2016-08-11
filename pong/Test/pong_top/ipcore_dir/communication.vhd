@@ -7,14 +7,14 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: communication.vhd
--- /___/   /\     Timestamp: Wed Aug 10 11:15:18 2016
+-- /___/   /\     Timestamp: Thu Aug 11 13:43:48 2016
 -- \   \  /  \ 
 --  \___\/\___\
 --             
--- Command	: -w -sim -ofmt vhdl "C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/ipcore_dir/tmp/_cg/communication.ngc" "C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/ipcore_dir/tmp/_cg/communication.vhd" 
+-- Command	: -w -sim -ofmt vhdl C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/ipcore_dir/tmp/_cg/communication.ngc C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/ipcore_dir/tmp/_cg/communication.vhd 
 -- Device	: 7a100tcsg324-3
--- Input file	: C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/ipcore_dir/tmp/_cg/communication.ngc
--- Output file	: C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/ipcore_dir/tmp/_cg/communication.vhd
+-- Input file	: C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/ipcore_dir/tmp/_cg/communication.ngc
+-- Output file	: C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/ipcore_dir/tmp/_cg/communication.vhd
 -- # of Entities	: 1
 -- Design Name	: communication
 -- Xilinx	: C:\Xilinx\14.7\ISE_DS\ISE\

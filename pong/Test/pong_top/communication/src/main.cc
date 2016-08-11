@@ -107,27 +107,13 @@ void rx_interrupt(void*)
 		i = 0;
 		writegpo = true;
 	}
-
-
-
-//	if(i == 0) for(u8 j = 0; j < 4; ++j) gpoData[j] = 0;
-//
-//	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
-//	if(byte == ' ') return;
-//
-//	args[i/4][i%4] = byte;
-//	if((((i+1)/4)*4) == (i+1)) gpoData[i/8] |= argToInt(args[i/4]) << 10*((i/4)%2);
-//	i++;
-//	i %= 24;
-//	writegpo = (i==0);
 	return;
 }
 
 void sendUSB(u32 data)
 {
 	xil_printf("%c", data);
-//	xil_printf("%04d %04d %04d %04d %04d %04d", ((gpoData[0] << 22) >> 22), ((gpoData[0] << 12) >> 22), ((gpoData[1] << 22) >> 22), ((gpoData[1] << 12) >> 22), ((gpoData[2] << 22) >> 22), ((gpoData[2] << 12) >> 22));
-	xil_printf("\r\n");
+	xil_printf("\n");
 }
 
 void sendUSBDebug(u32 data)
@@ -146,7 +132,7 @@ void sendUSBDebug(u32 data)
 		xil_printf("UNKNOWN");
 	}
 	xil_printf("(%d)", data);
-	xil_printf("\r\n");
+	xil_printf("\n");
 }
 
 

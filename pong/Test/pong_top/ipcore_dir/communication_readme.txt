@@ -1,5 +1,5 @@
 The following files were generated for 'communication' in directory
-C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\ipcore_dir\
+C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\ipcore_dir\
 
 Generate XCO file:
    CORE Generator input file containing the parameters used to generate a core.

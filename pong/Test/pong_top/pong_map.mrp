@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Wed Aug 10 19:44:54 2016
+Mapped Date    : Thu Aug 11 13:46:19 2016
 
 Design Summary
 --------------
@@ -107,7 +107,7 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                4.40
 
 Peak Memory Usage:  990 MB
-Total REAL time to MAP completion:  40 secs 
+Total REAL time to MAP completion:  38 secs 
 Total CPU time to MAP completion:   38 secs 
 
 Table of Contents
@@ -135,7 +135,7 @@ WARNING:Security:43 - No license file was found in the standard Xilinx license
 directory.
 WARNING:Security:44 - Since no license file was found,
 WARNING:Security:42 - Your license support version '2016.08' for ISE expires in
-21 days after which you will not qualify for Xilinx software updates or new
+20 days after which you will not qualify for Xilinx software updates or new
 releases.
 
 Section 3 - Informational

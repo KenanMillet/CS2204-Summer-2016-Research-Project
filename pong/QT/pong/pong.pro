@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     keyboarddriver.cpp \
     driverbank.cpp \
     usbdriver.cpp \
-    globals.cpp
+    globals.cpp \
+    usbasyncdriver.cpp
 
 HEADERS  += mainwindow.h \
     game.h \
@@ -44,7 +45,8 @@ HEADERS  += mainwindow.h \
     keyboarddriver.h \
     driverbank.h \
     usbdriver.h \
-    globals.h
+    globals.h \
+    usbasyncdriver.h
 
 FORMS    += mainwindow.ui
 

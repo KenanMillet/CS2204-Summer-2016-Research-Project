@@ -15,6 +15,7 @@ class DataHub;
 class physics;
 class DriverBank;
 class USBdriver;
+class USBasyncDriver;
 class DriverBank;
 
 
@@ -42,6 +43,7 @@ public:
     Driver* KeyboardDriverWSAD;
     Driver* KeyboardDriverIKJL;
     USBdriver* usb;
+    USBasyncDriver* usba;
     QThread serialthread;
 
 

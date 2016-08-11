@@ -31,28 +31,53 @@ void physics::start(){
         }
 
 
-        if  ((thepaddle1->pos().x() < 0 && (Decision(char(thepaddle1->direction) & char(LEFT)) == LEFT)) || ( thepaddle1->pos().x() + thepaddle1->boundingRect().right() > scene->sceneRect().right()  && (Decision(char(thepaddle1->direction) & char(RIGHT)) == RIGHT)))
+        if  (thepaddle1->pos().x() + thepaddle1->boundingRect().left() < scene->sceneRect().left() && (Decision(char(thepaddle1->direction) & char(LEFT)) == LEFT))
         {
+            thepaddle1->setX(scene->sceneRect().left() - thepaddle1->boundingRect().left());
+            thepaddle1->velocityX = 0;
+        }
+        else if  (thepaddle1->pos().x() + thepaddle1->boundingRect().right() > scene->sceneRect().right()  && (Decision(char(thepaddle1->direction) & char(RIGHT)) == RIGHT))
+        {
+            thepaddle1->setX(scene->sceneRect().right() - thepaddle1->boundingRect().right());
             thepaddle1->velocityX = 0;
         }
         else thepaddle1->velocityX = 10;
 
 
-        if  ((thepaddle2->pos().x() < 0 && (Decision(char(thepaddle2->direction) & char(LEFT)) == LEFT)) || ( thepaddle2->pos().x() + thepaddle2->boundingRect().right() > scene->sceneRect().right()  && (Decision(char(thepaddle2->direction) & char(RIGHT)) == RIGHT)))
+        if  (thepaddle2->pos().x() + thepaddle2->boundingRect().left() < scene->sceneRect().left() && (Decision(char(thepaddle2->direction) & char(LEFT)) == LEFT))
         {
+            thepaddle2->setX(scene->sceneRect().left() - thepaddle2->boundingRect().left());
+            thepaddle2->velocityX = 0;
+        }
+        else if  (thepaddle2->pos().x() + thepaddle2->boundingRect().right() > scene->sceneRect().right()  && (Decision(char(thepaddle2->direction) & char(RIGHT)) == RIGHT))
+        {
+            thepaddle2->setX(scene->sceneRect().right() - thepaddle2->boundingRect().right());
             thepaddle2->velocityX = 0;
         }
         else thepaddle2->velocityX = 10;
 
 
-        if  ((thepaddle1->pos().y() < 0 && (Decision(char(thepaddle1->direction) & char(UP)) == UP)) || (( thepaddle1->pos().y() + thepaddle1->boundingRect().bottom() > scene->sceneRect().bottom()/2)  && (Decision(char(thepaddle1->direction) & char(DOWN)) == DOWN)))
+        if  (thepaddle1->pos().y() + thepaddle1->boundingRect().top() < scene->sceneRect().top() && (Decision(char(thepaddle1->direction) & char(UP)) == UP))
         {
+            thepaddle1->setY(scene->sceneRect().top() - thepaddle1->boundingRect().top());
+            thepaddle1->velocityY = 0;
+        }
+        else if  (thepaddle1->pos().y() + thepaddle1->boundingRect().bottom() > (scene->sceneRect().bottom() - scene->sceneRect().top())/2  && (Decision(char(thepaddle1->direction) & char(DOWN)) == DOWN))
+        {
+            thepaddle1->setY((scene->sceneRect().bottom() - scene->sceneRect().top())/2 - thepaddle1->boundingRect().bottom());
             thepaddle1->velocityY = 0;
         }
         else thepaddle1->velocityY = 10;
 
-        if  ((thepaddle2->pos().y() < scene->sceneRect().bottom()/2 && (Decision(char(thepaddle2->direction) & char(UP)) == UP)) || ( thepaddle2->pos().y() + thepaddle2->boundingRect().bottom() > scene->sceneRect().bottom()  && (Decision(char(thepaddle2->direction) & char(DOWN)) == DOWN)))
+
+        if  (thepaddle2->pos().y() + thepaddle2->boundingRect().top() < (scene->sceneRect().bottom() - scene->sceneRect().top())/2 && (Decision(char(thepaddle2->direction) & char(UP)) == UP))
         {
+            thepaddle2->setY((scene->sceneRect().bottom() - scene->sceneRect().top())/2 - thepaddle2->boundingRect().top());
+            thepaddle2->velocityY = 0;
+        }
+        else if  (thepaddle2->pos().y() + thepaddle2->boundingRect().bottom() > thepaddle2->boundingRect().bottom() && (Decision(char(thepaddle2->direction) & char(DOWN)) == DOWN))
+        {
+            thepaddle2->setY(scene->sceneRect().bottom() - thepaddle2->boundingRect().bottom());
             thepaddle2->velocityY = 0;
         }
         else thepaddle2->velocityY = 10;

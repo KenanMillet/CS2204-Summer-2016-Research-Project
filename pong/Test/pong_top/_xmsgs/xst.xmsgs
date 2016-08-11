@@ -20,16 +20,16 @@
 <msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" Line 58: Net &lt;<arg fmt="%s" index="1">comms_gpi4_openSignal[31]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">gpo2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">gpo2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">gpo4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">gpo4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">uart_interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">uart_interrupt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">intc_irq</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf</arg>&quot; line <arg fmt="%s" index="2">131</arg>: Output port &lt;<arg fmt="%s" index="3">intc_irq</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comms</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">gpi1&lt;31:4&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -44,7 +44,7 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">comms_gpi4_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v</arg>&quot; line <arg fmt="%d" index="2">56</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ipc_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">IPC</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">player_v</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v</arg>&quot; line <arg fmt="%d" index="2">56</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ipc_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">IPC</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">player_v</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">reset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

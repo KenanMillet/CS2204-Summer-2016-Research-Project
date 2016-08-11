@@ -17,7 +17,6 @@ USBdriver::USBdriver(ExtInterface* interface, unsigned int id, ControlUnit* CU, 
 void USBdriver::dowork(){
 //    int i = 1;
     QSerialPort serPort;
-
     QList<QSerialPortInfo> serPortList = QSerialPortInfo::availablePorts();
     qDebug() << "this only get print once, the port connecting to is" << serPortList.at(serPortList.length() - 1).portName();
     serPort.setPort(serPortList.at(serPortList.length() - 1));
@@ -29,7 +28,6 @@ void USBdriver::dowork(){
         serPort.write(writeData.toStdString().c_str());
         /*qDebug() << "text is being sent" << */
         serPort.flush();
-
 
         if (serPort.waitForReadyRead(-1)) {
             if (serPort.canReadLine()) {

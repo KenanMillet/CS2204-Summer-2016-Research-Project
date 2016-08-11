@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : pong.vhf
--- /___/   /\     Timestamp : 08/10/2016 19:44:26
+-- /___/   /\     Timestamp : 08/11/2016 10:44:07
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
