@@ -5,10 +5,11 @@
 #include <QObject>
 #include <QKeyEvent>
 
+class DriverBank;
 
 class Keyboarddriver : public Driver{
 public:
-    Keyboarddriver(ExtInterface*, unsigned int, Qt::Key, Qt::Key, Qt::Key, Qt::Key);
+    Keyboarddriver(ExtInterface*, unsigned int, Qt::Key, Qt::Key, Qt::Key, Qt::Key, DriverBank* = nullptr);
 //    bool eventFilter(QObject *target, QEvent *e);
 
     void handle(void*);

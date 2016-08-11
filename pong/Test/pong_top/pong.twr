@@ -36,7 +36,7 @@ Setup/Hold to clock CLOCK
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-usb_in      |   -0.558(R)|      FAST  |    2.425(R)|      SLOW  |comms_clk_BUFG    |   0.000|
+usb_in      |   -0.367(R)|      FAST  |    2.137(R)|      SLOW  |comms_clk_BUFG    |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock CLOCK to Pad
@@ -44,7 +44,11 @@ Clock CLOCK to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-usb_out     |         9.404(R)|      SLOW  |         3.525(R)|      FAST  |comms_clk_BUFG    |   0.000|
+led0        |         7.763(R)|      SLOW  |         2.907(R)|      FAST  |comms_clk_BUFG    |   0.000|
+led1        |         7.785(R)|      SLOW  |         2.926(R)|      FAST  |comms_clk_BUFG    |   0.000|
+led2        |        10.163(R)|      SLOW  |         3.911(R)|      FAST  |comms_clk_BUFG    |   0.000|
+led3        |        10.143(R)|      SLOW  |         3.918(R)|      FAST  |comms_clk_BUFG    |   0.000|
+usb_out     |        10.291(R)|      SLOW  |         4.066(R)|      FAST  |comms_clk_BUFG    |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLOCK
@@ -52,18 +56,18 @@ Clock to Setup on destination clock CLOCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLOCK          |    5.828|         |         |         |
+CLOCK          |    5.917|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Aug 10 12:07:14 2016 
+Analysis completed Wed Aug 10 19:46:09 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 684 MB
+Peak Memory Usage: 620 MB
 
 
 

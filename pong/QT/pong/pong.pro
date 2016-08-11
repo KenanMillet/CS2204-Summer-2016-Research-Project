@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     datahub.cpp \
     keyboarddriver.cpp \
     driverbank.cpp \
-    usbdriver.cpp
+    usbdriver.cpp \
+    globals.cpp
 
 HEADERS  += mainwindow.h \
     game.h \
@@ -42,7 +43,8 @@ HEADERS  += mainwindow.h \
     tickable.h \
     keyboarddriver.h \
     driverbank.h \
-    usbdriver.h
+    usbdriver.h \
+    globals.h
 
 FORMS    += mainwindow.ui
 

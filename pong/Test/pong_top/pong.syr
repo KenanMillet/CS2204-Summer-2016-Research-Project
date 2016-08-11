@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.33 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.33 secs
  
 --> Reading design: pong.prj
 
@@ -108,13 +108,13 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\player.v" into library work
+Analyzing Verilog file "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v" into library work
 Parsing module <player>.
 Parsing module <player_v>.
 Parsing module <IPC>.
 Parsing module <BPC>.
-Parsing VHDL file "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\ipcore_dir\communication.vhd" into library work
-Parsing VHDL file "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" into library work
+Parsing VHDL file "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\ipcore_dir\communication.vhd" into library work
+Parsing VHDL file "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" into library work
 Parsing entity <pong>.
 Parsing architecture <BEHAVIORAL> of entity <pong>.
 
@@ -123,7 +123,7 @@ Parsing architecture <BEHAVIORAL> of entity <pong>.
 =========================================================================
 
 Elaborating entity <pong> (architecture <BEHAVIORAL>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" Line 54: <communication> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" Line 59: <communication> remains a black-box since it has no binding entity.
 Going to verilog side to elaborate module player
 
 Elaborating module <player>.
@@ -134,17 +134,17 @@ Elaborating module <IPC>.
 
 Elaborating module <BPC>.
 Back to vhdl to continue elaboration
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" Line 44: Net <gpi1[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" Line 51: Net <comms_gpi2_openSignal[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" Line 52: Net <comms_gpi3_openSignal[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" Line 53: Net <comms_gpi4_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" Line 48: Net <gpi1[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" Line 56: Net <comms_gpi2_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" Line 57: Net <comms_gpi3_openSignal[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" Line 58: Net <comms_gpi4_openSignal[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <pong>.
-    Related source file is "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf".
+    Related source file is "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf".
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_2>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_2>.
     Set property "IBUF_LOW_PWR = TRUE" for instance <XLXI_2>.
@@ -154,10 +154,26 @@ Synthesizing Unit <pong>.
     Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_4>.
     Set property "SLEW = SLOW" for instance <XLXI_4>.
     Set property "DRIVE = 12" for instance <XLXI_4>.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" line 126: Output port <gpo3> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" line 126: Output port <gpo4> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" line 126: Output port <uart_interrupt> of the instance <comms> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\pong.vhf" line 126: Output port <intc_irq> of the instance <comms> is unconnected or connected to loadless signal.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_24>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_24>.
+    Set property "SLEW = SLOW" for instance <XLXI_24>.
+    Set property "DRIVE = 12" for instance <XLXI_24>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_25>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_25>.
+    Set property "SLEW = SLOW" for instance <XLXI_25>.
+    Set property "DRIVE = 12" for instance <XLXI_25>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_26>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_26>.
+    Set property "SLEW = SLOW" for instance <XLXI_26>.
+    Set property "DRIVE = 12" for instance <XLXI_26>.
+    Set property "IOSTANDARD = DEFAULT" for instance <XLXI_27>.
+    Set property "CAPACITANCE = DONT_CARE" for instance <XLXI_27>.
+    Set property "SLEW = SLOW" for instance <XLXI_27>.
+    Set property "DRIVE = 12" for instance <XLXI_27>.
+INFO:Xst:3210 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" line 131: Output port <gpo2> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" line 131: Output port <gpo4> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" line 131: Output port <uart_interrupt> of the instance <comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\pong.vhf" line 131: Output port <intc_irq> of the instance <comms> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <gpi1<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <comms_gpi2_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <comms_gpi3_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -167,21 +183,21 @@ WARNING:Xst:653 - Signal <comms_gpi4_openSignal> is used but never assigned. Thi
 Unit <pong> synthesized.
 
 Synthesizing Unit <player>.
-    Related source file is "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\player.v".
+    Related source file is "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v".
     Summary:
 	no macro.
 Unit <player> synthesized.
-WARNING:Xst:2972 - "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\player.v" line 56. All outputs of instance <ipc_inst> of block <IPC> are unconnected in block <player_v>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v" line 56. All outputs of instance <ipc_inst> of block <IPC> are unconnected in block <player_v>. Underlying logic will be removed.
 
 Synthesizing Unit <player_v>.
-    Related source file is "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\player.v".
+    Related source file is "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v".
     Found 4-bit register for signal <extOut>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <player_v> synthesized.
 
 Synthesizing Unit <IPC>.
-    Related source file is "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\player.v".
+    Related source file is "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v".
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     WARNING:Xst:2404 -  FFs/Latches <extOut<3:0>> (without init value) have a constant value of 0 in block <IPC>.
     Summary:
@@ -189,7 +205,7 @@ WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and l
 Unit <IPC> synthesized.
 
 Synthesizing Unit <BPC>.
-    Related source file is "C:\Users\Owner\Desktop\Enhanced Pong\PongTest2\player.v".
+    Related source file is "C:\Users\xy670\Documents\GitHub\CS2204-Summer-2016-Research-Project\pong\Test\pong_top\player.v".
 WARNING:Xst:647 - Input <ctrlSel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ballPosY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <paddlePosY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -237,11 +253,11 @@ INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36
 INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
 INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
 INFO:Xst:2261 - The FF/Latch <extOut_0> in Unit <bpc_inst> is equivalent to the following FF/Latch, which will be removed : <extOut_1> 
-WARNING:Xst:1426 - The value init of the FF/Latch extOut_1 hinder the constant cleaning in the block player_instance.
-   You should achieve better results by setting this init to 0.
 WARNING:Xst:1426 - The value init of the FF/Latch extOut_0 hinder the constant cleaning in the block player_instance.
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1710 - FF/Latch <extOut_0> (without init value) has a constant value of 0 in block <bpc_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch extOut_1 hinder the constant cleaning in the block player_instance.
+   You should achieve better results by setting this init to 0.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -277,6 +293,7 @@ INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <comms> is equivalent to
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <comms> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+FlipFlop XLXI_19/player_instance/extOut_1 has been replicated 2 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -288,8 +305,8 @@ Unit <pong> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3
- Flip-Flops                                            : 3
+# Registers                                            : 5
+ Flip-Flops                                            : 5
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -332,8 +349,8 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 1
 #      VCC                         : 18
 #      XORCY                       : 52
-# FlipFlops/Latches                : 739
-#      FD                          : 114
+# FlipFlops/Latches                : 741
+#      FD                          : 116
 #      FDE                         : 139
 #      FDR                         : 203
 #      FDRE                        : 255
@@ -347,10 +364,10 @@ Primitive and Black Box Usage:
 #      SRLC16E                     : 2
 # Clock Buffers                    : 1
 #      BUFG                        : 1
-# IO Buffers                       : 3
+# IO Buffers                       : 7
 #      IBUF                        : 1
 #      IBUFG                       : 1
-#      OBUF                        : 1
+#      OBUF                        : 5
 
 Device utilization summary:
 ---------------------------
@@ -374,8 +391,9 @@ Slice Logic Distribution:
    Number of unique control sets:        50
 
 IO Utilization: 
- Number of IOs:                           3
- Number of bonded IOBs:                   3  out of    210     1%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    210     3%  
+    IOB Flip Flops/Latches:               2
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               16  out of    135    11%  
@@ -403,7 +421,7 @@ Clock Information:
 --------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                        | Clock buffer(FF name)                                                                                                              | Load  |
 --------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
-CLOCK                                                               | IBUFG+BUFG                                                                                                                         | 873   |
+CLOCK                                                               | IBUFG+BUFG                                                                                                                         | 875   |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 1     |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 1     |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0| NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 1     |
@@ -460,7 +478,7 @@ comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(comms/U0/lmb
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 72    |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 72    |
 comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 72    |
-comms/N1(comms/XST_GND:G)                                                                                                                         | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 64    |
+comms/N1(comms/XST_GND:G)                                                                                                                         | NONE(comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 64    |
 --------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -469,7 +487,7 @@ Speed Grade: -3
 
    Minimum period: 3.726ns (Maximum Frequency: 268.393MHz)
    Minimum input arrival time before clock: 0.401ns
-   Maximum output required time after clock: 0.640ns
+   Maximum output required time after clock: 0.645ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -524,23 +542,22 @@ Offset:              0.401ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              0.640ns (Levels of Logic = 2)
-  Source:            comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (FF)
-  Destination:       usb_out (PAD)
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            XLXI_19/player_instance/extOut_2 (FF)
+  Destination:       led2 (PAD)
   Source Clock:      CLOCK rising
 
-  Data Path: comms/U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX to usb_out
+  Data Path: XLXI_19/player_instance/extOut_2 to led2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              1   0.361   0.279  U0/iomodule_0/IOModule_Core_I1/Using_UART_TX.UART_TX_I1/TX (uart_tx)
-     end scope: 'comms:uart_tx'
-     OBUF:I->O                 0.000          XLXI_4 (usb_out)
+     FD:C->Q               2   0.361   0.283  XLXI_19/player_instance/extOut_2 (XLXI_19/player_instance/extOut_2)
+     OBUF:I->O                 0.000          XLXI_26 (led2)
     ----------------------------------------
-    Total                      0.640ns (0.361ns logic, 0.279ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
 
 =========================================================================
 
@@ -574,12 +591,12 @@ comms/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0 |    4.132| 
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 17.60 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.22 secs
  
 --> 
 
-Total memory usage is 443304 kilobytes
+Total memory usage is 469984 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   22 (   0 filtered)

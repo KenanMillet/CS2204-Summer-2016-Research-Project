@@ -1,45 +1,40 @@
 #include "usbdriver.h"
+#include "player.h"
+#include "qdebug.h"
 #include <QThread>
 #include <QString>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
-#include "player.h"
-#include "qdebug.h"
+#include <QDebug>
+#include "globals.h"
 
-#define TIMEOUT_MS 5
+#define TIMEOUT_MS 20
 
-USBdriver::USBdriver(ExtInterface* interface, unsigned int id, ControlUnit* CU, QThread* serialthread): Driver(interface, id), stop(false), CU(CU){
+USBdriver::USBdriver(ExtInterface* interface, unsigned int id, ControlUnit* CU, QThread* serialthread): Driver(interface, id), stop(false), debug(false), CU(CU){
     connect(serialthread, SIGNAL(started()), this, SLOT(dowork()));
 }
 
 void USBdriver::dowork(){
+//    int i = 1;
     QSerialPort serPort;
 
     QList<QSerialPortInfo> serPortList = QSerialPortInfo::availablePorts();
-    qDebug() << "this only get print once, the port connecting to is" << serPortList[0].portName();
-
+    qDebug() << "this only get print once, the port connecting to is" << serPortList.at(serPortList.length() - 1).portName();
     serPort.setPort(serPortList.at(serPortList.length() - 1));
-
     serPort.open(QIODevice::ReadWrite);
-
     QString fpgaData;
 
     while (!stop) {
-
-
         setwrite();
-
-
         serPort.write(writeData.toStdString().c_str());
         /*qDebug() << "text is being sent" << */
         serPort.flush();
 
-        if (serPort.waitForReadyRead(TIMEOUT_MS)) {
+
+        if (serPort.waitForReadyRead(-1)) {
             if (serPort.canReadLine()) {
                 fpgaData = serPort.readLine();
-
-                    processData(fpgaData);
-
+                processData(fpgaData);
             }
         }
     }
@@ -52,18 +47,8 @@ void USBdriver::dowork(){
 
 void USBdriver::processData(QString data){
     Decision thedecision;
-//    if(data=="UP"){
-//        thedecision = UP;
-//    }
-//    if(data == "DOWN"){
-//        thedecision = DOWN;
-//    }
-//    if(data == "LEFT"){
-//        thedecision = LEFT;
-//    }
-//    if(data == "RIGHT"){
-//        thedecision = RIGHT;
-//    }
+
+    if(data.length() == 0) return;
 
     thedecision = Decision(data.toStdString().at(0));
 
@@ -86,6 +71,16 @@ void USBdriver::setwrite(){
     int paddle2posx = int(CU->thepaddle2->pos().x());
     int paddle2posy = int(CU->thepaddle2->pos().y());
 
+    if(debug)
+    {
+        QDebug deb = qDebug();
+        deb << "    P2 Prediction:";
+        if(ballposx < paddle2posx) deb << "LEFT";
+        if(ballposx > paddle2posx) deb << "RIGHT";
+        if(ballposx == paddle2posx) deb << "NONE";
+        deb.nospace() << "(" << ballposx - paddle2posx << ")";
+        deb.~QDebug();
+    }
 
     data.sprintf("%04d %04d %04d %04d %04d %04d", ballposx, ballposy, paddle1posx, paddle1posy, paddle2posx, paddle2posy);
 

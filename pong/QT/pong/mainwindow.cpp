@@ -17,7 +17,8 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent), CU(new ControlUnit),
-    ui(new Ui::MainWindow), thephysics(new physics), stop(false)
+    ui(new Ui::MainWindow), thephysics(new physics), stop(false), db(nullptr), KeyboardDriverIKJL(nullptr), KeyboardDriverWSAD(nullptr),
+usb(nullptr)
 {
     ui->setupUi(this);
 }
@@ -28,16 +29,12 @@ MainWindow::~MainWindow()
 }
 
 
-void delay(int timedelay)
-{
-
-    QTime dieTime= QTime::currentTime().addMSecs(timedelay);
-    while (QTime::currentTime() < dieTime)
-        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
-}
-
-
 void MainWindow::SetupScene(){
+    ui->Keyboard_vs_bot->setGeometry(1100, 50, 150, 20);
+    ui->Keyboard_vs_keyboard->setGeometry(1100, 100, 150, 20);
+    ui->Keyboard_vs_USB->setGeometry(1100, 150, 150, 20);
+
+
     qDebug() << "setup scene function being called.";
     CU->scene = new QGraphicsScene(this);
     qDebug() << "scene was created";
@@ -62,45 +59,12 @@ void MainWindow::SetupScene(){
     CU->scene->addItem(CU->thepaddle1);
     CU->scene->addItem(CU->thepaddle2);
     qDebug() << "scene and items have been created";
-
-
-    Driver* driver1 = new Keyboarddriver(CU->interface, 1, Qt::Key_I, Qt::Key_K, Qt::Key_J, Qt::Key_L);
-//    Driver* driver2 = new Keyboarddriver(CU->interface, 2, Qt::Key_W, Qt::Key_S, Qt::Key_A, Qt::Key_D);
-//    Driver* driver3 = new Keyboarddriver(CU->interface, 3, Qt::Key_Up, Qt::Key_Down, Qt::Key_Left, Qt::Key_Right);
-    QThread serialthread;
-    USBdriver* usb = new USBdriver(CU->interface, 4, CU, &serialthread);
-    Driver* driver4 = usb;
-
-
-    CU->interface->p1driver = driver1;
-    CU->interface->p2driver = driver4;
-
-
-    usb->moveToThread(&serialthread);
-    serialthread.start();
-
-
-
-
-
-
-//    CU->interface->p1driver = driver3;
-
-    CU->interface->P1sel = SEL_IPC;
-    CU->interface->P2sel = SEL_IPC;
-
     ui->scene->setScene(CU->scene);
 
-//    this->installEventFilter(driver1);
-//    this->installEventFilter(driver2);
 
-    db = new DriverBank;
-    db->addDriver(driver1);
-//    db->addDriver(driver2);
 
-//    db->addDriver(driver3);
 
-    this->installEventFilter(db);
+    keyboard_vs_bot();
 
     qDebug() << "scene has been set up";
 
@@ -111,10 +75,6 @@ void MainWindow::SetupScene(){
     resize(m);
     qDebug() << "about to register ticks into the vector";
 
-    //CU->theball, paddle1, paddle2 has to be registered into registertick vector;
-//    CU->thetick->registertick(CU->theball, &(ball::tick));
-//    CU->thetick->registertick(CU->thepaddle1, &(paddle::tick));
-//    CU->thetick->registertick(CU->thepaddle2, &(paddle::tick));
 
     CU->thetick->registertick(dynamic_cast<Tickable*>(CU->theball));
     CU->thetick->registertick(dynamic_cast<Tickable*>(CU->thepaddle1));
@@ -136,4 +96,121 @@ void MainWindow::closeEvent( QCloseEvent *){
 
 
 
+void MainWindow::keyboard_vs_bot(){
+    if(db == nullptr)
+    {
+        db = new DriverBank;
+        this->installEventFilter(db);
+    }
 
+    if(KeyboardDriverIKJL == nullptr){
+    KeyboardDriverIKJL = new Keyboarddriver(CU->interface, 1, Qt::Key_I, Qt::Key_K, Qt::Key_J, Qt::Key_L, db);
+    }
+
+
+    CU->interface->p1driver = KeyboardDriverIKJL;
+    CU->interface->p2driver = nullptr;
+
+
+//    CU->interface->P1sel = SEL_IPC;
+    CU->interface->P1sel = SEL_BPC; //Wanted to test bot vs bot
+
+    CU->interface->P2sel = SEL_BPC;
+
+
+//    db = new DriverBank;
+//    db->clearbank();
+//    db->addDriver(KeyboardDriverIKJL);
+
+}
+
+void MainWindow::keyboard_vs_USB(){
+    if(db == nullptr)
+    {
+        db = new DriverBank;
+        this->installEventFilter(db);
+    }
+
+    if(KeyboardDriverIKJL == nullptr){
+    KeyboardDriverIKJL = new Keyboarddriver(CU->interface, 1, Qt::Key_I, Qt::Key_K, Qt::Key_J, Qt::Key_L, db);
+    }
+
+    if(usb == nullptr){
+    usb = new USBdriver(CU->interface, 2, CU, &serialthread);
+
+    usb->moveToThread(&serialthread);
+    serialthread.start();
+    }
+
+    Driver* driver4 = usb;
+
+    CU->interface->p1driver = KeyboardDriverIKJL;
+    CU->interface->p2driver = driver4;
+
+//    CU->interface->P1sel = SEL_IPC;
+    CU->interface->P1sel = SEL_BPC; //Wanted to test bot vs usb bot
+
+    CU->interface->P2sel = SEL_IPC;
+
+
+//    db = new DriverBank;
+//    db->addDriver(KeyboardDriverIKJL);
+
+
+}
+
+void MainWindow::keyboard_vs_keyboard(){
+    if(db == nullptr)
+    {
+        db = new DriverBank;
+        this->installEventFilter(db);
+    }
+
+    if(KeyboardDriverIKJL == nullptr){
+    KeyboardDriverIKJL = new Keyboarddriver(CU->interface, 1, Qt::Key_I, Qt::Key_K, Qt::Key_J, Qt::Key_L, db);
+    }
+
+    if(KeyboardDriverWSAD == nullptr){
+    KeyboardDriverWSAD = new Keyboarddriver(CU->interface, 2, Qt::Key_W, Qt::Key_S, Qt::Key_A, Qt::Key_D, db);
+    }
+
+
+
+    CU->interface->p1driver = KeyboardDriverIKJL;
+    CU->interface->p2driver = KeyboardDriverWSAD;
+
+
+    CU->interface->P1sel = SEL_IPC;
+    CU->interface->P2sel = SEL_IPC;
+
+
+//    delete db;
+//    db = new DriverBank();
+
+//    db->addDriver(KeyboardDriverIKJL);
+//    db->addDriver(KeyboardDriverWSAD);
+}
+
+
+void MainWindow::on_Keyboard_vs_bot_toggled(bool checked)
+{
+    if(checked==true){
+        keyboard_vs_bot();
+    }
+}
+
+
+
+void MainWindow::on_Keyboard_vs_keyboard_toggled(bool checked)
+{
+    if(checked==true){
+        keyboard_vs_keyboard();
+    }
+}
+
+void MainWindow::on_Keyboard_vs_USB_toggled(bool checked)
+{
+    if(checked==true){
+        keyboard_vs_USB();
+    }
+}

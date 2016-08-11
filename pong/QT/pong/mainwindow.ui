@@ -17,11 +17,50 @@
    <widget class="QGraphicsView" name="scene">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
       <width>281</width>
       <height>211</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Keyboard_vs_bot">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Keyboard_vs_bot</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Keyboard_vs_keyboard">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>70</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Keyboard_vs_keyboard</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Keyboard_vs_USB">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>110</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Keyboard_vs_USB</string>
     </property>
    </widget>
   </widget>

@@ -10,9 +10,13 @@
 #include <QResizeEvent>
 #include <QDebug>
 #include "controlunit.h"
+#include "qthread.h"
 class DataHub;
 class physics;
 class DriverBank;
+class USBdriver;
+class DriverBank;
+
 
 namespace Ui {
 class MainWindow;
@@ -32,6 +36,13 @@ public:
     physics* thephysics;
     bool stop;
     DriverBank* db;
+    void keyboard_vs_keyboard();
+    void keyboard_vs_bot();
+    void keyboard_vs_USB();
+    Driver* KeyboardDriverWSAD;
+    Driver* KeyboardDriverIKJL;
+    USBdriver* usb;
+    QThread serialthread;
 
 
 
@@ -41,6 +52,11 @@ public:
 
 
 
+
+private slots:
+    void on_Keyboard_vs_bot_toggled(bool checked);
+    void on_Keyboard_vs_keyboard_toggled(bool checked);
+    void on_Keyboard_vs_USB_toggled(bool checked);
 };
 
 #endif // MAINWINDOW_H

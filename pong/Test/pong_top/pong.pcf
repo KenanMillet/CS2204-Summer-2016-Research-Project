@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Aug 10 12:06:15 2016
+// Written by: Map P.20131013 on Wed Aug 10 19:45:33 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -9,5 +9,9 @@ NET
 COMP "CLOCK" LOCATE = SITE "E3" LEVEL 1;
 COMP "usb_in" LOCATE = SITE "C4" LEVEL 1;
 COMP "usb_out" LOCATE = SITE "D4" LEVEL 1;
+COMP "led0" LOCATE = SITE "H17" LEVEL 1;
+COMP "led1" LOCATE = SITE "K15" LEVEL 1;
+COMP "led2" LOCATE = SITE "J13" LEVEL 1;
+COMP "led3" LOCATE = SITE "N14" LEVEL 1;
 SCHEMATIC END;
 

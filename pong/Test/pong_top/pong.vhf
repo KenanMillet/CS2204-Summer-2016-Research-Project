@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : pong.vhf
--- /___/   /\     Timestamp : 08/10/2016 12:04:32
+-- /___/   /\     Timestamp : 08/10/2016 19:44:26
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath "C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/ipcore_dir" -intstyle ise -family artix7 -flat -suppress -vhdl "C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/pong.vhf" -w "C:/Users/Owner/Desktop/Enhanced Pong/PongTest2/pong.sch"
+--Command: sch2hdl -sympath C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/ipcore_dir -intstyle ise -family artix7 -flat -suppress -vhdl C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/pong.vhf -w C:/Users/xy670/Documents/GitHub/CS2204-Summer-2016-Research-Project/pong/Test/pong_top/pong.sch
 --Design Name: pong
 --Device: artix7
 --Purpose:
@@ -28,6 +28,10 @@ use UNISIM.Vcomponents.ALL;
 entity pong is
    port ( CLOCK   : in    std_logic; 
           usb_in  : in    std_logic; 
+          led0    : out   std_logic; 
+          led1    : out   std_logic; 
+          led2    : out   std_logic; 
+          led3    : out   std_logic; 
           usb_out : out   std_logic);
 end pong;
 
@@ -44,6 +48,7 @@ architecture BEHAVIORAL of pong is
    signal gpi1                  : std_logic_vector (31 downto 0);
    signal gpo1                  : std_logic_vector (31 downto 0);
    signal gpo2                  : std_logic_vector (31 downto 0);
+   signal gpo3                  : std_logic_vector (31 downto 0);
    signal XLXN_16               : std_logic;
    signal XLXN_40               : std_logic;
    signal XLXN_41               : std_logic_vector (1 downto 0);
@@ -133,7 +138,7 @@ begin
                 uart_rx=>comms_uart_rx,
                 gpo1(31 downto 0)=>gpo1(31 downto 0),
                 gpo2(31 downto 0)=>gpo2(31 downto 0),
-                gpo3=>open,
+                gpo3(31 downto 0)=>gpo3(31 downto 0),
                 gpo4=>open,
                 intc_irq=>open,
                 uart_interrupt=>open,
@@ -160,13 +165,29 @@ begin
                 clk=>comms_clk,
                 ctrlSel(1 downto 0)=>XLXN_41(1 downto 0),
                 extIn(3 downto 0)=>XLXN_42(3 downto 0),
-                paddleX(9 downto 0)=>gpo2(9 downto 0),
-                paddleY(9 downto 0)=>gpo2(19 downto 10),
+                paddleX(9 downto 0)=>gpo3(9 downto 0),
+                paddleY(9 downto 0)=>gpo3(19 downto 10),
                 reset=>XLXN_40,
                 extOut(3 downto 0)=>gpi1(3 downto 0));
    
    XLXI_21 : VCC
       port map (P=>XLXN_40);
+   
+   XLXI_24 : OBUF
+      port map (I=>gpi1(0),
+                O=>led0);
+   
+   XLXI_25 : OBUF
+      port map (I=>gpi1(1),
+                O=>led1);
+   
+   XLXI_26 : OBUF
+      port map (I=>gpi1(2),
+                O=>led2);
+   
+   XLXI_27 : OBUF
+      port map (I=>gpi1(3),
+                O=>led3);
    
 end BEHAVIORAL;
 

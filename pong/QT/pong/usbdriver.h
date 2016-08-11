@@ -3,6 +3,7 @@
 #include "driver.h"
 #include "controlunit.h"
 
+
 class USBdriver : public Driver{
     Q_OBJECT
 public:
@@ -13,6 +14,8 @@ public:
     void setwrite();
     QString writeData;
     void handle(void*);
+
+    bool debug;
 public slots:
 
     void dowork();

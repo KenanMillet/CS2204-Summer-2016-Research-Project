@@ -11,6 +11,7 @@ class DriverBank : public QObject
 public:
     bool eventFilter(QObject *target, QEvent *e);
     void addDriver(Driver*);
+    void clearbank();
 private:
     std::vector<Driver*> bank;
 };

@@ -34,10 +34,10 @@ bool ExtInterface::updateDecision(Driver *d, Decision data){
 void ExtInterface::reset(){
 
     if(P1sel == SEL_BPC) p1decision = (*(CU->player1))(1,P1sel, CU->theball->pos(), CU->thepaddle1->pos(), char(NONE));
-    else p1decision = NONE;
+    else p1decision = UNKNOWN;
 
     if(P2sel == SEL_BPC) p2decision = (*(CU->player2))(1,P2sel, CU->theball->pos(), CU->thepaddle2->pos(), char(NONE));
-    else p2decision = NONE;
+    else p2decision = UNKNOWN;
 }
 
 

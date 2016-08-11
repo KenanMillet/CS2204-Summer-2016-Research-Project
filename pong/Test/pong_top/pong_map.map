@@ -10,13 +10,12 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Wed Aug 10 12:05:09 2016
+Mapped Date    : Wed Aug 10 19:44:54 2016
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 '2100@pyke.poly.edu'.
-INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
-'2100@pyke.poly.edu'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
 INFO:Security:54 - 'xc7a100t' is a WebPack part.
 WARNING:Security:43 - No license file was found in the standard Xilinx license
 directory.
@@ -35,55 +34,54 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 29 secs 
-Total CPU  time at the beginning of Placer: 28 secs 
+Total REAL time at the beginning of Placer: 17 secs 
+Total CPU  time at the beginning of Placer: 16 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:642f0b0e) REAL time: 32 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:1389bc4b) REAL time: 19 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:642f0b0e) REAL time: 32 secs 
+Phase 2.7  Design Feasibility Check (Checksum:1389bc4b) REAL time: 19 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:642f0b0e) REAL time: 32 secs 
+Phase 3.31  Local Placement Optimization (Checksum:1389bc4b) REAL time: 19 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:2ff82b64) REAL time: 38 secs 
+(Checksum:5f8f9ad) REAL time: 22 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:2ff82b64) REAL time: 38 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:5f8f9ad) REAL time: 22 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:2ff82b64) REAL time: 38 secs 
+Phase 6.3  Local Placement Optimization (Checksum:5f8f9ad) REAL time: 22 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:2ff82b64) REAL time: 38 secs 
+Phase 7.5  Local Placement Optimization (Checksum:5f8f9ad) REAL time: 22 secs 
 
 Phase 8.8  Global Placement
 ........................................
-........................................
-.............
-..................................
-........................
-.................
-Phase 8.8  Global Placement (Checksum:3e406a14) REAL time: 51 secs 
+....................................
+....................
+................................
+................................
+Phase 8.8  Global Placement (Checksum:2a77769e) REAL time: 30 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:3e406a14) REAL time: 51 secs 
+Phase 9.5  Local Placement Optimization (Checksum:2a77769e) REAL time: 30 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:55fa9593) REAL time: 1 mins 4 secs 
+Phase 10.18  Placement Optimization (Checksum:cc5dd714) REAL time: 38 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:55fa9593) REAL time: 1 mins 4 secs 
+Phase 11.5  Local Placement Optimization (Checksum:cc5dd714) REAL time: 38 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:55fa9593) REAL time: 1 mins 4 secs 
+Phase 12.34  Placement Validation (Checksum:cc5dd714) REAL time: 38 secs 
 
-Total REAL time to Placer completion: 1 mins 5 secs 
-Total CPU  time to Placer completion: 1 mins 4 secs 
+Total REAL time to Placer completion: 39 secs 
+Total CPU  time to Placer completion: 37 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -99,11 +97,11 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                2
-  Number of Slice LUTs:                        641 out of  63,400    1%
-    Number used as logic:                      516 out of  63,400    1%
-      Number using O6 output only:             342
+  Number of Slice LUTs:                        640 out of  63,400    1%
+    Number used as logic:                      517 out of  63,400    1%
+      Number using O6 output only:             345
       Number using O5 output only:              14
-      Number using O5 and O6:                  160
+      Number using O5 and O6:                  158
       Number used as ROM:                        0
     Number used as Memory:                     117 out of  19,000    1%
       Number used as Dual Port RAM:             64
@@ -115,17 +113,17 @@ Slice Logic Utilization:
         Number using O6 output only:            52
         Number using O5 output only:             0
         Number using O5 and O6:                  1
-    Number used exclusively as route-thrus:      8
-      Number with same-slice register load:      6
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      4
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   278 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:          768
-    Number with an unused Flip Flop:           379 out of     768   49%
-    Number with an unused LUT:                 127 out of     768   16%
-    Number of fully used LUT-FF pairs:         262 out of     768   34%
+  Number of occupied Slices:                   274 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          772
+    Number with an unused Flip Flop:           380 out of     772   49%
+    Number with an unused LUT:                 132 out of     772   17%
+    Number of fully used LUT-FF pairs:         260 out of     772   33%
     Number of unique control sets:              46
     Number of slice register sites lost
       to control set restrictions:             186 out of 126,800    1%
@@ -139,8 +137,9 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         3 out of     210    1%
-    Number of LOCed IOBs:                        3 out of       3  100%
+  Number of bonded IOBs:                         7 out of     210    3%
+    Number of LOCed IOBs:                        7 out of       7  100%
+    IOB Flip Flops:                              2
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                 16 out of     135   11%
@@ -153,7 +152,10 @@ Specific Feature Utilization:
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     300    0%
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        2 out of     300    1%
+    Number used as OLOGICE2s:                    2
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
   Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
   Number of BSCANs:                              0 out of       4    0%
@@ -179,9 +181,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.40
 
-Peak Memory Usage:  948 MB
-Total REAL time to MAP completion:  1 mins 8 secs 
-Total CPU time to MAP completion:   1 mins 6 secs 
+Peak Memory Usage:  990 MB
+Total REAL time to MAP completion:  40 secs 
+Total CPU time to MAP completion:   38 secs 
 
 Mapping completed.
 See MAP report file "pong_map.mrp" for details.

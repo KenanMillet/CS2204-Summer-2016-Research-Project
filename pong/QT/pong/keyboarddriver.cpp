@@ -1,9 +1,13 @@
 #include "keyboarddriver.h"
 #include "qdebug.h"
+#include "driverbank.h"
 
 
-Keyboarddriver::Keyboarddriver(ExtInterface* interface, unsigned int id, Qt::Key upkey, Qt::Key downkey, Qt::Key leftkey, Qt::Key rightkey)
-    : Driver(interface, id), upKey(upkey), downKey(downkey), leftKey(leftkey),rightKey(rightkey){}
+Keyboarddriver::Keyboarddriver(ExtInterface* interface, unsigned int id, Qt::Key upkey, Qt::Key downkey, Qt::Key leftkey, Qt::Key rightkey, DriverBank* db)
+    : Driver(interface, id), upKey(upkey), downKey(downkey), leftKey(leftkey),rightKey(rightkey)
+{
+    if(db != nullptr) db->addDriver(this);
+}
 
 void Keyboarddriver::handle(void* event)
 {
@@ -29,7 +33,7 @@ void Keyboarddriver::handle(void* event)
         if ( keyEvent->key() == downKey ) data = Decision(char(data) & ~(char(DOWN)));
     }
 
-    if(((e->type() == QEvent::KeyRelease) || (e->type() == QEvent::KeyPress)) && !(((QKeyEvent *)e)->isAutoRepeat())) qDebug().nospace() << "P" << id << "driver data is " << data;
+//    if(((e->type() == QEvent::KeyRelease) || (e->type() == QEvent::KeyPress)) && !(((QKeyEvent *)e)->isAutoRepeat())) qDebug().nospace() << "P" << id << "driver data is " << data;
 
     senddata();
 }
