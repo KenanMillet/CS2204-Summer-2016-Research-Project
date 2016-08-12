@@ -22,6 +22,7 @@ class physics{
     bool stop;
     ControlUnit* CU;
     DataHub* dh;
+    MainWindow* m;
 };
 
 

@@ -12,7 +12,6 @@ USBasyncDriver::USBasyncDriver(ExtInterface* interface, unsigned int id, Control
     : Driver(interface, id), CU(CU), ST(ST), SP(new QSerialPort), compress(compress)
 {
     connect(SP, SIGNAL(readyRead()), this, SLOT(read()));
-
     if(compress)
     {
         connect(this, SIGNAL(doneReading()), this, SLOT(sendCompressed()));
@@ -75,17 +74,16 @@ void USBasyncDriver::sendCompressed()
 
     quint8 compBytes[8] = {
         ((bx << (32-8)) >> (32-8)),
-        ((bx << (32-10)) >> (32-2)) + ((by << (32-6)) >> (32-6)),
-        ((by << (32-10)) >> (32-4)) + ((p1x << (32-4)) >> (32-4)),
-        ((p1x << (32-10)) >> (32-6)) + ((p1y << (32-2)) >> (32-2)),
+        ((bx << (32-10)) >> (32-2)) + (((by << (32-6)) >> (32-6)) << 2),
+        ((by << (32-10)) >> (32-4)) + (((p1x << (32-4)) >> (32-4)) << 4),
+        ((p1x << (32-10)) >> (32-6)) + (((p1y << (32-2)) >> (32-2)) << 6),
         ((p1y << (32-10)) >> (32-8)),
         ((p2x << (32-8)) >> (32-8)),
-        ((p2x << (32-10)) >> (32-2)) + ((p2y << (32-6)) >> (32-6)),
+        ((p2x << (32-10)) >> (32-2)) + (((p2y << (32-6)) >> (32-6)) << 2),
         ((p2y << (32-10)) >> (32-4))
     };
 
-    message.sprintf("%c%c%c%c%c%c%c%c", compBytes[0], compBytes[1], compBytes[8], compBytes[2], compBytes[3], compBytes[4], compBytes[5], compBytes[6], compBytes[7]);
-
+    message.sprintf("%c%c%c%c%c%c%c%c", compBytes[0], compBytes[1], compBytes[2], compBytes[3], compBytes[4], compBytes[5], compBytes[6], compBytes[7]);
     SP->write(message.toStdString().c_str());
     SP->flush();
 }

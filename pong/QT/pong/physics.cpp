@@ -20,12 +20,14 @@ void physics::start(){
 
         if ( theball->pos().y() + theball->boundingRect().top() < scene->sceneRect().top() )
         {
+            m->addscoreP2();
             theball->flipY();
             theball->setY(scene->sceneRect().top() - theball->boundingRect().top());
             //CU->reset();
         }
         if( theball->pos().y() + theball->boundingRect().bottom() > scene->sceneRect().bottom() )
         {
+            m->addscoreP1();
             theball->flipY();
             theball->setY(scene->sceneRect().bottom() - theball->boundingRect().bottom());
         }
@@ -108,4 +110,7 @@ void physics::start(){
                 theball->flipY();
             }
         }
+
+
+
 }

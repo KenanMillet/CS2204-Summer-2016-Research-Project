@@ -18,9 +18,10 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent), CU(new ControlUnit),
-    ui(new Ui::MainWindow), thephysics(new physics), stop(false), db(nullptr), KeyboardDriverIKJL(nullptr), KeyboardDriverWSAD(nullptr),
+    ui(new Ui::MainWindow), thephysics(new physics), stop(false), db(nullptr), KeyboardDriverIKJL(nullptr), KeyboardDriverWSAD(nullptr), P1score(0), P2score(0),
 usb(nullptr)
 {
+    thephysics->m = this;
     ui->setupUi(this);
 }
 
@@ -34,6 +35,9 @@ void MainWindow::SetupScene(){
     ui->Keyboard_vs_bot->setGeometry(1100, 50, 150, 20);
     ui->Keyboard_vs_keyboard->setGeometry(1100, 100, 150, 20);
     ui->Keyboard_vs_USB->setGeometry(1100, 150, 150, 20);
+    ui->bot_ve_bot->setGeometry(1100, 200, 150, 20);
+    ui->P1scoreboard->setGeometry(1100, 550, 150, 50);
+    ui->P2scoreboard->setGeometry(1100, 650, 150, 50);
 
 
     qDebug() << "setup scene function being called.";
@@ -196,6 +200,14 @@ void MainWindow::keyboard_vs_keyboard(){
 }
 
 
+
+
+void MainWindow::bot_vs_bot(){
+    CU->interface->P1sel = SEL_BPC;
+    CU->interface->P2sel = SEL_BPC;
+}
+
+
 void MainWindow::on_Keyboard_vs_bot_toggled(bool checked)
 {
     if(checked==true){
@@ -217,4 +229,27 @@ void MainWindow::on_Keyboard_vs_USB_toggled(bool checked)
     if(checked==true){
         keyboard_vs_USB();
     }
+}
+
+void MainWindow::on_bot_ve_bot_toggled(bool checked)
+{
+    if(checked==true){
+        bot_vs_bot();
+    }
+}
+
+
+
+
+
+void MainWindow::addscoreP1(){
+    ++P1score;
+    ui->P1scoreboard->display(P1score);
+}
+
+
+
+void MainWindow::addscoreP2(){
+    ++P2score;
+    ui->P2scoreboard->display(P2score);
 }
