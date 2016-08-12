@@ -11,7 +11,7 @@ class QThread;
 class USBasyncDriver : public Driver{
     Q_OBJECT
 public:
-    USBasyncDriver(ExtInterface*, unsigned int, ControlUnit*, QThread*);
+    USBasyncDriver(ExtInterface*, unsigned int, ControlUnit*, QThread*, bool=true);
     ~USBasyncDriver();
     void handle(void*);
     void processData(QString data);
@@ -28,6 +28,7 @@ private:
     QThread* ST;
     QString data;
     QSerialPortInfo port;
+    const bool compress;
 };
 
 #endif // USBASYNCDRIVER_H

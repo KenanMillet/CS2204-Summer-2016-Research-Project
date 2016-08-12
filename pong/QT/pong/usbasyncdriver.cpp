@@ -8,14 +8,21 @@
 #include "controlunit.h"
 
 
-USBasyncDriver::USBasyncDriver(ExtInterface* interface, unsigned int id, ControlUnit* CU, QThread* ST)
-    : Driver(interface, id), CU(CU), ST(ST), SP(new QSerialPort)
+USBasyncDriver::USBasyncDriver(ExtInterface* interface, unsigned int id, ControlUnit* CU, QThread* ST, bool compress)
+    : Driver(interface, id), CU(CU), ST(ST), SP(new QSerialPort), compress(compress)
 {
     connect(SP, SIGNAL(readyRead()), this, SLOT(read()));
-    connect(this, SIGNAL(doneReading()), this, SLOT(send()));
-    connect(ST, SIGNAL(started()), this, SLOT(send()));
-//    connect(this, SIGNAL(doneReading()), this, SLOT(sendCompressed()));
-//    connect(ST, SIGNAL(started()), this, SLOT(sendCompressed()));
+
+    if(compress)
+    {
+        connect(this, SIGNAL(doneReading()), this, SLOT(sendCompressed()));
+        connect(ST, SIGNAL(started()), this, SLOT(sendCompressed()));
+    }
+    else
+    {
+        connect(this, SIGNAL(doneReading()), this, SLOT(send()));
+        connect(ST, SIGNAL(started()), this, SLOT(send()));
+    }
 
     QList<QSerialPortInfo> serPortList = QSerialPortInfo::availablePorts();
     port = serPortList.at(serPortList.length() - 1);
@@ -66,16 +73,18 @@ void USBasyncDriver::sendCompressed()
     quint32 p2x = quint32(CU->thepaddle2->pos().x());
     quint32 p2y = quint32(CU->thepaddle2->pos().y());
 
-//    quint8 compBytes[8] = {
-//        ((bx << (32-8)) >> (32-8)),
-//        ((bx << (32-16)) >> (32-8)),
-//        ((bx << (32-20)) >> (32-4)) + ((by << (32-4)) >> (32-4)),
-//        ((by << (32-12)) >> (32-8)),
-//        ((by << (32-20)) >> (32-8)),
+    quint8 compBytes[8] = {
+        ((bx << (32-8)) >> (32-8)),
+        ((bx << (32-10)) >> (32-2)) + ((by << (32-6)) >> (32-6)),
+        ((by << (32-10)) >> (32-4)) + ((p1x << (32-4)) >> (32-4)),
+        ((p1x << (32-10)) >> (32-6)) + ((p1y << (32-2)) >> (32-2)),
+        ((p1y << (32-10)) >> (32-8)),
+        ((p2x << (32-8)) >> (32-8)),
+        ((p2x << (32-10)) >> (32-2)) + ((p2y << (32-6)) >> (32-6)),
+        ((p2y << (32-10)) >> (32-4))
+    };
 
-//    };
-
-//    message.sprintf("%04d %04d %04d %04d %04d %04d", ballposx, ballposy, paddle1posx, paddle1posy, paddle2posx, paddle2posy);
+    message.sprintf("%c%c%c%c%c%c%c%c", compBytes[0], compBytes[1], compBytes[8], compBytes[2], compBytes[3], compBytes[4], compBytes[5], compBytes[6], compBytes[7]);
 
     SP->write(message.toStdString().c_str());
     SP->flush();

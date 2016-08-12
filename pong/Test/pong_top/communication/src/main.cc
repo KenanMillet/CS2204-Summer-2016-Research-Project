@@ -8,6 +8,8 @@ void init_gpio();
 void init_uart_interrupt();
 
 void rx_interrupt(void*);
+void pollUSB();
+void pollUSBcompressed();
 void sendUSB(u32);
 void sendUSBDebug(u32);
 
@@ -15,7 +17,6 @@ void sendUSBDebug(u32);
 
 u16 argToInt(char[4]);
 
-char args[6][4];
 bool writegpo = false;
 
 XIOModule gpio;
@@ -68,7 +69,16 @@ void init_uart_interrupt()
 
 void rx_interrupt(void*)
 {
+	//Choose only one function to be uncommented
+	
+	//pollUSB();
+	pollUSBcompressed();
+}
+
+void pollUSB()
+{
 	static u8 i(0);
+	static char args[6][4];
 
 	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
 	if(byte == ' ') return;
@@ -103,6 +113,52 @@ void rx_interrupt(void*)
 	i++;
 
 	if(i == 24)
+	{
+		i = 0;
+		writegpo = true;
+	}
+	return;
+}
+
+void pollUSBcompressed()
+{
+	static u8 i(0);
+	
+	u8 byte = XIOModule_RecvByte(STDIN_BASEADDRESS);
+	
+	switch(i)
+	{
+	case 0:
+		for(u8 j = 0; j < 4; ++j) gpoData[j] = 0;
+		gpoData[0] |= u32(byte); //bx(7:0)
+		break;
+	case 1:
+		gpoData[0] |= u32(byte) << 8; //bx(9:8), by(5:0)
+		break;
+	case 2:
+		gpoData[0] |= (u32((byte << 4) >> 4) << 16);  //by(9:6)
+		gpoData[1] |= u32(byte) >> 4; //p1x(3:0)
+		break;
+	case 3:
+		gpoData[1] |= u32(byte) << 4; //p1x(9:4), p1y(1:0)
+		break;
+	case 4:
+		gpoData[1] |= u32(byte) << 12; //p1y(9:2)
+		break;
+	case 5:
+		gpoData[2] |= u32(byte); //p2x(7:0)
+		break;
+	case 6:
+		gpoData[2] |= u32(byte) << 8; //p2x(9:8), p2y(5:0)
+		break;
+	case 7:
+		gpoData[2] |= (u32((byte << 4) >> 4) << 16);  //by(9:6)
+		break;
+	}
+	
+	i++;
+	
+	if(i == 8)
 	{
 		i = 0;
 		writegpo = true;
