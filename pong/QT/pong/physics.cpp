@@ -75,7 +75,7 @@ void physics::start(){
             thepaddle2->setY((scene->sceneRect().bottom() - scene->sceneRect().top())/2 - thepaddle2->boundingRect().top());
             thepaddle2->velocityY = 0;
         }
-        else if  (thepaddle2->pos().y() + thepaddle2->boundingRect().bottom() > thepaddle2->boundingRect().bottom() && (Decision(char(thepaddle2->direction) & char(DOWN)) == DOWN))
+        else if  (thepaddle2->pos().y() + thepaddle2->boundingRect().bottom() > scene->sceneRect().bottom() && (Decision(char(thepaddle2->direction) & char(DOWN)) == DOWN))
         {
             thepaddle2->setY(scene->sceneRect().bottom() - thepaddle2->boundingRect().bottom());
             thepaddle2->velocityY = 0;
@@ -108,7 +108,4 @@ void physics::start(){
                 theball->flipY();
             }
         }
-
-
-
 }
